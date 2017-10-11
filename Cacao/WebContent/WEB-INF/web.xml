@@ -11,12 +11,66 @@
   </welcome-file-list>
   
   <servlet>
-    <servlet-name>CmdControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdControl</servlet-class>
+    <servlet-name>CmdMainControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdMainControl</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CmdControl</servlet-name>
-    <url-pattern>/ProjectCacao</url-pattern>
+    <servlet-name>CmdMainControl</servlet-name>
+    <url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdRegisterControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdRegisterControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdRegisterControl</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdServiceControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdServiceControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdServiceControl</servlet-name>
+    <url-pattern>/Service</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdLoginControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdLoginControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdLoginControl</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdMyPageControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdMyPageControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdMyPageControl</servlet-name>
+    <url-pattern>/MyPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdOrderControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdOrderControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdOrderControl</servlet-name>
+    <url-pattern>/Order</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CmdProductControl</servlet-name>
+    <servlet-class>mvc.cacao.control.CmdProductControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdProductControl</servlet-name>
+    <url-pattern>/Product</url-pattern>
   </servlet-mapping>
   
 </web-app>

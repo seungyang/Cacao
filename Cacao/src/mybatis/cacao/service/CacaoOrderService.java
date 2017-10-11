@@ -1,21 +1,23 @@
 package mybatis.cacao.service;
 
-import mybatis.cacao.session.CacaoServiceRepository;
+import mybatis.cacao.session.CacaoOrderRepository;
 
 
-public class CacaoService {
-	private static CacaoService service;
+
+
+public class CacaoOrderService {
+	private static CacaoOrderService service;
 	
-	public static CacaoService getInstance() {
-		if(service == null)service = new CacaoService();
+	public static CacaoOrderService getInstance() {
+		if(service == null)service = new CacaoOrderService();
 		return service;
 	}
 	
-	private CacaoService() {
+	private CacaoOrderService() {
 		
 	}
 	 
-	CacaoServiceRepository repo = new CacaoServiceRepository();
+	CacaoOrderRepository repo = new CacaoOrderRepository();
 	
 //	public int getGroupId(){
 //		return repo.getGroupId();

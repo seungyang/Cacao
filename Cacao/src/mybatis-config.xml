@@ -2,7 +2,7 @@
 <!DOCTYPE configuration     
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"     
 "http://mybatis.org/dtd/mybatis-3-config.dtd">  
-<configuration>
+<configuration> 
 <properties resource="db.properties"></properties> 
 
 <settings>
@@ -29,10 +29,40 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <property name="username" value="${username}"/>         
 <property name="password" value="${password}"/>       
 </dataSource>     
-</environment>   
+</environment>    
 </environments>   
 <!-- 여러개의 mapper 설정 -->
+
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoMapper.xml"/> 
+<mapper resource="mybatis/cacao/mapper/CacaoLoginMapper.xml"/> 
 </mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoMainMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoMyPageMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoOrderMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoProductMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoRegisterMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoServiceMapper.xml"/> 
+</mappers>
+
+<mappers>     
+<mapper resource="mybatis/cacao/mapper/CacaoAdminMapper.xml"/> 
+</mappers>
+
 </configuration> 

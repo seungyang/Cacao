@@ -1,503 +1,726 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.0" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="mvc.cacao.model.QA" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/QA.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="62" y="111"/>    
+  <class id="1" language="java" name="mvc.cacao.cmd.CmdException" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/CmdException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1835" y="536"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="mvc.cacao.model.Service" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Service.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="217" y="120"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="mvc.cacao.model.Member" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Member.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="370" y="111"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="mvc.cacao.model.Info" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Info.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="523" y="156"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="mvc.cacao.model.Order" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Order.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="674" y="102"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="mvc.cacao.model.Deliver" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Deliver.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="826" y="111"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="mvc.cacao.model.Choose" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/model/Choose.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="979" y="84"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="mvc.cacao.control.CmdControl" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/control/CmdControl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="198" y="380"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="mvc.cacao.cmd.CmdNull" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdNull.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="608" y="387"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="mvc.cacao.cmd.CmdpCharApView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdpCharApView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1392" y="401"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="mvc.cacao.cmd.CmdpDetailView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdpDetailView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1389" y="546"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="mvc.cacao.cmd.CmdMyPageOrder" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPageOrder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2169" y="712"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="mvc.cacao.cmd.CmdOrderNoView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdOrderNoView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1394" y="683"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="mvc.cacao.cmd.CmdJoinAgree" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdJoinAgree.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1396" y="263"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="15" language="java" name="mvc.cacao.cmd.CmdOrderAddrFind" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdOrderAddrFind.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1762" y="546"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="mvc.cacao.cmd.CmdException" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdException.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="86" y="555"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="mvc.cacao.cmd.CmdOrderAccView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdOrderAccView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1769" y="402"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="18" language="java" name="mvc.cacao.cmd.CmdpCharLiView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdpCharLiView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1400" y="127"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="19" language="java" name="mvc.cacao.cmd.Cmd" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/Cmd.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2641" y="863"/>    
+  <interface id="2" language="java" name="mvc.cacao.cmd.Cmd" project="Cacao" file="/Cacao/src/mvc/cacao/cmd/Cmd.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2046" y="868"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="20" language="java" name="mvc.cacao.cmd.CmdMyPageMain" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPageMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1771" y="129"/>    
+  <class id="3" language="java" name="mvc.cacao.cmd.CmdNull" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/CmdNull.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2129" y="545"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="mvc.cacao.cmd.CmdLoginForm" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdLoginForm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1767" y="267"/>    
+  <class id="4" language="java" name="mvc.cacao.cmd.login.CmdLoginPwdFind" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/login/CmdLoginPwdFind.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="942" y="683"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="mvc.cacao.cmd.CmdJoinSuccess" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdJoinSuccess.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2154" y="277"/>    
+  <class id="5" language="java" name="mvc.cacao.cmd.login.CmdLoginFindForm" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/login/CmdLoginFindForm.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1336" y="683"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="mvc.cacao.cmd.CmdOrderNoFind" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdOrderNoFind.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2163" y="131"/>    
+  <class id="6" language="java" name="mvc.cacao.cmd.login.CmdLoginEmailFind" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/login/CmdLoginEmailFind.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="957" y="830"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="mvc.cacao.cmd.CmdJoinAuth" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdJoinAuth.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1770" y="684"/>    
+  <class id="7" language="java" name="mvc.cacao.cmd.login.CmdLoginForm" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/login/CmdLoginForm.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1325" y="832"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="mvc.cacao.cmd.CmdServiceFAQ" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdServiceFAQ.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2160" y="421"/>    
+  <class id="8" language="java" name="mvc.cacao.cmd.main.CmdCacaoMain" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/main/CmdCacaoMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1145" y="991"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="mvc.cacao.cmd.CmdMyPageQAForm" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPageQAForm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2545" y="129"/>    
+  <class id="9" language="java" name="mvc.cacao.cmd.mypage.CmdMyPagePick" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPagePick.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3244" y="878"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="mvc.cacao.cmd.CmdInfoForm" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdInfoForm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2552" y="282"/>    
+  <class id="10" language="java" name="mvc.cacao.cmd.mypage.CmdMyPageCancelList" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPageCancelList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3250" y="1042"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="mvc.cacao.cmd.CmdJoinInfoSave" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdJoinInfoSave.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2925" y="128"/>    
+  <class id="11" language="java" name="mvc.cacao.cmd.mypage.CmdMyPageQAForm" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPageQAForm.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3636" y="1043"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="mvc.cacao.cmd.CmdServiceNotice" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdServiceNotice.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2561" y="432"/>    
+  <class id="12" language="java" name="mvc.cacao.cmd.mypage.CmdMyPageOrder" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPageOrder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3634" y="890"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="mvc.cacao.cmd.CmdCateDollView" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdCateDollView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2169" y="568"/>    
+  <class id="13" language="java" name="mvc.cacao.cmd.mypage.CmdMyPageMain" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPageMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3243" y="1185"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="mvc.cacao.cmd.CmdLoginFindForm" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdLoginFindForm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3358" y="755"/>    
+  <class id="14" language="java" name="mvc.cacao.cmd.mypage.CmdMyPageQAList" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/mypage/CmdMyPageQAList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3648" y="1184"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="mvc.cacao.cmd.CmdMyPageCancelList" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPageCancelList.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2935" y="283"/>    
+  <class id="15" language="java" name="mvc.cacao.cmd.product.CmdpCateCaseView" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/product/CmdpCateCaseView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="736" y="1436"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="mvc.cacao.cmd.CmdLoginEmailFind" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdLoginEmailFind.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3325" y="117"/>    
+  <class id="16" language="java" name="mvc.cacao.cmd.product.CmdpCharLiView" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/product/CmdpCharLiView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1130" y="1436"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="mvc.cacao.cmd.CmdLoginPwdFind" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdLoginPwdFind.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2946" y="589"/>    
+  <class id="17" language="java" name="mvc.cacao.cmd.product.CmdpDetailView" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/product/CmdpDetailView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="740" y="1636"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="mvc.cacao.cmd.CmdMyPageQAList" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPageQAList.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2943" y="440"/>    
+  <class id="18" language="java" name="mvc.cacao.cmd.product.CmdpCateDollView" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/product/CmdpCateDollView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1162" y="1624"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="mvc.cacao.cmd.CmdCacaoMain" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdCacaoMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2569" y="583"/>    
+  <class id="19" language="java" name="mvc.cacao.cmd.product.CmdpCharApView" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/product/CmdpCharApView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1544" y="1436"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="37" language="java" name="mvc.cacao.cmd.CmdOrderInfoForm" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdOrderInfoForm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3322" y="294"/>    
+  <class id="20" language="java" name="mvc.cacao.cmd.register.CmdJoinAuth" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinAuth.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1952" y="1440"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="38" language="java" name="mvc.cacao.cmd.CmdServiceMain" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdServiceMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3344" y="605"/>    
+  <class id="21" language="java" name="mvc.cacao.cmd.register.CmdJoinIdCheck" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinIdCheck.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2346" y="1440"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="39" language="java" name="mvc.cacao.cmd.CmdMyPagePick" project="CacaoClass" 
-    file="/CacaoClass/src/mvc/cacao/cmd/CmdMyPagePick.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3345" y="448"/>    
+  <class id="22" language="java" name="mvc.cacao.cmd.register.CmdJoinInfoSave" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinInfoSave.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1968" y="1648"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="40" language="java" name="mybatis.cacao.service.CacaoService" project="CacaoClass" 
-    file="/CacaoClass/src/mybatis/cacao/service/CacaoService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="339" y="645"/>    
+  <class id="23" language="java" name="mvc.cacao.cmd.register.CmdJoinSuccess" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinSuccess.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2386" y="1644"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="mybatis.cacao.session.CacaoRepository" project="CacaoClass" 
-    file="/CacaoClass/src/mybatis/cacao/session/CacaoRepository.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="950" y="342"/>    
+  <class id="24" language="java" name="mvc.cacao.cmd.register.CmdJoinAgree" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinAgree.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1964" y="1848"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="42">    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="19"/>  
+  <class id="25" language="java" name="mvc.cacao.cmd.register.CmdJoinInfoForm" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/register/CmdJoinInfoForm.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2398" y="1844"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="mvc.cacao.cmd.service.CmdServiceMain" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/service/CmdServiceMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2940" y="1444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="mvc.cacao.cmd.service.CmdServiceFAQ" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/service/CmdServiceFAQ.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2962" y="1632"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="mvc.cacao.cmd.service.CmdServiceNotice" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/cmd/service/CmdServiceNotice.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3352" y="1444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="mvc.cacao.control.CmdLoginControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdLoginControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1296" y="2492"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="mvc.cacao.control.CmdOrderControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdOrderControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1726" y="2492"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="mvc.cacao.control.CmdRegisterControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdRegisterControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1300" y="2240"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="mvc.cacao.control.CmdServiceControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdServiceControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1722" y="2232"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="mvc.cacao.control.CmdProductControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdProductControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="824" y="2500"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="mvc.cacao.control.CmdMyPageControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdMyPageControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="814" y="2232"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="mvc.cacao.control.CmdMainControl" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/control/CmdMainControl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="784" y="1960"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="mvc.cacao.model.Deliver" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/model/Deliver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2264" y="2231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="mvc.cacao.model.Info" project="Cacao" file="/Cacao/src/mvc/cacao/model/Info.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2416" y="2276"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="mvc.cacao.model.Order" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/model/Order.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2567" y="2222"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="mvc.cacao.model.Member" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/model/Member.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2721" y="2231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="mvc.cacao.model.Service" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/model/Service.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2874" y="2240"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="mvc.cacao.model.Choose" project="Cacao" 
+    file="/Cacao/src/mvc/cacao/model/Choose.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3025" y="2204"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="mvc.cacao.model.QA" project="Cacao" file="/Cacao/src/mvc/cacao/model/QA.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3181" y="2231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="mybatis.cacao.service.CacaoMyPageService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoMyPageService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2567" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="mybatis.cacao.service.CacaoOrderService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoOrderService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2841" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="mybatis.cacao.service.CacaoProductService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoProductService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3113" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="mybatis.cacao.service.CacaoRegisterService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoRegisterService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3394" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="mybatis.cacao.service.CacaoService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3660" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="mybatis.cacao.service.CacaoMainService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoMainService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3916" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="mybatis.cacao.service.CacaoLoginService" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/service/CacaoLoginService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4179" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="mybatis.cacao.session.CacaoOrderRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoOrderRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2828" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="mybatis.cacao.session.CacaoMainRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoMainRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4016" y="656"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="mybatis.cacao.session.CacaoMyPageRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoMyPageRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2540" y="640"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="mybatis.cacao.session.CacaoRegisterRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoRegisterRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3412" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="mybatis.cacao.session.CacaoServiceRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoServiceRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3720" y="644"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="mybatis.cacao.session.CacaoProductRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoProductRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3112" y="656"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="mybatis.cacao.session.CacaoLoginRepository" project="Cacao" 
+    file="/Cacao/src/mybatis/cacao/session/CacaoLoginRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4324" y="648"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="57">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
-  <realization id="43">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="44">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="45">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="46">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="47">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="48">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="49">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="50">    
-    <end type="SOURCE" refId="39"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="51">    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="52">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="53">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="54">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <association id="55">    
-    <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="56" name="service">        
-        <position height="0" width="0" x="-340" y="-114"/>      
-      </attribute>      
-      <multiplicity id="57" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-340" y="-114"/>      
-      </multiplicity>    
+  <association id="58">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="59" name="repo"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
+    <end type="TARGET" refId="50" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="58">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="59">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <realization id="60">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
   <realization id="61">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="62">    
     <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="63">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="64">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="65">    
-    <end type="SOURCE" refId="38"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="66">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="67">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="68">    
-    <end type="SOURCE" refId="37"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="69">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="70">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
-  <realization id="71">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="19"/>  
+  <association id="71">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="72" name="service"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="74">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
-  <realization id="72">    
+  <association id="75">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="76" name="repo"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="55" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="79" name="service"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="81">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="82">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="83">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="84">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="85">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="86">    
     <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="TARGET" refId="2"/>  
   </realization>  
-  <realization id="73">    
-    <end type="SOURCE" refId="30"/>    
-    <end type="TARGET" refId="19"/>  
+  <association id="87">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="88" name="repo"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="52" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="91" name="service"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="47" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="93">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
+  <realization id="94">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="95">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="96" name="service"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="99" name="repo"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="102" name="repo"/>      
+      <multiplicity id="103" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="54" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="105" name="service"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="49" navigable="false">      
+      <attribute id="108" name="service"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="110">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="111">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="112">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="113" name="repo"/>      
+      <multiplicity id="114" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="115">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="116">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="117">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="118">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="119" name="service"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="121">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="122">    
+    <end type="SOURCE" refId="49" navigable="false">      
+      <attribute id="123" name="repo"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="56" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
