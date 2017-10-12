@@ -7,6 +7,7 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-
+1:1문의
+<a href="myPageQAForm.jsp">링크</a>
 </body>
 </html>

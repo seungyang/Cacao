@@ -7,6 +7,6 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-
+찜
 </body>
 </html>
