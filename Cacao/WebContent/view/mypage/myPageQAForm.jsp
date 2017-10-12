@@ -7,6 +7,6 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-
+QA 등록 
 </body>
 </html>
