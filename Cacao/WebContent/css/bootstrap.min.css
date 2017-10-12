@@ -4141,20 +4141,20 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	.navbar-collapse.in {
 		overflow-y: visible
 	}
-	.navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse,
+	.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-static-top .navbar-collapse,
 		.navbar-fixed-bottom .navbar-collapse {
 		padding-right: 0;
 		padding-left: 0
 	}
 }
 
-.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
+.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
 	{
 	max-height: 340px
 }
 
 @media ( max-device-width :480px) and (orientation:landscape) {
-	.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
+	.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
 		{
 		max-height: 200px
 	}
@@ -4185,7 +4185,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	}
 }
 
-.navbar-fixed-top, .navbar-fixed-bottom {
+.navbar-fixed-top, .navbar-fixed-down, .navbar-fixed-bottom {
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -4193,7 +4193,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 }
 
 @media ( min-width :768px) {
-	.navbar-fixed-top, .navbar-fixed-bottom {
+	.navbar-fixed-top,.navbar-fixed-down, .navbar-fixed-bottom {
 		border-radius: 0
 	}
 }
@@ -4202,7 +4202,12 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	top: 0;
 	border-width: 0 0 1px
 }
-
+/* 결제 고정 nav */
+ .navbar-fixed-down{
+ 	bottom:0;
+ 	border-width:0 0 1px;
+ 	background-color:white;
+ }
 .navbar-fixed-bottom {
 	bottom: 0;
 	margin-bottom: 0;

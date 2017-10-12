@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 
 public class CacaoServiceRepository {
-	private String namespace = "mapper.ServiceMapper";
+	private String namespace = "mapper.CacaoServiceMapper";
 	
 	SqlSessionFactory getSqlSessionFactory(){
 		InputStream in = null;
