@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<!DOCTYPE configuration     
-PUBLIC "-//mybatis.org//DTD Config 3.0//EN"     
-"http://mybatis.org/dtd/mybatis-3-config.dtd">  
-<configuration> 
-<properties resource="db.properties"></properties> 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <properties resource="db.properties"></properties> 
 
-<settings>
-	<setting name="mapUnderscoreToCamelCase" value="true"/>
-</settings>  
+ <settings>
+	 <setting name="mapUnderscoreToCamelCase" value="true"/>
+ </settings>  
 
-<typeAliases>
+ <typeAliases>
 	<typeAlias type="cacao.model.Choose" alias="choose"/>
 	<typeAlias type="cacao.model.Deliver" alias="deliver"/>
 	<typeAlias type="cacao.model.Info" alias="info"/>
@@ -18,22 +16,23 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAlias type="cacao.model.QA" alias="qa"/>
 	<typeAlias type="cacao.model.Service" alias="service"/>
 	
-</typeAliases>
+ </typeAliases>
 
-<environments default="development">       
-<environment id="development">       
-<transactionManager type="JDBC"/><!-- 커밋을 누가 담당할까 JDBC / MANAGER -->      
-<dataSource type="POOLED"><!-- 컨넥션플을 할까 pooled / unpooled -->          
-<property name="driver" value="${driver}"/>         
-<property name="url" value="${url}"/>         
-<property name="username" value="${username}"/>         
-<property name="password" value="${password}"/>       
-</dataSource>     
-</environment>    
-</environments>   
+ <environments default="development">       
+ <environment id="development">       
+ <transactionManager type="JDBC"/><!-- 커밋을 누가 담당할까 JDBC / MANAGER -->      
+ <dataSource type="POOLED"><!-- 컨넥션플을 할까 pooled / unpooled -->          
+ <property name="driver" value="${driver}"/>         
+ <property name="url" value="${url}"/>         
+ <property name="username" value="${username}"/>         
+ <property name="password" value="${password}"/>       
+ </dataSource>     
+ </environment>    
+ </environments>   
 
 <!-- 여러개의 mapper 설정 -->
 
+<<<<<<< HEAD
 <mappers>     
 <mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/> 
 <mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/> 
@@ -46,5 +45,19 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/> 
 </mappers>
  
+=======
+ <mappers>     
+ <mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoMyPageMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoOrderMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoServiceMapper.xml"/> 
+ <mapper resource="cacao/model/mapper/CacaoAdminMapper.xml"/>
+ <mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/>  
+ </mappers>
+
+>>>>>>> refs/remotes/origin/master
 
 </configuration> 

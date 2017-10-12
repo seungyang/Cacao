@@ -7,6 +7,6 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-
+취소내역
 </body>
 </html>
