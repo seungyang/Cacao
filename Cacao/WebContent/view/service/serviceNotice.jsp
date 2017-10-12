@@ -27,7 +27,7 @@
 <%-- 	<%} %> --%>
 	<dl class="accordion">
 	<%for(int i =0; i < noticeList.size(); i++){ %>
-		<dt>[<%= noticeList.get(i).getsCate() %>]  <%= noticeList.get(i).getsDate() %><br/>
+		<dt>[<%= noticeList.get(i).getsCate() %>]  <%= noticeList.get(i).getsDate().substring(0,10) %><br/>
 			<h2><%= noticeList.get(i).getsTitle() %></h2></dt>
 		<dd><%= noticeList.get(i).getsDetail() %></dd>
 	<%} %>	

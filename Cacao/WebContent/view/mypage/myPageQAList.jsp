@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="../../css/mypage/qabtn.css" />
+
 <script type="text/javascript"></script>
 <title> 우리반 연습</title>
 </head>
@@ -14,8 +14,6 @@
 <input type="button" id="qa_btn" name="qa_btn" value="문의하기"/>
 
 
-<div class="col three">				
-			<a href="#" class="btn btn-sunflower">문의하기</a>			
-		</div>
+
 </body>
 </html>

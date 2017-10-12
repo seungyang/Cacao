@@ -13,6 +13,7 @@
 <title> 우리반 연습</title>
 <link rel="stylesheet" type="text/css" href="../../css/mypage/tabs.css" />
 <link rel="stylesheet" type="text/css" href="../../css/mypage/iframe.css" />
+<link rel="stylesheet" type="text/css" href="../../css/mypage/qabtn.css" />
 </head>
 <body>
 
@@ -53,7 +54,9 @@
 						</div>
 						<div class="tab-pane" id="tab_default_4">
 							<iframe class="f_width" src="myPageQAList.jsp" frameborder="0" scrolling="no"></iframe>
-							<a href="myPageQAForm.jsp">문의</a>
+							<div class="col three">				
+								<a href="#" class="btn btn-sunflower">문의하기</a>			
+							</div>
 						</div>
 					</div>
 				</div>

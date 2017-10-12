@@ -28,14 +28,14 @@
 <!--     <url-pattern>/Register</url-pattern> -->
 <!--   </servlet-mapping> -->
   
-<!--   <servlet> -->
-<!--     <servlet-name>CmdServiceControl</servlet-name> -->
-<!--     <servlet-class>cacao.control.CmdServiceControl</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>CmdServiceControl</servlet-name> -->
-<!--     <url-pattern>/Service</url-pattern> -->
-<!--   </servlet-mapping> -->
+  <servlet>
+    <servlet-name>CmdServiceControl</servlet-name>
+    <servlet-class>cacao.control.CmdServiceControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdServiceControl</servlet-name>
+    <url-pattern>/Service</url-pattern>
+  </servlet-mapping>
   
 <!--   <servlet> -->
 <!--     <servlet-name>CmdLoginControl</servlet-name> -->
