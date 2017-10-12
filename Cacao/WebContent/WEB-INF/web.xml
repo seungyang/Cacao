@@ -19,50 +19,50 @@
     <url-pattern>/Main</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-    <servlet-name>CmdRegisterControl</servlet-name>
-    <servlet-class>cacao.control.CmdRegisterControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CmdRegisterControl</servlet-name>
-    <url-pattern>/Register</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>CmdRegisterControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdRegisterControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdRegisterControl</servlet-name> -->
+<!--     <url-pattern>/Register</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-    <servlet-name>CmdServiceControl</servlet-name>
-    <servlet-class>cacao.control.CmdServiceControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CmdServiceControl</servlet-name>
-    <url-pattern>/Service</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>CmdServiceControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdServiceControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdServiceControl</servlet-name> -->
+<!--     <url-pattern>/Service</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-    <servlet-name>CmdLoginControl</servlet-name>
-    <servlet-class>cacao.control.CmdLoginControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CmdLoginControl</servlet-name>
-    <url-pattern>/Login</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>CmdLoginControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdLoginControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdLoginControl</servlet-name> -->
+<!--     <url-pattern>/Login</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-    <servlet-name>CmdMyPageControl</servlet-name>
-    <servlet-class>cacao.control.CmdMyPageControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CmdMyPageControl</servlet-name>
-    <url-pattern>/MyPage</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>CmdMyPageControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdMyPageControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdMyPageControl</servlet-name> -->
+<!--     <url-pattern>/MyPage</url-pattern> -->
+<!--   </servlet-mapping> -->
   
-  <servlet>
-    <servlet-name>CmdOrderControl</servlet-name>
-    <servlet-class>cacao.control.CmdOrderControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CmdOrderControl</servlet-name>
-    <url-pattern>/Order</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>CmdOrderControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdOrderControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdOrderControl</servlet-name> -->
+<!--     <url-pattern>/Order</url-pattern> -->
+<!--   </servlet-mapping> -->
   
   <servlet>
     <servlet-name>CmdProductControl</servlet-name>
@@ -72,5 +72,14 @@
     <servlet-name>CmdProductControl</servlet-name>
     <url-pattern>/Product</url-pattern>
   </servlet-mapping>
+  
+<!--     <servlet> -->
+<!--     <servlet-name>CmdIncludeControl</servlet-name> -->
+<!--     <servlet-class>cacao.control.CmdIncludeControl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>CmdIncludeControl</servlet-name> -->
+<!--     <url-pattern>/Include</url-pattern> -->
+<!--   </servlet-mapping> -->
   
 </web-app>

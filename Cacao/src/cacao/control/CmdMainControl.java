@@ -69,7 +69,7 @@ public class CmdMainControl extends HttpServlet {
 			if( commandMap.containsKey( cmdKey ) ){
 				cmd = (Cmd)commandMap.get( cmdKey);
 			}else{
-				throw new CmdException("지정할 명령어가 존재하지 않음");
+				throw new CmdException("Main - 지정할 명령어가 존재하지 않음");
 			}
 
 			nextPage = cmd.execute( request, response  );
@@ -77,7 +77,7 @@ public class CmdMainControl extends HttpServlet {
 		}catch( CmdException e ){
 			request.setAttribute("javax.servlet.jsp.jspException", e );
 			nextPage = error;
-			System.out.println("오류 : " + e.getMessage() );
+			System.out.println("Main - 오류 : " + e.getMessage() );
 		}
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );

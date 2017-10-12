@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 
 public class CacaoOrderRepository {
-	private String namespace = "mapper.OrderMapper";
+	private String namespace = "mapper.CacaoOrderMapper";
 	
 	SqlSessionFactory getSqlSessionFactory(){
 		InputStream in = null;

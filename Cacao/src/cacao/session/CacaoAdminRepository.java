@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 
 public class CacaoAdminRepository {
-	private String namespace = "mapper.AdminMapper";
+	private String namespace = "mapper.CacaoAdminMapper";
 	
 	SqlSessionFactory getSqlSessionFactory(){
 		InputStream in = null;

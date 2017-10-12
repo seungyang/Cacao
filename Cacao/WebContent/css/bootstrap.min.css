@@ -4141,6 +4141,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	.navbar-collapse.in {
 		overflow-y: visible
 	}
+<<<<<<< HEAD
 	.navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse,
 		.navbar-fixed-bottom .navbar-collapse {
 		padding-right: 0;
@@ -4203,6 +4204,75 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	border-width: 0 0 1px
 }
 
+=======
+	.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-static-top .navbar-collapse,
+		.navbar-fixed-bottom .navbar-collapse {
+		padding-right: 0;
+		padding-left: 0
+	}
+}
+
+.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
+	{
+	max-height: 340px
+}
+
+@media ( max-device-width :480px) and (orientation:landscape) {
+	.navbar-fixed-top .navbar-fixed-down .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
+		{
+		max-height: 200px
+	}
+}
+
+.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse,
+	.container-fluid>.navbar-collapse {
+	margin-right: -15px;
+	margin-left: -15px
+}
+
+@media ( min-width :768px) {
+	.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse,
+		.container-fluid>.navbar-collapse {
+		margin-right: 0;
+		margin-left: 0
+	}
+}
+
+.navbar-static-top {
+	z-index: 1000;
+	border-width: 0 0 1px
+}
+
+@media ( min-width :768px) {
+	.navbar-static-top {
+		border-radius: 0
+	}
+}
+
+.navbar-fixed-top, .navbar-fixed-down, .navbar-fixed-bottom {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030
+}
+
+@media ( min-width :768px) {
+	.navbar-fixed-top,.navbar-fixed-down, .navbar-fixed-bottom {
+		border-radius: 0
+	}
+}
+
+.navbar-fixed-top {
+	top: 0;
+	border-width: 0 0 1px
+}
+/* 결제 고정 nav */
+ .navbar-fixed-down{
+ 	bottom:0;
+ 	border-width:0 0 1px;
+ 	background-color:white;
+ }
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao/
 .navbar-fixed-bottom {
 	bottom: 0;
 	margin-bottom: 0;
