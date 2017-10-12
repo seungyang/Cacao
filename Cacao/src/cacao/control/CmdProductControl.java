@@ -32,8 +32,9 @@ public class CmdProductControl extends HttpServlet {
 
 	private void initCommand(){
 		commandMap = new HashMap();
-
+		
 		commandMap.put("pCateView-page",new CmdNull("pCateView.jsp") );
+		commandMap.put("pCateCaseView-page",new CmdNull("pCateCaseView.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 

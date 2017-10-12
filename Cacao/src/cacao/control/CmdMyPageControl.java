@@ -35,6 +35,7 @@ public class CmdMyPageControl extends HttpServlet {
 		commandMap = new HashMap();
 
 		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp") );
+		commandMap.put("myPageMain-page", new CmdNull("myPageMain.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
