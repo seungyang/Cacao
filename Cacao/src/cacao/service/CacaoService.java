@@ -1,5 +1,8 @@
 package cacao.service;
 
+import java.util.List;
+
+import cacao.model.vo.Service;
 import cacao.session.CacaoServiceRepository;
 
 
@@ -17,10 +20,10 @@ public class CacaoService {
 	 
 	CacaoServiceRepository repo = new CacaoServiceRepository();
 	
-//	public int getGroupId(){
-//		return repo.getGroupId();
-//	}
-//	
+	public List<Service> getNoticeList(){
+		return repo.getNoticeList();
+	}
+	
 //	public int insert( BoardRec rec ) {
 //		return repo.insert( rec );
 //	}
