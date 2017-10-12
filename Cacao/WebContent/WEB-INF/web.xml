@@ -12,7 +12,7 @@
   
   <servlet>
     <servlet-name>CmdMainControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdMainControl</servlet-class>
+    <servlet-class>cacao.control.CmdMainControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdMainControl</servlet-name>
@@ -21,7 +21,7 @@
   
   <servlet>
     <servlet-name>CmdRegisterControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdRegisterControl</servlet-class>
+    <servlet-class>cacao.control.CmdRegisterControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdRegisterControl</servlet-name>
@@ -30,7 +30,7 @@
   
   <servlet>
     <servlet-name>CmdServiceControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdServiceControl</servlet-class>
+    <servlet-class>cacao.control.CmdServiceControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdServiceControl</servlet-name>
@@ -39,7 +39,7 @@
   
   <servlet>
     <servlet-name>CmdLoginControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdLoginControl</servlet-class>
+    <servlet-class>cacao.control.CmdLoginControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdLoginControl</servlet-name>
@@ -48,7 +48,7 @@
   
   <servlet>
     <servlet-name>CmdMyPageControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdMyPageControl</servlet-class>
+    <servlet-class>cacao.control.CmdMyPageControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdMyPageControl</servlet-name>
@@ -57,7 +57,7 @@
   
   <servlet>
     <servlet-name>CmdOrderControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdOrderControl</servlet-class>
+    <servlet-class>cacao.control.CmdOrderControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdOrderControl</servlet-name>
@@ -66,7 +66,7 @@
   
   <servlet>
     <servlet-name>CmdProductControl</servlet-name>
-    <servlet-class>mvc.cacao.control.CmdProductControl</servlet-class>
+    <servlet-class>cacao.control.CmdProductControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CmdProductControl</servlet-name>

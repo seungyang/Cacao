@@ -10,13 +10,13 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </settings>  
 
 <typeAliases>
-	<typeAlias type="mvc.cacao.model.Choose" alias="choose"/>
-	<typeAlias type="mvc.cacao.model.Deliver" alias="deliver"/>
-	<typeAlias type="mvc.cacao.model.Info" alias="info"/>
-	<typeAlias type="mvc.cacao.model.Member" alias="member"/>
-	<typeAlias type="mvc.cacao.model.Order" alias="order"/>
-	<typeAlias type="mvc.cacao.model.QA" alias="qa"/>
-	<typeAlias type="mvc.cacao.model.Service" alias="service"/>
+	<typeAlias type="cacao.model.Choose" alias="choose"/>
+	<typeAlias type="cacao.model.Deliver" alias="deliver"/>
+	<typeAlias type="cacao.model.Info" alias="info"/>
+	<typeAlias type="cacao.model.Member" alias="member"/>
+	<typeAlias type="cacao.model.Order" alias="order"/>
+	<typeAlias type="cacao.model.QA" alias="qa"/>
+	<typeAlias type="cacao.model.Service" alias="service"/>
 	
 </typeAliases>
 
@@ -35,35 +35,35 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- 여러개의 mapper 설정 -->
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoLoginMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoMainMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoMyPageMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoMyPageMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoOrderMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoOrderMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoProductMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoRegisterMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoServiceMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoServiceMapper.xml"/> 
 </mappers>
 
 <mappers>     
-<mapper resource="mybatis/cacao/mapper/CacaoAdminMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoAdminMapper.xml"/> 
 </mappers>
 
 </configuration> 
