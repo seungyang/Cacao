@@ -16,7 +16,11 @@
 	<typeAlias type="cacao.model.vo.Member" alias="member"/>
 	<typeAlias type="cacao.model.vo.Order" alias="order"/>
 	<typeAlias type="cacao.model.vo.QA" alias="qa"/>
+<<<<<<< HEAD
 	<typeAlias type="cacao.model.vo.Service" alias="service"/>	
+=======
+	<typeAlias type="cacao.model.vo.Service" alias="service"/>
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
  </typeAliases>
 
  <environments default="development">       
@@ -33,6 +37,7 @@
 
 <!-- 여러개의 mapper 설정 -->
 
+<<<<<<< HEAD
  <mappers>     
 <!--  <mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/>  -->
 <!--  <mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/>  -->
@@ -45,5 +50,19 @@
 <!--  <mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/>   -->
  </mappers>
 
+=======
+<mappers>     
+<!-- <mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/>  -->
+<!-- <mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/> --> 
+<mapper resource="cacao/model/mapper/CacaoMyPageMapper.xml"/> 
+<!-- <mapper resource="cacao/model/mapper/CacaoOrderMapper.xml"/>  -->
+<!-- <mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/> -->
+<!-- <mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/> -->
+<!-- <mapper resource="cacao/model/mapper/CacaoServiceMapper.xml"/>  -->
+<!-- <mapper resource="cacao/model/mapper/CacaoAdminMapper.xml"/>  -->
+<!-- <mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/>  -->
+</mappers>
+
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 
 </configuration> 

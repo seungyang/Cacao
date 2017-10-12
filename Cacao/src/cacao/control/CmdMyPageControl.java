@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
+import cacao.cmd.mypage.CmdMyPagePick;
 
 
 
@@ -33,7 +34,7 @@ public class CmdMyPageControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
-		commandMap.put("main-page",	new CmdNull("cacaoMain.jsp") );
+		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 

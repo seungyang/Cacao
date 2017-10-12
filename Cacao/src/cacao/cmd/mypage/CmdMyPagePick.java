@@ -1,10 +1,14 @@
 package cacao.cmd.mypage;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Info;
+import cacao.service.CacaoMyPageService;
 
 
 
@@ -16,18 +20,15 @@ public class CmdMyPagePick implements Cmd {
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
-		// TODO Auto-generated method stub
-	
-				
 		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
+		// String email = request.getAttribute("");
+		
+		String email = "omy@naver.com";
 			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+		List<Info> infolist = CacaoMyPageService.getInstance().selectList(email);
 		
-		
+		request.setAttribute("infolist", infolist);
+				
 		return next;			
 	}
 
