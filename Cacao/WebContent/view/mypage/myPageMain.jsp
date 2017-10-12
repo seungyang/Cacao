@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<% String pjName = "/Cacao"; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,7 @@
 
 <title> 우리반 연습</title>
 <link rel="stylesheet" type="text/css" href="../../css/mypage/tabs.css" />
+<link rel="stylesheet" type="text/css" href="../../css/mypage/iframe.css" />
 </head>
 <body>
 
@@ -40,16 +43,17 @@
 					</ul>
 					<div class="tab-content">
 						<div class="tab-pane active" id="tab_default_1">
-							<iframe src="myPageOrder.jsp" frameborder="0"></iframe>
+							<iframe class="f_width" src="myPageOrder.jsp" frameborder="0" scrolling="no"></iframe>
 						</div>
 						<div class="tab-pane" id="tab_default_2">
-							<iframe src="myPagePick.jsp" frameborder="0"></iframe>
+							<iframe class="f_width" src="<%=pjName %>/MyPage?cmd=myPagePick-page" frameborder="0" scrolling="no"></iframe>
 						</div>
 						<div class="tab-pane" id="tab_default_3">
-							<iframe src="myPageCancelList.jsp" frameborder="0"></iframe>
+							<iframe class="f_width" src="myPageCancelList.jsp" frameborder="0" scrolling="no"></iframe>
 						</div>
 						<div class="tab-pane" id="tab_default_4">
-							<iframe src="myPageQAList.jsp" frameborder="0"></iframe>
+							<iframe class="f_width" src="myPageQAList.jsp" frameborder="0" scrolling="no"></iframe>
+							<a href="myPageQAForm.jsp">문의</a>
 						</div>
 					</div>
 				</div>

@@ -3,30 +3,13 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
 
-<mapper namespace="mapper.MyPageMapper">    
+<mapper namespace="mapper.CacaoMyPageMapper">    
 
-<select id="getGroupId" parameterType="hashmap" resultType="comment">
-   
-select 
-seq_group_id_article.nextval seq_group_id  
-from 
-dual  
-
+<select id="selectAll" parameterType="hashmap" resultType="info">
+select i_name, i_cost 
+from info
+where i_id in (select i_id from choose where m_email=#{email})
 </select>
-
-<insert id="insert" parameterType="rec">
-Insert 
-Into 
-article(ARTICLE_ID,GROUP_ID,SEQUENCE_NO,POSTING_DATE,READ_COUNT,WRITER_NAME,PASSWORD,TITLE,CONTENT)
-Values(seq_article_id_article.nextval,#{GroupId},#{UserId},sysdate,0,#{UserId},#{UserId},#{UserId},#{UserId})";
-</insert>  
-<!-- # : PreparedStatement효과, $: Statement 효과 -->
-
-<update id="update" parameterType="hashmap">
-	Update comment_tab Set user_id = #{UserId},comment_content = #{CommentContent},reg_date = sysdate  
-	Where comment_no = #{cId}
-</update>
-
 
 </mapper> 
  
