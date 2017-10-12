@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> 와우 </title>
+<title> 우리반 연습</title>
 </head>
 <body>
-현빈아 서운하다
+
 </body>
 </html>

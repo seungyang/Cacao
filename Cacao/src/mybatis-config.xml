@@ -36,34 +36,15 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 <mappers>     
 <mapper resource="cacao/model/mapper/CacaoLoginMapper.xml"/> 
-</mappers>
-
-<mappers>     
 <mapper resource="cacao/model/mapper/CacaoMainMapper.xml"/> 
-</mappers>
-
-<mappers>     
 <mapper resource="cacao/model/mapper/CacaoMyPageMapper.xml"/> 
-</mappers>
-
-<mappers>     
 <mapper resource="cacao/model/mapper/CacaoOrderMapper.xml"/> 
-</mappers>
-
-<mappers>     
-<mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/> 
-</mappers>
-
-<mappers>     
-<mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/> 
-</mappers>
-
-<mappers>     
+<mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/>
+<mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/>
 <mapper resource="cacao/model/mapper/CacaoServiceMapper.xml"/> 
-</mappers>
-
-<mappers>     
 <mapper resource="cacao/model/mapper/CacaoAdminMapper.xml"/> 
+<mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/> 
 </mappers>
+ 
 
 </configuration> 

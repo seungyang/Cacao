@@ -33,7 +33,7 @@ public class CmdProductControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
-		commandMap.put("main-page",	new CmdNull("cacaoMain.jsp") );
+		commandMap.put("pCateView-page",new CmdNull("pCateView.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
@@ -61,13 +61,13 @@ public class CmdProductControl extends HttpServlet {
 			cmdKey = "main-page";
 		}
 		Cmd cmd = null;
-
+		System.out.println("접근");
 		try{
 			
-			if( commandMap.containsKey( cmdKey ) ){
-				cmd = (Cmd)commandMap.get( cmdKey);
+			if( commandMap.containsKey(cmdKey) ){
+				cmd = (Cmd)commandMap.get(cmdKey);
 			}else{
-				throw new CmdException("지정할 명령어가 존재하지 않음");
+				throw new CmdException("Product 부분 - 지정할 명령어가 존재하지 않음");
 			}
 
 			nextPage = cmd.execute( request, response  );
@@ -75,7 +75,7 @@ public class CmdProductControl extends HttpServlet {
 		}catch( CmdException e ){
 			request.setAttribute("javax.servlet.jsp.jspException", e );
 			nextPage = error;
-			System.out.println("오류 : " + e.getMessage() );
+			System.out.println("Product 오류 : " + e.getMessage() );
 		}
 
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
