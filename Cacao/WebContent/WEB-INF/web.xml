@@ -46,14 +46,14 @@
 <!--     <url-pattern>/Login</url-pattern> -->
 <!--   </servlet-mapping> -->
   
-<!--   <servlet> -->
-<!--     <servlet-name>CmdMyPageControl</servlet-name> -->
-<!--     <servlet-class>cacao.control.CmdMyPageControl</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>CmdMyPageControl</servlet-name> -->
-<!--     <url-pattern>/MyPage</url-pattern> -->
-<!--   </servlet-mapping> -->
+  <servlet>
+    <servlet-name>CmdMyPageControl</servlet-name>
+    <servlet-class>cacao.control.CmdMyPageControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdMyPageControl</servlet-name>
+    <url-pattern>/MyPage</url-pattern>
+  </servlet-mapping>
   
 <!--   <servlet> -->
 <!--     <servlet-name>CmdOrderControl</servlet-name> -->
