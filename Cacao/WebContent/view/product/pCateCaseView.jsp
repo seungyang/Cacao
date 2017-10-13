@@ -61,6 +61,8 @@
 	height: 5000px;
 }
 
+
+
 .productimg {
 	margin-left: 30%;
 	margin-right: 30%;
@@ -102,7 +104,7 @@
 			<!--/.carousel-indicators-->
 
 			<div class="carousel-inner">
-
+			
 				<div class="item active"
 					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20170901_ribbonryan_Rbanner_W.gif');">
 

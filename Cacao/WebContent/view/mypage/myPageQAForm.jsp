@@ -90,7 +90,7 @@ $(function(){
 <div class="form-group">
   <label class="col-md-4 control-label" for="qContent">내용</label>  
   <div class="col-md-5">
-  <input id="qContent" name="qContent" type="text" class="form-control input-md">
+  <textarea  id="qContent" class="form-control input-md" name="qContent" rows="10" cols="20"></textarea>
   </div>
 </div>
 

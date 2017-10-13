@@ -11,6 +11,11 @@
 
 <title>카카오프렌즈</title>
 
+<!-- combobox css -->
+
+<link rel="stylesheet" type="text/css" href="/Cacao/css/product/easydropdown.css"/>
+
+
 <!--
         Google Fonts
         ============================================= -->
@@ -37,28 +42,55 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
 
 
+
+
 <!-- product페이지 css -->
-
-
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
 
 <!-- Modernizer Script for old Browsers -->
 <script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
+
+<!-- combobox js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
+<style type="text/css">
+#drop{
+	float : left; 
+	margin-left : 48.5%;
+
+}
+#print{
+	float : left;
+
+}
+</style>
+
 </head>
 <body>
+	<img src="/Cacao/img/product/ProductHeader.PNG" width=100%>
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
 	
 	
 	<section id="portfolio" style="margin-top: 10%">
-   <div class="container">
-    <pre>총 number 개의 상품이 조회되었습니다                                                                                                                  <select>
+   
+   
+<div class="container">
+<div id="print">
+<h3>총 number 개의 상품이 조회되었습니다 </h3> 
+</div>
+<div id="drop">
+<select class="dropdown">
+  <option value="" class="label">검색기준</option>  
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="opel">Opel</option>
   <option value="audi">Audi</option>
 </select>
-</pre>
+</div>
+</div>
+
+<div class="container">
 	</br>
         <div class="row" style="margin-top: 3.5%;">
           <div class="col-sm-4 portfolio-item">
