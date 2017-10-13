@@ -8,8 +8,8 @@
 <title> 우리반 연습</title>
 </head>
 <body>
+<!-- 	메인 카카오 페이지로 이동 -->
 	<% response.sendRedirect(pjName+"/Main?cmd=main-page"); %>
-	
 
 </body>
 </html>
