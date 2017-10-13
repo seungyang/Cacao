@@ -24,6 +24,10 @@ public class CacaoService {
 		return repo.getNoticeList();
 	}
 	
+	public List<Service> getFaqList(){
+		return repo.getFaqList();
+	}
+	
 //	public int insert( BoardRec rec ) {
 //		return repo.insert( rec );
 //	}

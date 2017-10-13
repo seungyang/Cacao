@@ -53,11 +53,11 @@
 
 </head>
 <body>
-
+<img class='img_set' src="/Cacao/img/service/service_img.png"/>
 <jsp:include page="/view/include/header.jsp"></jsp:include>
 	
 	
-	<section id="portfolio" style="margin-top: 10%">
+	<section id="portfolio">
 <div class="container">
     <div class="row">
 		<div class="col-md-12">

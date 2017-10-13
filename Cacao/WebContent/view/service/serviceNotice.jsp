@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ page import="java.util.*" %>
     <%@ page import="cacao.model.vo.*" %>
-    <%List<Service> noticeList = (List) request.getAttribute("result"); %>
+    <%List<Service> noticeList = (List) request.getAttribute("noticeResult"); %>
 <!DOCTYPE html>
 <html>
 <head>

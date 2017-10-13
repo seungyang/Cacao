@@ -37,11 +37,9 @@ public class CmdMyPageControl extends HttpServlet {
 		commandMap.put("main-page",new CmdNull("myPageMain.jsp")); 
 		commandMap.put("myPageOrder-page",new CmdNull("myPageOrder.jsp"));
 		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp") );
-<<<<<<< HEAD
 		commandMap.put("myPageCancelList-page",new CmdNull("myPageCancelList.jsp"));
 		commandMap.put("myPageQAList-page",new CmdNull("myPageQAList.jsp"));
 		commandMap.put("myPageQAForm-page",new CmdNull("myPageQAForm.jsp"));
-=======
 		commandMap.put("myPageMain-page", new CmdNull("myPageMain.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
@@ -50,7 +48,6 @@ public class CmdMyPageControl extends HttpServlet {
 //		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
 		// 나머지도 추가하기		
 		
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao/
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

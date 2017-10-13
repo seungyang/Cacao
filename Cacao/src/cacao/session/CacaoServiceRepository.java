@@ -35,7 +35,15 @@ public class CacaoServiceRepository {
 			sess.close();
 		}
 	}
-	
+	public List<Service> getFaqList(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectFaq");
+		}finally {
+			sess.close();
+		}
+	}
 //	public Integer insertComment(Comment c){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		

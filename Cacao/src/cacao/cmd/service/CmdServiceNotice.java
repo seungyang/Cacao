@@ -26,7 +26,7 @@ public class CmdServiceNotice implements Cmd {
 		
 			List<Service> noticeInfo = CacaoService.getInstance().getNoticeList();
 			//int resultCnt = 0;
-			request.setAttribute("result", noticeInfo);
+			request.setAttribute("noticeResult", noticeInfo);
 		
 		
 		return next;			

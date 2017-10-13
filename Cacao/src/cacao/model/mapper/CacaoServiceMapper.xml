@@ -10,5 +10,10 @@ select *
 from service 
 where s_kind='곻지사항'
 </select>
+<select id="selectFaq" parameterType="hashmap" resultType="service">
+select * 
+from service 
+where s_kind='FAQ'
+</select>
 </mapper> 
  
