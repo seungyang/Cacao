@@ -136,17 +136,17 @@
 	<section id="sec">
 		<div style="height: 70%">
 			<div class="productimg">
-				<img src="../../img/product/portfolio/caca1.jpg" width=500
+				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
 					height=500 />
 
 			</div>
 			<div class="productimg">
-				<img src="../../img/product/portfolio/caca1.jpg" width=500
+				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
 					height=500 />
 
 			</div>
 			<div class="productimg">
-				<img src="../../img/product/portfolio/caca1.jpg" width=500
+				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
 					height=500 />
 			</div>
 

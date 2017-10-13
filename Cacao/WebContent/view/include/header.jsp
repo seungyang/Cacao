@@ -33,7 +33,7 @@
 
 				<!-- logo -->
 				<h1 class="navbar-brand">
-					<a href="${pageContext.request.contextPath}/index.jsp" class="link_logo">
+					<a href="/Cacao/Main?cmd=main-page"" class="link_logo">
 						<span class="tit_friends tit_logo">KAKAO FRIENDS</span>			
 					</a>
 				</h1>
@@ -45,8 +45,8 @@
 				<ul id="nav" class="nav navbar-nav">
 					<li><a href="${pageContext.request.contextPath}/myPage/mypage.jsp" class="link_mb">캐릭터</a></li>
 					<li><a href="/Cacao/Product?cmd=pCateView-page"class="link_mb">카테고리</a></li>
-					<li><a href="portfolio/portfolio.jsp"class="link_mb">마이페이지</a></li>
-					<li><a href="board/board.jsp?page=1"class="link_mb">고객센터</a></li>
+					<li><a href="/Cacao/MyPage?cmd=myPageMain-page"class="link_mb">마이페이지</a></li>
+					<li><a href="/Cacao/Service?cmd=sMain-page"class="link_mb">고객센터</a></li>
 					<li><a href="guest/guest.jsp"class="link_mb">매장안내</a></li>
 					<li><a href="download/download.jsp"class="link_mb">뮤지엄</a></li>
 		

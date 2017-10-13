@@ -5,18 +5,59 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords"
+   content="one page, business template, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title> 우리반 연습</title>
+<!--
+        Google Fonts
+        ============================================= -->
+<link
+   href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+   rel="stylesheet" type="text/css">
 
+<!--
+        CSS
+        ============================================= -->
+<!-- Fontawesome -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+<!-- Fancybox -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
+<!-- owl carousel -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css">
+<!-- Animate -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
+<!-- Main Responsive -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
+
+
+<!-- product페이지 css -->
+
+
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
+
+<!-- Modernizer Script for old Browsers -->
+<script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Cacao/css/service/service_main.css" />
 
 </head>
 <body>
 
+<jsp:include page="/view/include/header.jsp"></jsp:include>
+	
+	
+	<section id="portfolio" style="margin-top: 10%">
 <div class="container">
     <div class="row">
 		<div class="col-md-12">
@@ -64,6 +105,8 @@
 <script type="text/javascript">
 
 </script>
+</section>
+<jsp:include page="/view/include/footer.jsp"></jsp:include>
 
 </body>
 </html>

@@ -38,6 +38,7 @@ public class CmdServiceControl extends HttpServlet {
 		commandMap.put("main-page",	new CmdNull("serviceMain.jsp") );
 		commandMap.put("notice-page",	new CmdServiceNotice("serviceNotice.jsp") );
 		commandMap.put("faq-page",new CmdServiceFAQ("serviceFAQ.jsp")); 
+		commandMap.put("sMain-page",	new CmdNull("sMain.jsp") );
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
 //		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
