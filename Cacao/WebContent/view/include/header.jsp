@@ -1,21 +1,98 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-<%
-	//String loginId =(String)session.getAttribute("loginId");
-	String loginId = null;
-	Cookie[] cookies = request.getCookies();
-	if (cookies != null) {
-		for (Cookie cookie : cookies) {
-			if (cookie.getName().equalsIgnoreCase("loginId")) {
-				loginId = cookie.getValue();
-			}
-		}
-	}
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+<style type="text/css">
+#imaginary_container{
+    margin-top:20%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+
+
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+    padding: 20px 0px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 0;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  color: #222;
+  padding: 3px 5px;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 18px;
+  color: #ff3546;
+  padding: 5px 60px 5px 5px;
+  line-height: 30px;
+}
+
+.carousel-control {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+
+}
+.left.carousel-control {
+  right: 30px;
+  left: inherit;
+}
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right {
+  font-size: 12px;
+  background-color: #fff;
+  line-height: 30px;
+  text-shadow: none;
+  color: #333;
+  border: 1px solid #ddd;
+}
+</style>
 </head>
 <body>
 	<header id="navigation" class="navbar-fixed-top">
@@ -32,9 +109,9 @@
 				<!-- /responsive nav button -->
 
 				<!-- logo -->
-				<h1 class="navbar-brand">
+				<h1 class="navbar-brand" style="margin-left: -10em;margin-top: 0.5em" >
 					<a href="/Cacao/Main?cmd=main-page"" class="link_logo">
-						<span class="tit_friends tit_logo">KAKAO FRIENDS</span>			
+						<span class="tit_friends tit_logo" >KAKAO FRIENDS</span>			
 					</a>
 				</h1>
 				<!-- /logo -->
@@ -43,14 +120,216 @@
 			<nav class="collapse navigation navbar-collapse navbar-center"
 				role="navigation">
 				<ul id="nav" class="nav navbar-nav">
-					<li><a href="${pageContext.request.contextPath}/myPage/mypage.jsp" class="link_mb">캐릭터</a></li>
-					<li><a href="/Cacao/Product?cmd=pCateView-page"class="link_mb">카테고리</a></li>
-					<li><a href="/Cacao/MyPage?cmd=myPageMain-page"class="link_mb">마이페이지</a></li>
-					<li><a href="/Cacao/Service?cmd=sMain-page"class="link_mb">고객센터</a></li>
-					<li><a href="guest/guest.jsp"class="link_mb">매장안내</a></li>
-					<li><a href="download/download.jsp"class="link_mb">뮤지엄</a></li>
-		
+						<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">캐릭터 <span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/라이언.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/무지.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/어피치.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/프로도.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/네오.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/튜브.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/제이지.png"/></li>
+						</ul>
+					</li>
+					<li class="col-sm-1">
+						<ul>
+							<li><img src="/Cacao/img/main/콘.png"/></li>
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+			
+			
+				<li class="dropdown mega-dropdown">
+				<a href="/Cacao/Product?cmd=pCateView-page" class="dropdown-toggle" data-toggle="dropdown">카테고리<span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">인형/피규어</li>
+							<li><a href="#">미니인형</a></li>
+                            <li><a href="#">25cm/35cm인형</a></li>
+                            <li><a href="#">대형인형</a></li>
+							<li><a href="#">키체인인형</a></li>
+							<li><a href="#">피규어</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">여행/레저</li>
+                            <li><a href="#">여행</a></li>
+							<li><a href="#">골프</a></li>
+							<li><a href="#">물놀이</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">리빙</li>
+							<li><a href="#">컵/텀블러</a></li>
+                            <li><a href="#">패브릭</a></li>
+                            <li><a href="#">탈취/방향제</a></li>
+							<li><a href="#">주방용품</a></li>
+							<li><a href="#">미용/욕실용품</a></li>
+							<li><a href="#">생활소품</a></li>
+							<li><a href="#">푸드</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">생활테크</li>
+                            <li><a href="#">휴대폰 케이스</a></li>
+							<li><a href="#">휴대폰 악세서리</a></li>
+							<li><a href="#">노트북 악세서리</a></li>
+							<li><a href="#">소형 전자</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">잡화</li>
+							<li><a href="#">신발</a></li>
+                            <li><a href="#">파우치/지갑/가방</a></li>
+                            <li><a href="#">패션소품</a></li>
+							<li><a href="#">우산</a></li>
+							<li><a href="#">모자</a></li>
+							<li><a href="#">교통카드</a></li>
+							<li><a href="#">시즌소품</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">유아</li>
+                            <li><a href="#">식기</a></li>
+							<li><a href="#">잡화</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">의류</li>
+							<li><a href="#">여성의류</a></li>
+                            <li><a href="#">남성의류</a></li>
+                            <li><a href="#">상의</a></li>
+							<li><a href="#">잠옷</a></li>
+							<li><a href="#">양말</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">뮤지엄</li>
+                            <li><a href="#">뮤지엄</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">쥬얼리</li>
+							<li><a href="#">귀걸이</a></li>
+                            <li><a href="#">케이스</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">수비니어</li>
+                            <li><a href="#">수비니어</a></li>
+
+						</ul>
+					</li>
+					<li class="col-sm-2">
+						<ul>
+							<li class="dropdown-header">문구</li>
+							<li><a href="#">스티커</a></li>
+                            <li><a href="#">필기구</a></li>
+                            <li><a href="#">노트/메모</a></li>
+							<li><a href="#">카트/엽서</a></li>
+							<li><a href="#">파일</a></li>
+							<li><a href="#">데스크 소품</a></li>
+							<li><a href="#">선물 포장</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">오마이프렌즈</li>
+                            <li><a href="#">이지웨어</a></li>
+							<li><a href="#">액티브웨어</a></li>
+							<li><a href="#">악세서리</a></li>
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+			
+			
+			
+			<li class="dropdown mega-dropdown">
+				<a href="/Cacao/MyPage?cmd=main-page" class="dropdown-toggle" data-toggle="dropdown">마이페이지<span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					
+					<li class="col-sm-3">
+						<ul>
+							<li><h4>로그인</h4></li>
+							<li><a href="#"><h4>주문내역</h4></a></li>
+                            <li><a href="#"><h4>찜</h4></a></li>
+                            <li><a href="#"><h4>취소내역</h4></a></li>
+							<li><a href="#"><h4>1:1문의</h4></a></li>
+
+						</ul>
+					</li>
+				</ul>				
+			</li>
+            <li class="dropdown mega-dropdown">
+    			<a href="/Cacao/Service?cmd=main-page" class="dropdown-toggle" data-toggle="dropdown">고객센터<span class="caret"></span></a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-3">
+    					<ul>
+							<li><h4>공지사항</h4></li>
+							<li><a href="#"><h4>FAQ</h4></a></li>
+                            
+						</ul>
+					</li>
+				
+                   
+				</ul>				
+			</li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">뮤지엄</a></li>
+			
 				</ul>
+			<ul class="nav navbar-nav navbar-right">
+        
+         <li>
+        
+       
+           
+                <div class="input-group stylish-input-group" style="width:10em; margin-top:15%">
+                    <input type="text" class="form-control"  placeholder="Search"  >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+           
+       
+	 </li>
+     	 
+       
+         
+        <li><a href="#">login</a></li>
+      </ul>	
+			
+        
+        
+      
+      
 			</nav>
 			
 			<!-- /main nav -->
