@@ -121,7 +121,7 @@ $(document).ready(function(){
 				role="navigation">
 				<ul id="nav" class="nav navbar-nav">
 						<li class="dropdown mega-dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">캐릭터 <span class="caret"></span></a>				
+				<a onclick="location.href='/Cacao/Product?cmd=pCateView-page'" class="dropdown-toggle" data-toggle="dropdown">캐릭터 <span class="caret"></span></a>				
 				<ul class="dropdown-menu mega-dropdown-menu">
 					
 					<li class="col-sm-1">
@@ -170,7 +170,7 @@ $(document).ready(function(){
 			
 			
 				<li class="dropdown mega-dropdown">
-				<a href="/Cacao/Product?cmd=pCateView-page" class="dropdown-toggle" data-toggle="dropdown">카테고리<span class="caret"></span></a>				
+				<a onclick="location.href='/Cacao/Product?cmd=pCateView-page'" class="dropdown-toggle" data-toggle="dropdown">카테고리<span class="caret"></span></a>				
 				<ul class="dropdown-menu mega-dropdown-menu">
 					
 					<li class="col-sm-2">
@@ -270,7 +270,7 @@ $(document).ready(function(){
 			
 			
 			<li class="dropdown mega-dropdown">
-				<a href="/Cacao/MyPage?cmd=main-page" class="dropdown-toggle" data-toggle="dropdown">마이페이지<span class="caret"></span></a>				
+				<a onclick="location.href='/Cacao/MyPage?cmd=main-page'" class="dropdown-toggle" data-toggle="dropdown">마이페이지 <span class="caret"></span></a>				
 				<ul class="dropdown-menu mega-dropdown-menu">
 					
 					<li class="col-sm-3">
@@ -278,7 +278,7 @@ $(document).ready(function(){
 							<li><h4>로그인</h4></li>
 							<li><a href="#"><h4>주문내역</h4></a></li>
                             <li><a href="#"><h4>찜</h4></a></li>
-                            <li><a href="#"><h4>취소내역</h4></a></li>
+                            <li><a href="#"><h4>취소및교환</h4></a></li>
 							<li><a href="#"><h4>1:1문의</h4></a></li>
 
 						</ul>
@@ -286,7 +286,7 @@ $(document).ready(function(){
 				</ul>				
 			</li>
             <li class="dropdown mega-dropdown">
-    			<a href="/Cacao/Service?cmd=main-page" class="dropdown-toggle" data-toggle="dropdown">고객센터<span class="caret"></span></a>				
+    			<a onclick="location.href='/Cacao/Service?cmd=main-page'" class="dropdown-toggle" data-toggle="dropdown">고객센터<span class="caret"></span></a>				
 				<ul class="dropdown-menu mega-dropdown-menu">
 					<li class="col-sm-3">
     					<ul>

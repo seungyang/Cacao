@@ -54,6 +54,7 @@
 <!-- combobox js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
+
 <style type="text/css">
 #drop{
 	float : left; 
@@ -80,7 +81,7 @@
 <h3>총 number 개의 상품이 조회되었습니다 </h3> 
 </div>
 <div id="drop">
-<select class="dropdown">
+<select class="dropdown1">
   <option value="" class="label">검색기준</option>  
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
