@@ -11,5 +11,14 @@ from info
 where i_id in (select i_id from choose where m_email=#{email})
 </select>
 
+<select id="qaList" parameterType="hashmap" resultType="qa">
+select q_cate, q_title, q_content, q_status, q_answer
+from qa
+where m_email=#{email}
+</select>
+<insert id="insertQA" parameterType="qa">
+insert into qa(q_id, m_email, q_cate, q_title, q_content, q_file)
+values(SEQ_QA_ID.NEXTVAL, #{mEmail}, #{qCate}, #{qTitle}, #{qContent}, #{qFile})
+</insert>
 </mapper> 
  

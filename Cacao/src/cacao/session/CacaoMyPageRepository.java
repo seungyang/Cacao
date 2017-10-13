@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import cacao.model.vo.Info;
+import cacao.model.vo.QA;
 
 
 public class CacaoMyPageRepository {
@@ -37,25 +38,37 @@ public class CacaoMyPageRepository {
 			sess.close();
 		}
 	}
-//	
-//	public Integer insertComment(Comment c){
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		int result =  sess.insert(namespace + ".insertComment",c);
-//		if(result > 0) {
-//			sess.commit();
-//		}else {
-//			sess.rollback();
-//		}
-//		return result;
-//		}finally {
-//			sess.close();
-//		}	
-//			
-//		
-//	}
+	
+	public List<QA> getQaList(String email){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("email", email);
+		return sess.selectList(namespace+".qaList",hash);
+		}finally {
+			sess.close();
+		}
+		
+	}
+	
+	public Integer getInsert(QA q){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".insertQA",q);
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		return result;
+		}finally {
+			sess.close();
+		}	
+			
+		
+	}
 //
 //	public Comment selectCommentByPk(Long cId) {
 //		SqlSession sess = getSqlSessionFactory().openSession();

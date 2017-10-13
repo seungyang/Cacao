@@ -3,6 +3,7 @@ package cacao.service;
 import java.util.List;
 
 import cacao.model.vo.Info;
+import cacao.model.vo.QA;
 import cacao.session.CacaoMyPageRepository;
 
 
@@ -22,18 +23,15 @@ public class CacaoMyPageService {
 	 
 	CacaoMyPageRepository repo = new CacaoMyPageRepository();
 	
-//	public int getGroupId(){
-//		return repo.getGroupId();
-//	}
-//	
-//	public int insert( BoardRec rec ) {
-//		return repo.insert( rec );
-//	}
-//	
 	public List<Info> selectList(String email) {
 		return repo.selectList(email);
 	}
-//	
+	public List<QA> getQaList(String email){
+		return repo.getQaList(email);		
+	}
+	public int getInsert(QA q){
+		return repo.getInsert(q);
+	}
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);
 //	}
