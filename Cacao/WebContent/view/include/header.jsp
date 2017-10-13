@@ -30,7 +30,6 @@ $(document).ready(function(){
     background: white !important; 
 }
 .stylish-input-group .form-control{
-<<<<<<< HEAD
 	border-right:0; 
 	box-shadow:0 0 0; 
 	border-color:#ccc;
