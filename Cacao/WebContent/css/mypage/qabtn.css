@@ -9,12 +9,25 @@ GENERIC BUTTON STYLES
 
 .col {width: 150px;}
 .btn {font-size: 18px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
-display: inline-block;zoom: 1; color: #fff; text-align: center; position:relative; 
+display: inline-block; zoom: 1; color: #fff; text-align: center; position:relative; 
 -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; 
 transition: border .25s linear, color .25s linear, background-color .25s linear;}
+
+.btn2 {font-size: 18px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
+display: inline-block; zoom: 1; color: #000; text-align: center; position:relative; 
+-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; 
+transition: border .25s linear, color .25s linear, background-color .25s linear;
+border: 1px solid black;}
 
 /*SUNFLOWER BUTTON STYLES*/		
 .btn.btn-sunflower{background-color: #ffda01; border-color: #ffda01; -webkit-box-shadow: 0 3px 0 #b19001; box-shadow: 0 3px 0 #b19001;}
 .btn.btn-sunflower:hover{background-color:#e3ba02;}
 .btn.btn-sunflower:active{top: 3px; outline: none; -webkit-box-shadow: none; box-shadow: none;}
+
+.btn2.btn-sunflower2{background-color: #ffffff; border-color: #ffffff; -webkit-box-shadow: 0 3px 0 #b19001; box-shadow: 0 3px 0 #b19001;}
+.btn2.btn-sunflower2:hover{background-color:#ffffff;}
+.btn2.btn-sunflower2:active{top: 3px; outline: none; -webkit-box-shadow: none; box-shadow: none;}
+
+.btn_wrap{width:685px; float:right;}
+.btn_wrap div{float:left; margin-right:15px;}
 

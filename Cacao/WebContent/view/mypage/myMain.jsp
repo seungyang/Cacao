@@ -1,15 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% String pjName = "/Cacao"; %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<script type="text/javascript"></script>
-<title> 우리반 연습</title>
+<title> 와우 </title>
 </head>
 <body>
-1:1문의
-
+	<% response.sendRedirect(pjName+"/MyPage?cmd=main-page"); %>
 </body>
 </html>

@@ -34,14 +34,12 @@ public class CmdMyPageControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
+		commandMap.put("main-page",new CmdNull("myPageMain.jsp")); 
+		commandMap.put("myPageOrder-page",new CmdNull("myPageOrder.jsp"));
 		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp") );
-//		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
-//		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
-//		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
-//		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
-//		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
-		// 나머지도 추가하기		
-		
+		commandMap.put("myPageCancelList-page",new CmdNull("myPageCancelList.jsp"));
+		commandMap.put("myPageQAList-page",new CmdNull("myPageQAList.jsp"));
+		commandMap.put("myPageQAForm-page",new CmdNull("myPageQAForm.jsp"));
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

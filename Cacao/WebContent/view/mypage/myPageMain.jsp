@@ -1,7 +1,32 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<% String pjName = "/Cacao"; %>
+<% 	String pjName = "/Cacao";
+
+	String pageNum = request.getParameter("page");
+
+	String class1 = "1";
+	String class2 = "2";
+	String class3 = "3";
+	String class4 = "4";
+	
+	if(pageNum==null){
+		pageNum = "1";
+	}
+	switch(pageNum){
+	case "1": class1 = "active"; 
+		break;
+	case "2": class2 = "active"; 
+		break;
+	case "3": class3 = "active"; 
+		break;
+	case "4": class4 = "active"; 
+		break;
+	
+	
+	}
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +36,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title> 우리반 연습</title>
-<link rel="stylesheet" type="text/css" href="../../css/mypage/tabs.css" />
-<link rel="stylesheet" type="text/css" href="../../css/mypage/iframe.css" />
-<link rel="stylesheet" type="text/css" href="../../css/mypage/qabtn.css" />
+
+<link rel="stylesheet" type="text/css" href="<%=pjName %>/css/mypage/tabs.css" />
+<link rel="stylesheet" type="text/css" href="<%=pjName %>/css/mypage/iframe.css" />
+<link rel="stylesheet" type="text/css" href="<%=pjName %>/css/mypage/qabtn.css" />
+
+
+<script type="text/javascript">
+	$(function(){
+		$('#qaBtn').click(function(){
+			event.preventDefault();
+			/* window.location = 'myPageQAForm.jsp'; */
+			window.location = '<%=pjName %>/MyPage?cmd=myPageQAForm-page';
+		});
+	});	
+</script>
 </head>
 <body>
 
@@ -25,37 +62,37 @@
 			<div class="tabbable-panel">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
-						<li class="active">
+						<li class="<%=class1 %>">
 							<a href="#tab_default_1" data-toggle="tab">
 							주문내역 </a>
 						</li>
-						<li>
+						<li class="<%=class2 %>">
 							<a href="#tab_default_2" data-toggle="tab">
 							찜 </a>
 						</li>
-						<li>
+						<li class="<%=class3 %>">
 							<a href="#tab_default_3" data-toggle="tab">
 							취소내역</a>
 						</li>
-						<li>
+						<li class="<%=class4 %>">
 							<a href="#tab_default_4" data-toggle="tab">
 							1:1 문의 </a>
 						</li>
 					</ul>
 					<div class="tab-content">
-						<div class="tab-pane active" id="tab_default_1">
-							<iframe class="f_width" src="myPageOrder.jsp" frameborder="0" scrolling="no"></iframe>
+						<div class="tab-pane <%=class1 %>" id="tab_default_1">
+							<iframe class="f_width" src="<%=pjName %>/MyPage?cmd=myPageOrder-page" frameborder="0" scrolling="no"></iframe>
 						</div>
-						<div class="tab-pane" id="tab_default_2">
+						<div class="tab-pane <%=class2 %>" id="tab_default_2">
 							<iframe class="f_width" src="<%=pjName %>/MyPage?cmd=myPagePick-page" frameborder="0" scrolling="no"></iframe>
 						</div>
-						<div class="tab-pane" id="tab_default_3">
-							<iframe class="f_width" src="myPageCancelList.jsp" frameborder="0" scrolling="no"></iframe>
+						<div class="tab-pane <%=class3 %>" id="tab_default_3">
+							<iframe class="f_width" src="<%=pjName %>/MyPage?cmd=myPageCancelList-page" frameborder="0" scrolling="no"></iframe>
 						</div>
-						<div class="tab-pane" id="tab_default_4">
-							<iframe class="f_width" src="myPageQAList.jsp" frameborder="0" scrolling="no"></iframe>
-							<div class="col three">				
-								<a href="#" class="btn btn-sunflower">문의하기</a>			
+						<div class="tab-pane <%=class4 %>" id="tab_default_4">
+							<iframe class="f_width" src="<%=pjName %>/MyPage?cmd=myPageQAList-page" frameborder="0" scrolling="no"></iframe>
+							<div class="col three" style="float: right;">				
+								<a href="#" class="btn btn-sunflower" id="qaBtn">문의하기</a>			
 							</div>
 						</div>
 					</div>
@@ -65,15 +102,6 @@
 		</div>
 	</div>
 </div>
-<br>
-<br>
 
-<br>
-<br>
-
-
-<script type="text/javascript">
-
-</script>
 </body>
 </html>
