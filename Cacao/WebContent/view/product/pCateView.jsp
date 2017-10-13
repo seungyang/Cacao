@@ -68,7 +68,7 @@
 
 </head>
 <body>
-	<img src="/Cacao/img/product/ProductHeader.PNG" width=100%>
+	<img src="/Cacao/img/product/product_img.png" width=100%>
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
 	
 	
