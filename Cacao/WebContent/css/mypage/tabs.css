@@ -2,6 +2,7 @@
 .tabbable-panel {
   border:1px solid #eee;
   padding: 10px;
+  margin-top: -70px;
 }
 
 /* Default mode */
@@ -53,4 +54,8 @@
 }
 .portlet .tabbable-line > .tab-content {
   padding-bottom: 0;
+}
+
+.img_set{
+	width: 100%;
 }

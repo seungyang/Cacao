@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String pjName = "/Cacao";
+   String pjName = "/Cacao";
 %>
 <!DOCTYPE html>
 <html>
@@ -15,11 +15,11 @@
 
 <script type="text/javascript">
 $(function(){
-	$('#qaCencel').click(function(){
-		event.preventDefault();
-		window.location = '/Cacao/MyPage?cmd=main-page&page=4';
-	});
-});	
+   $('#qaCencel').click(function(){
+      event.preventDefault();
+      window.location = '/Cacao/MyPage?cmd=main-page&page=4';
+   });
+});   
 </script>
 
 
@@ -90,7 +90,7 @@ $(function(){
 <div class="form-group">
   <label class="col-md-4 control-label" for="qContent">내용</label>  
   <div class="col-md-5">
-  <input id="qContent" name="qContent" type="text" class="form-control input-md">
+  <textarea  id="qContent" class="form-control input-md" name="qContent" rows="10" cols="20"></textarea>
   </div>
 </div>
 
@@ -108,12 +108,12 @@ $(function(){
 </div>
 
 <div class="btn_wrap">
-	<div class="col three">				
-		<a href="#" class="btn2 btn-sunflower2" id="qaCencel">취소하기</a>			
-	</div>
-	<div class="col three">				
-		<a href="#" class="btn btn-sunflower" id="qaInsert">등록하기</a>			
-	</div>
+   <div class="col three">            
+      <a href="#" class="btn2 btn-sunflower2" id="qaCencel">취소하기</a>         
+   </div>
+   <div class="col three">            
+      <a href="#" class="btn btn-sunflower" id="qaInsert">등록하기</a>         
+   </div>
 </div>
 </fieldset>
 
