@@ -12,20 +12,27 @@ import cacao.service.CacaoMyPageService;
 
 
 
-public class CmdMyPageQAList implements Cmd {
+public class CmdMyPageQASave implements Cmd {
 	private String next;
 
-	public CmdMyPageQAList( String _next ){
+	public CmdMyPageQASave( String _next ){
 		next = _next;
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 
+		QA q = new QA();
 		String email = "omy@naver.com";
 		
-		List<QA> qaList = CacaoMyPageService.getInstance().getQaList(email);
+		q.setmEmail(email);
+		q.setqCate(request.getParameter("qCate"));
+		q.setqTitle(request.getParameter("qTitle"));
+		q.setqContent(request.getParameter("qContent"));
+		q.setqFile(request.getParameter("qFile"));
+				
+		int result = CacaoMyPageService.getInstance().getInsert(q);
 		
-		request.setAttribute("qaResult", qaList);
+		request.setAttribute("qaSave", result);
 		
 		return next;			
 	}
