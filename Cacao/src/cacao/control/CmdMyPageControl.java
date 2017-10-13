@@ -47,7 +47,7 @@ public class CmdMyPageControl extends HttpServlet {
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
 //		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
 		// 나머지도 추가하기		
-		
+
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
