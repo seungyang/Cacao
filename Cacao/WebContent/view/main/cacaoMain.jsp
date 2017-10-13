@@ -107,55 +107,55 @@
         <div class="row" style="margin-top: 3.5%;">
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
           </div>
              <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
           </div>
              <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
@@ -163,22 +163,22 @@
           
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
               
@@ -186,11 +186,11 @@
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
-                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
+                          <img class="img-fluid" src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg" alt="" style="height: 240px; width: 300px;">
             
               <div class="caption">
                 <div class="caption-content">
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/main/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>
             </a>
@@ -204,44 +204,45 @@
  <section id="portfolio" style="margin-top: 5%">
       <div class="container">
         <div class="row" style="margin-top: 3.5%;">
-          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
+          
+          <div class="col-sm-3 portfolio-item" style="margin-bottom: 20px;">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_muzi.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
+          <div class="col-sm-3 portfolio-item" style="margin-bottom: 20px;">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_neo.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
+          <div class="col-sm-3 portfolio-item" style="margin-bottom: 20px;">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_ryan.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
+          <div class="col-sm-3 portfolio-item" style="margin-bottom: 20px;">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_tube.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
 
 
-  <div class="col-sm-4 portfolio-item">
+  			<div class="col-sm-3 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/i_apeach.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_con.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_frodo.png" alt="" style="height: 120px; width: 300px;">
             </a>
           </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                           <img class="img-fluid" src="${pageContext.request.contextPath}/img/cacao/ico_jayg.png" alt="" style="height: 120px; width: 300px;">
             </a>
