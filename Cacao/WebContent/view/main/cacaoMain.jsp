@@ -59,7 +59,7 @@
 	<!--
         Home Slider
         ==================================== -->
-	<section id="home">
+	<section id="home" >
 		<div id="home-carousel" class="carousel slide" data-interval="false">
 			<ol class="carousel-indicators">
 				<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
@@ -68,7 +68,7 @@
 			</ol>
 			<!--/.carousel-indicators-->
 
-			<div class="carousel-inner">
+			<div class="carousel-inner" ">
 
 				<div class="item active"
 					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20170901_ribbonryan_Rbanner_W.gif');">
@@ -97,6 +97,7 @@
 
 		</div>
 	</section>
+	
 	<div id="background">
 	
 	
