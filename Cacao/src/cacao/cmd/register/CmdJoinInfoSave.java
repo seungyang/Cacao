@@ -31,7 +31,7 @@ public class CmdJoinInfoSave implements Cmd {
 //			m.setmSex(request.getParameter("mSex"));
 			
 			
-			System.out.println("email:"+m.getmEmail());
+//			System.out.println("email:"+m.getmEmail());
 			
 			int result = CacaoRegisterService.getInstance().getInsert(m);
 			

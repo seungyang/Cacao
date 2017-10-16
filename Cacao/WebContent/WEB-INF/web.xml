@@ -37,14 +37,14 @@
     <url-pattern>/Service</url-pattern>
   </servlet-mapping>
   
-<!--   <servlet> -->
-<!--     <servlet-name>CmdLoginControl</servlet-name> -->
-<!--     <servlet-class>cacao.control.CmdLoginControl</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>CmdLoginControl</servlet-name> -->
-<!--     <url-pattern>/Login</url-pattern> -->
-<!--   </servlet-mapping> -->
+  <servlet>
+    <servlet-name>CmdLoginControl</servlet-name>
+    <servlet-class>cacao.control.CmdLoginControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdLoginControl</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>CmdMyPageControl</servlet-name>

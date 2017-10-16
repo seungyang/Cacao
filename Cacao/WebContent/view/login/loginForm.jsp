@@ -8,7 +8,7 @@
 	href="${pageContext.request.contextPath}/css/login/loginForm.css">
 
 <script type="text/javascript">
-	//회원가입 클릭시 페이지 이동
+	//회원가입 클릭시 회원가입 페이지로 이동
 	function openWindow() {
 		window.open("../register/joinAgree.jsp", "회원가입폼",
 				"width=50px, height=50px");
