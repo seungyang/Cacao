@@ -230,7 +230,7 @@ function openDaumPostcode() {
   </span> 
   </div>
 </div>
- 
+  
 <div class="btn_wrap">
    <div class="col three">            
       <a href="#" class="btn2 btn-sunflower2" id="qaCencel">취소하기</a>         
