@@ -1,9 +1,28 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="cacao.model.vo.*"%>
 <% 
-int cnt = Integer.parseInt(request.getParameter("cnt"));
-String id = request.getParameter("id");
-String detail = request.getParameter("detail");
-String imgstr = "";
+	request.setCharacterEncoding("utf-8");
+	String id = request.getParameter("id");
+	String cnt = request.getParameter("cnt");
+	Info info = new Info();
+	info.setiId(id);
+	info.setiCnt(cnt);
+	
+	ArrayList<Info> infolist = null;
+	infolist = (ArrayList)session.getAttribute("cart");
+	
+	
+	if(infolist == null){
+		infolist = new ArrayList();
+		infolist.add(info);
+	}else{
+		infolist.add(info);
+	}
+	
+	session.setAttribute("cart", infolist);
+
+	
 %>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -60,43 +79,9 @@ String imgstr = "";
 
 
 
-<!-- 스타일시도 -->
-<style type="text/css">
-#sec {
-	
-}
 
 
 
-.productimg {
-	margin-left: 15%;
-	margin-right: 30%;
-	margin-bottom: 10%;
-	float: left;
-	width: 500px;
-}
-
-#detail {
-	
-	margin-left: 30%;
-	margin-right: 30%;
-	width: 500px;
-	height: 500px;
-}
-</style>
-
-<script type="text/javascript">
-window.onload=function(){
-	var plus = document.getElementById("plus");
-	plus.onclick = function(){
-		document.getElementById("text").value = parseInt(document.getElementById("text").value) + 1;
-	}	 
-	var minus = document.getElementById("minus");
-	minus.onclick = function(){
-		document.getElementById("text").value = parseInt(document.getElementById("text").value) - 1;
-	}	 
-}
-</script>
 
 
 
@@ -106,86 +91,26 @@ window.onload=function(){
 </head>
 <body>
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
-	<section id="home">
-		<div id="home-carousel" class="carousel slide" data-interval="false">
-			<ol class="carousel-indicators">
-				<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-				<%for(int i=1;i<cnt;i++){ %>
-				<li data-target="#home-carousel" data-slide-to="<%=i%>"></li>
-				<%} %>
-			</ol>
-			<!--/.carousel-indicators-->
-
-			<div class="carousel-inner">
+	<section id="sec" style="height=5000px">
+	<table>
+	<%
+		 
+		 
+		for(int i=0; i < infolist.size(); i++) { 
+			Info item = (Info) infolist.get(i); 
 			
-				<div class="item active"
-					style="background-image: url('/Cacao/img/product/all/<%=id%>00.jpg');">
 
-				</div>
-				<%for(int i=1;i<cnt;i++){ 
-				if(i>10){
-					imgstr = String.valueOf(i);
-				}else{
-					imgstr = "0"+String.valueOf(i);
-				}
-				
-				%>
-				<div class="item"
-					style="background-image: url('/Cacao/img/product/all/<%=id%><%=imgstr%>.jpg');">
-				</div>
-
-				<%} %>
-			</div>
-			<!--/.carousel-inner-->
-			<nav id="nav-arrows"
-				class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-				<a class="sl-prev hidden-xs" href="#home-carousel" data-slide="prev">
-					<i class="fa fa-angle-left fa-3x"></i>
-				</a> <a class="sl-next" href="#home-carousel" data-slide="next"> <i
-					class="fa fa-angle-right fa-3x"></i>
-				</a>
-			</nav>
-
-		</div>
-	</section>
-
-
-	<!-- 	여기서부터 상품 그림 설명 -->
-	<section id="sec" style="height: <%=cnt*700%>px;">
-		<div>
-			<%for(int i=0;i<cnt;i++){ 
-		
-				if(i>10){
-					imgstr = String.valueOf(i);
-				}else{
-					imgstr = "0"+String.valueOf(i);
-				}
-				
-				
-				%> 
-				
-				<div class="productimg">
-				<img src="/Cacao/img/product/all/<%=id%><%=imgstr%>.jpg" width=1000
-					height=500 />
-
-				</div>
-							
-				
-			<%} %>
-			
-		
-
-		</div>
-
-
-	
-		
-		
+%>
+			<tr>
+			<td> 상품번호 : <%= item.getiId() %></td>
+			<td> 개수 : <%= item.getiCnt() %></td>
+			</tr>
+<%
+		} 	
+%>
+	</table>
 	</section>
 	
-	<div id="detail" style="height: 200px; margin-bottom:10%">상품설명<br/><%=detail %></div>
-
-	<jsp:include page="/view/include/buy.jsp"></jsp:include>
 	<jsp:include page="/view/include/footer.jsp"></jsp:include>
 	
 </body>

@@ -97,7 +97,13 @@ window.onload=function(){
 	}
 	var buy = document.getElementById("buy");
 	buy.onclick = function(){
-		
+		alert("사기")
+	}
+	var cart = document.getElementById("cart");
+	cart.onclick = function(){
+		var text = document.getElementById("text").value;
+		alert(text);
+		location.href="/Cacao/view/main/cartView.jsp?id=<%=id%>&cnt="+text;
 	}		 
 }
 </script>
