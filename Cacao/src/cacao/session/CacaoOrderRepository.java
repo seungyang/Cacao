@@ -9,6 +9,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import cacao.model.vo.Choose;
+import cacao.model.vo.Info;
+import cacao.model.vo.Order;
+
 
 
 public class CacaoOrderRepository {
@@ -25,6 +29,17 @@ public class CacaoOrderRepository {
 		return sessFac;
 	}
 	
+	public List<Choose> getItemList(String iid){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("iid", iid);
+		return sess.selectList(namespace+".orderList",hash);
+		}finally {
+			sess.close();
+		}
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession

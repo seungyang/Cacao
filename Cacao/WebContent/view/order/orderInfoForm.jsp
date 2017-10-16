@@ -1,7 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ page import="java.util.*" %>
+<%@ page import="cacao.model.vo.*" %>
+<%List<Choose> orderList = (List) request.getAttribute("orderResult"); %>
     <%
    String pjName = "/Cacao";
+    int sum = 0;
+    for(int i =0; i < orderList.size(); i ++){
+    	sum += Integer.parseInt(orderList.get(i).getiCost());
+    }
 %>
 <!DOCTYPE html>
 <html>
@@ -15,9 +22,41 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 $(function(){
+	
    $('#qaCencel').click(function(){
       event.preventDefault();
       window.location = '/Cacao/MyPage?cmd=main-page&page=4';
+   });
+   
+   $('.minus').click(function(){
+	   var countm =  $(this).parent().find("input.textcnt").val();
+	   var gob = $(this).parent().parent().parent().parent().find("span.money").text();
+	   var allmoney = $(this).parent().parent().parent().parent().parent().find("span#sum").text();
+	   var totalmoney = $(this).parent().parent().parent().parent().parent().find("span#allmoney").text();
+	   
+	   if(countm <= 1){
+		   alert("수량은 최소 1개 입니다.");
+		   return;
+	   }
+	   $(this).parent().find("input.textcnt").val(countm-1);
+	   $(this).parent().parent().parent().parent().parent().find("span#sum").text(parseInt(allmoney)-parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#basket").text(parseInt(allmoney)-parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#allmoney").text(parseInt(totalmoney)-parseInt(gob)+"원");
+   });
+   $('.plus').on("click",function(){
+	   var countp = $(this).parent().find("input.textcnt").val();
+	   var gob = $(this).parent().parent().parent().parent().find("span.money").text();
+	   var allmoney = $(this).parent().parent().parent().parent().parent().find("span#sum").text();
+	   var totalmoney = $(this).parent().parent().parent().parent().parent().find("span#allmoney").text();
+	   
+	   if(countp >= 50){
+		   alert("주문 최대수량은 최대 50개 입니다.");
+		   return;
+	   }
+	   $(this).parent().find("input.textcnt").val(parseInt(countp)+1);
+	   $(this).parent().parent().parent().parent().parent().find("span#sum").text(parseInt(allmoney)+parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#basket").text(parseInt(allmoney)+parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#allmoney").text(parseInt(totalmoney)+parseInt(gob)+"원");
    });
 });
 function openDaumPostcode() {
@@ -129,11 +168,13 @@ function openDaumPostcode() {
 
 <legend style="text-align: center">상품리스트</legend>
 
+<% for(int i=0; i <orderList.size(); i++){ %>
+<div class='product'>
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">상품이름</label>  
   <div class="col-md-5">
   <span class="help-block">
-  [한정] 썸머미니인형-라이언
+  <%=orderList.get(i).getiName()%>
   
   </span> 
   </div>
@@ -142,8 +183,8 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">금액</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  12000원
+  <span class="money">
+  <%=orderList.get(i).getiCost()%>
   </span> 
   </div>
 </div>
@@ -152,34 +193,32 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">수량</label>  
   <div class="col-md-5">
   <span class="help-block">
-  1개
+  <input type="button" name="minus" value = "-" class="minus">
+  <input type="text" size='1' name="count" disabled = 'true' class ="textcnt" value = "1">
+  <input type="button" name="plus" value = "+" class="plus">
+  <hr/>
   </span> 
   </div>
+  
+</div>
 </div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="qTel">옵션</label>  
-  <div class="col-md-5">
-  <span class="help-block">
-  케이블 추가
-  </span> 
-  </div>
-</div>
-
+<%} %>
+<hr/>
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">총 상품 금액</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  12,000원
-  </span> 
+  <span class="help-block" id="sum">
+  <%=sum %>원
+  </span>
   </div>
 </div>
 <hr/>
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">장바구니 합계</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  12,000원
+  <span class="help-block" id="basket">
+  <%=sum %>원
   </span> 
   </div>
 </div>
@@ -187,7 +226,7 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">배송비</label>  
   <div class="col-md-5">
   <span class="help-block">
-  2,500원
+  2500원
   </span> 
   </div>
 </div>
@@ -195,8 +234,8 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">총 결제금액</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  14,500원
+  <span class="help-block" id="allmoney">
+  <%=sum+2500 %>원
   </span> 
   </div>
 </div>

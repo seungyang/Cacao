@@ -1,5 +1,11 @@
 package cacao.service;
 
+import java.util.List;
+
+import cacao.model.vo.Choose;
+import cacao.model.vo.Info;
+import cacao.model.vo.Order;
+import cacao.model.vo.QA;
 import cacao.session.CacaoOrderRepository;
 
 
@@ -19,6 +25,9 @@ public class CacaoOrderService {
 	 
 	CacaoOrderRepository repo = new CacaoOrderRepository();
 	
+	public List<Choose> getItemList(String iid){
+		return repo.getItemList(iid);		
+	}
 //	public int getGroupId(){
 //		return repo.getGroupId();
 //	}
