@@ -61,8 +61,9 @@
 
 <!-- Modernizer Script for old Browsers -->
 <script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title>우리반 연습</title>
 
@@ -78,7 +79,15 @@
 			/* window.location = 'myPageQAForm.jsp'; */
 			window.location = '<%=pjName%>/MyPage?cmd=myPageQAForm-page';
 		});
+
 	});
+	function autoResize(i)
+	{
+	    var iframeHeight=
+	    (i).contentWindow.document.body.scrollHeight;
+	    (i).height=iframeHeight+20;
+	}
+	
 </script>
 </head>
 
@@ -86,7 +95,7 @@
 	<img class='img_set' src="/Cacao/img/mypage/myPage_img.png">
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
 
-	<section id="portfolio">
+	<section id="portfolio" onload="autoResize(this)">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -102,26 +111,26 @@
 								<li class="<%=class4%>"><a href="#tab_default_4"
 									data-toggle="tab"> 1:1 문의 </a></li>
 							</ul>
-							<div class="tab-content">
+							<div class="tab-content" style="height: 800px">
 								<div class="tab-pane <%=class1%>" id="tab_default_1">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPageOrder-page" frameborder="0"
-										scrolling="no"></iframe>
+										scrolling="no" onload="autoResize(this)"></iframe>
 								</div>
+							
 								<div class="tab-pane <%=class2%>" id="tab_default_2">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPagePick-page" frameborder="0"
-										scrolling="no"></iframe>
+										scrolling="no" onload="autoResize(this)"></iframe>
 								</div>
 								<div class="tab-pane <%=class3%>" id="tab_default_3">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPageCancelList-page"
-										frameborder="0" scrolling="no"></iframe>
+										frameborder="0" scrolling="no" onload="autoResize(this)"></iframe>
 								</div>
 								<div class="tab-pane <%=class4%>" id="tab_default_4">
 									<iframe class="f_width"
-										src="<%=pjName%>/MyPage?cmd=myPageQAList-page"
-										frameborder="0" scrolling="no"></iframe>
+										src="<%=pjName%>/MyPage?cmd=myPageQAList-page" frameborder="0" scrolling="no" onload="autoResize(this)"></iframe>
 									<div class="col three" style="float: right;">
 										<a href="#" class="btn btn-sunflower" id="qaBtn">문의하기</a>
 									</div>
