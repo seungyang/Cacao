@@ -1,10 +1,18 @@
 package cacao.cmd.order;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Choose;
+import cacao.model.vo.Info;
+import cacao.model.vo.Order;
+import cacao.model.vo.QA;
+import cacao.service.CacaoMyPageService;
+import cacao.service.CacaoOrderService;
 
 
 
@@ -20,13 +28,11 @@ public class CmdOrderInfoForm implements Cmd {
 	
 				
 		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
-			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+		String iid = "omy@naver.com";
 		
+		List<Choose> orderList = CacaoOrderService.getInstance().getItemList(iid);
+		
+		request.setAttribute("orderResult", orderList);
 		
 		return next;			
 	}
