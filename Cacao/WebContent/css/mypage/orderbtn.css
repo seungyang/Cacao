@@ -8,12 +8,12 @@ GENERIC BUTTON STYLES
 ********************/
 
 .col {width: 150px;}
-.btn1 {font-size: 18px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
+.btn1 {font-size: 12px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
 display: inline-block; zoom: 1; color: #fff; text-align: center; position:relative; 
 -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; 
 transition: border .25s linear, color .25s linear, background-color .25s linear;}
 
-.btn2 {font-size: 18px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
+.btn2 {font-size: 12px; white-space:nowrap; width:100%; padding:.8em 1.5em; font-family: Open Sans, Helvetica,Arial,sans-serif; line-height:18px; 
 display: inline-block; zoom: 1; color: #000; text-align: center; position:relative; 
 -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; 
 transition: border .25s linear, color .25s linear, background-color .25s linear;

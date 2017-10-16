@@ -59,9 +59,6 @@ public class Order {
 	}
 	public void setiCost(String iCost) {
 		this.iCost = iCost;
-	}
-	
-	
-	
+	}	
 	
 }

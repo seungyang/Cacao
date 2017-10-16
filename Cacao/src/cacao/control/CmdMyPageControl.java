@@ -13,6 +13,7 @@ import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
 import cacao.cmd.mypage.CmdMyPageOrder;
+import cacao.cmd.mypage.CmdMyPageOrderDetail;
 import cacao.cmd.mypage.CmdMyPagePick;
 import cacao.cmd.mypage.CmdMyPageQAList;
 import cacao.cmd.mypage.CmdMyPageQASave;
@@ -39,14 +40,13 @@ public class CmdMyPageControl extends HttpServlet {
 
 		commandMap.put("main-page",new CmdNull("myPageMain.jsp")); 
 		commandMap.put("myPageOrder-page",new CmdMyPageOrder("myPageOrder.jsp"));
+		commandMap.put("CmdMyPageOrderDetail-page",new CmdMyPageOrderDetail("myPageOrderDetail.jsp"));
 		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp"));
 		commandMap.put("myPageCancelList-page",new CmdNull("myPageCancelList.jsp"));
 		
 		commandMap.put("myPageQAList-page",new CmdMyPageQAList("myPageQAList.jsp"));
 		commandMap.put("myPageQAForm-page",new CmdNull("myPageQAForm.jsp"));
 		commandMap.put("myPageQASave-page", new CmdMyPageQASave("myPageQASave.jsp"));
-	
-
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

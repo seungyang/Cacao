@@ -36,6 +36,9 @@ public class CacaoMyPageService {
 	public List<Order> orderList(String email) {
 		return repo.getOrderList(email);
 	}
+	public List<Order> orderListDetail(String email,String orderid) {
+		return repo.getOrderListDetail(email,orderid);
+	}
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);
 //	}
