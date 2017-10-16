@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-
+<% 
+int cnt = Integer.parseInt(request.getParameter("cnt"));
+String id = request.getParameter("id");
+%>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -106,7 +109,7 @@
 			<div class="carousel-inner">
 			
 				<div class="item active"
-					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20170901_ribbonryan_Rbanner_W.gif');">
+					style="background-image: url('/Cacao/img/product/all/');">
 
 				</div>
 

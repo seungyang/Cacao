@@ -2,7 +2,7 @@ package cacao.model.vo;
 
 public class Info {
 
-	private int iId;
+	private String iId;
 	private String iChar;
 	private String iCate;
 	private String iName;
@@ -13,11 +13,10 @@ public class Info {
 	private String iImg;
 	private String iImgcnt;
 	private String iDetail;
-	
-	public int getiId() {
+	public String getiId() {
 		return iId;
 	}
-	public void setiId(int iId) {
+	public void setiId(String iId) {
 		this.iId = iId;
 	}
 	public String getiChar() {
@@ -80,6 +79,7 @@ public class Info {
 	public void setiDetail(String iDetail) {
 		this.iDetail = iDetail;
 	}
+	
 	
 	
 

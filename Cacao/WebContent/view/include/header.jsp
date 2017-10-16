@@ -313,18 +313,18 @@
 
 
 					<li class="dropdown mega-dropdown"><a
-						onclick="location.href='/Cacao/MyPage?cmd=main-page'"
+						href="/Cacao/MyPage?cmd=main-page"
 						class="dropdown-toggle" data-toggle="dropdown">마이페이지 <span
 							class="caret"></span></a>
 						<ul class="dropdown-menu mega-dropdown-menu">
-
+						
 							<li class="col-sm-3">
 								<ul>
 									<li><h4>로그인</h4></li>
-									<li><a href="#"><h4>주문내역</h4></a></li>
-									<li><a href="#"><h4>찜</h4></a></li>
-									<li><a href="#"><h4>취소및교환</h4></a></li>
-									<li><a href="#"><h4>1:1문의</h4></a></li>
+									<li><a href="/Cacao/MyPage?cmd=main-page&page=1"><h4>주문내역</h4></a></li>
+									<li><a href="/Cacao/MyPage?cmd=main-page&page=2"><h4>찜</h4></a></li>
+									<li><a href="/Cacao/MyPage?cmd=main-page&page=3"><h4>취소및교환</h4></a></li>
+									<li><a href="/Cacao/MyPage?cmd=main-page&page=4"><h4>1:1문의</h4></a></li>
 
 								</ul>
 							</li>
@@ -339,8 +339,8 @@
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<li class="col-sm-3">
 								<ul>
-									<li><h4>공지사항</h4></li>
-									<li><a href="#"><h4>FAQ</h4></a></li>
+									<li><a href='/Cacao/Service?cmd=main-page&page=1'><h4>공지사항</h4></a></li>
+									<li><a href='/Cacao/Service?cmd=main-page&page=2'><h4>FAQ</h4></a></li>
 
 								</ul>
 							</li>
