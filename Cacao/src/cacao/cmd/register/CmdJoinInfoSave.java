@@ -5,6 +5,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Member;
+import cacao.service.CacaoRegisterService;
+
 
 
 
@@ -16,16 +19,23 @@ public class CmdJoinInfoSave implements Cmd {
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
-		// TODO Auto-generated method stub
-	
 				
-		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
+			Member m = new Member();
+			String mCheck = "T";
 			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+			m.setmEmail(request.getParameter("emailid"));
+			m.setmName(request.getParameter("mem_name"));
+			m.setmCheck(mCheck);
+			m.setmPwd(request.getParameter("password"));
+//			m.setmBirth(request.getParameter("mBirth"));
+//			m.setmSex(request.getParameter("mSex"));
+			
+			
+			System.out.println("email:"+m.getmEmail());
+			
+			int result = CacaoRegisterService.getInstance().getInsert(m);
+			
+			request.setAttribute("mSave", result);
 		
 		
 		return next;			
