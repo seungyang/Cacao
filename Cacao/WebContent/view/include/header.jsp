@@ -376,10 +376,10 @@
 
                <!-- 로그인 버튼 -->
 
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/로그인.PNG" onclick="javascript:openWindow(); "/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/비회원.PNG"/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/장바구니.PNG"/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/외국어.PNG"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/login.png" onclick="javascript:openWindow(); "/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>
 
 
 

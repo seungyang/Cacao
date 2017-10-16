@@ -94,11 +94,7 @@ window.onload=function(){
 	var minus = document.getElementById("minus");
 	minus.onclick = function(){
 		document.getElementById("text").value = parseInt(document.getElementById("text").value) - 1;
-	}
-	var buy = document.getElementById("buy");
-	buy.onclick = function(){
-		
-	}		 
+	}	 
 }
 </script>
 
