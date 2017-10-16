@@ -134,6 +134,7 @@ function openDaumPostcode() {
   <div class="col-md-5">
   <span class="help-block">
   [한정] 썸머미니인형-라이언
+  
   </span> 
   </div>
 </div>
@@ -190,14 +191,7 @@ function openDaumPostcode() {
   </span> 
   </div>
 </div>
-<div class="form-group">
-  <label class="col-md-4 control-label" for="qTel">쿠폰</label>  
-  <div class="col-md-5">
-  <span class="help-block">
-  0원
-  </span> 
-  </div>
-</div>
+
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">총 결제금액</label>  
   <div class="col-md-5">
@@ -209,6 +203,33 @@ function openDaumPostcode() {
 
 <legend style="text-align: center">결제수단</legend>
 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="qTel">결제 방법</label>  
+  <div class="col-md-5">
+  <span class="help-block">
+  <input type="radio" name="payment" value="deposit">무통장 입금
+  <input type="radio" name="payment" value="account"/>계좌이체
+  </span> 
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="qTel">개인정보 수집 및 이용 동의</label>  
+  <div class="col-md-5">
+  <span class="help-block">
+  <input type="checkbox" name="check1"> 
+  </span> 
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="qTel">회원 이용 약관 동의</label>  
+  <div class="col-md-5">
+  <span class="help-block">
+  <input type="checkbox" name="check1"> 
+  </span> 
+  </div>
+</div>
 
 <div class="btn_wrap">
    <div class="col three">            
