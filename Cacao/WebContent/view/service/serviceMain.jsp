@@ -1,35 +1,27 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% String pjName = "/Cacao"; 
+    
+    String pageNum = request.getParameter("page");
 
-<%
-	String pjName = "/Cacao";
+    String class1 = "1";
+    String class2 = "2";
 
-	String pageNum = request.getParameter("page");
 
-	String class1 = "1";
-	String class2 = "2";
-	String class3 = "3";
-	String class4 = "4";
+    if (pageNum == null) {
+       pageNum = "1";
+    }
+    switch (pageNum) {
+       case "1" :
+          class1 = "active";
+          break;
+       case "2" :
+          class2 = "active";
+          break;
+    }
+    
+    %>
 
-	if (pageNum == null) {
-		pageNum = "1";
-	}
-	switch (pageNum) {
-		case "1" :
-			class1 = "active";
-			break;
-		case "2" :
-			class2 = "active";
-			break;
-		case "3" :
-			class3 = "active";
-			break;
-		case "4" :
-			class4 = "active";
-			break;
-
-	}
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,10 +100,10 @@
 					
 					<div class="tab-content">
 					
-						<div class="tab-pane active" id="tab_default_1">
+						<div class="tab-pane <%=class1%>" id="tab_default_1">
 							<iframe class="f_width" src="/Cacao/Service?cmd=notice-page" frameborder="0" scrolling="no" ></iframe>
 						</div>
-						<div class="tab-pane" id="tab_default_2">
+						<div class="tab-pane <%=class2%>" id="tab_default_2">
 							<iframe class="f_width" src="/Cacao/Service?cmd=faq-page" frameborder="0" scrolling="no" ></iframe>
 							
 						</div>

@@ -1,7 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ page import="java.util.*" %>
+<%@ page import="cacao.model.vo.*" %>
+<%List<Choose> orderList = (List) request.getAttribute("orderResult"); %>
     <%
    String pjName = "/Cacao";
+    int sum = 0;
+    for(int i =0; i < orderList.size(); i ++){
+    	sum += Integer.parseInt(orderList.get(i).getiCost());
+    }
 %>
 <!DOCTYPE html>
 <html>
@@ -15,9 +22,71 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 $(function(){
-   $('#qaCencel').click(function(){
+	
+   $('#Cancel').click(function(){
       event.preventDefault();
       window.location = '/Cacao/MyPage?cmd=main-page&page=4';
+   });
+   $('#Insert').click(function () {
+	   if($('#qName').val() == ''){
+			alert('주문자를 입력하세요');
+			return;
+		}
+		if($('#qEmail').val() == ''){
+			alert('이메일을 입력하세요');
+			return;
+		}
+		if($('#qTel').val() == ''){
+			alert('전화번호를 입력하세요');
+			return;
+		}
+		if($('#post1').val() == ''){
+			alert('주소를 선택하세요');
+			return;
+		}
+		if(($('input[type ="radio"]').is(":checked")) == false){
+			alert('결제 방법을 선택하세요');
+			return;
+		}
+		if(($('#personal').is(":checked")) == false){
+			alert('개인정보 수집 및 이용에 동의하세요');
+			return;
+		}
+		if(($('#member').is(":checked")) == false){
+			alert('회원 이용 약관에 동의하세요');
+			return;
+		}
+		
+		$('#orderInsert').submit();
+  });
+   
+   $('.minus').click(function(){
+	   var countm =  $(this).parent().find("input.textcnt").val();
+	   var gob = $(this).parent().parent().parent().parent().find("span.money").text();
+	   var allmoney = $(this).parent().parent().parent().parent().parent().find("span#sum").text();
+	   var totalmoney = $(this).parent().parent().parent().parent().parent().find("span#allmoney").text();
+	   
+	   if(countm <= 1){
+		   alert("수량은 최소 1개 입니다.");
+		   return;
+	   }
+	   $(this).parent().find("input.textcnt").val(countm-1);
+	   $(this).parent().parent().parent().parent().parent().find("span#sum").text(parseInt(allmoney)-parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#allmoney").text(parseInt(totalmoney)-parseInt(gob)+"원");
+   });
+   $('.plus').on("click",function(){
+	   var countp = $(this).parent().find("input.textcnt").val();
+	   var gob = $(this).parent().parent().parent().parent().find("span.money").text();
+	   var allmoney = $(this).parent().parent().parent().parent().parent().find("span#sum").text();
+	   var totalmoney = $(this).parent().parent().parent().parent().parent().find("span#allmoney").text();
+	   
+	   if(countp >= 50){
+		   alert("주문 최대수량은 최대 50개 입니다.");
+		   return;
+	   }
+	   $(this).parent().find("input.textcnt").val(parseInt(countp)+1);
+	   $(this).parent().parent().parent().parent().parent().find("span#sum").text(parseInt(allmoney)+parseInt(gob)+"원");
+	   $(this).parent().parent().parent().parent().parent().find("span#allmoney").text(parseInt(totalmoney)+parseInt(gob)+"원");
    });
 });
 function openDaumPostcode() {
@@ -71,7 +140,7 @@ function openDaumPostcode() {
 </head>
 <body>
 	
-	<form class="form-horizontal">
+	<form class="form-horizontal" id='orderInsert' name='orderInsert' action="<%=pjName %>/Order?cmd=myPageQASave-page" method='post'>
 
 <fieldset>
 <legend style="text-align: center">주문 및 배송 정보</legend>
@@ -79,7 +148,7 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qName">주문자명</label>  
  <div class="col-md-5">
-  <input id="qName" name="qName" type="text" placeholder="주문자명" class="form-control input-md" required="">
+  <input id="qName" name="qName" type="text" placeholder="실명을 입력하지 않을 경우 반품 또는 분실의 우려가 있습니다." class="form-control input-md" required="">
 </div>
 </div>
 
@@ -87,7 +156,7 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qEmail">이메일</label>  
   <div class="col-md-5">
-  <input id="qEmail" name="qEmail" type="text" placeholder="이메일" class="form-control input-md" required="">
+  <input id="qEmail" name="qEmail" type="text" placeholder="잘못 입력 시 배송정보와 주문정보 확인이 불가합니다." class="form-control input-md" required="">
     
   </div>
 </div>
@@ -96,7 +165,7 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">연락처</label>  
   <div class="col-md-5">
-  <input id="qTel" name="qTel" type="text" placeholder="연락처" class="form-control input-md" required="">
+  <input id="qTel" name="qTel" type="text" placeholder="잘못 입력 시 택배 도착이 지연될 수 있습니다." class="form-control input-md" required="">
     
   </div>
 </div>
@@ -123,27 +192,36 @@ function openDaumPostcode() {
   <input id="qTitle" name="qTitle" type="text" placeholder="20자 이내로 작성해 주세요" class="form-control input-md" required="">
   <span class="help-block">
   * 배송메모 작성시 특수문자 & < > 등은 제외하고 입력해 주시기 바랍니다.
+  </span>
+  <span class="help-block">
+  * 위에 내용을 허위기재 시에 발생하는 모든 불이익은 책임지지 않습니다.
   </span> 
   </div>
 </div>
 
 <legend style="text-align: center">상품리스트</legend>
 
+<% for(int i=0; i <orderList.size(); i++){ %>
+<div class='product'>
+<div ></div>
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">상품이름</label>  
   <div class="col-md-5">
   <span class="help-block">
-  [한정] 썸머미니인형-라이언
+  <%=orderList.get(i).getiName()%>
   
   </span> 
   </div>
+  <div align='right' style="position:absolute; y-index:1; right:25%; margin-left:0px; margin-top:0px;">
+	<img src="<%=pjName %>/img/product/all/<%=orderList.get(i).getiId() %>00.jpg" width=150px height=150px>
+</div>
 </div>
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">금액</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  12000원
+  <span class="money">
+  <%=orderList.get(i).getiCost()%>
   </span> 
   </div>
 </div>
@@ -152,34 +230,27 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">수량</label>  
   <div class="col-md-5">
   <span class="help-block">
-  1개
+  <input type="button" name="minus" value = "-" class="minus">
+  <input type="text" size='1' name="count" disabled = 'true' class ="textcnt" value = "1">
+  <input type="button" name="plus" value = "+" class="plus">
+  <br/>
+  <br/>
+  <hr/>
   </span> 
   </div>
 </div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="qTel">옵션</label>  
-  <div class="col-md-5">
-  <span class="help-block">
-  케이블 추가
-  </span> 
-  </div>
+
 </div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="qTel">총 상품 금액</label>  
-  <div class="col-md-5">
-  <span class="help-block">
-  12,000원
-  </span> 
-  </div>
-</div>
+<%} %>
+
 <hr/>
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">장바구니 합계</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  12,000원
+  <span class="help-block" id="sum">
+  <%=sum %>원
   </span> 
   </div>
 </div>
@@ -187,7 +258,7 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">배송비</label>  
   <div class="col-md-5">
   <span class="help-block">
-  2,500원
+  2500원
   </span> 
   </div>
 </div>
@@ -195,8 +266,8 @@ function openDaumPostcode() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="qTel">총 결제금액</label>  
   <div class="col-md-5">
-  <span class="help-block">
-  14,500원
+  <span class="help-block" id="allmoney">
+  <%=sum+2500 %>원
   </span> 
   </div>
 </div>
@@ -217,7 +288,7 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">개인정보 수집 및 이용 동의</label>  
   <div class="col-md-5">
   <span class="help-block">
-  <input type="checkbox" name="check1"> 
+  <input type="checkbox" name="check1" id="personal"> 
   </span> 
   </div>
 </div>
@@ -226,17 +297,17 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">회원 이용 약관 동의</label>  
   <div class="col-md-5">
   <span class="help-block">
-  <input type="checkbox" name="check1"> 
+  <input type="checkbox" name="check1" id="member"> 
   </span> 
   </div>
 </div>
   
 <div class="btn_wrap">
    <div class="col three">            
-      <a href="#" class="btn2 btn-sunflower2" id="qaCencel">취소하기</a>         
+      <a href="#" class="btn2 btn-sunflower2" id="Cancel">취소하기</a>         
    </div>
    <div class="col three">            
-      <a href="#" class="btn btn-sunflower" id="qaInsert">등록하기</a>         
+      <a href="#" class="btn btn-sunflower" id="Insert">등록하기</a>         
    </div>
 </div>
 

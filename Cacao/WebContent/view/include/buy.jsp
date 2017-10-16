@@ -45,10 +45,10 @@ margin-left:25%
 				role="navigation">
 				
 					
-					<img id=heart src="/Cacao/img/product/heart.png" width=50px height=50px/>
+					<img id=choose src="/Cacao/img/product/heart.png" width=50px height=50px/>
 					<img id=cart src="/Cacao/img/product/cart.png" width=50px height=50px/>
 					<img id=minus src="/Cacao/img/product/minus.png" width=50px height=50px/>
-					<input type="text"/>
+					<input type="text" id='text' value=1 disabled="true"></input>
 					<img id=plus src="/Cacao/img/product/plus.png" width=50px height=50px/>
 					<img id=buy src="/Cacao/img/product/buy.png" width=50px height=50px/>
 				

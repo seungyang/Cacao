@@ -14,6 +14,8 @@ public class Info {
 	private String iImgcnt;
 	private String iDetail;
 	
+
+
 	public String getiId() {
 		return iId;
 	}

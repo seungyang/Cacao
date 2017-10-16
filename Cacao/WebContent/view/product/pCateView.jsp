@@ -94,15 +94,16 @@ if(catelist.size()==0){
 
 </div>
 <div id="drop">
-<select class="dropdown1">
+
+<select class="dropdown1" style="float:right">
   <option value="" class="label">검색기준</option>  
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
+  <option value="volvo">높은가격순</option>
+  <option value="saab">낮은가격순</option>
+  <option value="opel">판매순</option>
 </select>
 </div>
-</div>
+
+
 
 <div class="container">
 	</br>
@@ -110,10 +111,11 @@ if(catelist.size()==0){
         <%for(int i=0;i<size;i++){ %>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist.get(i).getiId()%>&cnt=<%=catelist.get(i).getiCnt()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;">
-            
+                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist.get(i).getiId()%>&cnt=<%=catelist.get(i).getiImgcnt()%>&detail=<%=catelist.get(i).getiDetail()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
+            				
               <div class="caption">
                 <div class="caption-content">
+                	상품명 : <%= catelist.get(i).getiName() %><br/>가격 : <%= catelist.get(i).getiCost() %>원<br/>
                      <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
                 </div>
               </div>

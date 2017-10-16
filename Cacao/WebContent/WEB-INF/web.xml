@@ -55,14 +55,14 @@
     <url-pattern>/MyPage</url-pattern>
   </servlet-mapping>
   
-<!--   <servlet> -->
-<!--     <servlet-name>CmdOrderControl</servlet-name> -->
-<!--     <servlet-class>cacao.control.CmdOrderControl</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>CmdOrderControl</servlet-name> -->
-<!--     <url-pattern>/Order</url-pattern> -->
-<!--   </servlet-mapping> -->
+  <servlet>
+    <servlet-name>CmdOrderControl</servlet-name>
+    <servlet-class>cacao.control.CmdOrderControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdOrderControl</servlet-name>
+    <url-pattern>/Order</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>CmdProductControl</servlet-name>
