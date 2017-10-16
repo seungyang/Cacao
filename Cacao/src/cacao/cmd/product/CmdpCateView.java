@@ -1,10 +1,14 @@
 package cacao.cmd.product;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Info;
+import cacao.service.CacaoProductService;
 
 
 
@@ -20,12 +24,9 @@ public class CmdpCateView implements Cmd {
 	
 				
 		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
 			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+			List<Info> result = CacaoProductService.getInstance().selectList();
+			request.setAttribute("result", result);
 		
 		
 		return next;			

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
     <% String pjName = "/Cacao"; 
     
     String pageNum = request.getParameter("page");
@@ -21,6 +22,38 @@
     }
     
     %>
+=======
+
+<%
+	String pjName = "/Cacao";
+
+	String pageNum = request.getParameter("page");
+
+	String class1 = "1";
+	String class2 = "2";
+	String class3 = "3";
+	String class4 = "4";
+
+	if (pageNum == null) {
+		pageNum = "1";
+	}
+	switch (pageNum) {
+		case "1" :
+			class1 = "active";
+			break;
+		case "2" :
+			class2 = "active";
+			break;
+		case "3" :
+			class3 = "active";
+			break;
+		case "4" :
+			class4 = "active";
+			break;
+
+	}
+%>
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 <!DOCTYPE html>
 <html>
 <head>

@@ -3,6 +3,7 @@ package cacao.service;
 import java.util.List;
 
 import cacao.model.vo.Info;
+import cacao.model.vo.Order;
 import cacao.model.vo.QA;
 import cacao.session.CacaoMyPageRepository;
 
@@ -31,6 +32,9 @@ public class CacaoMyPageService {
 	}
 	public int getInsert(QA q){
 		return repo.getInsert(q);
+	}
+	public List<Order> orderList(String email) {
+		return repo.getOrderList(email);
 	}
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);

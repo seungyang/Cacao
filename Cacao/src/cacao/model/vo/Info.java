@@ -13,11 +13,12 @@ public class Info {
 	private String iImg;
 	private String iImgcnt;
 	private String iDetail;
-	
+
+
 	public String getiId() {
 		return iId;
 	}
-	public void setiId(S iId) {
+	public void setiId(String iId) {
 		this.iId = iId;
 	}
 	public String getiChar() {
@@ -80,6 +81,7 @@ public class Info {
 	public void setiDetail(String iDetail) {
 		this.iDetail = iDetail;
 	}
+	
 	
 	
 

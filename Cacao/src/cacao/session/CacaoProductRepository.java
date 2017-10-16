@@ -1,13 +1,14 @@
 package cacao.session;
 
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import cacao.model.vo.Info;
 
 
 
@@ -25,15 +26,15 @@ public class CacaoProductRepository {
 		return sessFac;
 	}
 	
-//	public List<Comment> selectComment(){
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		return sess.selectList(namespace+".selectAll");
-//		}finally {
-//			sess.close();
-//		}
-//	}
+	public List<Info> selectList(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAll");
+		}finally {
+			sess.close();
+		}
+	}
 //	
 //	public Integer insertComment(Comment c){
 //		SqlSession sess = getSqlSessionFactory().openSession();

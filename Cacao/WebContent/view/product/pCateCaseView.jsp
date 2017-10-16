@@ -1,5 +1,10 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-
+<% 
+int cnt = Integer.parseInt(request.getParameter("cnt"));
+String id = request.getParameter("id");
+String detail = request.getParameter("detail");
+String imgstr = "";
+%>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -58,27 +63,23 @@
 <!-- 스타일시도 -->
 <style type="text/css">
 #sec {
-	height: 5000px;
+	
 }
 
 
 
 .productimg {
-	margin-left: 30%;
+	margin-left: 15%;
 	margin-right: 30%;
-	margin-bottom: 10%; width : 500px;
-	height: 500px;
-	border: solid;
-	border-color: black;
+	margin-bottom: 10%;
 	float: left;
 	width: 500px;
 }
 
 #detail {
+	
 	margin-left: 30%;
 	margin-right: 30%;
-	border: solid;
-	border-color: red;
 	width: 500px;
 	height: 500px;
 }
@@ -98,27 +99,31 @@
 		<div id="home-carousel" class="carousel slide" data-interval="false">
 			<ol class="carousel-indicators">
 				<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#home-carousel" data-slide-to="1"></li>
-				<li data-target="#home-carousel" data-slide-to="2"></li>
+				<%for(int i=1;i<cnt;i++){ %>
+				<li data-target="#home-carousel" data-slide-to="<%=i%>"></li>
+				<%} %>
 			</ol>
 			<!--/.carousel-indicators-->
 
 			<div class="carousel-inner">
 			
 				<div class="item active"
-					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20170901_ribbonryan_Rbanner_W.gif');">
+					style="background-image: url('/Cacao/img/product/all/<%=id%>00.jpg');">
 
 				</div>
-
+				<%for(int i=1;i<cnt;i++){ 
+				if(i>10){
+					imgstr = String.valueOf(i);
+				}else{
+					imgstr = "0"+String.valueOf(i);
+				}
+				
+				%>
 				<div class="item"
-					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20171010_Rbanner_bodypillow_W.jpg');">
-
+					style="background-image: url('/Cacao/img/product/all/<%=id%><%=imgstr%>.jpg');">
 				</div>
 
-				<div class="item"
-					style="background-image: url('https://t1.daumcdn.net/friends/prod/banner/20170907_minicushion_Rbanner_W.jpg');">
-
-				</div>
+				<%} %>
 			</div>
 			<!--/.carousel-inner-->
 			<nav id="nav-arrows"
@@ -135,32 +140,39 @@
 
 
 	<!-- 	여기서부터 상품 그림 설명 -->
-	<section id="sec">
-		<div style="height: 70%">
-			<div class="productimg">
-				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
+	<section id="sec" style="height: <%=cnt*700%>px;">
+		<div>
+			<%for(int i=0;i<cnt;i++){ 
+		
+				if(i>10){
+					imgstr = String.valueOf(i);
+				}else{
+					imgstr = "0"+String.valueOf(i);
+				}
+				
+				
+				%> 
+				
+				<div class="productimg">
+				<img src="/Cacao/img/product/all/<%=id%><%=imgstr%>.jpg" width=1000
 					height=500 />
 
-			</div>
-			<div class="productimg">
-				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
-					height=500 />
-
-			</div>
-			<div class="productimg">
-				<img src="/Cacao/img/product/portfolio/caca1.jpg" width=500
-					height=500 />
-			</div>
+				</div>
+							
+				
+			<%} %>
+			
+		
 
 		</div>
 
 
 	
-		<div id="detail" style="height: 50PX;">상품설명</div>
+		
 		
 	</section>
 	
-	
+	<div id="detail" style="height: 200px; margin-bottom:10%">상품설명<br/><%=detail %></div>
 
 	<jsp:include page="/view/include/buy.jsp"></jsp:include>
 	<jsp:include page="/view/include/footer.jsp"></jsp:include>

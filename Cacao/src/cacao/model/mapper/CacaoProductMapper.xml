@@ -5,7 +5,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="mapper.CacaoProductMapper">    
 
-
+<select id="selectAll" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+</select>
 
 
 </mapper> 

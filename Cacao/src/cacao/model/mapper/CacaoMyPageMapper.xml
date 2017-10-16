@@ -20,5 +20,10 @@ where m_email=#{email}
 insert into qa(q_id, m_email, q_cate, q_title, q_content, q_file)
 values(SEQ_QA_ID.NEXTVAL, #{mEmail}, #{qCate}, #{qTitle}, #{qContent}, #{qFile})
 </insert>
+<select id="orderList" parameterType="hashmap" resultType="order">
+select d.d_id d_id, i.i_name i_name, o.o_cnt o_cnt, d.d_status d_status,i.i_id i_id
+from orderlist o, deliver d, info i
+where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email}
+</select>
 </mapper> 
  
