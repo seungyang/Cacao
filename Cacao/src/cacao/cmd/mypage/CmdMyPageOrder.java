@@ -1,10 +1,14 @@
 package cacao.cmd.mypage;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Order;
+import cacao.service.CacaoMyPageService;
 
 
 
@@ -18,14 +22,11 @@ public class CmdMyPageOrder implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 	
-				
-		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
+		String email = "omy@naver.com";
 			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+		List<Order> orderList = CacaoMyPageService.getInstance().orderList(email);
+		
+		request.setAttribute("orderList", orderList);
 		
 		
 		return next;			
