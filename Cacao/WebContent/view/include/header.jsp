@@ -35,26 +35,8 @@
 
 <!-- drop down event -->
 <style type="text/css">
-<<<<<<< HEAD
 #imaginary_container {
 	margin-top: 20%; /* Don't copy this */
-=======
-#imaginary_container{
-    margin-top:20%; /* Don't copy this */
-}
-.stylish-input-group .input-group-addon{
-    background: white !important; 
-}
-.stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
->>>>>>> refs/remotes/origin/master
 }
 
 .stylish-input-group .input-group-addon {
@@ -150,7 +132,6 @@
 	<header id="navigation" class="navbar-fixed-top">
 		<div class="container">
 
-
 			<div class="navbar-header">
 				<!-- responsive nav button -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -160,10 +141,6 @@
 						class="icon-bar"></span>
 				</button>
 				<!-- /responsive nav button -->
-
-
-    
-
 
 				<!-- logo -->
 				<h1 class="navbar-brand"
@@ -419,7 +396,6 @@
 			<!-- /main nav -->
 		</div>
 
-
 	</header>
 
 
@@ -442,10 +418,6 @@
 
 
 	<!--
-=======
-   </header>
-   <!--
->>>>>>> refs/remotes/origin/master
         End Fixed Navigation
         ==================================== -->
 	<!-- main jQuery -->
