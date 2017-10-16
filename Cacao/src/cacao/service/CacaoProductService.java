@@ -1,5 +1,8 @@
 package cacao.service;
 
+import java.util.List;
+
+import cacao.model.vo.Info;
 import cacao.session.CacaoProductRepository;
 
 
@@ -25,9 +28,9 @@ public class CacaoProductService {
 //		return repo.insert( rec );
 //	}
 //	
-//	public List<BoardRec> selectList(int firstrow,int endrow) {
-//		return repo.selectList(firstrow,endrow);
-//	}
+	public List<Info> selectList() {
+		return repo.selectList();
+	}
 //	
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);

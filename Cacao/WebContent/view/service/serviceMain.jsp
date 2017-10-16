@@ -1,6 +1,35 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% String pjName = "/Cacao"; %>
+
+<%
+	String pjName = "/Cacao";
+
+	String pageNum = request.getParameter("page");
+
+	String class1 = "1";
+	String class2 = "2";
+	String class3 = "3";
+	String class4 = "4";
+
+	if (pageNum == null) {
+		pageNum = "1";
+	}
+	switch (pageNum) {
+		case "1" :
+			class1 = "active";
+			break;
+		case "2" :
+			class2 = "active";
+			break;
+		case "3" :
+			class3 = "active";
+			break;
+		case "4" :
+			class4 = "active";
+			break;
+
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,11 +95,11 @@
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
 					
-						<li class="active">
+						<li class="<%=class1%>">
 							<a href="#tab_default_1" data-toggle="tab">
 							공지사항 </a>
 						</li>
-						<li>
+						<li class="<%=class2%>">
 							<a href="#tab_default_2" data-toggle="tab">
 							FAQ </a>
 						</li>
