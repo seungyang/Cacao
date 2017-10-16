@@ -145,8 +145,8 @@
             <!-- logo -->
             <h1 class="navbar-brand"
                style="margin-left: -10em; margin-top: 0.5em">
-               <a href="/Cacao/Main?cmd=main-page" " class="link_logo"> <span
-                  class="tit_friends tit_logo">KAKAO FRIENDS</span>
+               <a href="/Cacao/Main?cmd=main-page" class="link_logo"> <span
+                  class="tit_friends tit_logo">Team Cacao</span>
                </a>
             </h1>
             <!-- /logo -->

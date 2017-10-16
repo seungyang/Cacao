@@ -15,7 +15,7 @@ String imgstr = "";
 <meta charset="utf-8">
 
 <title>카카오프렌즈</title>
-
+ 
 <!--
         Google Fonts
         ============================================= -->
@@ -85,7 +85,18 @@ String imgstr = "";
 }
 </style>
 
-
+<script type="text/javascript">
+window.onload=function(){
+	var plus = document.getElementById("plus");
+	plus.onclick = function(){
+		document.getElementById("text").value = parseInt(document.getElementById("text").value) + 1;
+	}	 
+	var minus = document.getElementById("minus");
+	minus.onclick = function(){
+		document.getElementById("text").value = parseInt(document.getElementById("text").value) - 1;
+	}	 
+}
+</script>
 
 
 
