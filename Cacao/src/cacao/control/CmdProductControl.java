@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
+import cacao.cmd.product.CmdpCateView;
 
 
 
@@ -32,8 +33,8 @@ public class CmdProductControl extends HttpServlet {
 
 	private void initCommand(){
 		commandMap = new HashMap();
-		
-		commandMap.put("pCateView-page",new CmdNull("pCateView.jsp") );
+		 
+		commandMap.put("pCateView-page",new CmdpCateView("pCateView.jsp") );
 		commandMap.put("pCateCaseView-page",new CmdNull("pCateCaseView.jsp") );
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
