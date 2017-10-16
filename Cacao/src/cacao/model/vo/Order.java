@@ -9,6 +9,8 @@ public class Order {
 	private String oCnt;
 	private String iName; // 상품명
 	private String dStatus;
+	private String iCost;
+	
 	
 	public String getoId() {
 		return oId;
@@ -51,6 +53,12 @@ public class Order {
 	}
 	public void setdStatus(String dStatus) {
 		this.dStatus = dStatus;
+	}
+	public String getiCost() {
+		return iCost;
+	}
+	public void setiCost(String iCost) {
+		this.iCost = iCost;
 	}
 	
 	
