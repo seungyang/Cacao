@@ -36,11 +36,7 @@
 <!-- drop down event -->
 <style type="text/css">
 #imaginary_container {
-<<<<<<< HEAD
-	margin-top: 20%; /* Don't copy this */
-=======
    margin-top: 20%; /* Don't copy this */
->>>>>>> refs/remotes/origin/master
 }
 
 .stylish-input-group .input-group-addon {
@@ -136,17 +132,6 @@
    <header id="navigation" class="navbar-fixed-top">
       <div class="container">
 
-<<<<<<< HEAD
-			<div class="navbar-header">
-				<!-- responsive nav button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<!-- /responsive nav button -->
-=======
          <div class="navbar-header">
             <!-- responsive nav button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -156,22 +141,7 @@
                   class="icon-bar"></span>
             </button>
             <!-- /responsive nav button -->
->>>>>>> refs/remotes/origin/master
 
-<<<<<<< HEAD
-				<!-- logo -->
-				<h1 class="navbar-brand"
-					style="margin-left: -10em; margin-top: 0.5em">
-					<a href="/Cacao/Main?cmd=main-page" " class="link_logo"> <span
-						class="tit_friends tit_logo">KAKAO FRIENDS</span>
-					</a>
-				</h1>
-				<!-- /logo -->
-			</div>
-			<!-- main nav -->
-			<nav class="collapse navigation navbar-collapse navbar-center"
-				role="navigation">
-=======
             <!-- logo -->
             <h1 class="navbar-brand"
                style="margin-left: -10em; margin-top: 0.5em">
@@ -184,7 +154,6 @@
          <!-- main nav -->
          <nav class="collapse navigation navbar-collapse navbar-center"
             role="navigation">
->>>>>>> refs/remotes/origin/master
 
 
             <ul class="nav navbar-nav">
@@ -248,146 +217,6 @@
                      class="caret"></span></a>
                   <ul class="dropdown-menu mega-dropdown-menu">
 
-<<<<<<< HEAD
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">인형/피규어</li>
-									<li><a href="#">미니인형</a></li>
-									<li><a href="#">25cm/35cm인형</a></li>
-									<li><a href="#">대형인형</a></li>
-									<li><a href="#">키체인인형</a></li>
-									<li><a href="#">피규어</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">여행/레저</li>
-									<li><a href="#">여행</a></li>
-									<li><a href="#">골프</a></li>
-									<li><a href="#">물놀이</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">리빙</li>
-									<li><a href="#">컵/텀블러</a></li>
-									<li><a href="#">패브릭</a></li>
-									<li><a href="#">탈취/방향제</a></li>
-									<li><a href="#">주방용품</a></li>
-									<li><a href="#">미용/욕실용품</a></li>
-									<li><a href="#">생활소품</a></li>
-									<li><a href="#">푸드</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">생활테크</li>
-									<li><a href="#">휴대폰 케이스</a></li>
-									<li><a href="#">휴대폰 악세서리</a></li>
-									<li><a href="#">노트북 악세서리</a></li>
-									<li><a href="#">소형 전자</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">잡화</li>
-									<li><a href="#">신발</a></li>
-									<li><a href="#">파우치/지갑/가방</a></li>
-									<li><a href="#">패션소품</a></li>
-									<li><a href="#">우산</a></li>
-									<li><a href="#">모자</a></li>
-									<li><a href="#">교통카드</a></li>
-									<li><a href="#">시즌소품</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">유아</li>
-									<li><a href="#">식기</a></li>
-									<li><a href="#">잡화</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">의류</li>
-									<li><a href="#">여성의류</a></li>
-									<li><a href="#">남성의류</a></li>
-									<li><a href="#">상의</a></li>
-									<li><a href="#">잠옷</a></li>
-									<li><a href="#">양말</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">뮤지엄</li>
-									<li><a href="#">뮤지엄</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">쥬얼리</li>
-									<li><a href="#">귀걸이</a></li>
-									<li><a href="#">케이스</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">수비니어</li>
-									<li><a href="#">수비니어</a></li>
-
-								</ul>
-							</li>
-							<li class="col-sm-2">
-								<ul>
-									<li class="dropdown-header">문구</li>
-									<li><a href="#">스티커</a></li>
-									<li><a href="#">필기구</a></li>
-									<li><a href="#">노트/메모</a></li>
-									<li><a href="#">카트/엽서</a></li>
-									<li><a href="#">파일</a></li>
-									<li><a href="#">데스크 소품</a></li>
-									<li><a href="#">선물 포장</a></li>
-									<li class="divider"></li>
-									<li class="dropdown-header">오마이프렌즈</li>
-									<li><a href="#">이지웨어</a></li>
-									<li><a href="#">액티브웨어</a></li>
-									<li><a href="#">악세서리</a></li>
-								</ul>
-							</li>
-						</ul></li>
-
-
-
-
-					<li class="dropdown mega-dropdown"><a
-						href="/Cacao/MyPage?cmd=main-page"
-						class="dropdown-toggle" data-toggle="dropdown">마이페이지 <span
-							class="caret"></span></a>
-						<ul class="dropdown-menu mega-dropdown-menu">
-						
-							<li class="col-sm-3">
-								<ul>
-									<li><h4>로그인</h4></li>
-									<li><a href="/Cacao/MyPage?cmd=main-page&page=1"><h4>주문내역</h4></a></li>
-									<li><a href="/Cacao/MyPage?cmd=main-page&page=2"><h4>찜</h4></a></li>
-									<li><a href="/Cacao/MyPage?cmd=main-page&page=3"><h4>취소및교환</h4></a></li>
-									<li><a href="/Cacao/MyPage?cmd=main-page&page=4"><h4>1:1문의</h4></a></li>
-
-								</ul>
-							</li>
-						</ul></li>
-
-
-
-					<li class="dropdown mega-dropdown"><a
-						onclick="location.href='/Cacao/Service?cmd=main-page'"
-						class="dropdown-toggle" data-toggle="dropdown">고객센터<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu mega-dropdown-menu">
-							<li class="col-sm-3">
-								<ul>
-									<li><a href='/Cacao/Service?cmd=main-page&page=1'><h4>공지사항</h4></a></li>
-									<li><a href='/Cacao/Service?cmd=main-page&page=2'><h4>FAQ</h4></a></li>
-
-								</ul>
-							</li>
-
-
-						</ul></li>
-					<li><a href="#">매장안내</a></li>
-					<li><a href="#">뮤지엄</a></li>
-
-				</ul>
-
-
-
-				<ul class="nav navbar-nav navbar-right">
-=======
                      <li class="col-sm-2">
                         <ul>
                            <li class="dropdown-header">인형/피규어</li>
@@ -458,7 +287,6 @@
                            <li class="divider"></li>
                            <li class="dropdown-header">수비니어</li>
                            <li><a href="#">수비니어</a></li>
->>>>>>> refs/remotes/origin/master
 
                         </ul>
                      </li>
@@ -528,12 +356,7 @@
 
             <ul class="nav navbar-nav navbar-right">
 
-<<<<<<< HEAD
-			<!-- /main nav -->
-		</div>
-=======
                <li>
->>>>>>> refs/remotes/origin/master
 
 
 
@@ -552,10 +375,10 @@
 
 
                <!-- 로그인 버튼 -->
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/로그인.PNG" onclick="javascript:openWindow(); "/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/비회원.PNG"/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/장바구니.PNG"/></li>
-               <li><img style="width:30px;height:30px" src="/Cacao/img/main/외국어.PNG"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:25px" src="/Cacao/img/main/login.png" onclick="javascript:openWindow(); "/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:25px" src="/Cacao/img/main/non.png"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:25px" src="/Cacao/img/main/cart.png"/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:25px" src="/Cacao/img/main/foreign.png"/></li>
 
 
 
@@ -573,9 +396,6 @@
          <!-- /main nav -->
       </div>
 
-<<<<<<< HEAD
-	<!--
-=======
    </header>
 
 
@@ -598,7 +418,6 @@
 
 
    <!--
->>>>>>> refs/remotes/origin/master
         End Fixed Navigation
         ==================================== -->
    <!-- main jQuery -->
