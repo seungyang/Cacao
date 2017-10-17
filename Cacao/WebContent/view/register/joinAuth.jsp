@@ -3,120 +3,42 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--
-        CSS
-        ============================================= -->
+<!-- CSS  ============================================= -->
 <!-- Fontawesome -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<!-- Fancybox -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
-<!-- owl carousel -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/owl.carousel.css">
 <!-- Animate -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Main Stylesheet -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/main.css">
-<!-- Main Responsive -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/responsive.css">
-
 <title>우리반 연습</title>
-<style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/register/joinInfoForm.css">
 
-* {
-	font-family: 'Roboto', sans-serif;
-}
-
-/* form starting stylings ------------------------------- */
-#textF-Num {
-	position: relative;
-	margin-bottom: 45px;
-}
-
-#textF {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	display: block;
-	width: 300px;
-	border: none;
-	border-bottom: 1px solid #00BFFF;
-}
-
-#textF:focus {
-	outline: none;
-}
-/* LABEL ======================================= */
-label {
-	color: #999;
-	font-size: 18px;
-	font-weight: normal;
-	position: absolute;
-	pointer-events: none;
-	left: 5px;
-	top: 10px;
-	transition: 0.2s ease all;
-}
-
-/* active state */
-#textF:focus ~ label, #textF:valid ~ label {
-	top: -20px;
-	font-size: 14px;
-	color: #000;
-}
-
-/* BOTTOM BARS ================================= */
-#bar {
-	position: relative;
-	display: block;
-	width: 300px;
-}
-
-#bar:before, #bar:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: .5px;
-	position: absolute;
-	background: #00BFFF;
-	transition: 0.2s ease all;
-}
-
-#bar:before {
-	left: 50%;
-}
-
-#bar:after {
-	right: 50%;
-}
-
-/* active state */
-#textF:focus ~ #bar:before, #textF:focus ~ #bar:after {
-	width: 50%;
-}
-</style>
 </head>
 <body>
+<div style='background:yellow; width:100%; height:5px;'></div>
+<div>
+	<header style="margin-top: 2%">
+	
+<div >
+	<font style="font-size: 22; font-weight: bold; margin-left: 2%; color: grey">Cacao 계정만들기</font><img src="../../img/login/loginheader.png" style="height: 20px; margin-left: 70%;"/>
+</div>
+<hr/>
+            </header> 
 
-	<header> </header>
 	<br>
-	<hr />
+	<div style="margin-top: -2%;">
+		<img alt="" src="../../img/register/registAuth1.png" style="margin-left: 10%; height: 60px; margin-top: -0.24%; "> <img
+			alt="" src="../../img/register/registAuth2.png"
+			style="margin-left: -1%; height: 60px; margin-top: -0.09%;"> <img alt=""
+			src="../../img/register/registAuth3.png" style="margin-left: -1%; height: 60px;"">
 
-
-	<img alt="" src="../../img/register/registAuth1.png">
-	<img alt="" src="../../img/register/registAuth2.png"
-		style="margin-left: -1%">
-	<img alt="" src="../../img/register/registAuth3.png"
-		style="margin-left: -1%">
-
+	</div>
 
 
 	<div class="container">
@@ -126,8 +48,6 @@ label {
 					<span>이메일인증</span>
 				</h1>
 				<hr>
-
-
 			</div>
 		</div>
 
@@ -160,7 +80,7 @@ label {
 			</div>
 		</div>
 	</div>
-
+</div>
 	<hr>
 	<br>
 	<footer> </footer>

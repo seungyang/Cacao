@@ -28,7 +28,6 @@ public class CmdMyPageOrder implements Cmd {
 		
 		request.setAttribute("orderList", orderList);
 		
-		
 		return next;			
 	}
 

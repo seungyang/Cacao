@@ -6,24 +6,50 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mapper.CacaoMyPageMapper">    
 
 <select id="selectAll" parameterType="hashmap" resultType="info">
-select i_name, i_cost 
+select i_id,i_imgcnt,i_detail,i_name,i_cost
 from info
 where i_id in (select i_id from choose where m_email=#{email})
 </select>
 
 <select id="qaList" parameterType="hashmap" resultType="qa">
-select q_cate, q_title, q_content, q_status, q_answer
+select q_id,q_cate, q_title, q_content, q_status, q_answer
 from qa
 where m_email=#{email}
+order by q_id desc
 </select>
 <insert id="insertQA" parameterType="qa">
 insert into qa(q_id, m_email, q_cate, q_title, q_content, q_file)
 values(SEQ_QA_ID.NEXTVAL, #{mEmail}, #{qCate}, #{qTitle}, #{qContent}, #{qFile})
 </insert>
 <select id="orderList" parameterType="hashmap" resultType="order">
-select d.d_id d_id, i.i_name i_name, o.o_cnt o_cnt, d.d_status d_status,i.i_id i_id
+select i.i_id i_id,o.d_id d_id, i.i_name i_name, d.d_status d_status, o.cnt o_cnt
+from (select o1.o_id o_id, o1.cnt, d_id, m_email, i_id
+from (select min(o_id) o_id, count(d_id) cnt from orderlist group by d_id ) o1,
+(select * from orderlist where o_id in ( select min(o_id) o_id from orderlist group by d_id)) o2
+where o1.o_id = o2.o_id) o, deliver d, info i
+where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email} and d_status not like '%취소'
+order by d_id desc
+</select>
+<select id="orderListDetail" parameterType="hashmap" resultType="order">
+select d.d_id d_id, i.i_name i_name, o.o_cnt o_cnt, d.d_status d_statusm,i.i_id i_id
 from orderlist o, deliver d, info i
-where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email}
+where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email} and o.d_id =#{orderid}
+order by d_id desc
+</select>
+<select id="cancelList" parameterType="hashmap" resultType="order">
+select i.i_id i_id,o.d_id d_id, i.i_name i_name, d.d_status d_status, o.cnt o_cnt
+from (select o1.o_id o_id, o1.cnt, d_id, m_email, i_id
+from (select min(o_id) o_id, count(d_id) cnt from orderlist group by d_id ) o1,
+(select * from orderlist where o_id in ( select min(o_id) o_id from orderlist group by d_id)) o2
+where o1.o_id = o2.o_id) o, deliver d, info i
+where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email} and d_status like '%취소'
+order by d_id desc
+</select>
+<select id="cancelListDetail" parameterType="hashmap" resultType="order">
+select d.d_id d_id, i.i_name i_name, o.o_cnt o_cnt, d.d_status d_statusm,i.i_id i_id
+from orderlist o, deliver d, info i
+where o.d_id=d.d_id and o.i_id = i.i_id and m_email=#{email} and o.d_id =#{orderid} and d_status like '%취소'
+order by d_id desc
 </select>
 </mapper> 
  

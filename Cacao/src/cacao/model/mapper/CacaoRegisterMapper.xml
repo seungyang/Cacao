@@ -14,12 +14,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- </select> -->
 
-<!-- <insert id="insert" parameterType="rec"> -->
-<!-- Insert  -->
-<!-- Into  -->
-<!-- article(ARTICLE_ID,GROUP_ID,SEQUENCE_NO,POSTING_DATE,READ_COUNT,WRITER_NAME,PASSWORD,TITLE,CONTENT) -->
-<!-- Values(seq_article_id_article.nextval,#{GroupId},#{UserId},sysdate,0,#{UserId},#{UserId},#{UserId},#{UserId})"; -->
-<!-- </insert>   -->
+<insert id="insertMember" parameterType="member">
+Insert 
+Into member(m_email,m_name, m_check, m_pwd)
+Values(  #{mEmail}, #{mName}, #{mCheck} , #{mPwd})
+</insert>  
+
 
 
 <!-- <update id="update" parameterType="hashmap"> -->

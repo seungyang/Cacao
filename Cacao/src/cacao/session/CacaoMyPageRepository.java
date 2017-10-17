@@ -83,19 +83,46 @@ public class CacaoMyPageRepository {
 			sess.close();
 		}
 	}
-//
-//	public Comment selectCommentByPk(Long cId) {
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		HashMap hasp = new HashMap();
-//		hasp.put("cId", cId);
-//		return sess.selectOne(namespace+".selectAll",hasp);
-//		}finally {
-//			sess.close();
-//		}
-//	}
-//	
+
+	public List<Order> getOrderListDetail(String email,String orderid) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("email", email);
+		hash.put("orderid", orderid);
+		return sess.selectList(namespace+".orderListDetail",hash);
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Order> getCancelList(String email) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("email", email);
+		return sess.selectList(namespace+".cancelList",hash);
+		}finally {
+			sess.close();
+		}
+	}
+	public List<Order> getCancelListDetail(String email,String orderid) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("email", email);
+		hash.put("orderid", orderid);
+		return sess.selectList(namespace+".cancelListDetail",hash);
+		}finally {
+			sess.close();
+		}
+	}
 //	public int update(Long cId,String UserId,String CommentContent,String RegDate ) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession

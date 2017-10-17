@@ -140,7 +140,7 @@ function openDaumPostcode() {
 </head>
 <body>
 	
-	<form class="form-horizontal" id='orderInsert' name='orderInsert' action="<%=pjName %>/Order?cmd=myPageQASave-page" method='post'>
+	<form class="form-horizontal" id='orderInsert' name='orderInsert' action="<%=pjName %>/Order?cmd=insert-page" method='post'>
 
 <fieldset>
 <legend style="text-align: center">주문 및 배송 정보</legend>

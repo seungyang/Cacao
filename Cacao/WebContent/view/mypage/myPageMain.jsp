@@ -132,7 +132,7 @@
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPageQAList-page" frameborder="0" scrolling="no" onload="autoResize(this)"></iframe>
 									<div class="col three" style="float: right;">
-										<a href="#" class="btn btn-sunflower" id="qaBtn">문의하기</a>
+										<a href="#" class="btn1 btn-sunflower1" id="qaBtn">문의하기</a>
 									</div>
 								</div>
 							</div>

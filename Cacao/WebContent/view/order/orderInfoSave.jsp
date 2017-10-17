@@ -2,23 +2,22 @@
     pageEncoding="UTF-8"%>
     <%
    String pjName = "/Cacao";
-   
-	int result = (int)request.getAttribute("mSave");
+	int result = (int)request.getAttribute("orderInsert");
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> 우리반 연습</title>
+<title> 와우 </title>
 </head>
 <body>
-<% 
-		if(result>0){
-			response.sendRedirect(pjName+"/Register?cmd=joinAuth-page");
-		}else{
-	%>
-		시스템오류입니다
-	<%} // End of If %>
 
+	<% 
+		if(result>0){
+			response.sendRedirect(pjName+"/Order?cmd=main-page&page=4");
+		}else{
+			response.sendRedirect(pjName+"/Order?cmd=myPageQAForm-page");
+	%>
+	<%} // End of If %>
 </body>
 </html>

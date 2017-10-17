@@ -1,0 +1,98 @@
+.Agree-wrapper {
+	margin-bottom: 20px;
+	border-top: 1px solid #f0f0f0;
+	background: #fff;
+	transform: translateZ(0);
+}
+
+input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+}
+
+label p {
+	line-height: 1.4em;
+}
+
+label {
+	position: relative;
+	display: block;
+	margin: 0 0 0 16px;
+	padding: 16px 0;
+	border-bottom: 1px solid #f0f0f0;
+	background: #fff;
+	font-size: 1em;
+	line-height: 1.2em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+label:after {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	margin-top: -10px;
+	height: 20px;
+	content: '>';
+	line-height: 20px;
+	transform: rotate(90deg);
+}
+
+section {
+	overflow: hidden;
+	height: 0;
+	transition: .3s all;
+}
+
+#Agree1:checked ~ label[for*='1']:after, #Agree2:checked ~ label[for*='2']:after,
+	#Agree3:checked ~ label[for*='3']:after, #Agree4:checked ~ label[for*='4']:after
+	{
+	transform: rotate(270deg);
+}
+
+#Agree1:checked ~ #Content1, #Agree2:checked ~ #Content2, #Agree3:checked 
+	~ #Content3, #Agree4:checked ~ #Content4 {
+	height: auto;
+}
+
+section p {
+	margin: 0;
+	padding: 16px;
+	border-bottom: 1px solid #f0f0f0;
+	color: #999;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+body{margin:0;}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button5 {
+     background-color: grey;
+    color: white;
+    border: 2px solid #e7e7e7;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}

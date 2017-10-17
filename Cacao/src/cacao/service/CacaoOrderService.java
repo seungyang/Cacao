@@ -32,9 +32,9 @@ public class CacaoOrderService {
 //		return repo.getGroupId();
 //	}
 //	
-//	public int insert( BoardRec rec ) {
-//		return repo.insert( rec );
-//	}
+	public int insertOrder( Order order ) {
+		return repo.insertOrder(order);
+	}
 //	
 //	public List<BoardRec> selectList(int firstrow,int endrow) {
 //		return repo.selectList(firstrow,endrow);

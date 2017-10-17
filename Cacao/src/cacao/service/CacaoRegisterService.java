@@ -1,5 +1,6 @@
 package cacao.service;
 
+import cacao.model.vo.Member;
 import cacao.session.CacaoRegisterRepository;
 
 
@@ -21,9 +22,9 @@ public class CacaoRegisterService {
 //		return repo.getGroupId();
 //	}
 //	
-//	public int insert( BoardRec rec ) {
-//		return repo.insert( rec );
-//	}
+	public int getInsert( Member m ) {
+		return repo.getInsert(m);
+	}
 //	
 //	public List<BoardRec> selectList(int firstrow,int endrow) {
 //		return repo.selectList(firstrow,endrow);

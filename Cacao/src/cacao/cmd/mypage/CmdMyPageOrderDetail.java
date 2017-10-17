@@ -12,22 +12,24 @@ import cacao.service.CacaoMyPageService;
 
 
 
-public class CmdMyPageCancelList implements Cmd {
+public class CmdMyPageOrderDetail implements Cmd {
 	private String next;
 
-	public CmdMyPageCancelList( String _next ){
+	public CmdMyPageOrderDetail( String _next ){
 		next = _next;
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
-		// TODO Auto-generated method stub
+		
 		String email = "omy@naver.com";
+		String orderid = request.getParameter("orderid");
 		
-		List<Order> cancelList = CacaoMyPageService.getInstance().cancelList(email);
+			
+		List<Order> orderListDetail = CacaoMyPageService.getInstance().orderListDetail(email,orderid);
 		
-		request.setAttribute("cancelList", cancelList);
+		request.setAttribute("orderListDetail", orderListDetail);
 		
-
+		
 		return next;			
 	}
 
