@@ -12,7 +12,17 @@ from choose, info
 where choose.m_email = #{iid} and info.i_id = choose.i_id
 
 </select>
-
+<insert id="orderInsert" parameterType="order">
+insert into deliver(d_id, d_pay, d_name, d_addr, d_note, d_tel)
+values (to_char(sysdate,'YYYYMMDD')||seq_deliver_id.nextval,#{oPayment},#{oName},#{oAddr},#{oMemo},#{oTel})
+</insert>
+<insert id="itemInsert" parameterType="order">
+	<selectKey resultType="String" keyProperty="dId" order="BEFORE">
+		select to_char(sysdate,'YYYYMMDD')||seq_deliver_id.currval d_id from dual
+	</selectKey>
+insert into orderlist(o_id, d_id, m_email,i_id, o_cnt) 
+values (seq_orderlist_id.nextval,#{dId},#{mEmail},#{iId},#{oCnt})
+</insert> 
 <!-- <insert id="insert" parameterType="rec"> -->
 <!-- Insert  -->
 <!-- Into  -->
