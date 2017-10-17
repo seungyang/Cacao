@@ -13,6 +13,7 @@ import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
 import cacao.cmd.order.CmdOrderInfoForm;
+import cacao.cmd.order.CmdOrderInfoSave;
 
 
 
@@ -35,7 +36,9 @@ public class CmdOrderControl extends HttpServlet {
 		commandMap = new HashMap();
 
 		commandMap.put("main-page",	new CmdOrderInfoForm("orderInfoForm.jsp") );
-//		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
+		commandMap.put("insert-page",new CmdOrderInfoSave("orderInfoSave.jsp") );
+		commandMap.put("success-page",new CmdNull("orderAccView.jsp"));
+		commandMap.put("fail-page",new CmdNull("orderAddrFind.jsp"));
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 

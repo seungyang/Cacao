@@ -50,24 +50,33 @@ public class CacaoOrderRepository {
 //		}
 //	}
 //	
-//	public Integer insertComment(Comment c){
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		int result =  sess.insert(namespace + ".insertComment",c);
-//		if(result > 0) {
-//			sess.commit();
-//		}else {
-//			sess.rollback();
-//		}
-//		return result;
-//		}finally {
-//			sess.close();
-//		}	
-//			
-//		
-//	}
+	public Integer insertOrder(Order order){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			
+		int result1 =  sess.insert(namespace + ".orderInsert",order);
+		
+		if(result1 > 0) {
+			
+			int result2 =  sess.insert(namespace + ".itemInsert",order);
+			
+			if(result2 > 0) {
+				sess.commit();
+			}
+			else {
+				sess.rollback();
+				return result2;
+			}
+		}else {
+			sess.rollback();
+		}
+		return result1;
+		}finally {
+			sess.close();
+		}	
+	}
 //
 //	public Comment selectCommentByPk(Long cId) {
 //		SqlSession sess = getSqlSessionFactory().openSession();

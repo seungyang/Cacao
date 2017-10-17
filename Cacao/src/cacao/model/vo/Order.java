@@ -10,9 +10,45 @@ public class Order {
    private String iName; // 상품명
    private String dStatus;
    private String iCost;
+   private String oPayment; //결제수단
+   private String oName; //주문자명
+   private String oTel; //연락처
+   private String oMemo; //배송메모
+   private String oAddr; //배송주소
    
    
-   public String getoId() {
+   
+   public String getoAddr() {
+	return oAddr;
+}
+public void setoAddr(String oAddr) {
+	this.oAddr = oAddr;
+}
+public String getoMemo() {
+	return oMemo;
+}
+public void setoMemo(String oMemo) {
+	this.oMemo = oMemo;
+}
+public String getoTel() {
+	return oTel;
+}
+public void setoTel(String oTel) {
+	this.oTel = oTel;
+}
+public String getoName() {
+	return oName;
+}
+public void setoName(String oName) {
+	this.oName = oName;
+}
+public String getoPayment() {
+	return oPayment;
+}
+public void setoPayment(String oPayment) {
+	this.oPayment = oPayment;
+}
+public String getoId() {
       return oId;
    }
    public void setoId(String oId) {
