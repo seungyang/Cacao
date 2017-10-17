@@ -1,6 +1,7 @@
 package cacao.session;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import cacao.model.vo.Choose;
-import cacao.model.vo.Info;
+import cacao.model.vo.Deliver;
 import cacao.model.vo.Order;
 
 
@@ -50,24 +51,32 @@ public class CacaoOrderRepository {
 //		}
 //	}
 //	
-	public Integer insertOrder(Order order){
+	public Integer insertOrder(Order order, String[] iCnt, String[] iId){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
 		//JDBC의 연결 객체 -> SqlSession
 		try {
+			String str= sess.selectOne(namespace+".orderNextval");
+			order.setoStr(str);
 			
-		int result1 =  sess.insert(namespace + ".orderInsert",order);
-		
+			int result1 =  sess.insert(namespace + ".orderInsert",order);
 		if(result1 > 0) {
-			
-			int result2 =  sess.insert(namespace + ".itemInsert",order);
-			
-			if(result2 > 0) {
-				sess.commit();
+			int result2 = 0;
+			for(int i = 0; i < iCnt.length;i++) {
+				Deliver d = new Deliver();
+				d.setOlDid(str);
+				d.setOlEmail(order.getmEmail());
+				d.setOlIid(iId[i]);
+				d.setOlOcnt(iCnt[i]);
+								
+				result2 +=  sess.insert(namespace+".itemInsert",d);
+			}			
+			if(result2 == iCnt.length) {
+					sess.commit();
 			}
 			else {
 				sess.rollback();
-				return result2;
+				return 0;
 			}
 		}else {
 			sess.rollback();
@@ -77,38 +86,5 @@ public class CacaoOrderRepository {
 			sess.close();
 		}	
 	}
-//
-//	public Comment selectCommentByPk(Long cId) {
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		HashMap hasp = new HashMap();
-//		hasp.put("cId", cId);
-//		return sess.selectOne(namespace+".selectAll",hasp);
-//		}finally {
-//			sess.close();
-//		}
-//	}
-//	
-//	public int update(Long cId,String UserId,String CommentContent,String RegDate ) {
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		//JDBC의 연결 객체 -> SqlSession
-//		try {
-//		HashMap hasp = new HashMap();
-//		hasp.put("cId", cId);
-//		hasp.put("UserId", UserId);
-//		hasp.put("CommentContent", CommentContent);
-//		hasp.put("RegDate", RegDate);
-//		int result = sess.update(namespace+".update",hasp);
-//		if(result > 0) {
-//			sess.commit();
-//		}else {
-//			sess.rollback();
-//		}
-//		return result;
-//		
-//		}finally {
-//			sess.close();
-//		}
-//	}
+
 }

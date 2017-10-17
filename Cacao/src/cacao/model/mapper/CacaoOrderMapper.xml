@@ -6,36 +6,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mapper.CacaoOrderMapper">    
 
 <select id="orderList" parameterType="hashmap" resultType="choose">
-
 select info.i_id i_id, info.i_name i_name, info.i_cost i_cost, choose.m_email m_email 
 from choose, info
 where choose.m_email = #{iid} and info.i_id = choose.i_id
-
 </select>
+
+<select id="orderNextval" resultType="String">
+select to_char(sysdate,'YYYYMMDD')||seq_deliver_id.nextval from dual
+</select>
+
 <insert id="orderInsert" parameterType="order">
 insert into deliver(d_id, d_pay, d_name, d_addr, d_note, d_tel)
-values (to_char(sysdate,'YYYYMMDD')||seq_deliver_id.nextval,#{oPayment},#{oName},#{oAddr},#{oMemo},#{oTel})
+values (#{oStr},#{oPayment},#{oName},#{oAddr},#{oMemo},#{oTel})
 </insert>
-<insert id="itemInsert" parameterType="order">
-	<selectKey resultType="String" keyProperty="dId" order="BEFORE">
-		select to_char(sysdate,'YYYYMMDD')||seq_deliver_id.currval d_id from dual
-	</selectKey>
-insert into orderlist(o_id, d_id, m_email,i_id, o_cnt) 
-values (seq_orderlist_id.nextval,#{dId},#{mEmail},#{iId},#{oCnt})
-</insert> 
-<!-- <insert id="insert" parameterType="rec"> -->
-<!-- Insert  -->
-<!-- Into  -->
-<!-- article(ARTICLE_ID,GROUP_ID,SEQUENCE_NO,POSTING_DATE,READ_COUNT,WRITER_NAME,PASSWORD,TITLE,CONTENT) -->
-<!-- Values(seq_article_id_article.nextval,#{GroupId},#{UserId},sysdate,0,#{UserId},#{UserId},#{UserId},#{UserId})"; -->
-<!-- </insert>   -->
-<!-- # : PreparedStatement효과, $: Statement 효과 -->
 
-<!-- <update id="update" parameterType="hashmap"> -->
-<!-- 	Update comment_tab Set user_id = #{UserId},comment_content = #{CommentContent},reg_date = sysdate   -->
-<!-- 	Where comment_no = #{cId} -->
-<!-- </update> -->
-
-
+<insert id="itemInsert" parameterType="deliver">
+insert into orderlist(o_id, d_id, m_email,i_id,o_cnt)
+values (seq_orderlist_id.nextval,#{olDid},#{olEmail},#{olIid},#{olOcnt})
+</insert>
 </mapper> 
  

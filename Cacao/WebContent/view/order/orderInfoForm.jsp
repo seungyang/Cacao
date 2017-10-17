@@ -3,12 +3,15 @@
   <%@ page import="java.util.*" %>
 <%@ page import="cacao.model.vo.*" %>
 <%List<Choose> orderList = (List) request.getAttribute("orderResult"); %>
-    <%
+<%
    String pjName = "/Cacao";
+	
     int sum = 0;
     for(int i =0; i < orderList.size(); i ++){
     	sum += Integer.parseInt(orderList.get(i).getiCost());
     }
+    
+    
 %>
 <!DOCTYPE html>
 <html>
@@ -233,6 +236,8 @@ function openDaumPostcode() {
   <input type="button" name="minus" value = "-" class="minus">
   <input type="text" size='1' name="count" disabled = 'true' class ="textcnt" value = "1">
   <input type="button" name="plus" value = "+" class="plus">
+  <input type="hidden" name="iCnt"  class ="textcnt" value = "1">
+  <input type="hidden" name="iId" value="<%=orderList.get(i).getiId() %>">
   <br/>
   <br/>
   <hr/>

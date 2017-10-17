@@ -12,6 +12,7 @@ public class CmdNull implements Cmd{
 	}
 
 	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CmdException{
+		
 		return next;
 	}
 
