@@ -90,7 +90,15 @@ String imgstr = "";
 	height: 500px;
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="text/javascript">
+$(function(){
+	$('#buy').click(function(){
+		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
+	});
+})
+</script>
 <script type="text/javascript">
 window.onload=function(){
 	var plus = document.getElementById("plus");

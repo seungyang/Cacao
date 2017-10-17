@@ -50,9 +50,11 @@
 		infolist.remove(Integer.parseInt(index));
 	}else if(change.equals("4")){
 // 		선택삭제
+		
 		String[] deleteindex = request.getParameterValues("itemcheck");
+		
 		for(int i=0;i<deleteindex.length;i++){
-			infolist.remove(Integer.parseInt(deleteindex[i]));
+			infolist.remove(Integer.parseInt(deleteindex[i])-i);
 		}
 		
 	}

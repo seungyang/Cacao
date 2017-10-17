@@ -105,7 +105,7 @@ if(catelist.size()==0){
               <div class="caption">
                 <div class="caption-content">
                 	상품명 : <%= catelist.get(i).getiName() %><br/>가격 : <%= catelist.get(i).getiCost() %>원<br/>
-                     <img class="fa fa-search-plus fa-3x" src="${pageContext.request.contextPath}/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img>
+                     <a href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=catelist.get(i).getiName()%>&price=<%= catelist.get(i).getiCost()%>&id=<%= catelist.get(i).getiId()%>'><img class="fa fa-search-plus fa-3x" src="/Cacao/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img></a>
                 </div>
               </div>
             </a>

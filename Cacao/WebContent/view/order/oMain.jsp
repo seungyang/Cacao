@@ -1,6 +1,9 @@
-<%@ page contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <% String pjName = "/Cacao"; %>
+<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*"%>
+    <% String pjName = "/Cacao"; 
+    	String id = request.getParameter("id");
+    	String cnt = request.getParameter("cnt");
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +11,7 @@
 <title> 와우 </title>
 </head>
 <body>
-	<% response.sendRedirect(pjName+"/Order?cmd=main-page"); %>
+	
+	<% response.sendRedirect(pjName+"/Order?cmd=main-page&id="+id+"&cnt="+cnt); %>
 </body>
 </html>
