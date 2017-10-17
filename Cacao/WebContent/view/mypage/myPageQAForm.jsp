@@ -21,7 +21,17 @@ $(function(){
    });
    
    $('#qaSubmit').click(function () {
-		$('#qaFrm').submit();
+		if($('#qCate').val()==0){
+	   		alert('유형을 선택하세요');			
+		}else if($('#qTitle').val()==""){
+			alert('제목을 입력하세요');
+		}else if($('#qContent').val()==""){
+			alert('내용을 입력하세요');
+		}else{
+ 			$('#qaFrm').submit();
+		}
+		
+		/*  */
    });
 });   
 </script>
