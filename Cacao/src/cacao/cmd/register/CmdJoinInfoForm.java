@@ -18,7 +18,7 @@ public class CmdJoinInfoForm implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 	
-				
+		
 		
 			int messageId = Integer.parseInt(request.getParameter("messageId"));
 			String password = request.getParameter("password");

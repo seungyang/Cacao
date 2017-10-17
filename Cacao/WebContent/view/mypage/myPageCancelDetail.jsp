@@ -3,7 +3,7 @@
 <%@ page import="cacao.model.vo.*"%>
 <%
 	String pjName = "/Cacao";
-	List<Order> orderListDetail = (List<Order>) request.getAttribute("orderListDetail");
+	List<Order> cancelListDetail = (List<Order>) request.getAttribute("cancelListDetail");
 %>
 <!DOCTYPE html>
 <html>
@@ -52,16 +52,16 @@
 <body>
 	<div class="container">
 		<%
-			if ( orderListDetail.size() < 1) {
+			if ( cancelListDetail.size() < 1) {
 		%>
-						주문내역이 없습니다.
+						취소내역이 없습니다.
 		<% } else {
-			for (int i = 0; i < orderListDetail.size(); i++) {
+			for (int i = 0; i < cancelListDetail.size(); i++) {
 		%>
 		<div class="row equipo-item">
 			<div class="col-md-3 separador-vertical">
-				<img src="<%=pjName %>/img/product/all/<%=orderListDetail.get(i).getiId() %>00.jpg"
-					class="img-responsive center-block" lo="<%=orderListDetail.get(i).getiId() %>">
+				<img src="<%=pjName %>/img/product/all/<%=cancelListDetail.get(i).getiId() %>00.jpg"
+					class="img-responsive center-block" lo="<%=cancelListDetail.get(i).getiId() %>">
 			</div>
 			<br><br>
 			<div class="col-md-9">
@@ -69,20 +69,20 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">주문번호</label>
 					<div class="col-md-5">
-						<span class="help-block did"> <%=orderListDetail.get(i).getdId()%>
+						<span class="help-block did"> <%=cancelListDetail.get(i).getdId()%>
 						</span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">상품명</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=orderListDetail.get(i).getiName()%> 외 <%=orderListDetail.get(i).getoCnt() %>개 </span>
+						<span class="help-block"> <%=cancelListDetail.get(i).getiName()%> 외 <%=cancelListDetail.get(i).getoCnt() %>개 </span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">수량</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=orderListDetail.get(i).getoCnt()%> </span>
+						<span class="help-block"> <%=cancelListDetail.get(i).getoCnt()%> </span>
 					</div>
 				</div>
 				</p>

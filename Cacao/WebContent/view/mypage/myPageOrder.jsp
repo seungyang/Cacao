@@ -10,12 +10,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<%-- <link rel="stylesheet" type="text/css"	href="<%=pjName%>/css/mypage/orderbtn.css" /> --%>
+<link rel="stylesheet" type="text/css"	href="<%=pjName%>/css/mypage/orderbtn.css" />
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script>
-<script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script>
-
 
 <style type="text/css">
 .separador-vertical {
@@ -49,11 +46,9 @@
 		$('.btn1').on('click',function(){
 			var data =$(this).parent().parent().parent().find("span.did").text();
 			var img = $(this).parent().parent().parent().parent().find("img").attr("lo");
-			$(location).attr('href','<%=pjName%>/MyPage?cmd=CmdMyPageOrderDetail-page&orderid='+ img);
-				});
-		$("#popbutton").click(function() {
-			$('div.modal').modal();
-		})
+			window.open("<%=pjName%>/MyPage?cmd=CmdMyPageOrderDetail-page&orderid="+ img, "상세정보", "width=1275, height=800");
+		});
+
 
 	});
 </script>
@@ -62,6 +57,11 @@
 <body>
 	<div class="container">
 		<%
+			if ( orderList.size() < 1) {
+		%>
+						주문내역이 없습니다.
+		<% } else {
+
 			for (int i = 0; i < orderList.size(); i++) {
 		%>
 		<div class="row equipo-item">
@@ -85,8 +85,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">상품명</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=orderList.get(i).getiName()%>
-							외 <%=orderList.get(i).getoCnt()%>개
+						<span class="help-block"> <%=orderList.get(i).getiName()%>등 <%=orderList.get(i).getoCnt()%>개
 						</span>
 					</div>
 				</div>
@@ -105,42 +104,16 @@
 						<a href="#" class="btn2 btn-sunflower2" id="orderCencel">주문 취소</a>
 					</div>
 				</div>
-				</p>
+
 			</div>
 		</div>
 		<%
-			}
+			}}
 		%>
 	</div>
 	
 	<hr />
-	<div class="container">
-		<h2>모달</h2>
-		<!-- 버튼 -->
-		<button type="button" class="btn btn-primary btn-lg"
-			data-toggle="modal" data-target="#myModal">Launch demo
-			modal</button>
-		<!-- 모달 팝업 -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">×</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-					</div>
-					<div class="modal-body">...</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save
-							changes</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 
 
