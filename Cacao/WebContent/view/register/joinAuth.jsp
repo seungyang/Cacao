@@ -48,8 +48,6 @@
 					<span>이메일인증</span>
 				</h1>
 				<hr>
-
-
 			</div>
 		</div>
 

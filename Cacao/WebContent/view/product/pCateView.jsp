@@ -18,11 +18,10 @@ if(catelist.size()==0){
 <meta name="keywords"
    content="one page, business template, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
 <meta charset="utf-8">
-
 <title>카카오프렌즈</title>
 
-<!-- combobox css -->
 
+<!-- combobox css -->
 <link rel="stylesheet" type="text/css" href="/Cacao/css/product/easydropdown.css"/>
 
 
@@ -32,38 +31,28 @@ if(catelist.size()==0){
 <link
    href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
    rel="stylesheet" type="text/css">
-
 <!--
         CSS
         ============================================= -->
 <!-- Fontawesome -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
+<link rel="stylesheet" href="/Cacao/css/font-awesome.min.css">
 <!-- Bootstrap -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Cacao/css/bootstrap.min.css">
 <!-- Fancybox -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/Cacao/css/jquery.fancybox.css">
 <!-- owl carousel -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css">
+<link rel="stylesheet" href="/Cacao/css/owl.carousel.css">
 <!-- Animate -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
-<!-- Main Stylesheet -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-<!-- Main Responsive -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
-
-
-
-
-<!-- product페이지 css -->
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
-
-<!-- Modernizer Script for old Browsers -->
-<script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="/Cacao/css/animate.css">
+<link rel="stylesheet" href="/Cacao/css/main.css">
+<link rel="stylesheet" href="/Cacao/css/responsive.css">
+<link rel="stylesheet" href="/Cacao/css/responsive.css">
+<script src="/Cacao/js/vendor/modernizr-2.6.2.min.js"></script>
 
 <!-- combobox js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
+
 
 <style type="text/css">
 #drop{
@@ -111,7 +100,7 @@ if(catelist.size()==0){
         <%for(int i=0;i<size;i++){ %>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist.get(i).getiId()%>&cnt=<%=catelist.get(i).getiImgcnt()%>&detail=<%=catelist.get(i).getiDetail()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
+                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist.get(i).getiId()%>&cnt=<%=catelist.get(i).getiImgcnt()%>&detail=<%=catelist.get(i).getiDetail()%>&name=<%=catelist.get(i).getiName()%>&price=<%=catelist.get(i).getiCost()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
             				
               <div class="caption">
                 <div class="caption-content">

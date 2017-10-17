@@ -18,59 +18,40 @@
 	href="${pageContext.request.contextPath}/css/main.css">
 <title>우리반 연습</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/register/joinInfoForm.css">
-<%String pjName = "/ProjectC";  %>
+
+<%
+   String pjName = "/Cacao";
+%>
  
 <script type="text/javascript">
  
-function checkfield(){
+	function checkfield(){
+ 	
+		var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
  
-
- 
- if(document.signup.emailid.value==""){
-	 alert("이메일을 입력하세요");
-	 document.signup.emailid.focus();
-	 exit;
-	 
- }else if(document.signup.password.value==""){
- alert("비밀번호를 입력하세요");
- document.signup.password.focus();
- exit;
- 
- }else if(document.signup.cpassword.value==""){
- alert("비밀번호확인을 입력하세요");
- document.signup.cpassword.focus();
- exit;
-
- }else if(document.signup.mem_name.value==""){
- alert("닉네임을 입력하세요");
- document.signup.mem_name.focus();
- exit;
-
- }
- 
- 
- if(document.signup.password.value!=document.signup.cpassword.value){
- //비밀번호와 비밀번호확인의 값이 다를 경우
- 
- alert("입력한 2개의 비밀번호가 일치하지 않습니다.");
- document.signup.password.focus();
- exit;
- 
- }
- 
- 
- var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
- 
- if(exptext.test(document.signup.emailid.value)==false){
- //이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우
- 
- alert("이 메일형식이 올바르지 않습니다.");
- document.signup.emailid.focus();
- exit;
- }
- 
- document.signup.submit();
- 
+		if(document.signup.emailid.value==""){
+		 	alert("이메일을 입력하세요");
+	 		document.signup.emailid.focus();
+ 		}else if(document.signup.password.value==""){
+ 			alert("비밀번호를 입력하세요");
+ 			document.signup.password.focus();
+ 		}else if(document.signup.cpassword.value==""){
+ 			alert("비밀번호확인을 입력하세요");
+ 			document.signup.cpassword.focus();
+ 		}else if(document.signup.mem_name.value==""){
+ 			alert("닉네임을 입력하세요");
+ 			document.signup.mem_name.focus();
+ 		}else if(document.signup.password.value!=document.signup.cpassword.value){
+			//비밀번호와 비밀번호확인의 값이 다를 경우
+ 			alert("입력한 2개의 비밀번호가 일치하지 않습니다.");
+ 			document.signup.password.focus();
+		}else if(exptext.test(document.signup.emailid.value)==false){
+ 			//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우
+ 			alert("이 메일형식이 올바르지 않습니다.");
+ 			document.signup.emailid.focus();
+ 		}else {
+ 			document.signup.submit();
+ 		}
 }
 </script>
 
@@ -99,8 +80,9 @@ function checkfield(){
 		<div class="row">
 			<div class="col-md-8" style="margin-left: 15%">
 				<hr>
-				<form class="form-horizontal" action="<%=pjName%>/Register?cmd=joinAuth-form&&emailid=qoehd1412@naver.com" method="post" name="signup"
-					id="signup" enctype="multipart/form-data">
+				<form class="form-horizontal" action="<%=pjName %>/Register?cmd=joinInfoSave-page" method="post" name="signup"
+					id="signup">
+					
 					<div class="form-group" style="margin-left: 7%;">
 						<label class="control-label col-sm-3">카카오계정 이메일 <span
 							class="text-danger">*</span></label>

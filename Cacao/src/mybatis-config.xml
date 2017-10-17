@@ -39,7 +39,7 @@
 <mapper resource="cacao/model/mapper/CacaoMyPageMapper.xml"/> 
 <mapper resource="cacao/model/mapper/CacaoOrderMapper.xml"/> 
 <mapper resource="cacao/model/mapper/CacaoProductMapper.xml"/>
-<!-- <mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/> -->
+<mapper resource="cacao/model/mapper/CacaoRegisterMapper.xml"/>
 <mapper resource="cacao/model/mapper/CacaoServiceMapper.xml"/> 
 <!-- <mapper resource="cacao/model/mapper/CacaoAdminMapper.xml"/>  -->
 <!-- <mapper resource="cacao/model/mapper/CacaoIncludeMapper.xml"/>  -->

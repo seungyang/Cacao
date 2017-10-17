@@ -3,6 +3,12 @@
 int cnt = Integer.parseInt(request.getParameter("cnt"));
 String id = request.getParameter("id");
 String detail = request.getParameter("detail");
+String name =  request.getParameter("name");
+String price = request.getParameter("price");
+request.setAttribute("id", id);
+request.setAttribute("detail", detail);
+request.setAttribute("name", name);
+request.setAttribute("price", price);
 String imgstr = "";
 %>
 <!DOCTYPE html>
@@ -102,8 +108,7 @@ window.onload=function(){
 	var cart = document.getElementById("cart");
 	cart.onclick = function(){
 		var text = document.getElementById("text").value;
-		alert(text);
-		location.href="/Cacao/view/main/cartView.jsp?id=<%=id%>&cnt="+text;
+		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
 	}		 
 }
 </script>
