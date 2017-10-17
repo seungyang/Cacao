@@ -45,7 +45,7 @@ margin-left:25%
 				role="navigation">
 				
 					
-					<img id=heart src="/Cacao/img/product/heart.png" width=50px height=50px/>
+					<img id=choose src="/Cacao/img/product/heart.png" width=50px height=50px/>
 					<img id=cart src="/Cacao/img/product/cart.png" width=50px height=50px/>
 					<img id=minus src="/Cacao/img/product/minus.png" width=50px height=50px/>
 					<input type="text" id='text' value=1 disabled="true"></input>
