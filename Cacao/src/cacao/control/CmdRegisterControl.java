@@ -13,6 +13,7 @@ import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
 import cacao.cmd.register.CmdJoinInfoSave;
+import cacao.cmd.register.CmdJoinSuccess;
 
 
 
@@ -36,7 +37,8 @@ public class CmdRegisterControl extends HttpServlet {
 
 		commandMap.put("main-page",	new CmdNull("cacaoMain.jsp"));
 		commandMap.put("joinInfoSave-page",	new CmdJoinInfoSave("joinInfoSave.jsp"));
-		commandMap.put("joinAuth-page",new CmdNull("joinAuth.jsp")); 
+		commandMap.put("joinAuth-page",new CmdNull("joinAuth.jsp"));
+		commandMap.put("joinSuccess-page",new CmdJoinSuccess("joinSuccess.jsp"));
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
 //		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 

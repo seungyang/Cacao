@@ -16,8 +16,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="insertMember" parameterType="member">
 Insert 
-Into member(m_email,m_name, m_check, m_pwd)
-Values(  #{mEmail}, #{mName}, #{mCheck} , #{mPwd})
+Into member(m_email,m_name, m_check, m_pwd, m_birth, m_sex)
+Values(  #{mEmail}, #{mName}, #{mCheck} , #{mPwd}, #{mBirth}, #{mSex})
 </insert>  
 
 
