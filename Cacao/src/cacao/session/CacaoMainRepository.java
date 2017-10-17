@@ -1,6 +1,7 @@
 package cacao.session;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,6 +9,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import cacao.model.vo.Info;
 
 
 public class CacaoMainRepository {
@@ -23,6 +26,16 @@ public class CacaoMainRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
+
+//	public List<Info> selectInfo(ArrayList<Info> list) {
+//		SqlSession sess = getSqlSessionFactory().openSession();
+//		try {
+//		return sess.selectList(namespace+".selectAll");
+//		}finally {
+//			sess.close();
+//		}
+//		
+//	}
 	
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();

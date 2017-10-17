@@ -5,15 +5,15 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-
-
+<!-- 헤어css경로 -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/header.css">
+<!-- 부트스트랩링크 -->
 <link rel="stylesheet"
    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script
    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 <!-- 마우스 오버 이벤트 -->
 <script type="text/javascript">
    $(document).ready(
@@ -33,101 +33,15 @@
 </script>
 
 
-<!-- drop down event -->
-<style type="text/css">
-#imaginary_container {
-   margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-   background: white !important;
-}
-
-.stylish-input-group .form-control {
-   border-right: 0;
-   box-shadow: 0 0 0;
-   border-color: #ccc;
-}
-
-.stylish-input-group button {
-   border: 0;
-   background: transparent;
-}
-
-.mega-dropdown {
-   position: static !important;
-}
-
-.mega-dropdown-menu {
-   padding: 20px 0px;
-   width: 100%;
-   box-shadow: none;
-   -webkit-box-shadow: none;
-}
-
-.mega-dropdown-menu>li>ul {
-   padding: 0;
-   margin: 0;
-}
-
-.mega-dropdown-menu>li>ul>li {
-   list-style: none;
-}
-
-.mega-dropdown-menu>li>ul>li>a {
-   display: block;
-   color: #222;
-   padding: 3px 5px;
-}
-
-.mega-dropdown-menu>li ul>li>a:hover, .mega-dropdown-menu>li ul>li>a:focus
-   {
-   text-decoration: none;
-}
-
-.mega-dropdown-menu .dropdown-header {
-   font-size: 18px;
-   color: #ff3546;
-   padding: 5px 60px 5px 5px;
-   line-height: 30px;
-}
-
-.carousel-control {
-   width: 30px;
-   height: 30px;
-   top: -35px;
-}
-
-.left.carousel-control {
-   right: 30px;
-   left: inherit;
-}
-
-.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
-   {
-   font-size: 12px;
-   background-color: #fff;
-   line-height: 30px;
-   text-shadow: none;
-   color: #333;
-   border: 1px solid #ddd;
-}
-
-</style>
-
-
 <script type="text/javascript">
 
-// 로그인버튼
+// 로그인버튼 클릭시 로그인창 뜸
    function openWindow() {
-      window.open("/Cacao/view/login/loginForm.jsp", "로그인폼", "width=1275, height=800");
+      window.open("/Cacao/view/login/loginForm.jsp", "로그인폼", "width=1000px, height=600px");
    }
 </script>
-
-
-
-
 </head>
+
 <body>
    <header id="navigation" class="navbar-fixed-top">
       <div class="container">
