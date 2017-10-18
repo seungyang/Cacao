@@ -2,6 +2,7 @@ package cacao.cmd.register;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
@@ -17,15 +18,17 @@ public class CmdJoinAuth implements Cmd {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
-	
-				
 		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
-			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+		HttpSession session = request.getSession();
+		String emailid = (String) session.getAttribute("emailid");
+		System.out.println("email 인증 : " + emailid);
+		
+		// 이메일 인증코드 생성 및 보내는 코드 입력
+	
+		//이메일 인증코드 
+		
+		
+
 		
 		
 		return next;			

@@ -2,9 +2,12 @@ package cacao.cmd.register;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Member;
+import cacao.service.CacaoRegisterService;
 
 
 
@@ -18,16 +21,18 @@ public class CmdJoinSuccess implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 	
+		HttpSession session = request.getSession();
 				
-		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
+		Member m = (Member) session.getAttribute("loginM");
+
+		System.out.println("2 : " + m.getmEmail());
+		System.out.println("2 : " + m.getmPwd());
+		System.out.println("2 : " + m.getmName());
+		System.out.println("2 : " + m.getmBirth());
+		System.out.println("2 : " + m.getmSex());
 			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
-		
-		
+		int result = CacaoRegisterService.getInstance().getInsert(m);
+
 		return next;			
 	}
 
