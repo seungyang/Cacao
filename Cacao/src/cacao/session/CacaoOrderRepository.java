@@ -29,13 +29,13 @@ public class CacaoOrderRepository {
 		return sessFac;
 	}
 	
-	public List<Info> getItemList(String id){
+	public Info getItemList(String id){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
 		HashMap hash = new HashMap();
 		hash.put("id", id);
-		return sess.selectList(namespace+".orderList",hash);
+		return sess.selectOne(namespace+".orderList",hash);
 		}finally {
 			sess.close();
 		}

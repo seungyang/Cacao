@@ -11,11 +11,14 @@ if(session.getAttribute("useremail")!=null){
  };
  
  String loginimg = "in";
+ int num = 0;
  System.out.println("result : "+result);
  System.out.println("session email : "+sessionalert);
  if(result.equals("")){
+	 num = 0;
 	 loginimg = "login.png";
  }else{
+	 num = 1;
 	 loginimg = "logout.jpg";
  }
  System.out.println("img : "+loginimg);
@@ -55,13 +58,42 @@ if(session.getAttribute("useremail")!=null){
 
 
 <script type="text/javascript">
+window.onload=function(){
 
-// 로그인버튼 클릭시 로그인창 뜸
-   function openWindow() {
 
-      window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+	var icon2 = document.getElementById("icon2");
+	var icon3 = document.getElementById("icon3");
+	var icon4 = document.getElementById("icon4");
+	
 
-   }
+	icon1.onclick = function(){
+		if(document.getElementById('icon1').alt==0){
+			window.open('/Cacao/view/login/lMain.jsp', '로그인폼', 'width=1000px, height=600px');
+			
+		}else{
+		
+		<%session.removeAttribute("useremail");
+		session.removeAttribute("result");
+		
+		%>
+		location.href="/Cacao/Main?cmd=main-page";
+		
+		
+		}
+	}
+
+	icon2.onclick = function(){
+		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+	}
+	icon3.onclick = function(){
+		location.href = "/Cacao/view/main/cartView.jsp?change=5";
+	}
+	icon4.onclick = function(){
+		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+	}
+}
+
+
 </script>
 </head>
 
@@ -313,10 +345,10 @@ if(session.getAttribute("useremail")!=null){
 
                <!-- 로그인 버튼 -->
 
-               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/<%=loginimg %>" onclick="javascript:openWindow(); "/></li>
-               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
-               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
-               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>
+               <li><img id='icon1' style="width:30px;height:30px;margin-top:25px;margin-left:30px" alt='<%=num%>' src="/Cacao/img/main/<%=loginimg %>" /></li>
+               <li><img id='icon2'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
+               <li><img id='icon3'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
+               <li><img id='icon4'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>
 
 
 

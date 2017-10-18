@@ -1,17 +1,15 @@
 package cacao.cmd.order;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
-import cacao.model.vo.Choose;
 import cacao.model.vo.Info;
-import cacao.model.vo.Order;
-import cacao.model.vo.QA;
-import cacao.service.CacaoMyPageService;
 import cacao.service.CacaoOrderService;
 
 
@@ -26,11 +24,18 @@ public class CmdOrderInfoForm implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 	
-				
+	
+		HttpSession session = request.getSession();
+		List<Info> buylist = (List<Info>)session.getAttribute("buylist");
+		List<Info> orderList = new ArrayList<Info>();
+		Info info = new Info();
 		
-		String id = request.getParameter("id");
+		for(int i=0;i<buylist.size();i++) {
+			System.out.println("buylist : "+buylist.get(i).getiId());
+			info = CacaoOrderService.getInstance().getItemList(buylist.get(i).getiId());
+			orderList.add(info);
+		}
 		
-		List<Info> orderList = CacaoOrderService.getInstance().getItemList(id);
 		
 		request.setAttribute("orderResult", orderList);
 		

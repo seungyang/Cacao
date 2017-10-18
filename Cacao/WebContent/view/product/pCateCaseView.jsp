@@ -1,14 +1,20 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="cacao.model.vo.*" %>
 <% 
 int cnt = Integer.parseInt(request.getParameter("cnt"));
 String id = request.getParameter("id");
 String detail = request.getParameter("detail");
 String name =  request.getParameter("name");
 String price = request.getParameter("price");
-request.setAttribute("id", id);
-request.setAttribute("detail", detail);
-request.setAttribute("name", name);
-request.setAttribute("price", price);
+List<Info> infolist = new <Info>ArrayList();
+Info info = new Info();
+info.setiId(id);
+info.setiDetail(detail);
+info.setiName(name);
+info.setiCost(price);
+infolist.add(info);
+session.setAttribute("buylist", infolist);
 String imgstr = "";
 %>
 <!DOCTYPE html>
@@ -95,31 +101,21 @@ String imgstr = "";
 <script type="text/javascript">
 $(function(){
 	$('#buy').click(function(){
-		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
+		location.href = "/Cacao/Order?cmd=main-page";
+	});
+	$('#plus').click(function(){
+		$('#text').val(parseInt($('#text').val())+1);
+	});
+	$('#minus').click(function(){
+		$('#text').val($('#text').val()-1);
+	});
+	$('#cart').click(function(){
+		var text = $('#text').val();
+		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
 	});
 })
 </script>
-<script type="text/javascript">
-window.onload=function(){
-	var plus = document.getElementById("plus");
-	plus.onclick = function(){
-		document.getElementById("text").value = parseInt(document.getElementById("text").value) + 1;
-	}	 
-	var minus = document.getElementById("minus");
-	minus.onclick = function(){
-		document.getElementById("text").value = parseInt(document.getElementById("text").value) - 1;
-	}
-	var buy = document.getElementById("buy");
-	buy.onclick = function(){
-		alert("사기")
-	}
-	var cart = document.getElementById("cart");
-	cart.onclick = function(){
-		var text = document.getElementById("text").value;
-		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
-	}		 
-}
-</script>
+
 
 
 
