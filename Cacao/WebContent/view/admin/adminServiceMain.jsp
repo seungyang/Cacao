@@ -93,9 +93,6 @@ $scope.users = [
 ];
 
 //alert($scope.users.length);
-=======
-
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 

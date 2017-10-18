@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import cacao.model.vo.Member;
+import cacao.model.vo.QA;
 import cacao.model.vo.Service;
 
 
@@ -44,6 +45,19 @@ public class CacaoAdminRepository {
 			sess.close();
 		}	
 	}
+	
+	public List<QA> getAnswerList(String email){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			HashMap hash = new HashMap();
+			hash.put("email", email);
+		return sess.selectList(namespace+".answerList", hash);
+		}finally {
+			sess.close();
+		}
+	}
+	
 	public List<Service> getServiceList(){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
