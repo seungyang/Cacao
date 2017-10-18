@@ -3,6 +3,12 @@
 int cnt = Integer.parseInt(request.getParameter("cnt"));
 String id = request.getParameter("id");
 String detail = request.getParameter("detail");
+String name =  request.getParameter("name");
+String price = request.getParameter("price");
+request.setAttribute("id", id);
+request.setAttribute("detail", detail);
+request.setAttribute("name", name);
+request.setAttribute("price", price);
 String imgstr = "";
 %>
 <!DOCTYPE html>
@@ -84,7 +90,15 @@ String imgstr = "";
 	height: 500px;
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="text/javascript">
+$(function(){
+	$('#buy').click(function(){
+		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
+	});
+})
+</script>
 <script type="text/javascript">
 window.onload=function(){
 	var plus = document.getElementById("plus");
@@ -102,8 +116,7 @@ window.onload=function(){
 	var cart = document.getElementById("cart");
 	cart.onclick = function(){
 		var text = document.getElementById("text").value;
-		alert(text);
-		location.href="/Cacao/view/main/cartView.jsp?id=<%=id%>&cnt="+text;
+		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
 	}		 
 }
 </script>

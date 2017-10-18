@@ -33,7 +33,15 @@ public class CmdAdminControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
-		commandMap.put("main-page",	new CmdNull("cacaoMain.jsp") );
+		commandMap.put("main-page",	new CmdNull("adminMain.jsp") );
+		commandMap.put("adminProductMain-page",	new CmdNull("adminProductMain.jsp") );
+		
+		commandMap.put("adminOrderMain-page",	new CmdNull("adminOrderMain.jsp") );
+		
+		commandMap.put("adminMyPageMain-page",	new CmdNull("adminMyPageMain.jsp") );
+		
+		commandMap.put("adminServiceMain-page",	new CmdNull("adminServiceMain.jsp") );
+		
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 

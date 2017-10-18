@@ -45,12 +45,8 @@ margin-left:25%
 				role="navigation">
 				
 					
-					<img id=choose src="/Cacao/img/product/heart.png" width=50px height=50px/>
-					<img id=cart src="/Cacao/img/product/cart.png" width=50px height=50px/>
-					<img id=minus src="/Cacao/img/product/minus.png" width=50px height=50px/>
-					<input type="text" id='text' value=1 disabled="true"></input>
-					<img id=plus src="/Cacao/img/product/plus.png" width=50px height=50px/>
-					<a><img id=buy src="/Cacao/img/product/buy.png" width=150px height=50px/></a>
+					<a href="/Cacao/Order?cmd=main-page"><img id=buy src="/Cacao/img/product/continue.PNG" width=150px height=50px/></a>
+					<a href="/Cacao/Order?cmd=main-page"><img src="/Cacao/img/product/buy.png" width=50px width=150px height=50px/></a>
 				
 			</nav>
 			

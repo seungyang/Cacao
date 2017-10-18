@@ -14,9 +14,9 @@
 
 	<% 
 		if(result>0){
-			response.sendRedirect(pjName+"/Order?cmd=main-page&page=4");
+			response.sendRedirect(pjName+"/Order?cmd=success-page");
 		}else{
-			response.sendRedirect(pjName+"/Order?cmd=myPageQAForm-page");
+			response.sendRedirect(pjName+"/Order?cmd=fail-page");
 	%>
 	<%} // End of If %>
 </body>

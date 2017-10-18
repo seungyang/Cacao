@@ -34,13 +34,16 @@ public class CmdOrderInfoSave implements Cmd {
 		
 		order.setoPayment(request.getParameter("payment"));
 		order.setoName(request.getParameter("qName"));
-		order.setmEmail(request.getParameter("pEmail"));
+		order.setmEmail(request.getParameter("qEmail"));
 		order.setoTel(request.getParameter("qTel"));
 		order.setoAddr(allAddr);
 		order.setoMemo(request.getParameter("qTitle"));
-				
-		int result = CacaoOrderService.getInstance().insertOrder(order);
 		
+		String[] iCnt = request.getParameterValues("iCnt");
+		String[] iId = request.getParameterValues("iId");
+				
+		int result = CacaoOrderService.getInstance().insertOrder(order,iCnt,iId);
+
 		request.setAttribute("orderInsert", result);
 		
 		return next;			

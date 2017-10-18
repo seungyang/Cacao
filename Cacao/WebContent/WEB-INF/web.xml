@@ -73,6 +73,15 @@
     <url-pattern>/Product</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <servlet-name>CmdAdminControl</servlet-name>
+    <servlet-class>cacao.control.CmdAdminControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdAdminControl</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  
 <!--     <servlet> -->
 <!--     <servlet-name>CmdIncludeControl</servlet-name> -->
 <!--     <servlet-class>cacao.control.CmdIncludeControl</servlet-class> -->

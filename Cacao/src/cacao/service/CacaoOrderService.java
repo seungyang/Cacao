@@ -28,35 +28,8 @@ public class CacaoOrderService {
 	public List<Choose> getItemList(String iid){
 		return repo.getItemList(iid);		
 	}
-//	public int getGroupId(){
-//		return repo.getGroupId();
-//	}
-//	
-	public int insertOrder( Order order ) {
-		return repo.insertOrder(order);
+	public int insertOrder( Order order, String[] iCnt, String[] iId) {
+		return repo.insertOrder(order, iCnt, iId);
 	}
-//	
-//	public List<BoardRec> selectList(int firstrow,int endrow) {
-//		return repo.selectList(firstrow,endrow);
-//	}
-//	
-//	public BoardRec selectById(int id){
-//		return repo.selectById(id);
-//	}
-//	public void increaseReadCount( String article_id ){
-//		repo.increaseReadCount(article_id );
-//	}
-//	public int update( BoardRec rec ){
-//		return repo.update(rec);
-//	}
-//	public int delete( int article_id, String password ){
-//		return repo.delete(article_id,password );
-//	}
-//	public String selectLastSequenceNumber( String maxSeqNum, String minSeqNum ){
-//		return repo.selectLastSequenceNumber(maxSeqNum,minSeqNum );
-//	}
-//	
-//	public int getTotalCount(){
-//		return repo.getTotalCount();
-//	}
+
 }
