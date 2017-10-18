@@ -1,8 +1,9 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="cacao.model.vo.*" %>
+<%List<QA> answerList = (List<QA>) request.getAttribute("answerList");%>
 <%
-
-	String pjName = "/Cacao";
-	
+   String pjName = "/Cacao"; 
 %>
 
 <!DOCTYPE html>
@@ -20,27 +21,30 @@
 
 <div id='first' style="width:58%; float:left; margin-left: 4.5%; margin-top: 60px">
 <table class="w3-table w3-bordered w3-striped">
-  <tr style="color: blue">
   
+  
+  
+  <tr style="color: blue">
     <th>질문자 ID</th>
     <th>질문유형</th>
      <th>제목</th>
       <th>내용</th>
             <th>답변여부</th>
         <th>Edit</th>
-
   </tr>
-  <tr ng-repeat="user in users">
-    <td>{{ user.userId }}</td>
-    <td>{{ user. questType}}</td>
-      <td>{{ user.questTitle }}</td>  
-      <td>{{ user.questContext }}</td>
-       <td>{{ user.questCheck }}</td>
+  
+<%--  <%for(int i =0; i < answerList.size(); i++){ %> --%>
+  <tr  ng-repeat="user in users">
+    <td>{{user.userId}}</td>
+    <td>{{user.questType}}</td>
+    <td>{{user.questTitle}}</td>
+    <td>{{user.questContent}}</td>
+          <td>{{user.questCheck}}</td>
        <td>
       <button class="w3-btn w3-ripple" ng-click="editUser(user.id)">✎ 답변</button>
     </td>
-      
   </tr>
+<%--   <%} %> --%>
 </table>
 <br>
 </div>
@@ -53,13 +57,10 @@
     <input class="w3-input w3-border" type="text" ng-model="questTitle" ng-disabled="!edit" placeholder="Title">
   <br>
     <label>내용:</label>
-    <input class="w3-input w3-border" type="text" ng-model="questContext" ng-disabled="!edit" placeholder="Context">
+    <textarea class="w3-input w3-border" type="text" ng-model="questContent" ng-disabled="!edit" placeholder="Context"></textarea>
   <br>
     <label>답변 제목:</label>
-    <input class="w3-input w3-border" type="textField" ng-model="text" placeholder="제목">
-  <br>
-    <label>질문 답변:</label>
-    <textarea class="w3-input w3-border" type="text" ng-model="text2" placeholder="내용" style="height: auto; min-height: 200px;"></textarea>
+    <textarea class="w3-input w3-border" type="text" ng-model="questAnswer" placeholder="내용" style="height: auto; min-height: 300px;"></textarea>
   <br>
   <button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete">✔ Save Changes</button>
 </form>
@@ -72,49 +73,60 @@ angular.module('myApp', []).controller('userCtrl', function($scope) {
 $scope.userId = '';
 $scope.questType = '';
 $scope.questTitle = '';
-$scope.questContext = '';
-$scope.questCheck = '';
+$scope.questContent = '';
+$scope.questStatus = '';
 $scope.users = [
-{id:1, userId:'Hege', questType:"Pege",  questTitle:"TiTLE1",  questContext:"TEXT1",  questCheck:"답변완료"  },
-{id:2, userId:'Kim',  questType:"Pim" ,  questTitle:"TiTLE2",  questContext:"TEXT2",  questCheck:"답변작성중"},
-{id:3, userId:'Sal',  questType:"Smith" ,  questTitle:"TiTLE3",  questContext:"TEXT3",  questCheck:"답변대기중"},
-{id:4, userId:'Jack', questType:"Jones" ,  questTitle:"TiTLE4",  questContext:"TEXT4",  questCheck:"답변대기중"},
-{id:5, userId:'John', questType:"Doe",  questTitle:"TiTLE5",  questContext:"TEXT5",  questCheck:"답변완료" },
-{id:6, userId:'Peter',questType:"Pan",  questTitle:"TiTLE6",  questContext:"TEXT6",  questCheck:"답변완료" }
+	<%for(int i=0; i< answerList.size(); i++){ %>
+		{id:<%=i+1%>,userId: '<%=answerList.get(i).getmEmail()%>', questType:"<%= answerList.get(i).getqCate() %>", 
+			questTitle: '<%=answerList.get(i).getqTitle() %>', questContent:"<%=answerList.get(i).getqContent() %>", 
+			questStatus:'<%=answerList.get(i).getqStatus() %>'},
+		<%}%>
 ];
+
+
+
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 
 $scope.hideform = true; 
+
 $scope.editUser = function(id) {
   $scope.hideform = false;
   if (id == 'new') {
     $scope.edit = true;
     $scope.incomplete = true;
+    $scope.userId = '';
+    $scope.questType = '';
     $scope.questTitle = '';
-    $scope.questContext = '';
+    $scope.questContent = '';
+    $scope.questStatus = '';
+    
     } else {
-    $scope.edit = false;
-    $scope.questTitle = $scope.users[id-1].questTitle;
-    $scope.questContext = $scope.users[id-1].questContext; 
+   $scope.edit = false;
+   $scope.userId = $scope.users[id-1].userId;
+    $scope.questType = $scope.users[id-1].questType; 
+    $scope.questTitle = $scope.users[id-1].questTitle; 
+    $scope.questContent = $scope.users[id-1].questContent; 
+    $scope.questStatus = $scope.users[id-1].questStatus; 
   }
 };
 
 $scope.$watch('userId',function() {$scope.test();});
 $scope.$watch('questType',function() {$scope.test();});
 $scope.$watch('questTitle', function() {$scope.test();});
-$scope.$watch('questContext', function() {$scope.test();});
+$scope.$watch('questContent', function() {$scope.test();});
+$scope.$watch('questStatus', function() {$scope.test();});
 
 $scope.test = function() {
-  if ($scope.userId !== $scope.questType) {
+  if ($scope.questTitle !== $scope.questContent) {
     $scope.error = true;
     } else {
     $scope.error = false;
   }
   $scope.incomplete = false;
-  if ($scope.edit && (!$scope.questTitle.length ||
-  !$scope.questContext.length ||
-  !$scope.userId.length || !$scope.questType.length)) {
+  if ($scope.edit && (!$scope.userId.length ||
+  !$scope.questContent.length ||
+  !$scope.questTitle.length || !$scope.questContent.length)) {
      $scope.incomplete = true;
   }
 };
@@ -124,6 +136,3 @@ $scope.test = function() {
 
 </body>
 </html>
-
-
-
