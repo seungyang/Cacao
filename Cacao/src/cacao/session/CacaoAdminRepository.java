@@ -46,6 +46,7 @@ public class CacaoAdminRepository {
 		}	
 	}
 	
+	
 	public List<QA> getAnswerList(String email){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
@@ -57,6 +58,18 @@ public class CacaoAdminRepository {
 			sess.close();
 		}
 	}
+	
+	public int getAnswerTextList(QA qa){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			return sess.update(namespace+".answerTextList", qa);
+		}finally {
+			sess.close();
+		}
+	}
+	
+	
 	
 	public List<Service> getServiceList(){
 		SqlSession sess = getSqlSessionFactory().openSession();

@@ -1,8 +1,5 @@
 package cacao.cmd.admin;
 
-import java.util.List;
-
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,22 +10,28 @@ import cacao.service.CacaoAdminService;
 
 
 
-public class CmdAdminMyPageMain implements Cmd {
+public class CmdAdminMyPageMainSave implements Cmd {
 	private String next;
 
-	public CmdAdminMyPageMain( String _next ){
+	public CmdAdminMyPageMainSave( String _next ){
 		next = _next;
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 		
-	 
-		String email = "omy@naver.com";
-//		System.out.println(email);
-		List<QA> answerList = CacaoAdminService.getInstance().getAnswerList(email);
+	  QA qa = new QA();
+
+	  String id = request.getParameter("qa_id");
+	  qa.setqId(Integer.parseInt(id));
+	  qa.setmEmail(request.getParameter("qa_userid"));
+	  qa.setqAnswer(request.getParameter("qa_answer"));
+	  qa.setqStatus(request.getParameter("qa_status"));
+
 		
-		request.setAttribute("answerList", answerList);
+		int qaResult = CacaoAdminService.getInstance().getAnswerTextList(qa);
+		
+		request.setAttribute("qaResult", qaResult);
 		
 		
 		return next;			

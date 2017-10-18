@@ -33,6 +33,11 @@ public class CacaoAdminService {
 		return repo.getAnswerList(email);		
 	}
 	
+	public int getAnswerTextList(QA qa){
+		return repo.getAnswerTextList(qa);		
+	}
+	
+	
 	public List<Service> getServiceList(){
 		return repo.getServiceList();
 	}
