@@ -1,6 +1,8 @@
 package cacao.service;
 
-import cacao.session.CacaoLoginRepository;
+import cacao.model.vo.Member;
+import cacao.session.CacaoAdminRepository;
+
 
 
 
@@ -17,8 +19,11 @@ public class CacaoAdminService {
 		
 	}
 	 
-	CacaoLoginRepository repo = new CacaoLoginRepository();
+	CacaoAdminRepository repo = new CacaoAdminRepository();
 	
+	public int selectAdminLogin( Member member ) {
+		return repo.selectAdminLogin(member);
+	}
 //	public int getGroupId(){
 //		return repo.getGroupId();
 //	}

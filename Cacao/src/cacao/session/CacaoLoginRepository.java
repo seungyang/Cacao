@@ -9,6 +9,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import cacao.model.vo.Member;
+import cacao.model.vo.Order;
+
 
 public class CacaoLoginRepository {
 	private String namespace = "mapper.CacaoLoginMapper";
@@ -23,7 +26,24 @@ public class CacaoLoginRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-	
+	public Integer selectLogin(Member member){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			
+			int result1 =  sess.selectOne(namespace + ".selectLogin",member);
+		
+		if(result1 > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		return result1;
+		}finally {
+			sess.close();
+		}	
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession

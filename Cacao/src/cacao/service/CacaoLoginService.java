@@ -1,5 +1,7 @@
 package cacao.service;
 
+import cacao.model.vo.Member;
+import cacao.model.vo.Order;
 import cacao.session.CacaoLoginRepository;
 
 
@@ -18,6 +20,10 @@ public class CacaoLoginService {
 	}
 	 
 	CacaoLoginRepository repo = new CacaoLoginRepository();
+	
+	public int selectLogin( Member member ) {
+		return repo.selectLogin(member);
+	}
 	
 //	public int getGroupId(){
 //		return repo.getGroupId();

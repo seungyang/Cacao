@@ -9,6 +9,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import cacao.model.vo.Member;
+
 
 public class CacaoAdminRepository {
 	private String namespace = "mapper.CacaoAdminMapper";
@@ -23,7 +25,24 @@ public class CacaoAdminRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-	
+	public Integer selectAdminLogin(Member member){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			
+			int result1 =  sess.selectOne(namespace + ".selectAdminLogin",member);
+		
+		if(result1 > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		return result1;
+		}finally {
+			sess.close();
+		}	
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession

@@ -8,10 +8,10 @@ import cacao.cmd.CmdException;
 
 
 
-public class CmdLoginFindForm implements Cmd {
+public class CmdAdminLoginFindForm implements Cmd {
 	private String next;
 
-	public CmdLoginFindForm( String _next ){
+	public CmdAdminLoginFindForm( String _next ){
 		next = _next;
 	}
 	@Override

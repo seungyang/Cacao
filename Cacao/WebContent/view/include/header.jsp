@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-
+<%
+ String sessionalert = (String)session.getAttribute("useremail");
+System.out.print(sessionalert);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +40,7 @@
 
 // 로그인버튼 클릭시 로그인창 뜸
    function openWindow() {
-      window.open("/Cacao/view/login/loginForm.jsp", "로그인폼", "width=1275, height=800");
+      window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
    }
 </script>
 </head>
