@@ -76,13 +76,13 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">상품명</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=orderListDetail.get(i).getiName()%> 외 <%=orderListDetail.get(i).getoCnt() %>개 </span>
+						<span class="help-block"> <%=orderListDetail.get(i).getiName()%> </span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">수량</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=orderListDetail.get(i).getoCnt()%> </span>
+						<span class="help-block"> <%=orderListDetail.get(i).getoCnt()%> 개</span>
 					</div>
 				</div>
 				</p>

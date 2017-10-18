@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% String pjName = "/Cacao"; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,6 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-실패데스요
+	<% response.sendRedirect(pjName+"/MyPage?cmd=main-page");%>
 </body>
 </html>

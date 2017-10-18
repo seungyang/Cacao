@@ -1,25 +1,25 @@
-<%@ page contentType="text/xml; charset=utf-8" %>
-<%@ page language="java" import="java.sql.*"%>
-
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="cacao.model.vo.*"%>
 <%
-String driver="oracle.jdbc.driver.OracleDriver";
-String user="cacao";
-String pass="cacao";
-String dbURL="jdbc:oracle:thin:@192.168.0.138:1521:orcl";
-
-
-	Class.forName(driver);
-	Connection connection=DriverManager.getConnection(dbURL,user,pass);
-	
-	String sql = "select * from ajax_temp where name='" + request.getParameter("userid")+"'";
-	System.out.println(sql);
-	Statement stmt = connection.createStatement();
-	ResultSet rs = stmt.executeQuery(sql);		
-
-	String result="NO";
-	if (rs.next()){		
-		result = "YES";
-	}		
-	out.print(result);
+	String pjName = "/Cacao";
+	int updateResult = (int) request.getAttribute("updateResult");
 %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<title>우리반 연습</title>
+</head>
+<body>
+	<div class="container">
+		<%
+			if ( updateResult < 1) {
+				response.sendRedirect(pjName+"/MyPage?cmd=main-page&page=1");
+			} else { 
+				response.sendRedirect(pjName+"/MyPage?cmd=main-page&page=3");
+			} %>
+	</div>
+</body>
+</html>

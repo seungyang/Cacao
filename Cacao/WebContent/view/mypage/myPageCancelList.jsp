@@ -81,7 +81,7 @@
 					<label class="col-md-4 control-label" for="qTel">상품명</label>
 					<div class="col-md-5">
 						<span class="help-block"> <%=cancelList.get(i).getiName()%>
-							외 <%=cancelList.get(i).getoCnt()%>개
+							등 <%=cancelList.get(i).getoCnt()%> 개
 						</span>
 					</div>
 				</div>

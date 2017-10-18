@@ -31,12 +31,21 @@ $(function(){
       window.location = '/Cacao/MyPage?cmd=main-page&page=4';
    });
    $('#Insert').click(function () {
+	   var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+	   
+	   var imsi = $('#qEmail').val();
+	   
 	   if($('#qName').val() == ''){
 			alert('주문자를 입력하세요');
 			return;
 		}
 		if($('#qEmail').val() == ''){
 			alert('이메일을 입력하세요');
+			return;
+		}
+		if (exptext.test(imsi) == false) {
+			//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우
+			alert("이 메일형식이 올바르지 않습니다.");
 			return;
 		}
 		if($('#qTel').val() == ''){
@@ -59,6 +68,8 @@ $(function(){
 			alert('회원 이용 약관에 동의하세요');
 			return;
 		}
+		
+
 		
 		$('#orderInsert').submit();
   });

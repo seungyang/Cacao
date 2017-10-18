@@ -24,5 +24,15 @@ values (#{oStr},#{oPayment},#{oName},#{oAddr},#{oMemo},#{oTel})
 insert into orderlist(o_id, d_id, m_email,i_id,o_cnt)
 values (seq_orderlist_id.nextval,#{olDid},#{olEmail},#{olIid},#{olOcnt})
 </insert>
+
+<select id="findEmail" parameterType="order" resultType="int">
+select count(*) cnt from member where m_email = #{mEmail}
+</select>
+<insert id="insertEmail" parameterType="order">
+insert into member(M_EMAIL,M_NAME,M_CHECK)
+values(#{mEmail},#{oName},'F')
+</insert>
+
+
 </mapper> 
  

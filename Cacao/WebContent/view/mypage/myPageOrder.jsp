@@ -37,11 +37,15 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-/* 		$('.btn2').on('click',function(){
-			var data =$(this).parent().parent().parent().find("span.did").text() 
-			alert(data);
-			
-		}); */
+		$('.btn2').on('click',function(){
+			var data =$(this).parent().parent().parent().find("span.did").text();
+			var img = $(this).parent().parent().parent().parent().find("img").attr("lo");
+			var result = confirm('[주의] 상품을 취소하시겠습니까?'); 
+		 	if(result) { 
+		 		window.location = '/Cacao/MyPage?cmd=myPageOrderCancel-page&orderid='+ img; 
+		 	}
+		});
+
 		
 		$('.btn1').on('click',function(){
 			var data =$(this).parent().parent().parent().find("span.did").text();

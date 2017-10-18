@@ -45,6 +45,9 @@ public class CacaoMyPageService {
 	public List<Order> cancelListDetail(String email,String orderid) {
 		return repo.getCancelListDetail(email,orderid);
 	}
+	public int updateCancel(String orderid) {
+		return repo.getUpdateCancel(orderid);
+	}
 	
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);

@@ -29,7 +29,6 @@ public class CacaoOrderRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-	
 	public List<Choose> getItemList(String iid){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
@@ -59,29 +58,38 @@ public class CacaoOrderRepository {
 			String str= sess.selectOne(namespace+".orderNextval");
 			order.setoStr(str);
 			
-			int result1 =  sess.insert(namespace + ".orderInsert",order);
-		if(result1 > 0) {
-			int result2 = 0;
-			for(int i = 0; i < iCnt.length;i++) {
-				Deliver d = new Deliver();
-				d.setOlDid(str);
-				d.setOlEmail(order.getmEmail());
-				d.setOlIid(iId[i]);
-				d.setOlOcnt(iCnt[i]);
-								
-				result2 +=  sess.insert(namespace+".itemInsert",d);
-			}			
-			if(result2 == iCnt.length) {
+			int find = sess.selectOne(namespace+".findEmail",order);
+			if(find < 1) {
+				int findInsert = sess.insert(namespace + ".insertEmail",order);
+				if(findInsert > 0) {
 					sess.commit();
+				}else {
+					sess.rollback();
+				}
 			}
-			else {
+			int result1 =  sess.insert(namespace + ".orderInsert",order);
+			if(result1 > 0) {
+				int result2 = 0;
+				for(int i = 0; i < iCnt.length;i++) {
+					Deliver d = new Deliver();
+					d.setOlDid(str);
+					d.setOlEmail(order.getmEmail());
+					d.setOlIid(iId[i]);
+					d.setOlOcnt(iCnt[i]);
+								
+					result2 +=  sess.insert(namespace+".itemInsert",d);
+				}			
+				if(result2 == iCnt.length) {
+					sess.commit();
+				}
+				else {
+					sess.rollback();
+					return 0;
+				}
+			}else {
 				sess.rollback();
-				return 0;
 			}
-		}else {
-			sess.rollback();
-		}
-		return result1;
+			return result1;
 		}finally {
 			sess.close();
 		}	

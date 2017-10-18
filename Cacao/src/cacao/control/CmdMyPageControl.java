@@ -12,13 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
-import cacao.cmd.mypage.CmdMyPageCanceDetail;
-import cacao.cmd.mypage.CmdMyPageCancelList;
-import cacao.cmd.mypage.CmdMyPageOrder;
-import cacao.cmd.mypage.CmdMyPageOrderDetail;
-import cacao.cmd.mypage.CmdMyPagePick;
-import cacao.cmd.mypage.CmdMyPageQAList;
-import cacao.cmd.mypage.CmdMyPageQASave;
+import cacao.cmd.mypage.*;
 
 
 
@@ -44,6 +38,8 @@ public class CmdMyPageControl extends HttpServlet {
 		commandMap.put("myPageOrder-page",new CmdMyPageOrder("myPageOrder.jsp"));
 		commandMap.put("CmdMyPageOrderDetail-page",new CmdMyPageOrderDetail("myPageOrderDetail.jsp"));
 		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp"));
+		
+		commandMap.put("myPageOrderCancel-page", new CmdMyPageOrderCancel("myPageOrderCancel.jsp"));
 		commandMap.put("myPageCancelList-page",new CmdMyPageCancelList("myPageCancelList.jsp"));
 		commandMap.put("CmdMyPageCancelDetail-page",new CmdMyPageCanceDetail("myPageCancelDetail.jsp"));
 		
