@@ -21,7 +21,7 @@
 	<% 
 	if(result>0){
 		out.println("<script>alert('사용자 모드');</script>");
-		out.println("<script>self.close();</script>");
+		out.println("<script>opener.location.href='/Cacao/Main?cmd=main-page';self.close();</script>");
 		
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result1>0){

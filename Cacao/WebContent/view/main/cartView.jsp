@@ -20,9 +20,10 @@
 	
 
 	int sum = 0;
+	int equal = 0;
 	Info info = new Info();
 	ArrayList<Info> infolist = null;
-	infolist = (ArrayList)session.getAttribute("cart");
+	infolist = (ArrayList<Info>)session.getAttribute("cart");
 	
 	if(change==null){
 // 		일반적인 삽입
@@ -35,8 +36,19 @@
 			infolist = new ArrayList();
 			infolist.add(info);
 		}else{
-			infolist.add(info);
+			for(int i=0;i<infolist.size();i++){
+				if(infolist.get(i).getiName().equals(name))	{
+					infolist.get(i).setiCnt(String.valueOf(Integer.parseInt(infolist.get(i).getiCnt())+Integer.parseInt(cnt)));
+					equal = 1;
+					break;
+				}
+			}
+			if(equal!=1){
+				infolist.add(info);
+			}
+			
 		}
+	
 	}else if(change.equals("1")){
 // 		수량감소
 		infolist.get(Integer.parseInt(index)).setiCnt(String.valueOf(Integer.parseInt(infolist.get(Integer.parseInt(index)).getiCnt())-1));
@@ -59,7 +71,7 @@
 		
 	}
 	
-	
+	session.setAttribute("buylist", infolist);
 	session.setAttribute("cart", infolist);
 
 // 	CacaoMainService service = CacaoMainService.getInstance();
@@ -238,7 +250,6 @@ $(function(){
 	 	});
 
 	
-	
 
 
 	
@@ -339,6 +350,7 @@ $(function(){
 	</form>
 	</section>
 	
+	<jsp:include page="/view/include/cartbuy.jsp"></jsp:include>
 	<jsp:include page="/view/include/footer.jsp"></jsp:include>
 	
 </body>

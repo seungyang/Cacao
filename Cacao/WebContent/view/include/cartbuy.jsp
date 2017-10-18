@@ -19,9 +19,7 @@ margin-left:30%
 #plus{
 
 }
-#buy{
-margin-left:25%	
-}
+
 </style>
 </head>
 <body>
@@ -45,8 +43,8 @@ margin-left:25%
 				role="navigation">
 				
 					
-					<a href="/Cacao/Order?cmd=main-page"><img id=buy src="/Cacao/img/product/continue.PNG" width=150px height=50px/></a>
-					<a href="/Cacao/Order?cmd=main-page"><img src="/Cacao/img/product/buy.png" width=50px width=150px height=50px/></a>
+					<a href="/Cacao/Order?cmd=main-page"><img src="/Cacao/img/product/continue.PNG" style="margin-left: 60%;width:150px; height:50px;"/></a>
+					<a href="/Cacao/Order?cmd=main-page"><img id=buy src="/Cacao/img/product/buy.png" style="width:150px; height:50px;"/></a>
 				
 			</nav>
 			

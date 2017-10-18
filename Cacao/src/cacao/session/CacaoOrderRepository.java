@@ -1,7 +1,6 @@
 package cacao.session;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,8 +9,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import cacao.model.vo.Choose;
 import cacao.model.vo.Deliver;
+import cacao.model.vo.Info;
 import cacao.model.vo.Order;
 
 
@@ -29,13 +28,14 @@ public class CacaoOrderRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-	public List<Choose> getItemList(String iid){
+	
+	public Info getItemList(String id){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
 		HashMap hash = new HashMap();
-		hash.put("iid", iid);
-		return sess.selectList(namespace+".orderList",hash);
+		hash.put("id", id);
+		return sess.selectOne(namespace+".orderList",hash);
 		}finally {
 			sess.close();
 		}
