@@ -50,7 +50,7 @@ margin-left:25%
 					<img id=minus src="/Cacao/img/product/minus.png" width=50px height=50px/>
 					<input type="text" id='text' value=1 disabled="true"></input>
 					<img id=plus src="/Cacao/img/product/plus.png" width=50px height=50px/>
-					<a href="/Cacao/Order?cmd=main-page"><img id=buy src="/Cacao/img/product/buy.png" width=150px height=50px/></a>
+					<a><img id=buy src="/Cacao/img/product/buy.png" width=150px height=50px/></a>
 				
 			</nav>
 			
