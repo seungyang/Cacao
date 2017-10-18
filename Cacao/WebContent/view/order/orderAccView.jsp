@@ -25,15 +25,20 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title> 우리반 연습</title>
+
+
 </head>
-<body>
+<body style="margin-top: 3%; margin-left: 21%;">
+
+
  	<div class="container">
+ 	<img alt="" src="${pageContext.request.contextPath}/img/order/orderAcc_img.png" style="width: 75.4%;">
 	<div class="row">
 		<div class="col-md-6">
 			<!--Windows-->
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" style="width: 155%; height: 200px;">
       			<div class="panel-heading">
-       				<h3 class="panel-title"><i class="fa fa-windows fa-2x"></i>[주문 완료] 주문 번호 : <%=orderAcc.getdId() %></h3>
+       				<h3 class="panel-title">[주문 완료] 주문 번호 : <%=orderAcc.getdId() %></h3>
       			</div>
       			<div class="panel-body">
       				<ul>
@@ -98,7 +103,9 @@
 		</div>
 		<%	}	%>
 
-		<input type="button" id="orderClose" value="닫기"/> 
+	<div style="height: 0.01px; width: 73.5%;border: solid;border-top-color: grey;margin-top: 4%;"></div>
+
+		<input type="button" class="btn btn-primary" id="orderClose" value="닫기" style="width: 90px; height: 45px; margin-left: 33.5%; margin-top: 2%;"/> 
 	</div>
  	
  	
