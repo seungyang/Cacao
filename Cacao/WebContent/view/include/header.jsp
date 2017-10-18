@@ -40,11 +40,9 @@ System.out.print(sessionalert);
 
 // 로그인버튼 클릭시 로그인창 뜸
    function openWindow() {
-<<<<<<< HEAD
+
       window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
-=======
-      window.open("/Cacao/view/login/loginForm.jsp", "로그인폼", "width=1000px, height=600px");
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
+
    }
 </script>
 </head>

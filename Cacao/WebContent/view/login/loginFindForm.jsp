@@ -1,3 +1,5 @@
+<%@page import="java.awt.Window"%>
+<%@page import="com.sun.java.swing.plaf.windows.resources.windows"%>
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
         <%
@@ -19,6 +21,7 @@
 	<% 
 	if(result>0){
 		out.println("<script>alert('사용자 모드');</script>");
+		out.println("<script>self.close();</script>");
 		
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result1>0){

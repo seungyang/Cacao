@@ -42,7 +42,6 @@ public class CmdLoginFindForm implements Cmd {
 			
 			if(adminName.equals("masteradmin@cacao.com")) {
 				res = CacaoAdminService.getInstance().selectAdminLogin(member);
-			
 			}else if(adminName.equals("mypageadmin@cacao.com")){
 				result1 = CacaoAdminService.getInstance().selectAdminLogin(member);
 			}else if(adminName.equals("serviceadmin@cacao.com")){
@@ -56,6 +55,7 @@ public class CmdLoginFindForm implements Cmd {
 		
 			}
 			if (result==1) {
+				session.setAttribute("result", result);
 				session.setAttribute("useremail",request.getParameter("user"));
 			}
 			
