@@ -5,10 +5,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="mapper.CacaoOrderMapper">    
 
-<select id="orderList" parameterType="hashmap" resultType="choose">
-select info.i_id i_id, info.i_name i_name, info.i_cost i_cost, choose.m_email m_email 
-from choose, info
-where choose.m_email = #{iid} and info.i_id = choose.i_id
+<select id="orderList" parameterType="hashmap" resultType="info">
+select info.i_id i_id, info.i_name i_name, info.i_cost i_cost 
+from info
+where info.i_id = #{id}
 </select>
 
 <select id="orderNextval" resultType="String">

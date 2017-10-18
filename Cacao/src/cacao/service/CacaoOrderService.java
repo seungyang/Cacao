@@ -25,8 +25,8 @@ public class CacaoOrderService {
 	 
 	CacaoOrderRepository repo = new CacaoOrderRepository();
 	
-	public List<Choose> getItemList(String iid){
-		return repo.getItemList(iid);		
+	public List<Info> getItemList(String id){
+		return repo.getItemList(id);		
 	}
 	public int insertOrder( Order order, String[] iCnt, String[] iId) {
 		return repo.insertOrder(order, iCnt, iId);

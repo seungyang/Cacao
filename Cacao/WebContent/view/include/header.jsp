@@ -1,7 +1,25 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%
- String sessionalert = (String)session.getAttribute("useremail");
-System.out.print(sessionalert);
+ String sessionalert = "";
+
+if(session.getAttribute("useremail")!=null){
+	sessionalert = String.valueOf(session.getAttribute("useremail"));
+};
+ String result = "";
+ if(session.getAttribute("result")!=null){
+		result = String.valueOf(session.getAttribute("result"));
+ };
+ 
+ String loginimg = "in";
+ System.out.println("result : "+result);
+ System.out.println("session email : "+sessionalert);
+ if(result.equals("")){
+	 loginimg = "login.png";
+ }else{
+	 loginimg = "logout.jpg";
+ }
+ System.out.println("img : "+loginimg);
+
 %>
 <!DOCTYPE html>
 <html>
@@ -295,7 +313,7 @@ System.out.print(sessionalert);
 
                <!-- 로그인 버튼 -->
 
-               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/login.png" onclick="javascript:openWindow(); "/></li>
+               <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/<%=loginimg %>" onclick="javascript:openWindow(); "/></li>
                <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
                <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
                <li><img style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>

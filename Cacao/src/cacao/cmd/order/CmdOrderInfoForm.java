@@ -28,9 +28,9 @@ public class CmdOrderInfoForm implements Cmd {
 	
 				
 		
-		String iid = "omy@naver.com";
+		String id = request.getParameter("id");
 		
-		List<Choose> orderList = CacaoOrderService.getInstance().getItemList(iid);
+		List<Info> orderList = CacaoOrderService.getInstance().getItemList(id);
 		
 		request.setAttribute("orderResult", orderList);
 		

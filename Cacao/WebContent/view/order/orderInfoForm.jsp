@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
   <%@ page import="java.util.*" %>
 <%@ page import="cacao.model.vo.*" %>
-<%List<Choose> orderList = (List) request.getAttribute("orderResult"); %>
+<%List<Info> orderList = (List) request.getAttribute("orderResult"); %>
 <%
    String pjName = "/Cacao";
 	
