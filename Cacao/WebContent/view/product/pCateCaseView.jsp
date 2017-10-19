@@ -102,7 +102,7 @@ String imgstr = "";
 $(function(){
 	$('#buy').click(function(){
 		var text = $('#text').val();
-		location.href = x`
+		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
 	});
 	$('#plus').click(function(){
 		$('#text').val(parseInt($('#text').val())+1);

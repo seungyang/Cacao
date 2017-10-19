@@ -9,5 +9,23 @@ select i_id,i_imgcnt,i_detail,i_name,i_cost
 from info
 where i_name like '%${searchtext}%'
 </select>
+<select id="selectAllhprice" resultType="info" parameterType="hashmap">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_name like '%${searchtext}%'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllprice" resultType="info" parameterType="hashmap">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_name like '%${searchtext}%'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsell" resultType="info" parameterType="hashmap">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_name like '%${searchtext}%'
+order by i_name
+</select>
 </mapper> 
  

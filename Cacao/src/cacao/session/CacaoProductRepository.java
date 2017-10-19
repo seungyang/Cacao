@@ -40,7 +40,7 @@ public class CacaoProductRepository {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-		return sess.selectList(namespace+".selectAllsell");
+		return sess.selectList(namespace+".selectAllhprice");
 		}finally {
 			sess.close();
 		}
@@ -50,7 +50,7 @@ public class CacaoProductRepository {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-		return sess.selectList(namespace+".selectAllhprice");
+		return sess.selectList(namespace+".selectAlllprice");
 		}finally {
 			sess.close();
 		}
@@ -60,7 +60,49 @@ public class CacaoProductRepository {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-		return sess.selectList(namespace+".selectAlllprice");
+		return sess.selectList(namespace+".selectAllsell");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	
+	
+	public List<Info> selectListLi(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAllLi");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Info> selectListhpriceLi(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAllhpriceLi");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Info> selectListlpriceLi(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAlllpriceLi");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Info> selectListsellLi(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAllsellLi");
 		}finally {
 			sess.close();
 		}

@@ -38,6 +38,39 @@ public class CacaoMainRepository {
 			sess.close();
 		}
 	}
+	public List<Info> selectListhprice(String searchtext){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("searchtext", searchtext);
+		return sess.selectList(namespace+".selectAllhprice",hash);
+		}finally {
+			sess.close();
+		}
+	}
+	public List<Info> selectListlprice(String searchtext){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("searchtext", searchtext);
+		return sess.selectList(namespace+".selectAlllprice",hash);
+		}finally {
+			sess.close();
+		}
+	}
+	public List<Info> selectListsell(String searchtext){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("searchtext", searchtext);
+		return sess.selectList(namespace+".selectAllsell",hash);
+		}finally {
+			sess.close();
+		}
+	}
 //	public List<Info> selectInfo(ArrayList<Info> list) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		try {

@@ -24,6 +24,15 @@ public class CacaoMainService {
 	public List<Info> selectList(String searchtext) {
 		return repo.selectList(searchtext);
 	}
+	public List<Info> selectListhprice(String searchtext) {
+		return repo.selectListhprice(searchtext);
+	}
+	public List<Info> selectListlprice(String searchtext) {
+		return repo.selectListlprice(searchtext);
+	}
+	public List<Info> selectListsell(String searchtext) {
+		return repo.selectListsell(searchtext);
+	}
 //	public ArrayList<Info> selectInfo(ArrayList<Info> list){
 //		return repo.selectInfo(list);
 //	}

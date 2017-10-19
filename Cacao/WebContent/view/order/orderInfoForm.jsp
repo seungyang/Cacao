@@ -11,9 +11,9 @@
     	sum += Integer.parseInt(orderList.get(i).getiCost());
     }
     
-    String min = request.getParameter("min");
+    String min = request.getParameter("cnt");
     if(min!=null){
-    	orderList.get(0).setiCnt(request.getParameter("mincnt"));
+    	orderList.get(0).setiCnt(min);
     }
 %>
 <!DOCTYPE html>

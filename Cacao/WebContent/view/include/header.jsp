@@ -12,8 +12,7 @@ if(session.getAttribute("useremail")!=null){
  
  String loginimg = "in";
  int num = 0;
- System.out.println("result : "+result);
- System.out.println("session email : "+sessionalert);
+
  if(result.equals("")){
 	 num = 0;
 	 loginimg = "login.png";
@@ -21,7 +20,7 @@ if(session.getAttribute("useremail")!=null){
 	 num = 1;
 	 loginimg = "logout.jpg";
  }
- System.out.println("img : "+loginimg);
+
 
 %>
 <!DOCTYPE html>
@@ -135,7 +134,7 @@ window.onload=function(){
 
                      <li class="col-sm-1">
                         <ul>
-                           <li><img src="/Cacao/img/main/라이언.png" /></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCharLiView-page'"><img src="/Cacao/img/main/라이언.png" /></li>
                         </ul>
                      </li>
                      <li class="col-sm-1">

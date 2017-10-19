@@ -25,5 +25,33 @@ from info
 order by i_name
 </select>
 
+
+<select id="selectAllLi" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'LI%'
+</select>
+<select id="selectAllhpriceLi" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'LI%'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpriceLi" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'LI%'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellLi" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'LI%'
+order by i_name
+</select>
+
+
+
+
 </mapper> 
  
