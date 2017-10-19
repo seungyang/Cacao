@@ -2,9 +2,10 @@ package cacao.service;
 
 import java.util.List;
 
-import cacao.model.vo.Choose;
+import cacao.model.vo.Deliver;
 import cacao.model.vo.Info;
 import cacao.model.vo.Order;
+import cacao.model.vo.OrderId;
 import cacao.session.CacaoOrderRepository;
 
 
@@ -27,9 +28,13 @@ public class CacaoOrderService {
 	public Info getItemList(String id){
 		return repo.getItemList(id);		
 	}
-	public int insertOrder( Order order, String[] iCnt, String[] iId) {
+	public OrderId insertOrder( Order order, String[] iCnt, String[] iId) {
 		return repo.insertOrder(order, iCnt, iId);
 	}
+	public List<Deliver> deliverList( String dId) {
+		return repo.deliverList(dId);
+	}
+	
 	
 
 }

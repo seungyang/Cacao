@@ -6,6 +6,12 @@ public class Deliver {
 	private String olEmail;
 	private String olIid;
 	private String olOcnt;
+	private String iChar;
+	private String iCate;
+	private String iName;
+	private String iCost;
+	
+	
 	
 	public String getOlId() {
 		return olId;
@@ -36,6 +42,30 @@ public class Deliver {
 	}
 	public void setOlOcnt(String olOcnt) {
 		this.olOcnt = olOcnt;
+	}
+	public String getiChar() {
+		return iChar;
+	}
+	public void setiChar(String iChar) {
+		this.iChar = iChar;
+	}
+	public String getiCate() {
+		return iCate;
+	}
+	public void setiCate(String iCate) {
+		this.iCate = iCate;
+	}
+	public String getiName() {
+		return iName;
+	}
+	public void setiName(String iName) {
+		this.iName = iName;
+	}
+	public String getiCost() {
+		return iCost;
+	}
+	public void setiCost(String iCost) {
+		this.iCost = iCost;
 	}
 	
 	

@@ -10,8 +10,6 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-<% 
-		response.sendRedirect(pjName+"/Register?cmd=jcoinAuth-page");
-%>
+페이지 넘어왔다!!!!!!!
 </body>
-</html>`
+</html>
