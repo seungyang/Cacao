@@ -32,7 +32,7 @@
     <th>수정</th>
   </tr>
   <%for(int i=0; i< serviceList.size(); i++){ %>
-  <tr ng-repeat="user in users">
+  <tr>
     
     <td><%=serviceList.get(i).getsKind() %></td>
     <td><%=serviceList.get(i).getsCate() %></td>
