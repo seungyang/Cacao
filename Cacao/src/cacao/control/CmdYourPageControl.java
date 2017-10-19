@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
-import cacao.cmd.mypage.*;
+import cacao.cmd.mypage.CmdMyPageOrder;
+import cacao.cmd.mypage.CmdMyPageOrderDetail;
+import cacao.cmd.yourpage.CmdYourPageMain;
 
 
 
@@ -22,7 +24,7 @@ import cacao.cmd.mypage.*;
 public class CmdYourPageControl extends HttpServlet {
 	
 	private HashMap commandMap;
-	private String	jspDir = "/view/mypage/";
+	private String	jspDir = "/view/yourpage/";
 	private String  error = "error.jsp";
 	
 
@@ -33,20 +35,11 @@ public class CmdYourPageControl extends HttpServlet {
 
 	private void initCommand(){
 		commandMap = new HashMap();
-
-		commandMap.put("main-page",new CmdNull("yourPageMain.jsp")); 
+		
+		commandMap.put("main-page",new CmdNull("yourMain.jsp")); 
+		commandMap.put("yourPageMain-page",new CmdYourPageMain("yourPageMain.jsp")); 
 		commandMap.put("myPageOrder-page",new CmdMyPageOrder("myPageOrder.jsp"));
 		commandMap.put("CmdMyPageOrderDetail-page",new CmdMyPageOrderDetail("myPageOrderDetail.jsp"));
-		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp"));
-		
-		commandMap.put("myPageOrderCancel-page", new CmdMyPageOrderCancel("myPageOrderCancel.jsp"));
-		commandMap.put("myPageCancelList-page",new CmdMyPageCancelList("myPageCancelList.jsp"));
-		commandMap.put("CmdMyPageCancelDetail-page",new CmdMyPageCanceDetail("myPageCancelDetail.jsp"));
-		
-		
-		commandMap.put("myPageQAList-page",new CmdMyPageQAList("myPageQAList.jsp"));
-		commandMap.put("myPageQAForm-page",new CmdNull("myPageQAForm.jsp"));
-		commandMap.put("myPageQASave-page", new CmdMyPageQASave("myPageQASave.jsp"));
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

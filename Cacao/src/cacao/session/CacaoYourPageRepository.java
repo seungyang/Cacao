@@ -15,7 +15,7 @@ import cacao.model.vo.QA;
 
 
 public class CacaoYourPageRepository {
-	private String namespace = "mapper.CacaoMyPageMapper";
+	private String namespace = "mapper.CacaoYourPageMapper";
 
 	SqlSessionFactory getSqlSessionFactory(){
 		InputStream in = null;
@@ -28,56 +28,14 @@ public class CacaoYourPageRepository {
 		return sessFac;
 	}
 
-	public List<Info> selectList(String email){
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-			return sess.selectList(namespace+".selectAll",hash);
-		}finally {
-			sess.close();
-		}
-	}
-
-	public List<QA> getQaList(String email){
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-			return sess.selectList(namespace+".qaList",hash);
-		}finally {
-			sess.close();
-		}
-
-	}
-
-	public Integer getInsert(QA q){
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			int result =  sess.insert(namespace + ".insertQA",q);
-			if(result > 0) {
-				sess.commit();
-			}else {
-				sess.rollback();
-			}
-			return result;
-		}finally {
-			sess.close();
-		}	
-
-
-	}
-
-	public List<Order> getOrderList(String email) {
+	public List<Order> getOrderList(String email, String oId) {
 
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
 			HashMap hash = new HashMap();
 			hash.put("email", email);
+			hash.put("oId", oId);
 			return sess.selectList(namespace+".orderList",hash);
 		}finally {
 			sess.close();
@@ -98,69 +56,5 @@ public class CacaoYourPageRepository {
 		}
 	}
 
-	public List<Order> getCancelList(String email) {
-
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-			return sess.selectList(namespace+".cancelList",hash);
-		}finally {
-			sess.close();
-		}
-	}
-	public List<Order> getCancelListDetail(String email,String orderid) {
-
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-			hash.put("orderid", orderid);
-			return sess.selectList(namespace+".cancelListDetail",hash);
-		}finally {
-			sess.close();
-		}
-	}
-	public int getUpdateCancel(String orderid) {
-
-		SqlSession sess = getSqlSessionFactory().openSession();
-		//JDBC의 연결 객체 -> SqlSession
-		try {
-			HashMap hash = new HashMap();
-			hash.put("orderid", orderid);
-
-			int result = sess.update(namespace+".updateCancel",hash);
-			if(result > 0) {
-				sess.commit();
-			}else {
-				sess.rollback();
-			}
-			return result;
-		}finally {
-			sess.close();
-		}	
-	}
-	//	public int update(Long cId,String UserId,String CommentContent,String RegDate ) {
-	//		SqlSession sess = getSqlSessionFactory().openSession();
-	//		//JDBC의 연결 객체 -> SqlSession
-	//		try {
-	//		HashMap hasp = new HashMap();
-	//		hasp.put("cId", cId);
-	//		hasp.put("UserId", UserId);
-	//		hasp.put("CommentContent", CommentContent);
-	//		hasp.put("RegDate", RegDate);
-	//		int result = sess.update(namespace+".update",hasp);
-	//		if(result > 0) {
-	//			sess.commit();
-	//		}else {
-	//			sess.rollback();
-	//		}
-	//		return result;
-	//		
-	//		}finally {
-	//			sess.close();
-	//		}
-	//	}
+	
 }

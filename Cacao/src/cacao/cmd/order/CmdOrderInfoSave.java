@@ -3,10 +3,12 @@ package cacao.cmd.order;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.model.vo.Order;
+import cacao.model.vo.OrderId;
 import cacao.service.CacaoOrderService;
 
 
@@ -41,10 +43,18 @@ public class CmdOrderInfoSave implements Cmd {
 		String[] iCnt = request.getParameterValues("iCnt");
 		String[] iId = request.getParameterValues("iId");
 				
-		int result = CacaoOrderService.getInstance().insertOrder(order,iCnt,iId);
-
-		request.setAttribute("orderInsert", result);
+		OrderId oi = CacaoOrderService.getInstance().insertOrder(order,iCnt,iId);
 		
+		order.setdId(oi.getoStr());
+				
+		request.setAttribute("orderInsert", oi.getoResult());
+		
+		HttpSession session = request.getSession();
+		
+		session.setAttribute("orderAcc", order);
+		session.setAttribute("iCnt", iCnt);
+		session.setAttribute("iId", iId);
+						
 		return next;			
 	}
 

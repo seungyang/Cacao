@@ -32,7 +32,12 @@ select count(*) cnt from member where m_email = #{mEmail}
 insert into member(M_EMAIL,M_NAME,M_CHECK)
 values(#{mEmail},#{oName},'F')
 </insert>
-
+<select id="deliverList" parameterType="hashmap" resultType="deliver">
+select d_id ol_did,o.i_id ol_iid, i_char, i_cate, i_name, i_cost, o_cnt ol_ocnt
+from orderlist o join info i
+on o.i_id = i.i_id
+where d_id=#{dId}
+</select>
 
 </mapper> 
  

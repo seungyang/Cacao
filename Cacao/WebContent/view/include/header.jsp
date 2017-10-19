@@ -80,7 +80,7 @@ window.onload=function(){
 	}
 
 	icon2.onclick = function(){
-		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/YourPage?cmd=main-page", "로그인폼", "width=1000px, height=600px");
 	}
 	icon3.onclick = function(){
 		location.href = "/Cacao/view/main/cartView.jsp?change=5";
