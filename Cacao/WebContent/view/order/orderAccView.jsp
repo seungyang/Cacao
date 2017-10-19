@@ -25,6 +25,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title> 우리반 연습</title>
+
 <script type="text/javascript">
 	$(function(){
 		$('#orderClose').click(function(){
@@ -34,14 +35,17 @@
 
 </script>
 </head>
-<body>
+<body style="margin-top: 3%; margin-left: 21%;">
+
+
  	<div class="container">
+ 	<img alt="" src="${pageContext.request.contextPath}/img/order/orderAcc_img.png" style="width: 75.4%;">
 	<div class="row">
 		<div class="col-md-6">
 			<!--Windows-->
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" style="width: 155%; height: 200px;">
       			<div class="panel-heading">
-       				<h3 class="panel-title"><i class="fa fa-windows fa-2x"></i>[주문 완료] 주문 번호 : <%=orderAcc.getdId() %></h3>
+       				<h3 class="panel-title">[주문 완료] 주문 번호 : <%=orderAcc.getdId() %></h3>
       			</div>
       			<div class="panel-body">
       				<ul>
@@ -73,7 +77,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">캐릭터</label>
 					<div class="col-md-5">
-						<span class="help-block did"> <%=deliverAcc.get(i).getOlDid()%>
+						<span class="help-block did"> <%=deliverAcc.get(i).getiName()%>
 						</span>
 					</div>
 				</div>
@@ -106,7 +110,9 @@
 		</div>
 		<%	}	%>
 
-		<input type="button" id="orderClose" value="메인화면으로"/> 
+	<div style="height: 0.01px; width: 73.5%;border: solid;border-top-color: grey;margin-top: 4%;"></div>
+	<input type="button" id="orderClose" value="메인화면으로"/> 
+		
 	</div>
  	
  	</div> 	
