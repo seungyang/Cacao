@@ -31,19 +31,20 @@
     <th>첨부파일</th>
     <th>수정</th>
   </tr>
-  <%for(int i=0; i< serviceList.size(); i++){ %>
+<%--   <%for(int i=0; i< serviceList.size(); i++){ %> --%>
   <tr ng-repeat="user in users">
-    
-    <td><%=serviceList.get(i).getsKind() %></td>
-    <td><%=serviceList.get(i).getsCate() %></td>
-    <td><%=serviceList.get(i).getsTitle() %></td>
-    <td><%=serviceList.get(i).getsDetail() %></td>
-    <td><%=serviceList.get(i).getsImage() %></td>
+    <td>{{user.fName}}</td>
+    <td>{{user.lName}}</td>
+<%--     <td><%=serviceList.get(i).getsKind() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsCate() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsTitle() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsDetail() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsImage() %></td> --%>
     <td>
       <button class="w3-btn w3-ripple" ng-click="editUser(user.id)">✎ Edit</button>
     </td>
   </tr>
-  <%} %>
+<%--   <%} %> --%>
 </table>
 <br>
 </div>
@@ -85,22 +86,13 @@ $scope.lName = '';
 $scope.passw1 = '';
 $scope.passw2 = '';
 $scope.users = [
-<%for(int i=0; i< serviceList.size(); i++){ 
-	if(i!=serviceList.size()){%>
-	{id:<%=i%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: '<%=serviceList.get(i).getsCate()%>'},
-	<%
-	}else{%>
 
-	{id:<%=i%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: '<%=serviceList.get(i).getsCate()%>'}
-	
-	<%	
-	}
-	%>
-	
-
+<%for(int i=0; i< serviceList.size(); i++){ %>
+	{id:<%=i+1%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: "<%=serviceList.get(i).getsCate()%>"},
 <%}%>
 ];
 
+//alert($scope.users.length);
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 
@@ -113,8 +105,8 @@ $scope.editUser = function(id) {
     $scope.fName = '';
     $scope.lName = '';
     } else {
-    $scope.edit = false;
-    $scope.fName = $scope.users[id-1].fName;
+   $scope.edit = false;
+   $scope.fName = $scope.users[id-1].fName;
     $scope.lName = $scope.users[id-1].lName; 
   }
 };

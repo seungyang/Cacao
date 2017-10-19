@@ -92,12 +92,7 @@
 		});
 
 	});
-	function autoResize(i)
-	{
-	    var iframeHeight=
-	    (i).contentWindow.document.body.scrollHeight;
-	    (i).height=iframeHeight+20;
-	}
+
 	
 </script>
 </head>
@@ -106,7 +101,7 @@
 	<img class='img_set' src="/Cacao/img/mypage/myPage_img.png">
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
 
-	<section id="portfolio" onload="autoResize(this)">
+	<section id="portfolio" >
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -126,22 +121,22 @@
 								<div class="tab-pane <%=class1%>" id="tab_default_1">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPageOrder-page" frameborder="0"
-										scrolling="no" onload="autoResize(this)"></iframe>
+										scrolling="yes" ></iframe>
 								</div>
 							
 								<div class="tab-pane <%=class2%>" id="tab_default_2">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPagePick-page" frameborder="0"
-										scrolling="no" onload="autoResize(this)"></iframe>
+										scrolling="yes" ></iframe>
 								</div>
 								<div class="tab-pane <%=class3%>" id="tab_default_3">
 									<iframe class="f_width"
 										src="<%=pjName%>/MyPage?cmd=myPageCancelList-page"
-										frameborder="0" scrolling="no" onload="autoResize(this)"></iframe>
+										frameborder="0" scrolling="no" ></iframe>
 								</div>
 								<div class="tab-pane <%=class4%>" id="tab_default_4">
 									<iframe class="f_width"
-										src="<%=pjName%>/MyPage?cmd=myPageQAList-page" frameborder="0" scrolling="no" onload="autoResize(this)"></iframe>
+										src="<%=pjName%>/MyPage?cmd=myPageQAList-page" frameborder="0" scrolling="yes" ></iframe>
 									<div class="col three" style="float: right;">
 										<a href="#" class="btn1 btn-sunflower1" id="qaBtn">문의하기</a>
 									</div>
