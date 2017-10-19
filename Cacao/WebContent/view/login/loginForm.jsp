@@ -61,7 +61,7 @@
 
 			<div style="margin-top: 110px;">
 				<hr />
-				<a href="../register/joinAgree.jsp"><font style="font-size: 10">회원가입</font></a>
+				<a href="<%=pjName %>/Register?cmd=joinAgree-page"><font style="font-size: 10">회원가입</font></a>
 				<a href="#"><font style="font-size: 10; margin-left: 86px;">이메일
 						찾기</font></a> - <a href="#"><font style="font-size: 10">비밀번호 재설정</font></a>
 

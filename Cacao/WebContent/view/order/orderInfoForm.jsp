@@ -11,7 +11,10 @@
     	sum += Integer.parseInt(orderList.get(i).getiCost());
     }
     
-    
+    String min = request.getParameter("min");
+    if(min!=null){
+    	orderList.get(0).setiCnt(request.getParameter("mincnt"));
+    }
 %>
 <!DOCTYPE html>
 <html>
@@ -245,9 +248,9 @@ function openDaumPostcode() {
   <div class="col-md-5">
   <span class="help-block">
   <input type="button" name="minus" value = "-" class="minus">
-  <input type="text" size='1' name="count" disabled = 'true' class ="textcnt" value = "1">
+  <input type="text" size='1' name="count" disabled = 'true' class ="textcnt" value = "<%=orderList.get(i).getiCnt()%>">
   <input type="button" name="plus" value = "+" class="plus">
-  <input type="hidden" name="iCnt"  class ="textcnt" value = "1">
+  <input type="hidden" name="iCnt"  class ="textcnt" value = "<%=orderList.get(i).getiCnt()%>">
   <input type="hidden" name="iId" value="<%=orderList.get(i).getiId() %>">
   <br/>
   <br/>

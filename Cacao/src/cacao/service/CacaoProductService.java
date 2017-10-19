@@ -31,6 +31,15 @@ public class CacaoProductService {
 	public List<Info> selectList() {
 		return repo.selectList();
 	}
+	public List<Info> selectListhprice() {
+		return repo.selectListhprice();
+	}
+	public List<Info> selectListlprice() {
+		return repo.selectListlprice();
+	}
+	public List<Info> selectListsell() {
+		return repo.selectListsell();
+	}
 //	
 //	public BoardRec selectById(int id){
 //		return repo.selectById(id);

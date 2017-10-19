@@ -33,9 +33,9 @@ public class CmdLoginControl extends HttpServlet {
 
 	private void initCommand(){
 		commandMap = new HashMap();
-
+		commandMap.put("lMain-page",new CmdNull("Imain.jsp") );
 		commandMap.put("main-page",	new CmdNull("loginForm.jsp") );
-		commandMap.put("login-page",	new CmdLoginFindForm("loginFindForm.jsp") );
+		commandMap.put("login-page",new CmdLoginFindForm("loginFindForm.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 

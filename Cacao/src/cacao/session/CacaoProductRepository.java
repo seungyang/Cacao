@@ -35,6 +35,36 @@ public class CacaoProductRepository {
 			sess.close();
 		}
 	}
+	
+	public List<Info> selectListhprice(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAllsell");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Info> selectListlprice(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAllhprice");
+		}finally {
+			sess.close();
+		}
+	}
+	
+	public List<Info> selectListsell(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectAlllprice");
+		}finally {
+			sess.close();
+		}
+	}
 //	
 //	public Integer insertComment(Comment c){
 //		SqlSession sess = getSqlSessionFactory().openSession();

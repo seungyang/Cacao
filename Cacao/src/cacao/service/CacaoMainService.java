@@ -21,6 +21,9 @@ public class CacaoMainService {
 	 
 	CacaoMainRepository repo = new CacaoMainRepository();
 	
+	public List<Info> selectList(String searchtext) {
+		return repo.selectList(searchtext);
+	}
 //	public ArrayList<Info> selectInfo(ArrayList<Info> list){
 //		return repo.selectInfo(list);
 //	}

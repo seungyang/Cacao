@@ -22,7 +22,7 @@ import cacao.cmd.mypage.*;
 public class CmdYourPageControl extends HttpServlet {
 	
 	private HashMap commandMap;
-	private String	jspDir = "/view/mypage/";
+	private String	jspDir = "/view/yourpage/";
 	private String  error = "error.jsp";
 	
 

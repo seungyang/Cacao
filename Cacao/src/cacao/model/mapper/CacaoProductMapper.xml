@@ -9,7 +9,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 select i_id,i_imgcnt,i_detail,i_name,i_cost
 from info
 </select>
-
+<select id="selectAllhprice" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllprice" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsell" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+order by i_name
+</select>
 
 </mapper> 
  

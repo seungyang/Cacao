@@ -64,29 +64,29 @@ window.onload=function(){
 	var icon2 = document.getElementById("icon2");
 	var icon3 = document.getElementById("icon3");
 	var icon4 = document.getElementById("icon4");
-	
+	var search = document.getElementById("search");
 
 	icon1.onclick = function(){
 		if(document.getElementById('icon1').alt==0){
-			window.open('/Cacao/view/login/lMain.jsp', '로그인폼', 'width=1000px, height=600px');
+			window.open('/Cacao/Login?cmd=main-page', '로그인폼', 'width=1000px, height=600px');
 			
 		}else{
-		location.href="/Cacao/view/main/logout.jsp";
-		
-
-		
-		
+		location.href="/Cacao/Main?cmd=logout-page";
 		}
 	}
 
 	icon2.onclick = function(){
-		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/YourPage?cmd=main-page", "로그인폼", "width=1000px, height=600px");
 	}
 	icon3.onclick = function(){
-		location.href = "/Cacao/view/main/cartView.jsp?change=5";
+		location.href = "/Cacao/Main?cmd=cartView-page&change=5";
 	}
 	icon4.onclick = function(){
-		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/Login?cmd=main-page", "로그인폼", "width=1000px, height=600px");
+	}
+	search.onclick = function(){
+		var searchtext = document.getElementById("searchtext").value;
+		location.href="/Cacao/Main?cmd=search-page&searchtext="+searchtext;
 	}
 }
 
@@ -328,9 +328,9 @@ window.onload=function(){
 
                   <div class="input-group stylish-input-group"
                      style="width: 10em; margin-top: 15%">
-                     <input type="text" class="form-control" placeholder="Search">
+                     <input type="text" id='searchtext' class="form-control" placeholder="Search">
                      <span class="input-group-addon">
-                        <button type="submit">
+                        <button id = 'search' type="button">
                            <span class="glyphicon glyphicon-search"></span>
                         </button>
                      </span>
@@ -352,7 +352,7 @@ window.onload=function(){
 
 
 
-<!--             <li><button name="open_btn" style="background-image: url('/Cacao/img/main/로그아웃.png');width:100px; height:100px"  ></button></li> -->
+
             </ul>
             
 

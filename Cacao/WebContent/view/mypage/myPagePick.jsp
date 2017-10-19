@@ -67,7 +67,9 @@
               <div class="caption">
                 <div class="caption-content">
                 	상품명 : <%= infolist.get(i).getiName() %><br/>가격 : <%= infolist.get(i).getiCost() %>원<br/>
-                     <a href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=infolist.get(i).getiName()%>&price=<%= infolist.get(i).getiCost()%>&id=<%= infolist.get(i).getiId()%>'><img class="fa fa-search-plus fa-3x" src="/Cacao/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img></a>
+                     <img src="/Cacao/img/product/portfolio/cart.png" onclick="parent.location.href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=infolist.get(i).getiName()%>&price=<%= infolist.get(i).getiCost()%>&id=<%= infolist.get(i).getiId()%>'" style="width: 30px; height: 30px;"/>
+
+                     
                 </div>
               </div>
             </a>

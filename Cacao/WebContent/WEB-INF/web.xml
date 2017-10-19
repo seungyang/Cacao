@@ -91,13 +91,13 @@
     <url-pattern>/YourPage</url-pattern>
   </servlet-mapping>
   
-<!--     <servlet> -->
-<!--     <servlet-name>CmdIncludeControl</servlet-name> -->
-<!--     <servlet-class>cacao.control.CmdIncludeControl</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>CmdIncludeControl</servlet-name> -->
-<!--     <url-pattern>/Include</url-pattern> -->
-<!--   </servlet-mapping> -->
+    <servlet>
+    <servlet-name>CmdIncludeControl</servlet-name>
+    <servlet-class>cacao.control.CmdIncludeControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CmdIncludeControl</servlet-name>
+    <url-pattern>/Include</url-pattern>
+  </servlet-mapping>
   
 </web-app>

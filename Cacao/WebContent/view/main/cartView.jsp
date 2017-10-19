@@ -24,6 +24,7 @@
 	Info info = new Info();
 	ArrayList<Info> infolist = null;
 	infolist = (ArrayList<Info>)session.getAttribute("cart");
+	int size = 0;
 	
 	if(change==null){
 // 		일반적인 삽입
@@ -70,7 +71,11 @@
 		}
 		
 	}
-	
+	if(infolist==null){
+		size = 0;
+	}else{
+		size = infolist.size();
+	}
 	session.setAttribute("buylist", infolist);
 	session.setAttribute("cart", infolist);
 
@@ -271,7 +276,7 @@ $(function(){
 	<section id="sec" style="height=5000px;margin-top:20%;margin-left:10%;margin-right:25%" >
 	
 	<div id="search">
-	<h4>총 <%=infolist.size() %>개의 상품이 조회 되었습니다.</h4> 
+	<h4>총 <%=size %>개의 상품이 조회 되었습니다.</h4> 
 	</div>
 	<div class="all" style="float:right;margin-left:2%">
 	<form method='post'>
@@ -284,7 +289,8 @@ $(function(){
 	<div id=product style="margin-top : 10%">
 	<%
 		 
-		 
+		if(infolist!=null){
+			
 		for(int i=0; i < infolist.size(); i++) { 
 			Info item = (Info) infolist.get(i); 
 			sum = sum + Integer.parseInt(item.getiCnt()) * Integer.parseInt(item.getiCost());
@@ -330,7 +336,7 @@ $(function(){
 
 <%
 		
-} 	
+} 	}
 %>
 	</div>
 	

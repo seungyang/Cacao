@@ -101,7 +101,8 @@ String imgstr = "";
 <script type="text/javascript">
 $(function(){
 	$('#buy').click(function(){
-		location.href = "/Cacao/Order?cmd=main-page";
+		var text = $('#text').val();
+		location.href = x`
 	});
 	$('#plus').click(function(){
 		$('#text').val(parseInt($('#text').val())+1);
@@ -110,6 +111,10 @@ $(function(){
 		$('#text').val($('#text').val()-1);
 	});
 	$('#cart').click(function(){
+		var text = $('#text').val();
+		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
+	});
+	$('#choose').click(function(){
 		var text = $('#text').val();
 		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
 	});

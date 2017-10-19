@@ -2,35 +2,12 @@
 <%@ page import="java.util.*"%>
 <%@ page import="cacao.model.vo.*"%>
 <%
-List<Info> catelist1 = (List<Info>)session.getAttribute("resultall");
-List<Info> catelist2 = (List<Info>)session.getAttribute("resulthall");	
-List<Info> catelist3 = (List<Info>)session.getAttribute("resultlall");	
-List<Info> catelist4 = (List<Info>)session.getAttribute("resultsell");	
-List<Info> selectcatelist = null;
-int selectsize = 0;
-int size1 = 0;
-int size2 = 0;
-int size3 = 0;
-int size4 = 0;
-if(catelist1==null){
-	size1=0;
+List<Info> catelist = (List<Info>)session.getAttribute("searchresult");	
+int size = 0;
+if(catelist==null){
+	size=0;
 }else{
-	size1=catelist1.size();
-}
-if(catelist2==null){
-	size1=0;
-}else{
-	size2=catelist2.size();
-}
-if(catelist3==null){
-	size3=0;
-}else{
-	size3=catelist3.size();
-}
-if(catelist4==null){
-	size4=0;
-}else{
-	size4=catelist4.size();
+	size=catelist.size();
 }
 %>
 <!DOCTYPE html>
@@ -76,13 +53,7 @@ if(catelist4==null){
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-$(function(){
-	$('#orderarr').change(function(){
-		alert($('#orderarr option:selected').val());
-	});
-})
-</script>
+
 <style type="text/css">
 #drop{
 	float : left; 
@@ -106,18 +77,18 @@ $(function(){
    
 <div class="container">
 <div id="print">
-<h3>총 <%=size1%>개의 상품이 조회되었습니다 </h3> 
+<h3>총 <%=size%>개의 상품이 조회되었습니다 </h3> 
 
 
 
 </div>
 <div id="drop">
 
-<select id="orderarr" class="dropdown1" style="float:right">
+<select class="dropdown1" style="float:right">
   <option value="" class="label">검색기준</option>  
-  <option value="높은가격순">높은가격순</option>
-  <option value="낮은가격순">낮은가격순</option>
-  <option value="이름순">이름순</option>
+  <option value="volvo">높은가격순</option>
+  <option value="saab">낮은가격순</option>
+  <option value="opel">판매순</option>
 </select>
 </div>
 
@@ -126,15 +97,15 @@ $(function(){
 <div class="container">
 	</br>
         <div class="row" style="margin-top: 3.5%;">
-        <%for(int i=0;i<size1;i++){ %>
+        <%for(int i=0;i<size;i++){ %>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist1.get(i).getiId()%>&cnt=<%=catelist1.get(i).getiImgcnt()%>&detail=<%=catelist1.get(i).getiDetail()%>&name=<%=catelist1.get(i).getiName()%>&price=<%=catelist1.get(i).getiCost()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist1.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
+                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=catelist.get(i).getiId()%>&cnt=<%=catelist.get(i).getiImgcnt()%>&detail=<%=catelist.get(i).getiDetail()%>&name=<%=catelist.get(i).getiName()%>&price=<%=catelist.get(i).getiCost()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=catelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
             				
               <div class="caption">
                 <div class="caption-content">
-                	상품명 : <%= catelist1.get(i).getiName() %><br/>가격 : <%= catelist1.get(i).getiCost() %>원<br/>
-                     <a href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=catelist1.get(i).getiName()%>&price=<%= catelist1.get(i).getiCost()%>&id=<%= catelist1.get(i).getiId()%>'><img class="fa fa-search-plus fa-3x" src="/Cacao/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img></a>
+                	상품명 : <%= catelist.get(i).getiName() %><br/>가격 : <%= catelist.get(i).getiCost() %>원<br/>
+                     <a href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=catelist.get(i).getiName()%>&price=<%= catelist.get(i).getiCost()%>&id=<%= catelist.get(i).getiId()%>'><img class="fa fa-search-plus fa-3x" src="/Cacao/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img></a>
                 </div>
               </div>
             </a>

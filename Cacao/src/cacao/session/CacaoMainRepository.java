@@ -26,7 +26,18 @@ public class CacaoMainRepository {
 		SqlSessionFactory sessFac = new SqlSessionFactoryBuilder().build(in);
 		return sessFac;
 	}
-
+	
+	public List<Info> selectList(String searchtext){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("searchtext", searchtext);
+		return sess.selectList(namespace+".selectAll",hash);
+		}finally {
+			sess.close();
+		}
+	}
 //	public List<Info> selectInfo(ArrayList<Info> list) {
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		try {
