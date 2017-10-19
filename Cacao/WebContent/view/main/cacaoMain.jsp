@@ -79,14 +79,6 @@
 
 
 
-
-
-
-
-
-
-
-
 		<section id="portfolio" style="margin-top: 10%">
 			<div class="container"
 				style="padding-left: 100px; padding-right: 100px;">
@@ -171,7 +163,7 @@
 				<div class="row" style="margin-top: 3.5%;">
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+						src="${pageContext.request.contextPath}/img/main/favorite/char1.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -185,7 +177,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char2.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -199,7 +191,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char3.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -213,7 +205,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char4.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -227,7 +219,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char5.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -242,7 +234,7 @@
 
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char6.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -256,7 +248,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char7.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -271,7 +263,7 @@
 					</div>
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char8.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -286,7 +278,7 @@
 					
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
-							src="${pageContext.request.contextPath}/img/main/portfolio/caca1.jpg"
+							src="${pageContext.request.contextPath}/img/main/favorite/char9.jpg"
 							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
@@ -381,7 +373,7 @@
 				<h2 class="text-left" style="color: black;">배너광고</h2>
 				<img
 					src="${pageContext.request.contextPath}/img/cacao/bannerCacao2.jpg"
-					alt="" style="height: 240px; width: 101%;">
+					alt="" style="height: 220px; width: 101%;">
 			</div>
 		</section>
 
@@ -399,7 +391,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언1.jpg"
-							alt="" style="height: 241px; width: 241px;">
+							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -413,7 +405,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언2.jpg"
-							alt="" style="height: 241px; width: 241px;">
+						alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -427,7 +419,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언3.jpg"
-							alt="" style="height: 241px; width: 241px;">
+						alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -441,8 +433,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언4.jpg"
-							alt="" style="height: 241px; width: 241px;">
-
+							alt="" style="height: 240px; width: 300px;">
 							<div class="caption">
 								<div class="caption-content">
 									<img class="fa fa-search-plus fa-3x"
@@ -455,7 +446,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/어피치1.jpg"
-							alt="" style="height: 241px; width: 241px;">
+							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -470,8 +461,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언5.jpg"
-							alt="" style="height: 241px; width: 241px;">
-
+							alt="" style="height: 240px; width: 300px;">
 							<div class="caption">
 								<div class="caption-content">
 									<img class="fa fa-search-plus fa-3x"
@@ -484,7 +474,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/어피치2.jpg"
-							alt="" style="height: 241px; width: 241px;">
+							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -499,7 +489,7 @@
 					<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언6.jpg"
-							alt="" style="height: 241px; width: 241px;">
+							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
@@ -514,7 +504,7 @@
 						<div class="col-sm-4 portfolio-item">
 						<a class="" href=""> <img class="img-fluid"
 							src="${pageContext.request.contextPath}/img/main/favorite/라이언7.jpg"
-							alt="" style="height: 241px; width: 241px;">
+							alt="" style="height: 240px; width: 300px;">
 
 							<div class="caption">
 								<div class="caption-content">
