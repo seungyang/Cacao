@@ -36,6 +36,12 @@ public class CacaoAdminService {
 	public List<Service> getServiceList(){
 		return repo.getServiceList();
 	}
+	public int serviceInsert(Service service){
+		return repo.serviceInsert(service);
+	}
+	public int serviceModify(Service service){
+		return repo.serviceModify(service);
+	}
 //	public int getGroupId(){
 //		return repo.getGroupId();
 //	}

@@ -6,9 +6,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mapper.CacaoServiceMapper">    
 
 <select id="selectNotice" parameterType="hashmap" resultType="service">
-select *
+select * 
 from service 
-where s_kind='곻지사항'
+where s_kind='공지사항'
 </select>
 <select id="selectFaq" parameterType="hashmap" resultType="service">
 select * 

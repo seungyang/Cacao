@@ -14,6 +14,7 @@ import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
 import cacao.cmd.admin.CmdAdminMyPageMain;
 import cacao.cmd.admin.CmdAdminServiceForm;
+import cacao.cmd.admin.CmdAdminServiceSave;
 
 
 
@@ -45,6 +46,7 @@ public class CmdAdminControl extends HttpServlet {
 		commandMap.put("adminMyPageMain-page",	new CmdAdminMyPageMain("adminMyPageMain.jsp") );
 		
 		commandMap.put("adminServiceMain-page",	new CmdAdminServiceForm("adminServiceMain.jsp") );
+		commandMap.put("adminServiceSave-page",	new CmdAdminServiceSave("adminServiceSave.jsp") );
 		
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 

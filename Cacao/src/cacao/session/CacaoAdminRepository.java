@@ -67,6 +67,38 @@ public class CacaoAdminRepository {
 			sess.close();
 		}
 	}
+	public Integer serviceInsert(Service service){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".serviceInsert",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	public Integer serviceModify(Service service){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".serviceModify",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession
