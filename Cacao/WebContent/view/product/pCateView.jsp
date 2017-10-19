@@ -43,7 +43,6 @@ if(catelist4==null){
 <meta charset="utf-8">
 <title>카카오프렌즈</title>
 
-
 <!-- combobox css -->
 <link rel="stylesheet" type="text/css" href="/Cacao/css/product/easydropdown.css"/>
 
@@ -76,13 +75,7 @@ if(catelist4==null){
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-$(function(){
-	$('#orderarr').change(function(){
-		alert($('#orderarr option:selected').val());
-	});
-})
-</script>
+
 <style type="text/css">
 #drop{
 	float : left; 
@@ -94,6 +87,14 @@ $(function(){
 
 }
 </style>
+
+<script type="text/javascript">
+$(function(){
+	$('#orderarr').change(function(){ 
+		alert($('#orderarr option:selected').val());
+	});
+})
+</script>
 
 </head>
 <body>

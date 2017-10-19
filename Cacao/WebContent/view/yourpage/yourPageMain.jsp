@@ -83,12 +83,11 @@
 
 										<!--  메인 -->
 										<%
-											if (orderList.size() < 1) {
+											if (orderList==null||orderList.size() < 1) {
 										%>
 										주문내역이 없습니다.
 										<%
 											} else {
-
 												for (int i = 0; i < orderList.size(); i++) {
 										%>
 										<div class="row equipo-item">
