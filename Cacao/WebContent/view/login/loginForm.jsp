@@ -18,7 +18,7 @@
 	}
 </script>
 <script type="text/javascript">
-#(function(){
+$(function(){
 	$('#loginBtn').click(function(){
 		if($('#user').val()==""){
 	   		alert('아이디를 입력하세요');			

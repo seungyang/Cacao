@@ -77,14 +77,14 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">캐릭터</label>
 					<div class="col-md-5">
-						<span class="help-block did"> <%=deliverAcc.get(i).getiName()%>
+						<span class="help-block did"> <%=deliverAcc.get(i).getiChar()%>
 						</span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="qTel">카테고리</label>
 					<div class="col-md-5">
-						<span class="help-block"> <%=deliverAcc.get(i).getiChar()%> </span>
+						<span class="help-block"> <%=deliverAcc.get(i).getiCate()%> </span>
 					</div>
 				</div>
 				<div class="form-group">
