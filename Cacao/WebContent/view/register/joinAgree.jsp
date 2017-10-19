@@ -33,7 +33,7 @@ function join() {
 
 <body>
 <div style='background:yellow; width:100%; height:5px;'></div>
-<div style='width: 100%; height: 5px;'></div>
+<!-- <div style='width: 100%; height: 5px;'></div> -->
 	
 <!-- 	전체바디 div시작 -->
 <div>
