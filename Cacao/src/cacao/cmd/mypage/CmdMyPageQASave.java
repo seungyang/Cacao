@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
@@ -23,7 +24,8 @@ public class CmdMyPageQASave implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 
 		QA q = new QA();
-		String email = "omy@naver.com";
+		HttpSession session = request.getSession();
+		String email = (String)session.getAttribute("useremail");
 		
 		q.setmEmail(email);
 		q.setqCate(request.getParameter("qCate"));
