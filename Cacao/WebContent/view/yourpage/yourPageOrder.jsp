@@ -59,62 +59,7 @@
 <title>우리반 연습</title>
 </head>
 <body>
-	<div class="container">
-		<%
-			if ( orderList.size() < 1) {
-		%>
-						주문내역이 없습니다.
-		<% } else {
-
-			for (int i = 0; i < orderList.size(); i++) {
-		%>
-		<div class="row equipo-item">
-			<div class="col-md-3 separador-vertical">
-				<img
-					src="<%=pjName%>/img/product/all/<%=orderList.get(i).getiId()%>00.jpg"
-					class="img-responsive center-block"
-					lo="<%=orderList.get(i).getdId()%>">
-			</div>
-			<br>
-			<br>
-			<div class="col-md-9">
-				<p class="texto-equipo">
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="qTel">주문번호</label>
-					<div class="col-md-5">
-						<span class="help-block did"> <%=orderList.get(i).getdId()%>
-						</span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="qTel">상품명</label>
-					<div class="col-md-5">
-						<span class="help-block"> <%=orderList.get(i).getiName()%>등 <%=orderList.get(i).getoCnt()%>개
-						</span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="qTel">상태</label>
-					<div class="col-md-5">
-						<span class="help-block"> <%=orderList.get(i).getdStatus()%>
-						</span>
-					</div>
-				</div>
-				<div class="btn_wrap">
-					<div class="col three">
-						<a href="#" class="btn1 btn-sunflower1" id="orderDetail">주문 정보</a>
-					</div>
-					<div class="col three">
-						<a href="#" class="btn2 btn-sunflower2" id="orderCencel">주문 취소</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<%
-			}}
-		%>
-	</div>
+	
 	
 	<hr />
 	

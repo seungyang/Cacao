@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import cacao.model.vo.Deliver;
 import cacao.model.vo.Info;
 import cacao.model.vo.Order;
+import cacao.model.vo.OrderId;
 
 
 
@@ -40,6 +41,18 @@ public class CacaoOrderRepository {
 			sess.close();
 		}
 	}
+	public List<Deliver> deliverList(String dId){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		HashMap hash = new HashMap();
+		hash.put("dId", dId);
+		return sess.selectList(namespace+".deliverList",hash);
+		}finally {
+			sess.close();
+		}
+	}
+	
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession
@@ -50,14 +63,16 @@ public class CacaoOrderRepository {
 //		}
 //	}
 //	
-	public Integer insertOrder(Order order, String[] iCnt, String[] iId){
+	public OrderId insertOrder(Order order, String[] iCnt, String[] iId){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
 		//JDBC의 연결 객체 -> SqlSession
 		try {
+			OrderId oi = new OrderId();
+			
 			String str= sess.selectOne(namespace+".orderNextval");
 			order.setoStr(str);
-			
+			oi.setoStr(str);	//세션 저장을 위한 객체
 			int find = sess.selectOne(namespace+".findEmail",order);
 			if(find < 1) {
 				int findInsert = sess.insert(namespace + ".insertEmail",order);
@@ -84,12 +99,14 @@ public class CacaoOrderRepository {
 				}
 				else {
 					sess.rollback();
-					return 0;
+					oi.setoResult(0);
+					return oi;
 				}
 			}else {
 				sess.rollback();
 			}
-			return result1;
+			oi.setoResult(result1);
+			return oi;
 		}finally {
 			sess.close();
 		}	

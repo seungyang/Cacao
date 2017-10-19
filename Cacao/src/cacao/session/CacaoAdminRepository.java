@@ -46,6 +46,7 @@ public class CacaoAdminRepository {
 		}	
 	}
 	
+	
 	public List<QA> getAnswerList(String email){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
@@ -58,6 +59,18 @@ public class CacaoAdminRepository {
 		}
 	}
 	
+	public int getAnswerTextList(QA qa){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			return sess.update(namespace+".answerTextList", qa);
+		}finally {
+			sess.close();
+		}
+	}
+	
+	
+	
 	public List<Service> getServiceList(){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
@@ -66,6 +79,38 @@ public class CacaoAdminRepository {
 		}finally {
 			sess.close();
 		}
+	}
+	public Integer serviceInsert(Service service){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".serviceInsert",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	public Integer serviceModify(Service service){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".serviceModify",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
 	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();

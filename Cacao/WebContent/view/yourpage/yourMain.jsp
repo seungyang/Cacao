@@ -3,10 +3,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.awt.*" %>
 
-    <% String pjName = "/Cacao"; 
-      
-      
-    %>
+    <% String pjName = "/Cacao"; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,12 +11,12 @@
 <title> 와우 </title>
 </head>
 <body>
-	<%if(session.getAttribute("loginresult")!=null){
+	<%--<%if(session.getAttribute("loginresult")!=null){
 		response.sendRedirect(pjName+"/YourPage?cmd=main-page");
 	}else{
 		out.println("<script>alert('로그인이 되어있지 않습니다');</script>");
 		response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}%>
-	
+	--%>
 </body>
 </html>

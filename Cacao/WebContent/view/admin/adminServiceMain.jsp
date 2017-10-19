@@ -24,6 +24,7 @@
 
 <table class="w3-table w3-bordered w3-striped">
   <tr>
+  	<th></th>
     <th>유형</th>
     <th>카테고리</th>
     <th>제목</th>
@@ -33,6 +34,7 @@
   </tr>
 <%--   <%for(int i=0; i< serviceList.size(); i++){ %> --%>
   <tr ng-repeat="user in users">
+  	<td style="visibility: hidden;">{{user.number}}</td>
     <td>{{user.kind}}</td>
     <td>{{user.cate}}</td>
     <td>{{user.title}}</td>
@@ -51,39 +53,44 @@
 </table>
 <br>
 </div>
+
 <div style="width:30%; float:left; margin-left:30px; margin-top:20px;">
 <button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">✎ Create New User</button>
 
-<form ng-hide="hideform">
+<form ng-hide="hideform" id='serviceInsert' name='serviceInsert' action="<%=pjName %>/Admin?cmd=adminServiceSave-page" method='post'>
   <h3 ng-show="edit">등록</h3>
   <h3 ng-hide="edit">수정</h3>
     <label>유형</label>
-    <select id="qCate" name="qCate" class="w3-input w3-border" ng-model="kind">
+    <select id="qCate" name="servicekind" class="w3-input w3-border" ng-model="kind">
      		 <option value="0">문의 유형을 선택하세요</option>
      		 <option value="FAQ">FAQ</option>
      		 <option value="공지사항">공지사항</option>
    	</select>
   <br>
     <label>카테고리</label>
-    <input class="w3-input w3-border" type="text" ng-model="cate" placeholder="카테고리를 입력하세요">
+    <input class="w3-input w3-border" type="text" name = "servicecate" ng-model="cate" placeholder="카테고리를 입력하세요">
   <br>
     <label>제목</label>
-    <input class="w3-input w3-border" type="text" ng-model="title" placeholder="제목을 입력하세요">
+    <input class="w3-input w3-border" type="text" name = "servicetitle" ng-model="title" placeholder="제목을 입력하세요">
   <br>
     <label>내용</label>
-    <textarea class="w3-input w3-border" ng-model="detail" name="message" rows="7" cols="24" placeholder="내용을 입력하세요" ></textarea>
+    <textarea class="w3-input w3-border" ng-model="detail" name="servicedetail" rows="7" cols="24" placeholder="내용을 입력하세요" ></textarea>
   <br>
    <br>
     <label>첨부파일</label>
-    <input class="w3-input w3-border" ng-model="image" id="file" name="file" type="file" placeholder="첨부 파일공간" >
+    <input class="w3-input w3-border" ng-model="image" id="file" name="serviceimage" type="file" placeholder="첨부 파일공간" >
   <br>
-  <button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete">✔ Save Changes</button>
+  <input type="submit" class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete" value="✔ Save Changes">
+    <input style="visibility: hidden;"class="w3-input w3-border" ng-model="number" id="serviceid" name="serviceid" type="text">
+  
 </form>
 </div>
+
 </div>
 
 <script>
 angular.module('myApp', []).controller('userCtrl', function($scope) {
+$scope.number = '';
 $scope.kind = '';
 $scope.cate = '';
 $scope.title = '';
@@ -92,7 +99,7 @@ $scope.image = '';
 $scope.users = [
 
 <%for(int i=0; i< serviceList.size(); i++){ %>
-	{id:<%=i+1%>, kind:'<%=serviceList.get(i).getsKind()%>', cate: "<%=serviceList.get(i).getsCate()%>", title: "<%=serviceList.get(i).getsTitle()%>", detail: "<%=serviceList.get(i).getsDetail()%>", image: "<%=serviceList.get(i).getsImage()%>"},
+	{id:<%=i+1%>, number:'<%=serviceList.get(i).getsId()%>', kind:'<%=serviceList.get(i).getsKind()%>', cate: "<%=serviceList.get(i).getsCate()%>", title: "<%=serviceList.get(i).getsTitle()%>", detail: "<%=serviceList.get(i).getsDetail()%>", image: "<%=serviceList.get(i).getsImage()%>"},
 <%}%>
 ];
 
@@ -107,6 +114,7 @@ $scope.editUser = function(id) {
   if (id == 'new') {
     $scope.edit = true;
     $scope.incomplete = true;
+    $scope.number = 0;
     $scope.kind = '';
     $scope.cate = '';
     $scope.title = '';
@@ -114,6 +122,7 @@ $scope.editUser = function(id) {
     $scope.image = '';
     } else {
    $scope.edit = false;
+   $scope.number = $scope.users[id-1].number;
    $scope.kind = $scope.users[id-1].kind;
    $scope.cate = $scope.users[id-1].cate;
    $scope.title = $scope.users[id-1].title;
@@ -122,7 +131,7 @@ $scope.editUser = function(id) {
   }
 };
 
-
+$scope.$watch('number',function(){$scope.test();});
 $scope.$watch('kind', function() {$scope.test();});
 $scope.$watch('cate', function() {$scope.test();});
 $scope.$watch('title',function() {$scope.test();});
