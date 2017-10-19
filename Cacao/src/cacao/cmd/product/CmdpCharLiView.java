@@ -26,14 +26,14 @@ public class CmdpCharLiView implements Cmd {
 		
 				HttpSession session = request.getSession();
 				
-				List<Info> resultall = CacaoProductService.getInstance().selectListLi();
-				List<Info> resulthall = CacaoProductService.getInstance().selectListhpriceLi();
-				List<Info> resultlall = CacaoProductService.getInstance().selectListlpriceLi();
-				List<Info> resultsell = CacaoProductService.getInstance().selectListsellLi();
-				 session.setAttribute("resultall", resultall);
-				 session.setAttribute("resulthall", resulthall);
-				 session.setAttribute("resultlall", resultlall);
-				 session.setAttribute("resultsell", resultsell);
+				List<Info> Liresultall = CacaoProductService.getInstance().selectListLi();
+				List<Info> Liresulthall = CacaoProductService.getInstance().selectListhpriceLi();
+				List<Info> Liresultlall = CacaoProductService.getInstance().selectListlpriceLi();
+				List<Info> Liresultsell = CacaoProductService.getInstance().selectListsellLi();
+				 session.setAttribute("Liresultall", Liresultall);
+				 session.setAttribute("Liresulthall", Liresulthall);
+				 session.setAttribute("Liresultlall", Liresultlall);
+				 session.setAttribute("Liresultsell", Liresultsell);
 			
 			
 			return next;				

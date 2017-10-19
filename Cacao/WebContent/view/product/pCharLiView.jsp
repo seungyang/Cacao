@@ -2,10 +2,10 @@
 <%@ page import="java.util.*"%>
 <%@ page import="cacao.model.vo.*"%>
 <%
-List<Info> catelist1 = (List<Info>)session.getAttribute("resultall");
-List<Info> catelist2 = (List<Info>)session.getAttribute("resulthall");	
-List<Info> catelist3 = (List<Info>)session.getAttribute("resultlall");	
-List<Info> catelist4 = (List<Info>)session.getAttribute("resultsell");	
+List<Info> catelist1 = (List<Info>)session.getAttribute("Liresultall");
+List<Info> catelist2 = (List<Info>)session.getAttribute("Liresulthall");	
+List<Info> catelist3 = (List<Info>)session.getAttribute("Liresultlall");	
+List<Info> catelist4 = (List<Info>)session.getAttribute("Liresultsell");	
 List<Info> selectcatelist = null;
 String order = "";
 
@@ -59,7 +59,7 @@ if(request.getParameter("order")==null){
 <meta name="keywords"
    content="one page, business template, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
 <meta charset="utf-8">
-<title>카카오프렌즈</title>
+<title>라이언 페이지</title>
 
 <!-- combobox css -->
 <link rel="stylesheet" type="text/css" href="/Cacao/css/product/easydropdown.css"/>
@@ -126,7 +126,7 @@ if(request.getParameter("order")==null){
 </div>
 <div id="drop">
 
-<select onchange="location.href='/Cacao/Product?cmd=pCateView-page&order='+this.value;" class="dropdown1" style="float:right">
+<select onchange="location.href='/Cacao/Product?cmd=pCharLiView-page&order='+this.value;" class="dropdown1" style="float:right">
   <option class="option" value="" class="label">검색기준</option>  
   <option class="option" value="높은가격순">높은가격순</option>
   <option class="option" value="낮은가격순">낮은가격순</option>
