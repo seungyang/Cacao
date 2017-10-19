@@ -35,6 +35,8 @@ $(function(){
 
 <body >
 	<div style='width: 100%; height: 5px;'></div>
+	
+<!-- 	전체바디 div시작 -->
 	<div style="background-color: #FFF203;">
 <!-- 	헤더 -->
 		<header style="margin-top: 2%; background-color: white;">
@@ -55,8 +57,8 @@ $(function(){
 			<form style="margin-top: -20px"id='loginFrm' class="form-login" name='loginFrm' action="<%=pjName %>/Login?cmd=login-page" method='post'>
 				<input type="text" id= "user" name="user" placeholder="카카오계정 (이메일)" style="height: 15%;"> 
 				<input type="password" id= "pass" name="pass" placeholder="비밀번호(4~16자리)" style="height: 15%;"> 
-				<input type="submit" name="login" class="login loginmodal-submit" id="loginBtn" value="로그인"
-					style="background-color: #ffda01; margin-top: 20px; font-weight: bold; color: #5a5a5a;">
+				<input type="submit" name="login" class="button button5" id="loginBtn" value="로그인"
+					style="margin-top: 20px; font-weight: bold;">
 			</form>
 
 			<div style="margin-top: 97.5px;">
