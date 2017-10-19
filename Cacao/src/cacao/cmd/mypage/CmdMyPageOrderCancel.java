@@ -2,6 +2,7 @@ package cacao.cmd.mypage;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
@@ -19,7 +20,8 @@ public class CmdMyPageOrderCancel implements Cmd {
 	public String execute(HttpServletRequest request, HttpServletResponse response  ) throws CmdException {
 		// TODO Auto-generated method stub
 	
-		String email = "omy@naver.com";
+		HttpSession session = request.getSession();
+		String email = (String)session.getAttribute("useremail");
 		String orderid = request.getParameter("orderid");
 			
 		int result = CacaoMyPageService.getInstance().updateCancel(orderid);

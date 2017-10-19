@@ -31,14 +31,15 @@
     <th>첨부파일</th>
     <th>수정</th>
   </tr>
-  <%for(int i=0; i< serviceList.size(); i++){ %>
-  <tr>
-    
-    <td><%=serviceList.get(i).getsKind() %></td>
-    <td><%=serviceList.get(i).getsCate() %></td>
-    <td><%=serviceList.get(i).getsTitle() %></td>
-    <td><%=serviceList.get(i).getsDetail() %></td>
-    <td><%=serviceList.get(i).getsImage() %></td>
+<%--   <%for(int i=0; i< serviceList.size(); i++){ %> --%>
+  <tr ng-repeat="user in users">
+    <td>{{user.fName}}</td>
+    <td>{{user.lName}}</td>
+<%--     <td><%=serviceList.get(i).getsKind() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsCate() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsTitle() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsDetail() %></td> --%>
+<%--     <td><%=serviceList.get(i).getsImage() %></td> --%>
     <td>
       <button class="w3-btn w3-ripple" ng-click="editUser(user.id)">✎ Edit</button>
     </td>
