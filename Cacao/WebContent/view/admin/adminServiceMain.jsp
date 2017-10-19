@@ -86,11 +86,16 @@ $scope.lName = '';
 $scope.passw1 = '';
 $scope.passw2 = '';
 $scope.users = [
+
 <%for(int i=0; i< serviceList.size(); i++){ %>
 	{id:<%=i+1%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: "<%=serviceList.get(i).getsCate()%>"},
 <%}%>
 ];
+
 //alert($scope.users.length);
+=======
+
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 

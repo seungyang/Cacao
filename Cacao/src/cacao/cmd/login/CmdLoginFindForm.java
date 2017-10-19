@@ -55,8 +55,9 @@ public class CmdLoginFindForm implements Cmd {
 		
 			}
 			if (result==1) {
-				session.setAttribute("result", result);
+				session.setAttribute("loginresult", result);
 				session.setAttribute("useremail",request.getParameter("user"));
+				session.setMaxInactiveInterval(60*60) ;
 			}
 			
 			request.setAttribute("selectAdminLoginAll", res);
