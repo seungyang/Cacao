@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- CSS  ============================================= -->
 <!-- Bootstrap -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Cacao/css/bootstrap.min.css">
 <!-- Animate -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Main Stylesheet -->
