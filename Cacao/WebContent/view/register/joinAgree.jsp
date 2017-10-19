@@ -4,8 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>우리반 연습</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/register/joinAgree.css">
+<link rel="stylesheet" href="/Cacao/css/register/joinAgree.css">
 
 <script type="text/javascript">
 function join() {
