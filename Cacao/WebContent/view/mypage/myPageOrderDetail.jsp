@@ -9,35 +9,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<%=pjName %>/css/mypage/orderbtn.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link href="/Cacao/css/mypage/canceldetail.css" rel="stylesheet" type="text/css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<style type="text/css">
-.separador-vertical {
-	border-right: 1px solid #bfbdbd;
-}
-
-.titulo-equipo {
-	margin-top: 0px;
-}
-
-.img-responsive {
-	height: 200px;
-	width: 200px;
-}
-
-.equipo-item {
-	border: 1px solid #D1CFCF;
-	padding: 10px;
-	border-radius: 10px;
-	margin-bottom: 25px;
-}
-</style>
 <script type="text/javascript">
 	$(function(){
 		$('#orderClose').click(function(){
