@@ -2,23 +2,14 @@
 
 <%
 	String pjName = "/Cacao";
-	System.out.println("MypageSession : "+session.getAttribute("useremail"));
-	session = request.getSession();
-	
-	if(session.getAttribute("loginresult")!=null){
 
-	}else{
-	out.println("<script>alert('로그인이 되어있지 않습니다');location.href='/Cacao/Main?cmd=main-page';</script>");
-
-	}
-	
 	String pageNum = request.getParameter("page");
-	
+
 	String class1 = "1";
 	String class2 = "2";
 	String class3 = "3";
 	String class4 = "4";
-	
+
 	if (pageNum == null) {
 		pageNum = "1";
 	}
@@ -37,8 +28,6 @@
 			break;
 
 	}
-	
-	
 %>
 
 <!DOCTYPE html>

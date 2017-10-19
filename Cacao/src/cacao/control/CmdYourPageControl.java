@@ -12,22 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
-import cacao.cmd.admin.CmdAdminMyPageMain;
-import cacao.cmd.admin.CmdAdminServiceForm;
+import cacao.cmd.mypage.*;
 
 
 
 /**
  * Servlet implementation class CmdControl
  */
-public class CmdAdminControl extends HttpServlet {
+public class CmdYourPageControl extends HttpServlet {
 	
 	private HashMap commandMap;
-	private String	jspDir = "/view/admin/";
+	private String	jspDir = "/view/mypage/";
 	private String  error = "error.jsp";
 	
 
-    public CmdAdminControl() {
+    public CmdYourPageControl() {
     	super();       
 		initCommand();
 	}
@@ -35,24 +34,19 @@ public class CmdAdminControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
-		commandMap.put("main-page",	new CmdNull("adminMain.jsp") );
-		commandMap.put("adminProductMain-page",	new CmdNull("adminProductMain.jsp") );
+		commandMap.put("main-page",new CmdNull("yourPageMain.jsp")); 
+		commandMap.put("myPageOrder-page",new CmdMyPageOrder("myPageOrder.jsp"));
+		commandMap.put("CmdMyPageOrderDetail-page",new CmdMyPageOrderDetail("myPageOrderDetail.jsp"));
+		commandMap.put("myPagePick-page", new CmdMyPagePick("myPagePick.jsp"));
 		
-		commandMap.put("adminOrderMain-page",	new CmdNull("adminOrderMain.jsp") );
+		commandMap.put("myPageOrderCancel-page", new CmdMyPageOrderCancel("myPageOrderCancel.jsp"));
+		commandMap.put("myPageCancelList-page",new CmdMyPageCancelList("myPageCancelList.jsp"));
+		commandMap.put("CmdMyPageCancelDetail-page",new CmdMyPageCanceDetail("myPageCancelDetail.jsp"));
 		
-		commandMap.put("adminMyPageMain-page",	new CmdNull("adminMyPageMain.jsp") );
-
-		commandMap.put("adminMyPageMain-page",	new CmdAdminMyPageMain("adminMyPageMain.jsp") );
 		
-		commandMap.put("adminServiceMain-page",	new CmdAdminServiceForm("adminServiceMain.jsp") );
-		
-//		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
-//		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
-//		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
-//		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
-//		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
-		// 나머지도 추가하기		
-		
+		commandMap.put("myPageQAList-page",new CmdMyPageQAList("myPageQAList.jsp"));
+		commandMap.put("myPageQAForm-page",new CmdNull("myPageQAForm.jsp"));
+		commandMap.put("myPageQASave-page", new CmdMyPageQASave("myPageQASave.jsp"));
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

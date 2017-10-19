@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%
-	//String loginId =(String)session.getAttribute("loginId");
+    response.setHeader("P3P","CP='CAO PSA CONi OTR OUR DEM ONL'"); 
+	
 	String loginId = null;
 	Cookie[] cookies = request.getCookies();
 	if (cookies != null) {
