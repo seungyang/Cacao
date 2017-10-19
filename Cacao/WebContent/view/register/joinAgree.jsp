@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+   String pjName = "/Cacao";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +53,7 @@ function join() {
 			alt="" src="/Cacao/img/register/agreeBtn.png" style="margin-left: -1%; height: 60px;">
 
 	</div>
-	<form name="form" method="post" action="joinInfoForm.jsp">
+	<form name="form" method="post" action="<%=pjName %>/Register?cmd=joinInfoForm-page">
 	<div class="body" style="width: 76%; margin-left: 10.5%;">
 		<div class="Agree-wrapper">
 
@@ -119,8 +122,9 @@ function join() {
 
 		</div>
 	</div>
+	
+			<button type="button"  value="다음" class="button button5" style="margin-left: 45%;" onclick="join()">다음</button>
 
-			<button type="button" class="button button5" style="margin-left: 45%;" onclick="join()">다음</button>
 </form>
       <footer>
                <hr/>
