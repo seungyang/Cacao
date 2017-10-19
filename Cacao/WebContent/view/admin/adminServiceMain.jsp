@@ -33,8 +33,11 @@
   </tr>
 <%--   <%for(int i=0; i< serviceList.size(); i++){ %> --%>
   <tr ng-repeat="user in users">
-    <td>{{user.fName}}</td>
-    <td>{{user.lName}}</td>
+    <td>{{user.kind}}</td>
+    <td>{{user.cate}}</td>
+    <td>{{user.title}}</td>
+    <td>{{user.detail}}</td>
+    <td>{{user.image}}</td>
 <%--     <td><%=serviceList.get(i).getsKind() %></td> --%>
 <%--     <td><%=serviceList.get(i).getsCate() %></td> --%>
 <%--     <td><%=serviceList.get(i).getsTitle() %></td> --%>
@@ -55,24 +58,24 @@
   <h3 ng-show="edit">등록</h3>
   <h3 ng-hide="edit">수정</h3>
     <label>유형</label>
-    <select id="qCate" name="qCate" class="w3-input w3-border" ng-model="fName">
+    <select id="qCate" name="qCate" class="w3-input w3-border" ng-model="kind">
      		 <option value="0">문의 유형을 선택하세요</option>
      		 <option value="FAQ">FAQ</option>
      		 <option value="공지사항">공지사항</option>
    	</select>
   <br>
     <label>카테고리</label>
-    <input class="w3-input w3-border" type="text" ng-model="lName" placeholder="카테고리를 입력하세요">
+    <input class="w3-input w3-border" type="text" ng-model="cate" placeholder="카테고리를 입력하세요">
   <br>
     <label>제목</label>
-    <input class="w3-input w3-border" type="text" ng-model="passw1" placeholder="제목을 입력하세요">
+    <input class="w3-input w3-border" type="text" ng-model="title" placeholder="제목을 입력하세요">
   <br>
     <label>내용</label>
-    <textarea class="w3-input w3-border" name="message" rows="7" cols="24" placeholder="내용을 입력하세요" ></textarea>
+    <textarea class="w3-input w3-border" ng-model="detail" name="message" rows="7" cols="24" placeholder="내용을 입력하세요" ></textarea>
   <br>
    <br>
     <label>첨부파일</label>
-    <input class="w3-input w3-border" id="file" name="file" type="file" placeholder="첨부 파일공간" >
+    <input class="w3-input w3-border" ng-model="image" id="file" name="file" type="file" placeholder="첨부 파일공간" >
   <br>
   <button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete">✔ Save Changes</button>
 </form>
@@ -81,21 +84,20 @@
 
 <script>
 angular.module('myApp', []).controller('userCtrl', function($scope) {
-$scope.fName = '';
-$scope.lName = '';
-$scope.passw1 = '';
-$scope.passw2 = '';
+$scope.kind = '';
+$scope.cate = '';
+$scope.title = '';
+$scope.detail = '';
+$scope.image = '';
 $scope.users = [
 
 <%for(int i=0; i< serviceList.size(); i++){ %>
-	{id:<%=i+1%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: "<%=serviceList.get(i).getsCate()%>"},
+	{id:<%=i+1%>, kind:'<%=serviceList.get(i).getsKind()%>', cate: "<%=serviceList.get(i).getsCate()%>", title: "<%=serviceList.get(i).getsTitle()%>", detail: "<%=serviceList.get(i).getsDetail()%>", image: "<%=serviceList.get(i).getsImage()%>"},
 <%}%>
 ];
 
 //alert($scope.users.length);
-=======
 
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 
@@ -105,32 +107,34 @@ $scope.editUser = function(id) {
   if (id == 'new') {
     $scope.edit = true;
     $scope.incomplete = true;
-    $scope.fName = '';
-    $scope.lName = '';
+    $scope.kind = '';
+    $scope.cate = '';
+    $scope.title = '';
+    $scope.detail = '';
+    $scope.image = '';
     } else {
    $scope.edit = false;
-   $scope.fName = $scope.users[id-1].fName;
-    $scope.lName = $scope.users[id-1].lName; 
+   $scope.kind = $scope.users[id-1].kind;
+   $scope.cate = $scope.users[id-1].cate;
+   $scope.title = $scope.users[id-1].title;
+   $scope.detail = $scope.users[id-1].detail;
+   $scope.image = $scope.users[id-1].image;
   }
 };
 
-$scope.$watch('passw1',function() {$scope.test();});
-$scope.$watch('passw2',function() {$scope.test();});
-$scope.$watch('fName', function() {$scope.test();});
-$scope.$watch('lName', function() {$scope.test();});
+
+$scope.$watch('kind', function() {$scope.test();});
+$scope.$watch('cate', function() {$scope.test();});
+$scope.$watch('title',function() {$scope.test();});
+$scope.$watch('detail',function() {$scope.test();});
+$scope.$watch('image',function() {$scope.test();});
 
 $scope.test = function() {
-  if ($scope.passw1 !== $scope.passw2) {
-    $scope.error = true;
-    } else {
-    $scope.error = false;
-  }
-  $scope.incomplete = false;
-  if ($scope.edit && (!$scope.fName.length ||
-  !$scope.lName.length ||
-  !$scope.passw1.length || !$scope.passw2.length)) {
+	
+  if ($scope.edit && (!$scope.kind.length || !$scope.cate.length || !$scope.title.length || !$scope.detail.length || !$scope.image.length)) {
      $scope.incomplete = true;
   }
+  $scope.incomplete = false;
 };
 
 });    
