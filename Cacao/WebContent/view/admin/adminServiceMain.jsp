@@ -85,12 +85,22 @@ $scope.lName = '';
 $scope.passw1 = '';
 $scope.passw2 = '';
 $scope.users = [
-<%for(int i=0; i< serviceList.size(); i++){ %>
-	{id:<%=i%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: "<%=serviceList.get(i).getsCate()%>"},
+<%for(int i=0; i< serviceList.size(); i++){ 
+	if(i!=serviceList.size()){%>
+	{id:<%=i%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: '<%=serviceList.get(i).getsCate()%>'},
+	<%
+	}else{%>
+
+	{id:<%=i%>, fName:'<%=serviceList.get(i).getsKind()%>', lName: '<%=serviceList.get(i).getsCate()%>'}
+	
+	<%	
+	}
+	%>
+	
 
 <%}%>
 ];
-alert($scope.users.length);
+
 $scope.edit = true;
 $scope.error = false;
 $scope.incomplete = false; 
