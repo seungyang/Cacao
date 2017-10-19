@@ -10,5 +10,10 @@ select count(*) cnt
 from member 
 where m_email=#{mEmail} and m_pwd=#{mPwd} and m_check='T'
 </select>
+<select id="selectService" parameterType="hashmap" resultType="service">
+select * 
+from service 
+order by s_id desc
+</select>
 </mapper> 
  

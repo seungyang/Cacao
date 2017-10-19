@@ -19,7 +19,7 @@ $(function(){
       event.preventDefault();
       window.location = '/Cacao/MyPage?cmd=main-page&page=4';
    });
-   
+
    $('#qaSubmit').click(function () {
 		if($('#qCate').val()==0){
 	   		alert('유형을 선택하세요');			

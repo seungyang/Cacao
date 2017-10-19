@@ -1,6 +1,9 @@
 package cacao.service;
 
+import java.util.List;
+
 import cacao.model.vo.Member;
+import cacao.model.vo.Service;
 import cacao.session.CacaoAdminRepository;
 
 
@@ -23,6 +26,9 @@ public class CacaoAdminService {
 	
 	public int selectAdminLogin( Member member ) {
 		return repo.selectAdminLogin(member);
+	}
+	public List<Service> getServiceList(){
+		return repo.getServiceList();
 	}
 //	public int getGroupId(){
 //		return repo.getGroupId();

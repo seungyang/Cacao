@@ -6,9 +6,9 @@ if(session.getAttribute("useremail")!=null){
 	sessionalert = String.valueOf(session.getAttribute("useremail"));
 };
  String result = "";
- if(session.getAttribute("result")!=null){
-		result = String.valueOf(session.getAttribute("result"));
- };
+ if(session.getAttribute("loginresult")!=null){
+		result = String.valueOf(session.getAttribute("loginresult"));
+ }; 
  
  String loginimg = "in";
  int num = 0;
@@ -60,7 +60,7 @@ if(session.getAttribute("useremail")!=null){
 <script type="text/javascript">
 window.onload=function(){
 
-
+	var icon1 = document.getElementById("icon1");
 	var icon2 = document.getElementById("icon2");
 	var icon3 = document.getElementById("icon3");
 	var icon4 = document.getElementById("icon4");
@@ -71,12 +71,9 @@ window.onload=function(){
 			window.open('/Cacao/view/login/lMain.jsp', '로그인폼', 'width=1000px, height=600px');
 			
 		}else{
+		location.href="/Cacao/view/main/logout.jsp";
 		
-		<%session.removeAttribute("useremail");
-		session.removeAttribute("result");
-		
-		%>
-		location.href="/Cacao/Main?cmd=main-page";
+
 		
 		
 		}
