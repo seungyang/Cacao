@@ -25,6 +25,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <title> 우리반 연습</title>
+<script type="text/javascript">
+	$(function(){
+		$('#orderClose').click(function(){
+		 		location.replace('<%=pjName%>/Main?cmd=main-page'); 
+		});
+	})
+
+</script>
 </head>
 <body>
  	<div class="container">
@@ -98,9 +106,8 @@
 		</div>
 		<%	}	%>
 
-		<input type="button" id="orderClose" value="닫기"/> 
+		<input type="button" id="orderClose" value="메인화면으로"/> 
 	</div>
- 	
  	
  	</div> 	
 </body>
