@@ -25,11 +25,6 @@ public class CmdJoinSuccess implements Cmd {
 				
 		Member m = (Member) session.getAttribute("loginM");
 
-		System.out.println("2 : " + m.getmEmail());
-		System.out.println("2 : " + m.getmPwd());
-		System.out.println("2 : " + m.getmName());
-		System.out.println("2 : " + m.getmBirth());
-		System.out.println("2 : " + m.getmSex());
 			
 		int result = CacaoRegisterService.getInstance().getInsert(m);
 

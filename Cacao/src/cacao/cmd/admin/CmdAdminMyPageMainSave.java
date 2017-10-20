@@ -27,9 +27,14 @@ public class CmdAdminMyPageMainSave implements Cmd {
 	  qa.setmEmail(request.getParameter("qa_userid"));
 	  qa.setqAnswer(request.getParameter("qa_answer"));
 	  qa.setqStatus(request.getParameter("qa_status"));
-
-		
-		int qaResult = CacaoAdminService.getInstance().getAnswerTextList(qa);
+	  
+	  System.out.println(request.getParameter("qa_id"));
+	  System.out.println(request.getParameter("qa_userid"));
+	  System.out.println(request.getParameter("qa_answer"));
+	  System.out.println(request.getParameter("qa_status"));
+	  
+	  int qaResult = 0;
+		qaResult = CacaoAdminService.getInstance().getAnswerTextList(qa);
 		
 		request.setAttribute("qaResult", qaResult);
 		

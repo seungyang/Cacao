@@ -36,10 +36,13 @@ public class CmdRegisterControl extends HttpServlet {
 		commandMap = new HashMap();
 
 		commandMap.put("main-page",	new CmdNull("cacaoMain.jsp"));
-		commandMap.put("joinInfoSave-page",	new CmdJoinInfoSave("joinInfoSave.jsp"));
-		commandMap.put("joinAuth-page",new CmdNull("joinAuth.jsp"));
 		commandMap.put("joinAgree-page",new CmdNull("joinAgree.jsp"));
-		commandMap.put("joinSuccess-page",new CmdJoinSuccess("joinSuccess.jsp"));
+		commandMap.put("joinInfoForm-page",new CmdNull("joinInfoForm.jsp"));
+		
+		commandMap.put("joinAuth-page",new CmdJoinInfoSave("joinAuth.jsp"));
+		commandMap.put("joinInfoSave-page",	new CmdJoinSuccess("joinInfoSave.jsp"));
+		
+		commandMap.put("joinSuccess-page",new CmdNull("joinSuccess.jsp"));
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
 //		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 

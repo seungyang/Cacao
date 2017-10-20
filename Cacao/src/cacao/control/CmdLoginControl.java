@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
-import cacao.cmd.login.CmdLoginFindForm;
+import cacao.cmd.login.*;
 
 
 
@@ -36,6 +36,15 @@ public class CmdLoginControl extends HttpServlet {
 		commandMap.put("lMain-page",new CmdNull("Imain.jsp") );
 		commandMap.put("main-page",	new CmdNull("loginForm.jsp") );
 		commandMap.put("login-page",new CmdLoginFindForm("loginFindForm.jsp") );
+
+		commandMap.put("loginEmailFind-page",new CmdLoginEmailFind("loginEmailFind.jsp") );
+		commandMap.put("joinAgree-page",new CmdNull("joinAgree.jsp"));
+		commandMap.put("joinInfoForm-page",new CmdNull("joinInfoForm.jsp"));
+		commandMap.put("joinAuth-page",new CmdNull("joinAuth.jsp"));
+
+		commandMap.put("loginPwdFind-page",new CmdNull("loginPwdFind.jsp"));
+		commandMap.put("loginPwdFindSend-page",new CmdLoginPwdFind("loginPwdFindSend.jsp"));
+
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
 //		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 

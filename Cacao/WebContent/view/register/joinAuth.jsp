@@ -41,50 +41,51 @@
 </head>
 
 <body>
+<!-- ####상단노란테두리 -->
 <div style='background:yellow; width:100%; height:5px;'></div>
-<div>
-	<header style="margin-top: 2%">
-	<div >
-		<font style="font-size: 22; font-weight: bold; margin-left: 2%; color: grey">Cacao 계정만들기</font><img src="../../img/login/loginheader.png" style="height: 20px; margin-left: 70%;"/>
-	</div>
-	<hr/>
-	</header> 
+<!-- #### 전체 div 시작 -->	
+	<div>
+<!-- 	헤더 -->
+		<header style="margin-top: 2%; background-color: white;">
+			<div>
+				<font
+					style="font-size: 15; font-weight: bold; margin-left: 2%; color: grey">Cacao 계정만들기
+					</font><img src="/Cacao/img/login/loginheader.png"
+					style="height: 20px; margin-left: 67%;" />
+			</div>
+			<hr />
+		</header>
 
 	<br>
 	<div style="margin-top: -2%;">
-		<img alt="" src="${pageContext.request.contextPath}/img/register/registAuth1.png" style="margin-left: 10%; height: 60px; margin-top: -0.24%; "> <img
-			alt="" src="${pageContext.request.contextPath}/img/register/registAuth2.png"
+		<img alt="" src="/Cacao/img/register/registAuth1.png" style="margin-left: 10%; height: 60px; margin-top: -0.24%; "> <img
+			alt="" src="/Cacao/img/register/registAuth2.png"
 			style="margin-left: -1%; height: 60px; margin-top: -0.09%;"> <img alt=""
-			src="${pageContext.request.contextPath}/img/register/registAuth3.png" style="margin-left: -1%; height: 60px;"">
+			src="/Cacao/img/register/registAuth3.png" style="margin-left: -1%; height: 60px;"">
 	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8">
-				<h1 class="entry-title">
+	
+				<h1 class="entry-title" style="margin-left: 38%; margin-top: 5%;">
 					<span>이메일인증</span>
 				</h1>
-				<hr>
-			</div>
-		</div>
 
 		<div class="container">
 			<div class="row">
 			 	<form action="<%=pjName %>/Register?cmd=joinSuccess-page" method="post" name="joinAuth" id="joinAuth" >
 				
-					<h2 style="color: #7088be;"><%=imsiEmail %></h2>
+					<h2 style="color: #7088be; margin-left: 45%; margin-top: 3.5%;"><%=imsiEmail %></h2>
 					<br/>
-					<h3>위 메일로 발송된 8자리 인증번호를 입력해주세요.</h3>
+					<h3 style="margin-left: 21%;">위 메일로 발송된 8자리 인증번호를 입력해주세요.</h3>
 					<br> <br>
-					<div id="textF-Num" style="margin-left: 35%">
+					<div id="textF-Num" style="margin-left: 32%">
 						<label>인증번호 입력</label>
-						<input type="text" required id="textF"> <span id="highlight"></span> <span id="bar"></span> 
+						<input type="text" required id="textF" style="margin-left: 1%;"> <span id="highlight"></span> <span id="bar"></span> 
 					</div>
 					
 					<div>
 					<div class="form-group">
 						<div class="col-xs-offset-3 col-xs-10">
 							<input name="submitBtn" type="button" id="submitBtn" value="다음 "
-								class="btn btn-primary" style="margin-left: 15%; margin-top: 8%; height: :70px; width: 100px">
+								class="button button5" style="margin-left: 20%; margin-top: 7%; height: :70px; width: 100px">
 						</div>
 					</div>
 					
@@ -95,10 +96,16 @@
 		</div>
 	</div>
 	
-</div>
 <hr>
 	<br>
-	<footer> </footer>
+<footer>
+	
+
+		<div>
+			<img src="/Cacao/img/login/loginfoot.png" style="height: 55px; margin-left: 23%;" />
+
+		</div>
+	</footer>
 
 
 </body>

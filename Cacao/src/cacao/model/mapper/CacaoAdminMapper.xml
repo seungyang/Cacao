@@ -14,8 +14,7 @@ where m_email=#{mEmail} and m_pwd=#{mPwd} and m_check='T'
 <select id="answerList" parameterType="hashmap" resultType="qa">
 select q_id, m_email, q_cate, q_title, q_content, q_status, q_answer 
 from qa 
-where m_email=#{email} 
-order by q_id desc
+order by q_status, q_id desc
 </select>
 
 <update id="answerTextList" parameterType="qa">
@@ -38,6 +37,21 @@ update service
 set s_kind=#{sKind}, s_cate=#{sCate}, s_title=#{sTitle}, s_detail=#{sDetail} 
 where s_id=#{sId}
 </update>
+<select id="selectOrder" parameterType="hashmap" resultType="order">
+select * from deliver order by d_cancel ASC, d_id DESC
+</select>
+<update id="orderModify" parameterType="order">
+update deliver 
+set d_status=#{dStatus} 
+where d_id=#{dId}
+</update>
+<update id="orderModify1" parameterType="order">
+update deliver 
+set d_status=#{dStatus}, d_cancel='T' 
+where d_id=#{dId}
+</update>
+
+
 <select id="infolist" resultType="info">
 select *
 from info  
@@ -54,5 +68,10 @@ set i_char=#{iChar},i_cate=#{iCate},i_name=#{iName},i_cost=#{iCost},i_cnt=#{iCnt
 where i_id=#{iId}
 </update>
 
+
 </mapper> 
+ 
+ 
+ 
+ 
  

@@ -297,8 +297,8 @@ function openDaumPostcode() {
   <label class="col-md-4 control-label" for="qTel">결제 방법</label>  
   <div class="col-md-5">
   <span class="help-block">
-  <input type="radio" name="payment" value="deposit">무통장 입금
-  <input type="radio" name="payment" value="account"/>계좌이체
+  <input type="radio" name="payment" value="무통장입금">무통장 입금
+  <input type="radio" name="payment" value="계좌이체"/>계좌이체
   </span> 
   </div>
 </div>

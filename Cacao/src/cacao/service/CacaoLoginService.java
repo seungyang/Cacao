@@ -1,5 +1,7 @@
 package cacao.service;
 
+import java.util.List;
+
 import cacao.model.vo.Member;
 import cacao.model.vo.Order;
 import cacao.session.CacaoLoginRepository;
@@ -24,6 +26,15 @@ public class CacaoLoginService {
 	public int selectLogin( Member member ) {
 		return repo.selectLogin(member);
 	}
+	public List<Member> findEmail(String findNick, String findBirth) {
+		return repo.findEmail(findNick,findBirth);
+	}
+	public int findPwd(Member m) {
+			return repo.findPwd(m);
+	}
+	
+	
+	
 	
 //	public int getGroupId(){
 //		return repo.getGroupId();
