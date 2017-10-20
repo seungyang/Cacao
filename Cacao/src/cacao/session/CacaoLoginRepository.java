@@ -57,6 +57,15 @@ public class CacaoLoginRepository {
 			sess.close();
 		}		
 	}
+	public int findPwd(Member m) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			return sess.selectOne(namespace+".findPwd",m);
+		}finally {
+			sess.close();
+		}		
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession
