@@ -10,13 +10,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/login/loginForm.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript">
-	//회원가입 클릭시 회원가입 페이지로 이동
-	function openWindow() {
-		window.open("/Cacao/view/register/joinAgree.jsp", "회원가입폼",
-				"width=50px, height=50px");
-	}
-</script>
+
 <script type="text/javascript">
 $(function(){
 	$('#loginBtn').click(function(){
@@ -28,14 +22,11 @@ $(function(){
 			$('#loginFrm').submit();
 		}
 	});
-<<<<<<< HEAD
-	
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
-=======
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao/
+
 });
 	
 </script>
