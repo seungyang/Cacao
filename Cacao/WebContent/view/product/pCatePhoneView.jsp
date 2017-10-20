@@ -2,10 +2,10 @@
 <%@ page import="java.util.*"%>
 <%@ page import="cacao.model.vo.*"%>
 <%
-List<Info> catelist1 = (List<Info>)session.getAttribute("Apresultall");
-List<Info> catelist2 = (List<Info>)session.getAttribute("Apresulthall");	
-List<Info> catelist3 = (List<Info>)session.getAttribute("Apresultlall");	
-List<Info> catelist4 = (List<Info>)session.getAttribute("Apresultsell");	
+List<Info> catelist1 = (List<Info>)session.getAttribute("Phoneresultall");
+List<Info> catelist2 = (List<Info>)session.getAttribute("Phoneresulthall");	
+List<Info> catelist3 = (List<Info>)session.getAttribute("Phoneresultlall");	
+List<Info> catelist4 = (List<Info>)session.getAttribute("Phoneresultsell");	
 List<Info> selectcatelist = null;
 String order = "";
 
@@ -126,7 +126,7 @@ if(request.getParameter("order")==null){
 </div>
 <div id="drop">
 
-<select onchange="location.href='/Cacao/Product?cmd=pCharApView-page&order='+this.value;" class="dropdown1" style="float:right">
+<select onchange="location.href='/Cacao/Product?cmd=pCatePhoneView-page&order='+this.value;" class="dropdown1" style="float:right">
   <option class="option" value="" class="label">검색기준</option>  
   <option class="option" value="높은가격순">높은가격순</option>
   <option class="option" value="낮은가격순">낮은가격순</option>

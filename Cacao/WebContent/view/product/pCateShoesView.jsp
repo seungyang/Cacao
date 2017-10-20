@@ -2,10 +2,10 @@
 <%@ page import="java.util.*"%>
 <%@ page import="cacao.model.vo.*"%>
 <%
-List<Info> catelist1 = (List<Info>)session.getAttribute("Apresultall");
-List<Info> catelist2 = (List<Info>)session.getAttribute("Apresulthall");	
-List<Info> catelist3 = (List<Info>)session.getAttribute("Apresultlall");	
-List<Info> catelist4 = (List<Info>)session.getAttribute("Apresultsell");	
+List<Info> catelist1 = (List<Info>)session.getAttribute("Shoesresultall");
+List<Info> catelist2 = (List<Info>)session.getAttribute("Shoesresulthall");	
+List<Info> catelist3 = (List<Info>)session.getAttribute("Shoesresultlall");	
+List<Info> catelist4 = (List<Info>)session.getAttribute("Shoesresultsell");	
 List<Info> selectcatelist = null;
 String order = "";
 
@@ -126,7 +126,7 @@ if(request.getParameter("order")==null){
 </div>
 <div id="drop">
 
-<select onchange="location.href='/Cacao/Product?cmd=pCharApView-page&order='+this.value;" class="dropdown1" style="float:right">
+<select onchange="location.href='/Cacao/Product?cmd=pCateShoesView-page&order='+this.value;" class="dropdown1" style="float:right">
   <option class="option" value="" class="label">검색기준</option>  
   <option class="option" value="높은가격순">높은가격순</option>
   <option class="option" value="낮은가격순">낮은가격순</option>
@@ -142,7 +142,7 @@ if(request.getParameter("order")==null){
         <%for(int i=0;i<selectsize;i++){ %>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                          <a href='/Cacao/Product?cmd=pCateCaseView-page&id=<%=selectcatelist.get(i).getiId()%>&cnt=<%=selectcatelist.get(i).getiImgcnt()%>&detail=<%=selectcatelist.get(i).getiDetail()%>&name=<%=selectcatelist.get(i).getiName()%>&price=<%=selectcatelist.get(i).getiCost()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=selectcatelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
+                          <a href='/Cacao/Product?cmd==pCateCaseView-page&id=<%=selectcatelist.get(i).getiId()%>&cnt=<%=selectcatelist.get(i).getiImgcnt()%>&detail=<%=selectcatelist.get(i).getiDetail()%>&name=<%=selectcatelist.get(i).getiName()%>&price=<%=selectcatelist.get(i).getiCost()%>'><img class="img-fluid" src="/Cacao/img/product/all/<%=selectcatelist.get(i).getiId() %>00.jpg" alt="" style="height: 240px; width: 300px;"></a>
             				
               <div class="caption">
                 <div class="caption-content">

@@ -14,11 +14,8 @@
 	String price = request.getParameter("price");
 	String name = request.getParameter("name");
 	String id = request.getParameter("id");
-
 	
-
 	
-
 	int sum = 0;
 	int equal = 0;
 	Info info = new Info();
@@ -78,7 +75,6 @@
 	}
 	session.setAttribute("buylist", infolist);
 	session.setAttribute("cart", infolist);
-
 // 	CacaoMainService service = CacaoMainService.getInstance();
 // 	infolist = service.selectInfo(infolist);
 	
@@ -106,25 +102,25 @@
         ============================================= -->
 <!-- Fontawesome -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/font-awesome.min.css">
+	href="/Cacao/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+	href="/Cacao/css/bootstrap.min.css">
 <!-- Fancybox -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
+	href="/Cacao/css/jquery.fancybox.css">
 <!-- owl carousel -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/owl.carousel.css">
+	href="/Cacao/css/owl.carousel.css">
 <!-- Animate -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/animate.css">
+	href="/Cacao/css/animate.css">
 <!-- Main Stylesheet -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/main.css">
+	href="/Cacao/css/main.css">
 <!-- Main Responsive -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/responsive.css">
+	href="/Cacao/css/responsive.css">
 
 
 <!-- product페이지 css -->
@@ -132,13 +128,12 @@
 
 
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/responsive.css">
+	href="/Cacao/css/responsive.css">
 
 <!-- Modernizer Script for old Browsers -->
 
 <style type="text/css">
 .checks {position: relative;}
-
 .checks input[type="checkbox"] {  /* 실제 체크박스는 화면에서 숨김 */
   position: absolute;
   width: 1px;
@@ -175,7 +170,6 @@
 .checks input[type="checkbox"]:checked + label:active:before {
   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
 }
-
 .checks input[type="checkbox"]:checked + label:before {  /* 체크박스를 체크했을때 */ 
   content: '\2714';  /* 체크표시 유니코드 사용 */
   color: #99a1a7;
@@ -184,15 +178,12 @@
   border-color: #adb8c0;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
 }
-
 .btn {
   background-color: #CCFFFF;
   border: 0;
   font-family: 'Open Sans', sans-serif;
   
-
 }
-
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -202,16 +193,65 @@ var check_arr = []; //check된 배열
 $(function(){
 	$('input[name="plus"]').each(function(){
 		$(this).click(function(){
+		
+			var data =  $(this).parent().find('input.cnt').val();
+			var index = $(this).parent().find('input.index').val();
 			$(this).parent().find('input.cnt').val(parseInt($(this).parent().find('input.cnt').val()) + 1);
+			$(this).parent().parent().find('.changecnt').text(parseInt($(this).parent().parent().find('.changecnt').text())+1);
+			var sum = $(this).parent().parent().parent().parent().find('.sum').text();
+			var allsum = $(this).parent().parent().parent().parent().find('.allsum').text();
+			var cost = $(this).parent().parent().find('.cost').text();
+			$(this).parent().parent().parent().parent().find('.sum').html("<h4>"+(parseInt(sum)+parseInt(cost))+"</h4>");
+ 			$(this).parent().parent().parent().parent().find('.allsum').html("<h4>"+(parseInt(sum)+parseInt(cost)+2500)+'원'+"</h4>");
+			
+			$.ajax({
+				type : 'post',
+				url : 'Index.jsp',
+				data : { 'index' : index},
+				dataType : 'text',
+				success : function(data){
+				
+				
+				},
+				error : function(err){
+					
+				}
+			});
+		
+				
+			
 		});
+		
 	});
 	
 	$('input[name="minus"]').each(function(){
 		$(this).click(function(){
+			
+			var data =  $(this).parent().find('input.cnt').val();
+			var index = $(this).parent().find('input.index').val();
 			$(this).parent().find('input.cnt').val(parseInt($(this).parent().find('input.cnt').val()) - 1);
+			$(this).parent().parent().find('.changecnt').html("<h4>"+(parseInt($(this).parent().parent().find('.changecnt').text())-1)+"</h4>");
+			var sum = $(this).parent().parent().parent().parent().find('.sum').text();
+			var allsum = $(this).parent().parent().parent().parent().find('.allsum').text();
+			var cost = $(this).parent().parent().find('.cost').text();
+			$(this).parent().parent().parent().parent().find('.sum').html("<h4>"+(parseInt(sum)-parseInt(cost))+"</h4>");
+ 			$(this).parent().parent().parent().parent().find('.allsum').html("<h4>"+(parseInt(sum)-parseInt(cost)+2500)+'원'+"</h4>");
+			$.ajax({
+				type : 'post',
+				url : 'Indexminus.jsp',
+				data : { 'index' : index},
+				dataType : 'text',
+				success : function(data){
+					
+				
+				
+				},
+				error : function(err){
+					
+				}
+			});
 		});
 	});
-
 // 	모든선택 클릭시 이벤트
 	 $('input[name="all"]').change(function(){
 	        if($(this).is(":checked")){
@@ -228,12 +268,9 @@ $(function(){
 	          
 	        }
 	    });
-
-
 // 	 모든 선택  해제  이벤트
 	 $('input[name="itemcheck"]').each(function(){
 		$(this).change(function(){
-
 			if(!$(this).is(":checked")){
 	        
 				$('input[name="all"]').prop("checked",false);
@@ -241,11 +278,9 @@ $(function(){
 			
 		});
      });
-
 // 선택 데이터 삭제
 	 $('input[name="itemcheck"]').each(function(){
 			$(this).change(function(){
-
 				if(!$(this).is(":checked")){
 		        
 					$('input[name="all"]').prop("checked",false);
@@ -253,13 +288,16 @@ $(function(){
 				
 			});
 	 	});
+	$('#buy').click(function(){
+	if($('.detail').length==0){
+		alert("구매할 내용이 없습니다");
+	}else{
+		 	 location.href="/Cacao/Order?cmd=main-page"
+	};
+		
+	});
 
-	
-
-
-	
 });
-
 </script>
 
 
@@ -269,7 +307,7 @@ $(function(){
 
 
 <script
-	src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
+	src="/Cacao/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 	<jsp:include page="/view/include/header.jsp"></jsp:include>
@@ -289,12 +327,11 @@ $(function(){
 	<div id=product style="margin-top : 10%">
 	<%
 		 
-		if(infolist!=null){
-			
+		if((ArrayList<Info>)session.getAttribute("cart")!=null){
+			infolist = (ArrayList<Info>)session.getAttribute("cart");
 		for(int i=0; i < infolist.size(); i++) { 
 			Info item = (Info) infolist.get(i); 
 			sum = sum + Integer.parseInt(item.getiCnt()) * Integer.parseInt(item.getiCost());
-
 	%>	
 			<div class="detail">
 			<div class=choose>
@@ -308,18 +345,19 @@ $(function(){
 			상품이름 : <%= item.getiName() %>
 			</br>
 			</br>
-			주문개수 : <%= item.getiCnt() %>
+			주문개수 : <div class='changecnt'><%= item.getiCnt() %></div>
 			</br>
 			</br>
-			금액 : <%= item.getiCost() %>
+			금액 : <div class='cost'><%= item.getiCost() %></div>
 			</div>
 			<div class='cancel' style="float:left;margin-left:95%;margin-top:-20%;margin-right:30%">
 			<a href="/Cacao/view/main/cartView.jsp?change=3&index=<%=i%>"><input type='button' class='btn' value="취소"/></a>
 			</div>
 			<div class=number style="float:left;margin-left:68%">
-			<a href="/Cacao/view/main/cartView.jsp?change=1&index=<%=i%>"><input type='button' class='btn' name='minus'  value="-"/></a>
+			<input type='button' class='btn' name='minus'  value="-"/>
 			<input type='text' class="cnt"  value='<%=item.getiCnt()%>'/>
-			<a href="/Cacao/view/main/cartView.jsp?change=2&index=<%=i%>"><input type='button' class='btn' name= 'plus' value="+"/></a>
+			<input type='button' class='btn' name= 'plus' value="+"/>
+			<input type='hidden' class='index' value='<%=i%>'/>
 			</div>
 			
 			</br>
@@ -343,11 +381,11 @@ $(function(){
 <!-- 	합계창         -->
 	<div>
 	<div style="margin-left:50%"><h4>장바구니 합계 : </h4></div>                
-	<div style="float:right;margin-top:-4%;margin-rigt"><h4><%=sum %>원</h4></div></br>
+	<div style="float: left;margin-left:90%;margin-top:-4.5%;"class='sum'><h4><%=sum %></h4></div><div style="float: right;margin-top:-4.5%"><h4>원</h4></div></h4></br>
 	<div style="margin-top:-2.5%;margin-left:50%"><h4>배송비 : </h4></div>                     
 	<div style="float:right;margin-top:-4%"><h4>2500원</h4></div>                                                         
 	<div style="margin-left:50%"><h4>총 결제 금액 : </h4></div>
-	<div style="float:right;margin-top:-4%"><h4><%=sum+2500 %>원</h4></div>
+	<div class='allsum' style="float:right;margin-top:-4%"><h4><%=sum+2500 %>원</h4></div>
 	</div>
 	<br/>
 	<br/>
@@ -361,25 +399,3 @@ $(function(){
 	
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

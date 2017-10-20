@@ -12,7 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
+import cacao.cmd.product.CmdpCateCupView;
+import cacao.cmd.product.CmdpCateDollView;
+import cacao.cmd.product.CmdpCatePhoneView;
+import cacao.cmd.product.CmdpCateShoesView;
 import cacao.cmd.product.CmdpCateView;
+import cacao.cmd.product.CmdpCharApView;
 import cacao.cmd.product.CmdpCharLiView;
 
 
@@ -34,15 +39,15 @@ public class CmdProductControl extends HttpServlet {
 
 	private void initCommand(){
 		commandMap = new HashMap();
-		 
+	
 		commandMap.put("pCateView-page",new CmdpCateView("pCateView.jsp") );
 		commandMap.put("pCateCaseView-page",new CmdNull("pCateCaseView.jsp") );
 		commandMap.put("pCharLiView-page",new CmdpCharLiView("pCharLiView.jsp") );
-//		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
-//		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
-//		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
-//		commandMap.put("delete-form",new CmdNull("deleteMessage.jsp")); 
-//		commandMap.put("delete-confirm",new CmdCacaoMain("deleteConfirm.jsp")); 
+		commandMap.put("pCharApView-page",new CmdpCharApView("pCharApView.jsp") );
+		commandMap.put("pCateDollView-page",new CmdpCateDollView("pCateDollView.jsp") );
+		commandMap.put("pCateCupView-page",new CmdpCateCupView("pCateCupView.jsp") );
+		commandMap.put("pCatePhoneView-page",new CmdpCatePhoneView("pCatePhoneView.jsp") );
+		commandMap.put("pCateShoesView-page",new CmdpCateShoesView("pCateShoesView.jsp") );
 		// 나머지도 추가하기		
 		
 	}

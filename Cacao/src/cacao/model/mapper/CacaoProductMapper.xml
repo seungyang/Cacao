@@ -51,6 +51,147 @@ order by i_name
 </select>
 
 
+<select id="selectAllAp" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'AP%'
+</select>
+<select id="selectAllhpriceAp" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'AP%'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpriceAp" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'AP%'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellAp" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like 'AP%'
+order by i_name
+</select>
+
+
+
+
+<select id="selectAllDoll" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0101_____'
+</select>
+<select id="selectAllhpriceDoll" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0101_____'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpriceDoll" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0101_____'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellDoll" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0101_____'
+order by i_name
+</select>
+
+
+
+<select id="selectAllCup" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0201_____'
+</select>
+<select id="selectAllhpriceCup" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0201_____'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpriceCup" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0201_____'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellCup" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0201_____'
+order by i_name
+</select>
+
+
+
+
+
+<select id="selectAllPhone" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0301_____'
+</select>
+<select id="selectAllhpricePhone" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0301_____'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpricePhone" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0301_____'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellPhone" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0301_____'
+order by i_name
+</select>
+
+
+
+
+<select id="selectAllShoes" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0401_____'
+</select>
+<select id="selectAllhpriceShoes" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0401_____'
+order by to_number(i_cost) desc
+</select>
+<select id="selectAlllpriceShoes" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0401_____'
+order by to_number(i_cost) asc
+</select>
+<select id="selectAllsellShoes" resultType="info">
+select i_id,i_imgcnt,i_detail,i_name,i_cost
+from info
+where i_id like '__0401_____'
+order by i_name
+</select>
+
+
+
+
+
+
+
+
+
+
 
 
 </mapper> 
