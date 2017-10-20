@@ -19,29 +19,51 @@ $(function(){
 		}else if($('#pass').val()==""){
 			alert('패스워드를 입력하세요');
 		}else{
+<<<<<<< HEAD
 			$('#loginFrm').submit();
 		}
 
 
+=======
+			$('#loginFrm').submit();
+		}
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 	});
+<<<<<<< HEAD
 	
 
 	
+=======
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
+
+<<<<<<< HEAD
 
 
-
+=======
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 	$('#findPwd').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginPwdFind-page", "비밀번호찾기",
 		"width=550px, height=600px");
+<<<<<<< HEAD
 	});
+=======
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
+
+<<<<<<< HEAD
 
 
-
+=======
+	});
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 
 });
 	

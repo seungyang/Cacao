@@ -1,6 +1,7 @@
 package cacao.session;
 
 import java.io.InputStream;
+import java.util.HashMap;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -49,7 +50,19 @@ public class CacaoRegisterRepository {
 		}finally {
 			sess.close();
 		}	
+	}
+	
+	public int idCheck(String id) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			HashMap hash = new HashMap();
+			hash.put("id", id);
 			
+			return sess.selectOne(namespace+".idCheck",hash);
+		}finally {
+			sess.close();
+		}		
 		
 	}
 
