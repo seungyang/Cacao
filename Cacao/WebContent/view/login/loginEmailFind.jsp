@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <% 
 	String pjName = "/Cacao";
-	List<Member> findEmail = (List<Member>)request.getAttribute("findEmail");
+	List<Member> findEmail = (List<Member>)session.getAttribute("findEmail");
 
 %>
 <!DOCTYPE html>
@@ -21,15 +21,46 @@
 <script type="text/javascript">
 	$(function(){
 		
+		$('#findBtn').click(function(){
+			var findNick = $('#findNick').val();
+			var findBirth = $('#findBirth').val();
+
+			$.ajax({
+				type:'post',
+				url : '/Cacao/view/login/Index.jsp',
+				data : { 'findNick':findNick ,'findBirth':findBirth },
+				dataType : 'text',
+				success : function(data){
+					var obj = {};
+		               obj = eval("("+data+")");
+		               var arr = obj.result;
+		               
+		               var str = "";
+		               /* data값이 없을떄  */
+		               if(arr==""){
+		            	   	str = '<input id="findEmail" name="findEmail" type="text" value="검색된 이메일이 없습니다." class="form-control input-md" required="" readonly="readonly">';
+		            	   	$('.ajax').append(str);
+		               }else{
+		            	   for ( var i =0; i<arr.length;i++){
+		            		str = '<input id="findEmail" name="findEmail" type="text" value="'+arr[i].email+'" class="form-control input-md" required="" readonly="readonly">';
+			            	$('.ajax').append(str);	   
+		            	   }
+		               }		               
+				},
+				error : function(err){
+					alert("에러발생 : "+ err)
+				}
+			});
 		
-	})
+		});
+	});
 </script>
 </head>
 <body>
 <br/>
 <br/>
 
-<form action="<%=pjName%>/cmd=loginEmailFind-page">
+<form >
 <div class="form-group">
   <label class="col-md-4 control-label" for="findNick">닉네임</label>  
   <div class="col-md-5">
@@ -46,7 +77,7 @@
   </div>
 </div>
 <div class="form-group" style="margin-left: 200px">
-<input type="submit" name="findBtn" id="findBtn" value=" 검 색  "
+<input type="button" name="findBtn" id="findBtn" value=" 검 색  "
 					style="background-color: #ffda01; margin-top: 20px; font-weight: bold; color: black;
 					width: 200px; height: 40px;">
 
@@ -56,21 +87,9 @@
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="findEmail">검색된 이메일 주소</label>  
-  
-	<%	if (findEmail == null || findEmail.size()==0){%>
-		<div class="col-md-5">
-		  <input id="findEmail" name="findEmail" type="text" placeholder="검색된 이메일이 없습니다." class="form-control input-md" required="" readonly="readonly">
-		  </div>
-	<% }else{
-		for(int i = 0 ; i < findEmail.size();i++){
-			%>
-		  <div class="col-md-5">
-		  <input id="findEmail" name="findEmail" type="text" placeholder="찾은 이메일" class="form-control input-md" required="" readonly="readonly">
-		  </div>
-		  
-		  <% }//End of For %>
-	<% }// End of If %>
-		
+ 	<div class="col-md-5 ajax">
+	  
+ 	</div>
 </div>
 
 
