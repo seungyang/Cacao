@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
@@ -24,18 +25,20 @@ public class CmdLoginEmailFind implements Cmd {
 				
 		String findNick = request.getParameter("findNick");
 		String findBirth = request.getParameter("findBirth");
-		
+						
 		if(findNick==null || findBirth==null) {
 			findNick = "1";
 			findBirth ="1";
 		}
 		
-		
 		List<Member> findEmail = CacaoLoginService.getInstance().findEmail(findNick,findBirth);
 		
-		request.setAttribute("findEmail", findEmail);
+		HttpSession session = request.getSession();
 		
-		return next;			
+		session.setAttribute("findEmail", findEmail);
+
+		return next;
+		
 	}
 
 }

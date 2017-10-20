@@ -31,7 +31,7 @@ $(function(){
 	
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
-		"width=550px, height=800px");
+		"width=550px, height=600px");
 	});
 });
 	
