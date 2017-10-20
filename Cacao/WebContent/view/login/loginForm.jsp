@@ -10,13 +10,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/login/loginForm.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript">
-	//회원가입 클릭시 회원가입 페이지로 이동
-	function openWindow() {
-		window.open("/Cacao/view/register/joinAgree.jsp", "회원가입폼",
-				"width=50px, height=50px");
-	}
-</script>
+
 <script type="text/javascript">
 $(function(){
 	$('#loginBtn').click(function(){
@@ -27,12 +21,23 @@ $(function(){
 		}else{
 			$('#loginFrm').submit();
 		}
+<<<<<<< HEAD
 	});
 	
+=======
+	});
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
+<<<<<<< HEAD
+=======
+	$('#findPwd').click(function(){
+		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
+		"width=550px, height=600px");
+	});
+>>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 
 });
 	
@@ -70,8 +75,8 @@ $(function(){
 			<div style="margin-top: 97.5px;">
 				<hr />
 				<a href="<%=pjName %>/Register?cmd=joinAgree-page"><font style="font-size: 10; color: black;">회원가입</font></a>
-				<a href="#"><fon-t style="font-size: 10; margin-left: 86px; color: black;">이메일
-						찾기</font></a> - <a href="#"><font style="font-size:10;color: black;">비밀번호 재설정</font></a>
+				<a href="#" id="findEmail"><fon-t style="font-size: 10; margin-left: 86px; color: black;">이메일
+						찾기</font></a> - <a href="#" id="findPwd"><font style="font-size:10;color: black;">비밀번호 재설정</font></a>
 
 			</div>
 		</div>
