@@ -4,11 +4,8 @@
     pageEncoding="UTF-8"%>
 <% 
 	String pjName = "/Cacao";
-	if(session.getAttribute("findPwdResult").equals("0")){
-		out.println("<script>alert('입력된 정보가 올바르지 않습니다.');location.href='/Cacao/Login?cmd=loginPwdFind-page';</script>");
-	}else{
-		
-	}
+	String findPwdMail = (String) session.getAttribute("findPwdMail");
+	String findRandom = (String) session.getAttribute("findRandom");
 %>
 <!DOCTYPE html>
 <html>
@@ -19,18 +16,42 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+<script type="text/javascript">
+	$(function(){
+		$('#findBtn').click(function(){
+		
+		var inputAuthRandom= $('#findMail').val();
+		
+		if(inputAuthRandom=="<%=findRandom%>"){
+			$('#frm').submit();
+		}else{
+			alert('잘못된 인증번호 입니다. 확인해주세요.');
+			$('#findMail').val("");
+			$('#findMail').focus();
+		}
+		
+		
+	});
+})
+</script>
 </head>
 <body>
 <br/>
 <br/>
+	<% if( findPwdMail==null ){
+	%>
+		등록된 회원 정보가 없습니다.
+	<%
+	}else{
+	%>
 
-<form >
+<form id="frm" action="<%=pjName%>/Login?cmd=loginPwdFindChage-page" method="post">
 <div class="form-group">
- 	<label class="col-md-3 control-label" for="findMail">사용자가 입력한 이메일</label> <br/>
-  <label class="col-md-4 control-label" for="findMail">이메일</label>  
+ 	<label class="col-md-4 control-label" for="findMail"><%=findPwdMail %><br/>
+ 		위 메일로 발송된 6자리 인증번호를 입력해주세요.</label> 
+  
   <div class="col-md-5">
-  <input id="findMail" name="findMail" type="text" placeholder="메일을 적어주세요" class="form-control input-md" required="" values="">
+  <input id="findMail" name="findMail" type="text" placeholder="인증코드를 입력해주세요" class="form-control input-md" required="" values="">
     
   </div>
 </div>
@@ -43,6 +64,9 @@
 </div>
 </form>
 
+	<%
+	}
+	%>
 
 </body>
 </html>

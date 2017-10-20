@@ -44,6 +44,8 @@ public class CmdLoginControl extends HttpServlet {
 
 		commandMap.put("loginPwdFind-page",new CmdNull("loginPwdFind.jsp"));
 		commandMap.put("loginPwdFindSend-page",new CmdLoginPwdFind("loginPwdFindSend.jsp"));
+		commandMap.put("loginPwdFindChage-page",new CmdNull("loginPwdFindChage.jsp"));
+		commandMap.put("loginPwdFindAcc-page",new CmdLoginPwdAcc("loginPwdFindAcc.jsp"));
 
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 
