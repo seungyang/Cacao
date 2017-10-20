@@ -224,8 +224,7 @@
 	
 
 		<div>
-			<img src="/Cacao/img/login/loginfoot.png"
-				style="height: 55px; margin-left: 23%;" />
+			<img src="/Cacao/img/login/loginfoot.png" style="height: 55px; margin-left: 23%;" />
 
 		</div>
 	</footer>
