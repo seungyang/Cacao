@@ -43,7 +43,7 @@
 </table>
 <br>
 <button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">✎ Create New User</button>
-<button class="w3-btn w3-green w3-ripple" ng-click="back('new')">Back</button>
+<input type="button" value="뒤로가기" class="w3-btn w3-green w3-ripple" onclick="location.href='/Cacao/Admin?cmd=main-page'"/>
 <button class="w3-btn w3-green w3-ripple" ng-click="Register('new')">Register Image</button>
 </div>
 
