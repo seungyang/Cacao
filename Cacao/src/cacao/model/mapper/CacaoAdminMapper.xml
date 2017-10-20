@@ -18,6 +18,12 @@ where m_email=#{email}
 order by q_id desc
 </select>
 
+<select id="InfoList" parameterType="hashmap" resultType="info">
+select *
+from info  
+order by i_id
+</select>
+
 <update id="answerTextList" parameterType="qa">
 UPDATE QA 
 SET q_status=#{qStatus}, q_answer=#{qAnswer} 

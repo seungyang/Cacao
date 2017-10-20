@@ -38,7 +38,7 @@ public class CmdAdminControl extends HttpServlet {
 		commandMap = new HashMap();
 
 		commandMap.put("main-page",	new CmdNull("adminMain.jsp") );
-		commandMap.put("adminProductMain-page",	new CmdNull("adminProductMain.jsp") );
+		commandMap.put("adminProductMain-page",	new CmdAdminProductMain("adminProductMain.jsp") );
 		
 		commandMap.put("adminOrderMain-page",	new CmdNull("adminOrderMain.jsp") );
 

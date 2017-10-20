@@ -2,6 +2,7 @@ package cacao.service;
 
 import java.util.List;
 
+import cacao.model.vo.Info;
 import cacao.model.vo.Member;
 import cacao.model.vo.QA;
 import cacao.model.vo.Service;
@@ -31,6 +32,10 @@ public class CacaoAdminService {
 	
 	public List<QA> getAnswerList(String email){
 		return repo.getAnswerList(email);		
+	}
+	
+	public List<Info> getInfoList(String email){
+		return repo.getInfoList(email);		
 	}
 	
 	public int getAnswerTextList(QA qa){
