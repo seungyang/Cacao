@@ -23,10 +23,10 @@ public class CmdAdminProductMain implements Cmd {
 		// TODO Auto-generated method stub
 		
 	 
-		String email = "omy@naver.com";
-		List<Info> InfoList = CacaoAdminService.getInstance().getInfoList(email);
 		
-		request.setAttribute("InfoList", InfoList);
+		List<Info> infolist = CacaoAdminService.getInstance().getInfoList();
+		
+		request.setAttribute("infolist", infolist);
 		
 		
 		return next;			

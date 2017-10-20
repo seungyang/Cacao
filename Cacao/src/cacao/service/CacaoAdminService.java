@@ -34,9 +34,7 @@ public class CacaoAdminService {
 		return repo.getAnswerList(email);		
 	}
 	
-	public List<Info> getInfoList(String email){
-		return repo.getInfoList(email);		
-	}
+	
 	
 	public int getAnswerTextList(QA qa){
 		return repo.getAnswerTextList(qa);		
@@ -51,6 +49,18 @@ public class CacaoAdminService {
 	}
 	public int serviceModify(Service service){
 		return repo.serviceModify(service);
+	}
+	
+	public List<Info> getInfoList(){
+		return repo.getInfoList();	 	
+	}
+	
+	public int infoInsert(Info info){
+		return repo.infoInsert(info);
+	}
+	
+	public int infoModify(Info info){
+		return repo.infoModify(info);
 	}
 //	public int getGroupId(){
 //		return repo.getGroupId();

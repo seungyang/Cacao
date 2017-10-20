@@ -60,13 +60,12 @@ public class CacaoAdminRepository {
 		}
 	}
 	
-	public List<Info> getInfoList(String email){
+	public List<Info> getInfoList(){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-		return sess.selectList(namespace+".InfoList", hash);
+			
+		return sess.selectList(namespace+".infolist");
 		}finally {
 			sess.close();
 		}
@@ -114,6 +113,38 @@ public class CacaoAdminRepository {
 		//JDBC의 연결 객체 -> SqlSession
 		try {
 			int result =  sess.insert(namespace + ".serviceModify",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	public Integer infoInsert(Info info){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".infoInsert",info);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	public Integer infoModify(Info info){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.insert(namespace + ".infoModify",info);
 			if(result > 0) {
 				sess.commit();
 			}else {

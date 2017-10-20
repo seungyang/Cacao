@@ -14,6 +14,8 @@ import cacao.cmd.CmdException;
 import cacao.cmd.CmdNull;
 import cacao.cmd.admin.CmdAdminMyPageMain;
 import cacao.cmd.admin.CmdAdminMyPageMainSave;
+import cacao.cmd.admin.CmdAdminProductMain;
+import cacao.cmd.admin.CmdAdminProductMainSave;
 import cacao.cmd.admin.CmdAdminServiceForm;
 import cacao.cmd.admin.CmdAdminServiceSave;
 
@@ -37,7 +39,7 @@ public class CmdAdminControl extends HttpServlet {
 	private void initCommand(){
 		commandMap = new HashMap();
 
-		commandMap.put("main-page",	new CmdNull("adminMain.jsp") );
+		commandMap.put("main-page",	new CmdNull("adminMain.jsp"));
 		commandMap.put("adminProductMain-page",	new CmdAdminProductMain("adminProductMain.jsp") );
 		
 		commandMap.put("adminOrderMain-page",	new CmdNull("adminOrderMain.jsp") );
@@ -47,7 +49,8 @@ public class CmdAdminControl extends HttpServlet {
 		
 		commandMap.put("adminServiceMain-page",	new CmdAdminServiceForm("adminServiceMain.jsp") );
 		commandMap.put("adminServiceSave-page",	new CmdAdminServiceSave("adminServiceSave.jsp") );
-		
+		commandMap.put("adminProductMainSave-page",	new CmdAdminProductMainSave("adminProductMainSave.jsp") );
+	
 //		commandMap.put("list-page",	new CmdList("listMessage.jsp") );
 //		commandMap.put("input-form",new CmdNull("insertMessage.jsp")); 
 //		commandMap.put("input-confirm",new CmdInput("saveMessage.jsp")); 

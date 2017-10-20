@@ -18,12 +18,6 @@ where m_email=#{email}
 order by q_id desc
 </select>
 
-<select id="InfoList" parameterType="hashmap" resultType="info">
-select *
-from info  
-order by i_id
-</select>
-
 <update id="answerTextList" parameterType="qa">
 UPDATE QA 
 SET q_status=#{qStatus}, q_answer=#{qAnswer} 
@@ -44,5 +38,21 @@ update service
 set s_kind=#{sKind}, s_cate=#{sCate}, s_title=#{sTitle}, s_detail=#{sDetail} 
 where s_id=#{sId}
 </update>
+<select id="infolist" resultType="info">
+select *
+from info  
+order by i_id
+</select>
+<insert id="infoInsert" parameterType="info">
+insert into 
+info(i_id,i_char,i_cate,i_name,i_cost,i_cnt,i_color,i_kor,i_imgcnt,i_detail) 
+values(#{iId},#{iChar},#{iCate}, #{iName},#{iCost},#{iCnt},#{iColor},#{iKor},#{iImgcnt},'None')
+</insert>
+<update id="infoModify" parameterType="info">
+update info 
+set i_char=#{iChar},i_cate=#{iCate},i_name=#{iName},i_cost=#{iCost},i_cnt=#{iCnt},i_color=#{iColor},i_kor=#{iKor},i_imgcnt=#{iImgcnt}
+where i_id=#{iId}
+</update>
+
 </mapper> 
  
