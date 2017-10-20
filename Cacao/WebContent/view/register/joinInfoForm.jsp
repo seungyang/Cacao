@@ -206,7 +206,7 @@
 <!-- 							onclick="checkfield()"> -->
 <!-- 					</div> -->
 					
-				<button type="button"  value="다음" class="button button5" style="margin-left: 55%;" onclick="checkfield()">다음</button>
+				 <button type="button"  value="다음" class="button button5" style="margin-left: 55%; margin-top: 4%;" onclick="checkfield()">다음</button>
 					
 					
 					
