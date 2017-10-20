@@ -10,5 +10,8 @@ select count(*) cnt
 from member 
 where m_email=#{mEmail} and m_pwd=#{mPwd} and m_check='T'
 </select>
+<select id="findEmail" parameterType="hashmap" resultType="member">
+select m_email from member where m_name=#{findNick} and m_birth=#{findBirth}
+</select>
 </mapper> 
  

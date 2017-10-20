@@ -1,10 +1,14 @@
 package cacao.cmd.login;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
+import cacao.model.vo.Member;
+import cacao.service.CacaoLoginService;
 
 
 public class CmdLoginEmailFind implements Cmd {
@@ -18,14 +22,18 @@ public class CmdLoginEmailFind implements Cmd {
 		// TODO Auto-generated method stub
 	
 				
+		String findNick = request.getParameter("findNick");
+		String findBirth = request.getParameter("findBirth");
 		
-			int messageId = Integer.parseInt(request.getParameter("messageId"));
-			String password = request.getParameter("password");
-			
-			//int resultCnt = MessageDao.getInstance().delete(messageId, password);
-			int resultCnt = 0;
-			request.setAttribute("result", resultCnt);
+		if(findNick==null || findBirth==null) {
+			findNick = "1";
+			findBirth ="1";
+		}
 		
+		
+		List<Member> findEmail = CacaoLoginService.getInstance().findEmail(findNick,findBirth);
+		
+		request.setAttribute("findEmail", findEmail);
 		
 		return next;			
 	}

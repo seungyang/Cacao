@@ -75,7 +75,7 @@ window.onload=function(){
 	}
 
 	icon2.onclick = function(){
-		window.open("/Cacao/YourPage?cmd=main-page", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/YourPage?cmd=main-page", "비회원주문조회", "width=1000px, height=600px");
 	}
 	icon3.onclick = function(){
 		location.href = "/Cacao/Main?cmd=cartView-page&change=5";
