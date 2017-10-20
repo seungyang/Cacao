@@ -35,21 +35,10 @@ public class CmdLoginFindForm implements Cmd {
 			
 			int res = 0;
 			int result =0;
-			int result1 = 0;
-			int result2 = 0;
-			int result3 = 0;
-			int result4 = 0;
+	
 			
-			if(adminName.equals("masteradmin@cacao.com")) {
+			if(adminName.equals("masteradmin@cacao.com") || adminName.equals("mypageadmin@cacao.com") || adminName.equals("serviceadmin@cacao.com") || adminName.equals("productadmin@cacao.com") || adminName.equals("orderadmin@cacao.com")) {
 				res = CacaoAdminService.getInstance().selectAdminLogin(member);
-			}else if(adminName.equals("mypageadmin@cacao.com")){
-				result1 = CacaoAdminService.getInstance().selectAdminLogin(member);
-			}else if(adminName.equals("serviceadmin@cacao.com")){
-				result2 = CacaoAdminService.getInstance().selectAdminLogin(member);
-			}else if(adminName.equals("productadmin@cacao.com")){
-				result3 = CacaoAdminService.getInstance().selectAdminLogin(member);
-			}else if(adminName.equals("orderadmin@cacao.com")){
-				result4 = CacaoAdminService.getInstance().selectAdminLogin(member);
 			}else{
 				result = CacaoLoginService.getInstance().selectLogin(member);
 		
@@ -61,10 +50,6 @@ public class CmdLoginFindForm implements Cmd {
 			}
 			
 			request.setAttribute("selectAdminLoginAll", res);
-			request.setAttribute("selectAdminLoginMypage", result1);
-			request.setAttribute("selectAdminLoginService", result2);
-			request.setAttribute("selectAdminLoginProduct", result3);
-			request.setAttribute("selectAdminLoginOrder", result4);
 			request.setAttribute("selectLogin", result);
 		
 		return next;			

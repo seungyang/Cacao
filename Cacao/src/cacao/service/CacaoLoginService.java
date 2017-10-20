@@ -31,6 +31,8 @@ public class CacaoLoginService {
 	}
 	public int findPwd(Member m) {
 			return repo.findPwd(m);
+	}public int updatePwd(Member m) {
+		return repo.updatePwd(m);
 	}
 	
 	

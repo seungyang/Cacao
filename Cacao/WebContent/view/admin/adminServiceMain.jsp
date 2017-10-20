@@ -16,11 +16,11 @@
 </head>
 <body ng-app="myApp" ng-controller="userCtrl">
 
-<div class="w3-container" style="width:100%">
+<div style="width:100%">
+<img alt="" src="${pageContext.request.contextPath}/img/admin/adminservice.png" style="width: 100%; height: 240px">
 
-<div display="inline" style="width:60%; float:left;">
-<h3>Users</h3>
-
+<div display="inline" style="width:60%; float:left; margin-left: 30px;">
+<h2><a class="w3-btn w3-green w3-ripple" href="/Cacao/Admin?cmd=main-page">뒤로가기</a></h2>
 
 <table class="w3-table w3-bordered w3-striped">
   <tr>
