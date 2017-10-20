@@ -69,11 +69,11 @@
 
 		<div class="container">
 			<div class="row">
-			 	<form action="<%=pjName %>/Register?cmd=joinSuccess-page" method="post" name="joinAuth" id="joinAuth" >
+			 	<form action="<%=pjName %>/Register?cmd=joinInfoSave-page" method="post" name="joinAuth" id="joinAuth" >
 				
 					<h2 style="color: #7088be;"><%=imsiEmail %></h2>
 					<br/>
-					<h3>위 메일로 발송된 8자리 인증번호를 입력해주세요.</h3>
+					<h3>위 메일로 발송된 6자리 인증번호를 입력해주세요.</h3>
 					<br> <br>
 					<div id="textF-Num" style="margin-left: 35%">
 						<label>인증번호 입력</label>

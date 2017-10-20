@@ -13,8 +13,8 @@
 </head>
 <body>
 
-	<img alt="" src="../../img/register/registAuth1.png">
-	<img alt="" src="../../img/register/agreeInput3.png"
+	<img alt="" src="/Cacao/img/register/registAuth1.png">
+	<img alt="" src="/Cacao/img/register/agreeInput3.png"
 		style="margin-left: -1%">
 		
 		<h1>가입축하드립니다</h1>

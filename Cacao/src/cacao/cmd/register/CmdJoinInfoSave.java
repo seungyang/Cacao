@@ -53,7 +53,7 @@ public class CmdJoinInfoSave implements Cmd {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("emailid", emailid);
-		session.setAttribute("loginM",  m);
+			session.setAttribute("loginM",  m);
 	
 					
 			String authRandom = random();

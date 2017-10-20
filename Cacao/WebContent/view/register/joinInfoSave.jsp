@@ -11,7 +11,7 @@
 </head>
 <body>
 <% 
-		response.sendRedirect(pjName+"/Register?cmd=jcoinAuth-page");
+		response.sendRedirect(pjName+"/Register?cmd=joinSuccess-page");
 %>
 </body>
 </html>`
