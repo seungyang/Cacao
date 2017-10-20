@@ -6,12 +6,43 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <link href="/Cacao/css/header.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/Cacao/css/register/joinInfoForm.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-//################ 입력정보 유효성 검사
-	function checkfield() {
+$(function(){
+	$('#idcheck').click(function(){
+		var emailid = $('#emailid').val();
+		if(emailid ==""){
+			alert("입력을 해주세요");
+		}else{
+		$.ajax({
+			type : 'post',
+			url : '/Cacao/view/register/joinIdCheck.jsp',
+			data : { 'emailid' : emailid },
+			dataType : 'text',
+			success : function(data){
+				var obj = {};
+	            obj = eval("("+data+")");
+	            var result = parseInt(obj.idCheck);
+	            if(result==0){
+	            	$('.ajax').text("");
+	            	str = '사용가능한 ID 입니다.';
+	            	$('.ajax').append(str);
+	            }else{
+	            	$('.ajax').text("");
+	            	str = '이미 존재하는 ID 입니다.';
+	            	$('.ajax').append(str);
+	            }
+	            },
+			error : function(err){
+				
+			}
+		}); 
+		}
+	});
+	//################ 입력정보 유효성 검사
+	$('#nextBtn').click(function(){
 		var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
 		if (document.signup.emailid.value == "") {
@@ -36,8 +67,13 @@
 			document.signup.emailid.focus();
 		} else {
 			document.signup.submit();
-		}
-	}
+		};
+	});
+	
+})
+
+
+
 </script>
 
 
@@ -82,7 +118,8 @@
 								id="emailid" placeholder="이메일은 아이디로 사용됩니다" value=""
 								style="width: 220%">
 						</div>
-						<button class="button2 button4" style="margin-left: 34%;">ID 중복확인</button>
+						<input type="button" class="button2 button4" style="margin-left: 34%;" id="idcheck" value="ID 중복확인">
+						<div class='ajax'>   </div>
 						<span class="label label-danger" style="margin-left: -27%;">주의!</span><br>
 						<small style="margin-left: 25%">· 입력한 이메일로 가입인증번호가 발송됩니다.</small><br>
 						<small style="margin-left: 25%">· 꼭 실제로 사용중인 이메일주소를
@@ -206,7 +243,7 @@
 <!-- 							onclick="checkfield()"> -->
 <!-- 					</div> -->
 					
-				 <button type="button"  value="다음" class="button button5" style="margin-left: 55%; margin-top: 4%;" onclick="checkfield()">다음</button>
+				 <input type="button" id="nextBtn"  value="다음" class="button button5" style="margin-left: 55%; margin-top: 4%;" />
 					
 					
 					

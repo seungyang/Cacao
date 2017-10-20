@@ -1,12 +1,16 @@
+<%@page import="cacao.service.CacaoRegisterService"%>
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> 우리반 연습</title>
-</head>
-<body>
+<%@ page language="java" import="java.sql.*"%>
+<%@ page import = "org.json.simple.JSONArray" %>
+<%@ page import = "org.json.simple.JSONObject" %>
+    
+<%
+	String emailid = request.getParameter("emailid");
 
-</body>
-</html>
+	int idCheck = CacaoRegisterService.getInstance().idCheck(emailid);
+	
+	JSONObject jObj = new JSONObject();
+	jObj.put("idCheck",idCheck);
+	out.print(jObj.toString());
+%>

@@ -25,6 +25,10 @@ public class CacaoRegisterService {
 	public int getInsert( Member m ) {
 		return repo.getInsert(m);
 	}
+	
+	public int idCheck(String id) {
+		return repo.idCheck(id);
+	}
 //	
 //	public List<BoardRec> selectList(int firstrow,int endrow) {
 //		return repo.selectList(firstrow,endrow);
