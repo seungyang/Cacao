@@ -169,11 +169,13 @@ h5 {
 	</div>
 	 -->
 		<div class="container">
-        <div class="row">
+		
+        <div class="row" style="margin-top: 10%;">
+        <h1 style="text-align: center; margin-bottom: 20px;">관리자 페이지</h1>
             <!-- 상품 관리자 페이지  --> 
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="card card-inverse card-info">
-                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <img class="card-img-top" src="/Cacao/img/admin/lion.png">
                     <div class="card-block">
                         <h4 class="card-title">상품 관리</h4>
                         <div class="card-text">
@@ -190,7 +192,7 @@ h5 {
             <!-- 주문 관리자 페이지  --> 
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="card card-inverse card-info">
-                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <img class="card-img-top" src="/Cacao/img/admin/muzi.png">
                     <div class="card-block">
                         <h4 class="card-title">주문 관리</h4>
                         <div class="card-text">
@@ -207,7 +209,7 @@ h5 {
             <!-- 1:1문의 관리자 페이지  --> 
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="card card-inverse card-info">
-                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <img class="card-img-top" src="/Cacao/img/admin/neo.png">
                     <div class="card-block">
                         <h4 class="card-title">문의 관리</h4>
                         <div class="card-text">
@@ -224,7 +226,7 @@ h5 {
             <!-- 고객센터 관리자 페이지  --> 
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="card card-inverse card-info">
-                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <img class="card-img-top" src="/Cacao/img/admin/jayz.png">
                     <div class="card-block">
                         <h4 class="card-title">고객센터 관리</h4>
                         <div class="card-text">

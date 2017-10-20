@@ -13,13 +13,13 @@
 <body ng-app="myApp" ng-controller="userCtrl">
 
 
-
 <div style="width:100%">
-<img alt="" src="${pageContext.request.contextPath}/img/admin/AdminTitleHeader.png" style="width: 100%; height: 120px">
+<img alt="" src="${pageContext.request.contextPath}/img/admin/adminQA.png" style="width: 100%; height: 240px">
 <!-- 1:1문의게시판_관리자모드_타이틀 -->
-<h1 style="margin-top: -90px; margin-left: 7%">1:1문의게시판 답변</h1>
 
-<div id='first' style="width:58%; float:left; margin-left: 4.5%; margin-top: 60px">
+
+<div id='first' style="width:70%; float:left; margin-left: 2%; margin-top: 20px">
+<h2><a class="w3-btn w3-green w3-ripple" href="/Cacao/Admin?cmd=main-page">뒤로가기</a></h2>
 <table class="w3-table w3-bordered w3-striped">
   
   
@@ -27,10 +27,10 @@
   <tr style="color: blue">
   	<th></th>
     <th>질문자 ID</th>
-    <th>질문유형</th>
+    <th style="width: 10%;">질문유형</th>
      <th>제목</th>
       <th>내용</th>
-            <th>답변여부</th>
+            <th style="width: 10%;">답변여부</th>
         <th>Edit</th>
   </tr>
   
@@ -51,7 +51,7 @@
 <br>
 </div>
 <!-- <button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">✎ Create New User</button> -->
-<div id="second" style="width:30%; float:left; margin-left:50px; margin-left: 4.5%; margin-top: 80px">
+<div id="second" style="width:20%; float:left; margin-left:50px; margin-left: 3%; margin-top: 80px">
 <form ng-hide="hideform"  action="<%=pjName%>/Admin?cmd=adminMyPageMainSave-page" name="testP" id="testP" method="post" style="margin-top: -10%">
 <!--   <h3 ng-show="edit">수정창:</h3> -->
   <h3 ng-hide="edit">답변창:</h3>
@@ -76,7 +76,7 @@
   <button class="w3-btn w3-green w3-ripple" onclick="testPageMove()">✔ Save Changes</button>
   
   <input style="visibility: hidden;" type="text" id="qId" name="qa_id" ng-model="qId">
- <input style="visibility: hidden;" type="text" id="userId" name="qa_userid" ng-model="userId">
+  <input style="visibility: hidden;" type="text" id="userId" name="qa_userid" ng-model="userId">
 </form>
  
 </div>

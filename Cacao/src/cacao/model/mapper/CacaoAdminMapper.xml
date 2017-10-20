@@ -50,4 +50,28 @@ update deliver
 set d_status=#{dStatus}, d_cancel='T' 
 where d_id=#{dId}
 </update>
+
+
+<select id="infolist" resultType="info">
+select *
+from info  
+order by i_id
+</select>
+<insert id="infoInsert" parameterType="info">
+insert into 
+info(i_id,i_char,i_cate,i_name,i_cost,i_cnt,i_color,i_kor,i_imgcnt,i_detail) 
+values(#{iId},#{iChar},#{iCate}, #{iName},#{iCost},#{iCnt},#{iColor},#{iKor},#{iImgcnt},'None')
+</insert>
+<update id="infoModify" parameterType="info">
+update info 
+set i_char=#{iChar},i_cate=#{iCate},i_name=#{iName},i_cost=#{iCost},i_cnt=#{iCnt},i_color=#{iColor},i_kor=#{iKor},i_imgcnt=#{iImgcnt}
+where i_id=#{iId}
+</update>
+
+
 </mapper> 
+ 
+ 
+ 
+ 
+ 
