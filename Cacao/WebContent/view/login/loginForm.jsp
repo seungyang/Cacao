@@ -21,29 +21,17 @@ $(function(){
 		}else{
 			$('#loginFrm').submit();
 		}
-<<<<<<< HEAD
+	});
 
-	});
-	
-=======
-	});
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 	$('#findPwd').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginPwdFind-page", "비밀번호찾기",
 		"width=550px, height=600px");
 	});
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao
 
 });
 	
