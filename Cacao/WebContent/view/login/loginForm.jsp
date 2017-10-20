@@ -26,6 +26,10 @@ $(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
+	$('#findPwd').click(function(){
+		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
+		"width=550px, height=600px");
+	});
 
 });
 	
@@ -63,8 +67,8 @@ $(function(){
 			<div style="margin-top: 97.5px;">
 				<hr />
 				<a href="<%=pjName %>/Register?cmd=joinAgree-page"><font style="font-size: 10; color: black;">회원가입</font></a>
-				<a href="#"><fon-t style="font-size: 10; margin-left: 86px; color: black;">이메일
-						찾기</font></a> - <a href="#"><font style="font-size:10;color: black;">비밀번호 재설정</font></a>
+				<a href="#" id="findEmail"><fon-t style="font-size: 10; margin-left: 86px; color: black;">이메일
+						찾기</font></a> - <a href="#" id="findPwd"><font style="font-size:10;color: black;">비밀번호 재설정</font></a>
 
 			</div>
 		</div>
