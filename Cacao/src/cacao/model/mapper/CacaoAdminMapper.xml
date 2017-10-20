@@ -52,4 +52,3 @@ set d_status=#{dStatus}, d_cancel='T'
 where d_id=#{dId}
 </update>
 </mapper> 
- 
