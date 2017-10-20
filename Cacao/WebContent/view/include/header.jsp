@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="cacao.model.vo.*"%>
 <%
  String sessionalert = "";
 
@@ -9,6 +11,13 @@ if(session.getAttribute("useremail")!=null){
  if(session.getAttribute("loginresult")!=null){
 		result = String.valueOf(session.getAttribute("loginresult"));
  }; 
+ ArrayList<Info> infolist = (ArrayList<Info>)session.getAttribute("cart");
+ int cartnum = 0;
+ if(infolist==null){
+	 cartnum = 0;
+ }else{
+	 cartnum = infolist.size();
+ }
  
  String loginimg = "in";
  int num = 0;
@@ -343,7 +352,7 @@ window.onload=function(){
 
                <li><img id='icon1' style="width:30px;height:30px;margin-top:25px;margin-left:30px" alt='<%=num%>' src="/Cacao/img/main/<%=loginimg %>" /></li>
                <li><img id='icon2'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
-               <li><img id='icon3'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
+               <li><img id='icon3'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart/cart<%=cartnum %>.png"/></li>
                <li><img id='icon4'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>
 
 

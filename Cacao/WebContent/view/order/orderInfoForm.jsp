@@ -8,7 +8,7 @@
 	
     int sum = 0;
     for(int i =0; i < orderList.size(); i ++){
-    	sum += Integer.parseInt(orderList.get(i).getiCost());
+    	sum += Integer.parseInt(orderList.get(i).getiCost())*Integer.parseInt(orderList.get(i).getiCnt());
     }
     
     String min = request.getParameter("cnt");
