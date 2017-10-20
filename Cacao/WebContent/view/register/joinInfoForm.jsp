@@ -204,7 +204,7 @@
 <!-- 					####### 다음버튼 : joinInfoSave통해서 DB저장되고, 화면은 joinAuth페이지로 이동 -->
 					<div class="form-group" style="margin-left: 45%; margin-top: 10%;">
 						<input name="Submit" type="button" value="다음 "
-							class="btn btn-primary" style="width: 30%; height: 50px;"
+							class="btn-primary" style="width: 30%; height: 50px;"
 							onclick="checkfield()">
 					</div>
 <!-- 					다음버튼 END -->
