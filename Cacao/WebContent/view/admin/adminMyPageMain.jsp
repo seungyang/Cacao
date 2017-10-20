@@ -13,13 +13,13 @@
 <body ng-app="myApp" ng-controller="userCtrl">
 
 
-
 <div style="width:100%">
-<img alt="" src="${pageContext.request.contextPath}/img/admin/AdminTitleHeader.png" style="width: 100%; height: 120px">
+<img alt="" src="${pageContext.request.contextPath}/img/admin/adminQA.png" style="width: 100%; height: 240px">
 <!-- 1:1문의게시판_관리자모드_타이틀 -->
-<h1 style="margin-top: -90px; margin-left: 7%">1:1문의게시판 답변</h1>
 
-<div id='first' style="width:58%; float:left; margin-left: 4.5%; margin-top: 60px">
+
+<div id='first' style="width:58%; float:left; margin-left: 4.5%; margin-top: 20px">
+<h2><a class="w3-btn w3-green w3-ripple" href="/Cacao/Admin?cmd=main-page">뒤로가기</a></h2>
 <table class="w3-table w3-bordered w3-striped">
   
   
