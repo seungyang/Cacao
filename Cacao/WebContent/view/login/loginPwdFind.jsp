@@ -19,7 +19,18 @@
 <script type="text/javascript">
 	$(function(){
 		$('#findBtn').click(function(){
+			if($('#findMail').val()==""){
+				alert('이메일을 작성해주세요');
+				return;
+			}else if($('#findNick').val()==""){
+				alert('닉네임을 작성해주세요');
+				return;
+			}else 	if($('#findBirth').val()==""){
+				alert('생년월일을 작성해주세요');
+				return;
+			}else{
 			$('#frm').submit();
+			}
 		});
 	});
 </script>
@@ -33,14 +44,14 @@
  
   <label class="col-md-4 control-label" for="findMail">이메일</label>  
   <div class="col-md-5">
-  <input id="findMail" name="findMail" type="text" placeholder="메일을 적어주세요" class="form-control input-md" required="" values="">
-    
+  <input id="findMail" name="findMail" type="text" placeholder="메일을 적어주세요" class="form-control input-md" required="" >
+   
   </div>
 </div>
 <div class="form-group">
   <label class="col-md-4 control-label" for="findNick">닉네임</label>  
   <div class="col-md-5">
-  <input id="findNick" name="findNick" type="text" placeholder="가입시 입력한 닉네임을 적어주세요" class="form-control input-md" required="" values="">
+  <input id="findNick" name="findNick" type="text" placeholder="가입시 입력한 닉네임을 적어주세요" class="form-control input-md" required="" >
     
   </div>
 </div>
@@ -48,7 +59,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="findBirth">생년월일 (Ex.19990101)</label>  
   <div class="col-md-5">
-  <input id="findBirth" name="findBirth" type="text" placeholder="YYYYMMDD" class="form-control input-md" required="" values="">
+  <input id="findBirth" name="findBirth" type="text" placeholder="YYYYMMDD" class="form-control input-md" required="" >
     
   </div>
 </div>

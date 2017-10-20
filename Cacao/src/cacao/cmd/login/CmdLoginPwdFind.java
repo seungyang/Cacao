@@ -43,16 +43,15 @@ public class CmdLoginPwdFind implements Cmd {
 			m.setmEmail(findMail);
 			m.setmName(findNick);
 			m.setmBirth(findBirth);
+			
 			HttpSession session = request.getSession();
-			if( findMail == null || findNick==null || findBirth == null ) {
-				session.setAttribute("findPwdResult", "0");
-				return next;
-			}
+		
 			int result = CacaoLoginService.getInstance().findPwd(m);
 						
 			if(result==1) {
 							
 				session.setAttribute("findPwdMail", findMail);
+				System.out.println("2:"+findMail);
 				session.setAttribute("findM",  m);
 									
 				String findRandom = random();
@@ -61,10 +60,10 @@ public class CmdLoginPwdFind implements Cmd {
 				sendMail(findMail,findRandom);
 				
 			}
-			
+	
 			session.setAttribute("findPwdResult", result);
 			
-		return next;			
+		return next;
 	}
 
 	

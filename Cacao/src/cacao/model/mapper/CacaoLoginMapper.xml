@@ -16,5 +16,8 @@ select m_email from member where m_name=#{findNick} and m_birth=#{findBirth}
 <select id="findPwd" parameterType="member" resultType="int">
 select count(*) from member where m_email=#{mEmail} and m_name=#{mName} and m_birth=#{mBirth}
 </select>
+<update id="updatePwd" parameterType="member">
+update member set m_pwd = #{mPwd} where m_email=#{mEmail}
+</update>
 </mapper> 
  
