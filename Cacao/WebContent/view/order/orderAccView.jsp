@@ -50,11 +50,11 @@
       			<div class="panel-body">
       				<ul>
       					<li>이메일: <%=orderAcc.getmEmail() %></li>
-						<li>주문자명: <%=orderAcc.getoName() %></li>
-						<li>연락처: <%=orderAcc.getoTel() %></li>
-						<li>결제수단: <%=orderAcc.getoPayment() %></li>
-						<li>배송주소: <%=orderAcc.getoTel() %></li>
-						<li>배송메모: <%=orderAcc.getoMemo() %></li>
+						<li>주문자명: <%=orderAcc.getdName() %></li>
+						<li>연락처: <%=orderAcc.getdTel() %></li>
+						<li>결제수단: <%=orderAcc.getdPay() %></li>
+						<li>배송주소: <%=orderAcc.getdAddr() %></li>
+						<li>배송메모: <%=orderAcc.getdMemo() %></li>
 					</ul>
       			</div>
     		</div>
