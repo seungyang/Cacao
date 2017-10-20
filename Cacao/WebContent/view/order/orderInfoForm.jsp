@@ -2,19 +2,20 @@
     pageEncoding="UTF-8"%>
   <%@ page import="java.util.*" %>
 <%@ page import="cacao.model.vo.*" %>
-<%List<Info> orderList = (List) request.getAttribute("orderResult"); %>
+<%List<Info> orderList = (List<Info>) request.getAttribute("orderResult"); %>
 <%
    String pjName = "/Cacao";
 	
     int sum = 0;
-    for(int i =0; i < orderList.size(); i ++){
-    	sum += Integer.parseInt(orderList.get(i).getiCost())*Integer.parseInt(orderList.get(i).getiCnt());
-    }
-    
     String min = request.getParameter("cnt");
     if(min!=null){
     	orderList.get(0).setiCnt(min);
     }
+    for(int i =0; i < orderList.size(); i ++){
+    	sum += Integer.parseInt(orderList.get(i).getiCost())*Integer.parseInt(orderList.get(i).getiCnt());
+    }
+    
+   
 %>
 <!DOCTYPE html>
 <html>

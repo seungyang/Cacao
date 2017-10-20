@@ -101,7 +101,7 @@ String imgstr = "";
 $(function(){
 	$('#buy').click(function(){
 		var text = $('#text').val();
-		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
+		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value+"&cart=1";
 	});
 	$('#plus').click(function(){
 		$('#text').val(parseInt($('#text').val())+1);
