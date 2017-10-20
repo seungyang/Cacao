@@ -1,22 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String pjName = "/Cacao";
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- CSS  ============================================= -->
-<!-- Bootstrap -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<!-- Animate -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
-<!-- Main Stylesheet -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-<title>회원가입 정보입력</title>
-<!-- ###################joinInfoForm CSS -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/register/joinInfoForm.css">
 
-<%
-	String pjName = "/Cacao";
-%>
+<link href="/Cacao/css/header.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 //################ 입력정보 유효성 검사
@@ -213,7 +204,7 @@
 <!-- 					####### 다음버튼 : joinInfoSave통해서 DB저장되고, 화면은 joinAuth페이지로 이동 -->
 					<div class="form-group" style="margin-left: 45%; margin-top: 10%;">
 						<input name="Submit" type="button" value="다음 "
-							class="btn btn-primary" style="width: 30%; height: 50px;"
+							class="btn-primary" style="width: 30%; height: 50px;"
 							onclick="checkfield()">
 					</div>
 <!-- 					다음버튼 END -->

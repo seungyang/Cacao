@@ -20,24 +20,24 @@
 <body>
 	<% 
 	if(result>0){
-		out.println("<script>alert('사용자 모드');</script>");
+		/* out.println("<script>alert('사용자 모드');</script>"); */
 		out.println("<script>opener.location.href='/Cacao/Main?cmd=main-page';self.close();</script>");
 		
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result1>0){
-		out.println("<script>alert('총관리자 모드');</script>");
+		/* out.println("<script>alert('총관리자 모드');</script>"); */
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result2>0){
-		out.println("<script>alert('마이페이지 모드');</script>");
+		/* out.println("<script>alert('마이페이지 모드');</script>"); */
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result3>0){
-		out.println("<script>alert('서비스 모드');</script>");
+		/* out.println("<script>alert('서비스 모드');</script>"); */
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result4>0){
-		out.println("<script>alert('제품 모드');</script>");
+		/* out.println("<script>alert('제품 모드');</script>"); */
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else if(result5>0){
-		out.println("<script>alert('주문 모드');</script>");
+		/* out.println("<script>alert('주문 모드');</script>"); */
 		//response.sendRedirect(pjName+"/Main?cmd=main-page");
 	}else{
 		 out.println("<script>alert('아이디나 비밀번호를 확인하세요');</script>");

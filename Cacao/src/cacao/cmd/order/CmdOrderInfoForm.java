@@ -31,8 +31,8 @@ public class CmdOrderInfoForm implements Cmd {
 		Info info = new Info();
 		
 		for(int i=0;i<buylist.size();i++) {
-			System.out.println("buylist : "+buylist.get(i).getiId());
 			info = CacaoOrderService.getInstance().getItemList(buylist.get(i).getiId());
+			info.setiCnt(buylist.get(i).getiCnt());
 			orderList.add(info);
 		}
 		

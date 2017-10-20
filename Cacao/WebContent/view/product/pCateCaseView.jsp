@@ -40,33 +40,32 @@ String imgstr = "";
         ============================================= -->
 <!-- Fontawesome -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/font-awesome.min.css">
+	href="/Cacao/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+	href="/Cacao/css/bootstrap.min.css">
 <!-- Fancybox -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
+	href="/Cacao/css/jquery.fancybox.css">
 <!-- owl carousel -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/owl.carousel.css">
+	href="/Cacao/css/owl.carousel.css">
 <!-- Animate -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/animate.css">
+	href="/Cacao/css/animate.css">
 <!-- Main Stylesheet -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/main.css">
+	href="/Cacao/css/main.css">
 <!-- Main Responsive -->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/responsive.css">
+	href="/Cacao/css/responsive.css">
 
 
 <!-- product페이지 css -->
 
 
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/responsive.css">
+
 
 <!-- Modernizer Script for old Browsers -->
 
@@ -101,7 +100,8 @@ String imgstr = "";
 <script type="text/javascript">
 $(function(){
 	$('#buy').click(function(){
-		location.href = "/Cacao/Order?cmd=main-page";
+		var text = $('#text').val();
+		location.href = "/Cacao/Order?cmd=main-page&id=<%=id%>&cnt="+document.getElementById("text").value;
 	});
 	$('#plus').click(function(){
 		$('#text').val(parseInt($('#text').val())+1);
@@ -110,6 +110,10 @@ $(function(){
 		$('#text').val($('#text').val()-1);
 	});
 	$('#cart').click(function(){
+		var text = $('#text').val();
+		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
+	});
+	$('#choose').click(function(){
 		var text = $('#text').val();
 		location.href="/Cacao/view/main/cartView.jsp?cnt="+text+"&name=<%=name%>&price=<%=price%>&id=<%=id%>";
 	});

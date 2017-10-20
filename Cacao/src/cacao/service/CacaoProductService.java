@@ -31,24 +31,103 @@ public class CacaoProductService {
 	public List<Info> selectList() {
 		return repo.selectList();
 	}
-//	
-//	public BoardRec selectById(int id){
-//		return repo.selectById(id);
-//	}
-//	public void increaseReadCount( String article_id ){
-//		repo.increaseReadCount(article_id );
-//	}
-//	public int update( BoardRec rec ){
-//		return repo.update(rec);
-//	}
-//	public int delete( int article_id, String password ){
-//		return repo.delete(article_id,password );
-//	}
-//	public String selectLastSequenceNumber( String maxSeqNum, String minSeqNum ){
-//		return repo.selectLastSequenceNumber(maxSeqNum,minSeqNum );
-//	}
-//	
-//	public int getTotalCount(){
-//		return repo.getTotalCount();
-//	}
+	public List<Info> selectListhprice() {
+		return repo.selectListhprice();
+	}
+	public List<Info> selectListlprice() {
+		return repo.selectListlprice();
+	}
+	public List<Info> selectListsell() {
+		return repo.selectListsell();
+	}
+	
+	
+	
+	public List<Info> selectListLi() {
+		return repo.selectListLi();
+	}
+	public List<Info> selectListhpriceLi() {
+		return repo.selectListhpriceLi();
+	}
+	public List<Info> selectListlpriceLi() {
+		return repo.selectListlpriceLi();
+	}
+	public List<Info> selectListsellLi() {
+		return repo.selectListsellLi();
+	}
+	
+	public List<Info> selectListAp() {
+		return repo.selectListAp();
+	}
+	public List<Info> selectListhpriceAp() {
+		return repo.selectListhpriceAp();
+	}
+	public List<Info> selectListlpriceAp() {
+		return repo.selectListlpriceAp();
+	}
+	public List<Info> selectListsellAp() {
+		return repo.selectListsellAp();
+	}
+	
+	
+	
+	public List<Info> selectListDoll() {
+		return repo.selectListDoll();
+	}
+	public List<Info> selectListhpriceDoll() {
+		return repo.selectListhpriceDoll();
+	}
+	public List<Info> selectListlpriceDoll() {
+		return repo.selectListlpriceDoll();
+	}
+	public List<Info> selectListsellDoll() {
+		return repo.selectListsellDoll();
+	}
+	
+	
+	
+	public List<Info> selectListCup() {
+		return repo.selectListCup();
+	}
+	public List<Info> selectListhpriceCup() {
+		return repo.selectListhpriceCup();
+	}
+	public List<Info> selectListlpriceCup() {
+		return repo.selectListlpriceCup();
+	}
+	public List<Info> selectListsellCup() {
+		return repo.selectListsellCup();
+	}
+	
+	
+	public List<Info> selectListPhone() {
+		return repo.selectListPhone();
+	}
+	public List<Info> selectListhpricePhone() {
+		return repo.selectListhpricePhone();
+	}
+	public List<Info> selectListlpricePhone() {
+		return repo.selectListlpricePhone();
+	}
+	public List<Info> selectListsellPhone() {
+		return repo.selectListsellPhone();
+	}
+	
+	
+	
+	public List<Info> selectListShoes() {
+		return repo.selectListShoes();
+	}
+	public List<Info> selectListhpriceShoes() {
+		return repo.selectListhpriceShoes();
+	}
+	public List<Info> selectListlpriceShoes() {
+		return repo.selectListlpriceShoes();
+	}
+	public List<Info> selectListsellShoes() {
+		return repo.selectListsellShoes();
+	}
+	
+	
+	
 }

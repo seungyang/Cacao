@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="cacao.model.vo.*"%>
 <%
  String sessionalert = "";
 
@@ -9,11 +11,17 @@ if(session.getAttribute("useremail")!=null){
  if(session.getAttribute("loginresult")!=null){
 		result = String.valueOf(session.getAttribute("loginresult"));
  }; 
+ ArrayList<Info> infolist = (ArrayList<Info>)session.getAttribute("cart");
+ int cartnum = 0;
+ if(infolist==null){
+	 cartnum = 0;
+ }else{
+	 cartnum = infolist.size();
+ }
  
  String loginimg = "in";
  int num = 0;
- System.out.println("result : "+result);
- System.out.println("session email : "+sessionalert);
+
  if(result.equals("")){
 	 num = 0;
 	 loginimg = "login.png";
@@ -21,7 +29,7 @@ if(session.getAttribute("useremail")!=null){
 	 num = 1;
 	 loginimg = "logout.jpg";
  }
- System.out.println("img : "+loginimg);
+
 
 %>
 <!DOCTYPE html>
@@ -64,29 +72,29 @@ window.onload=function(){
 	var icon2 = document.getElementById("icon2");
 	var icon3 = document.getElementById("icon3");
 	var icon4 = document.getElementById("icon4");
-	
+	var search = document.getElementById("search");
 
 	icon1.onclick = function(){
 		if(document.getElementById('icon1').alt==0){
-			window.open('/Cacao/view/login/lMain.jsp', '로그인폼', 'width=1000px, height=600px');
+			window.open('/Cacao/Login?cmd=main-page', '로그인폼', 'width=1000px, height=600px');
 			
 		}else{
-		location.href="/Cacao/view/main/logout.jsp";
-		
-
-		
-		
+		location.href="/Cacao/Main?cmd=logout-page";
 		}
 	}
 
 	icon2.onclick = function(){
-		window.open("/Cacao/YourPage?cmd=main-page", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/YourPage?cmd=main-page", "비회원주문조회", "width=1000px, height=600px");
 	}
 	icon3.onclick = function(){
-		location.href = "/Cacao/view/main/cartView.jsp?change=5";
+		location.href = "/Cacao/Main?cmd=cartView-page&change=5";
 	}
 	icon4.onclick = function(){
-		window.open("/Cacao/view/login/lMain.jsp", "로그인폼", "width=1000px, height=600px");
+		window.open("/Cacao/Login?cmd=main-page", "로그인폼", "width=1000px, height=600px");
+	}
+	search.onclick = function(){
+		var searchtext = document.getElementById("searchtext").value;
+		location.href="/Cacao/Main?cmd=search-page&searchtext="+searchtext;
 	}
 }
 
@@ -135,7 +143,7 @@ window.onload=function(){
 
                      <li class="col-sm-1">
                         <ul>
-                           <li><img src="/Cacao/img/main/라이언.png" /></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCharLiView-page'"><img src="/Cacao/img/main/라이언.png" /></li>
                         </ul>
                      </li>
                      <li class="col-sm-1">
@@ -145,7 +153,7 @@ window.onload=function(){
                      </li>
                      <li class="col-sm-1">
                         <ul>
-                           <li><img src="/Cacao/img/main/어피치.png" /></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCharApView-page'"><img src="/Cacao/img/main/어피치.png" /></li>
                         </ul>
                      </li>
                      <li class="col-sm-1">
@@ -186,7 +194,7 @@ window.onload=function(){
                      <li class="col-sm-2">
                         <ul>
                            <li class="dropdown-header">인형/피규어</li>
-                           <li><a href="#">미니인형</a></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCateDollView-page'"><a>미니인형</a></li>
                            <li><a href="#">25cm/35cm인형</a></li>
                            <li><a href="#">대형인형</a></li>
                            <li><a href="#">키체인인형</a></li>
@@ -201,7 +209,7 @@ window.onload=function(){
                      <li class="col-sm-2">
                         <ul>
                            <li class="dropdown-header">리빙</li>
-                           <li><a href="#">컵/텀블러</a></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCateCupView-page'"><a>컵/텀블러</a></li>
                            <li><a href="#">패브릭</a></li>
                            <li><a href="#">탈취/방향제</a></li>
                            <li><a href="#">주방용품</a></li>
@@ -210,7 +218,7 @@ window.onload=function(){
                            <li><a href="#">푸드</a></li>
                            <li class="divider"></li>
                            <li class="dropdown-header">생활테크</li>
-                           <li><a href="#">휴대폰 케이스</a></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCatePhoneView-page'"><a>휴대폰 케이스</a></li>
                            <li><a href="#">휴대폰 악세서리</a></li>
                            <li><a href="#">노트북 악세서리</a></li>
                            <li><a href="#">소형 전자</a></li>
@@ -219,7 +227,7 @@ window.onload=function(){
                      <li class="col-sm-2">
                         <ul>
                            <li class="dropdown-header">잡화</li>
-                           <li><a href="#">신발</a></li>
+                           <li onclick="location.href='/Cacao/Product?cmd=pCateShoesView-page'"><a>신발</a></li>
                            <li><a href="#">파우치/지갑/가방</a></li>
                            <li><a href="#">패션소품</a></li>
                            <li><a href="#">우산</a></li>
@@ -328,9 +336,9 @@ window.onload=function(){
 
                   <div class="input-group stylish-input-group"
                      style="width: 10em; margin-top: 15%">
-                     <input type="text" class="form-control" placeholder="Search">
+                     <input type="text" id='searchtext' class="form-control" placeholder="Search">
                      <span class="input-group-addon">
-                        <button type="submit">
+                        <button id = 'search' type="button">
                            <span class="glyphicon glyphicon-search"></span>
                         </button>
                      </span>
@@ -344,7 +352,7 @@ window.onload=function(){
 
                <li><img id='icon1' style="width:30px;height:30px;margin-top:25px;margin-left:30px" alt='<%=num%>' src="/Cacao/img/main/<%=loginimg %>" /></li>
                <li><img id='icon2'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/non.png"/></li>
-               <li><img id='icon3'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart.png"/></li>
+               <li><img id='icon3'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/cart/cart<%=cartnum %>.png"/></li>
                <li><img id='icon4'style="width:30px;height:30px;margin-top:25px;margin-left:30px" src="/Cacao/img/main/foreign.png"/></li>
 
 
@@ -352,7 +360,7 @@ window.onload=function(){
 
 
 
-<!--             <li><button name="open_btn" style="background-image: url('/Cacao/img/main/로그아웃.png');width:100px; height:100px"  ></button></li> -->
+
             </ul>
             
 

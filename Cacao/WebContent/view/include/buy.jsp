@@ -58,31 +58,20 @@ margin-left:25%
 		</div>
 
 	</header>
-	<!--
-        End Fixed Navigation
-        ==================================== -->
-        <!-- main jQuery -->
-	<script src="js/vendor/jquery-1.11.1.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- jquery.nav -->
-	<script src="js/jquery.nav.js"></script>
-	<!-- Portfolio Filtering -->
-	<script src="js/jquery.mixitup.min.js"></script>
-	<!-- Fancybox -->
-	<script src="js/jquery.fancybox.pack.js"></script>
-	<!-- Parallax sections -->
-	<script src="js/jquery.parallax-1.1.3.js"></script>
-	<!-- jQuery Appear -->
-	<script src="js/jquery.appear.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery-countTo.js"></script>
-	<!-- owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- WOW script -->
-	<script src="js/wow.min.js"></script>
-	<!-- theme custom scripts -->
-	<script src="js/main.js"></script>
+	
+	
+	
+	<script src="/Cacao/js/vendor/jquery-1.11.1.min.js"></script>
+	<script src="/Cacao/js/bootstrap.min.js"></script>
+	<script src="/Cacao/js/jquery.nav.js"></script>
+	<script src="/Cacao/js/jquery.mixitup.min.js"></script>
+	<script src="/Cacao/js/jquery.fancybox.pack.js"></script>
+	<script src="/Cacao/js/jquery.parallax-1.1.3.js"></script>
+	<script src="/Cacao/js/jquery.appear.js"></script>
+	<script src="/Cacao/js/jquery-countTo.js"></script>
+	<script src="/Cacao/js/owl.carousel.min.js"></script>
+	<script src="/Cacao/js/wow.min.js"></script>
+	<script src="/Cacao/js/main.js"></script>
 
 </body>
 </html>

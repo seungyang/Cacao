@@ -44,6 +44,19 @@ public class CacaoLoginRepository {
 			sess.close();
 		}	
 	}
+	
+	public List<Member> findEmail(String findNick, String findBirth){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			HashMap hash = new HashMap();
+			hash.put("findNick", findNick);
+			hash.put("findBirth", findBirth);
+			return sess.selectList(namespace+".findEmail",hash);
+		}finally {
+			sess.close();
+		}		
+	}
 //	public List<Comment> selectComment(){
 //		SqlSession sess = getSqlSessionFactory().openSession();
 //		//JDBC의 연결 객체 -> SqlSession

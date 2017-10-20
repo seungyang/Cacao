@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cacao.cmd.Cmd;
 import cacao.cmd.CmdException;
@@ -23,10 +24,16 @@ public class CmdpCateView implements Cmd {
 		// TODO Auto-generated method stub
 	
 				
-		
+			HttpSession session = request.getSession();
 			
-			List<Info> result = CacaoProductService.getInstance().selectList();
-			request.setAttribute("result", result);
+			List<Info> resultall = CacaoProductService.getInstance().selectList();
+			List<Info> resulthall = CacaoProductService.getInstance().selectListhprice();
+			List<Info> resultlall = CacaoProductService.getInstance().selectListlprice();
+			List<Info> resultsell = CacaoProductService.getInstance().selectListsell();
+			 session.setAttribute("resultall", resultall);
+			 session.setAttribute("resulthall", resulthall);
+			 session.setAttribute("resultlall", resultlall);
+			 session.setAttribute("resultsell", resultsell);
 		
 		
 		return next;			

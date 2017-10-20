@@ -11,22 +11,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- CSS  ============================================= -->
-<!-- Fontawesome -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/font-awesome.min.css">
-<!-- Bootstrap -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<!-- Animate -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/animate.css">
-<!-- Main Stylesheet -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/main.css">
 <title>우리반 연습</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/register/joinInfoForm.css">
+
+<link href="/Cacao/css/header.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/Cacao/css/register/joinInfoForm.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script type="text/javascript">
 	$(function(){
 		

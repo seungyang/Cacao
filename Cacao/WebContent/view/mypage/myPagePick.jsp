@@ -9,44 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="/Cacao/css/product/easydropdown.css"/>
-
-
-<!--
-        Google Fonts
-        ============================================= -->
-<link
-   href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
-   rel="stylesheet" type="text/css">
-
-<!--
-        CSS
-        ============================================= -->
-<!-- Fontawesome -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
-<!-- Bootstrap -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<!-- Fancybox -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.fancybox.css">
-<!-- owl carousel -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css">
-<!-- Animate -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
-<!-- Main Stylesheet -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-<!-- Main Responsive -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
-
-
-
-
-<!-- product페이지 css -->
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
-
-<!-- Modernizer Script for old Browsers -->
-<script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.6.2.min.js"></script>
-
-<!-- combobox js -->
+<link href="/Cacao/css/header.css" rel="stylesheet" type="text/css">
+<script src="/Cacao/js/vendor/modernizr-2.6.2.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/Cacao/js/product/easydropdown.js" type="text/javascript"></script>
 
@@ -67,7 +31,9 @@
               <div class="caption">
                 <div class="caption-content">
                 	상품명 : <%= infolist.get(i).getiName() %><br/>가격 : <%= infolist.get(i).getiCost() %>원<br/>
-                     <a href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=infolist.get(i).getiName()%>&price=<%= infolist.get(i).getiCost()%>&id=<%= infolist.get(i).getiId()%>'><img class="fa fa-search-plus fa-3x" src="/Cacao/img/product/portfolio/cart.png" style="width: 30px; height: 30px;"></img></a>
+                     <img src="/Cacao/img/product/portfolio/cart.png" onclick="parent.location.href='/Cacao/view/main/cartView.jsp?cnt=1&name=<%=infolist.get(i).getiName()%>&price=<%= infolist.get(i).getiCost()%>&id=<%= infolist.get(i).getiId()%>'" style="width: 30px; height: 30px;"/>
+
+                     
                 </div>
               </div>
             </a>
