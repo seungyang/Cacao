@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
    String pjName = "/Cacao";
+	int result = (int)request.getAttribute("qaResult");
 %>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,14 @@
 <title> 우리반 연습</title>
 </head>
 <body>
-페이지 넘어왔다!!!!!!!
+	<% 
+		if(result>0){
+			out.println("<script>alert('수정이 완료되었습니다.');</script>");
+			 out.println("<script>location.href='/Cacao/view/admin/adminMyPageChangeForm.jsp'; </script>");
+		}else{
+			out.println("<script>alert('에러가 났습니다.');</script>");
+			 out.println("<script>location.href='/Cacao/view/admin/adminMain.jsp'; </script>");
+	%>
+	<%} // End of If %>
 </body>
 </html>

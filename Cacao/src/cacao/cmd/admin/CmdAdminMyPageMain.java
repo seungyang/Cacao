@@ -26,7 +26,7 @@ public class CmdAdminMyPageMain implements Cmd {
 	 
 		String email = "omy@naver.com";
 //		System.out.println(email);
-		List<QA> answerList = CacaoAdminService.getInstance().getAnswerList(email);
+		List<QA> answerList = CacaoAdminService.getInstance().getAnswerList();
 		
 		request.setAttribute("answerList", answerList);
 		

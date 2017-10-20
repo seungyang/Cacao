@@ -14,8 +14,7 @@ where m_email=#{mEmail} and m_pwd=#{mPwd} and m_check='T'
 <select id="answerList" parameterType="hashmap" resultType="qa">
 select q_id, m_email, q_cate, q_title, q_content, q_status, q_answer 
 from qa 
-where m_email=#{email} 
-order by q_id desc
+order by q_status, q_id desc
 </select>
 
 <update id="answerTextList" parameterType="qa">

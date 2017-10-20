@@ -49,28 +49,32 @@ public class CacaoAdminRepository {
 	}
 	
 	
-	public List<QA> getAnswerList(String email){
+	public List<QA> getAnswerList(){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-			HashMap hash = new HashMap();
-			hash.put("email", email);
-		return sess.selectList(namespace+".answerList", hash);
+		return sess.selectList(namespace+".answerList");
 		}finally {
 			sess.close();
 		}
 	}
 	
-	public int getAnswerTextList(QA qa){
+	public Integer getAnswerTextList(QA qa){
 		SqlSession sess = getSqlSessionFactory().openSession();
 		//JDBC의 연결 객체 -> SqlSession
 		try {
-			return sess.update(namespace+".answerTextList", qa);
+			int result =  sess.update(namespace+".answerTextList",qa);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
 		}finally {
 			sess.close();
-		}
+		}	
+
 	}
-	
 	
 	
 	public List<Service> getServiceList(){

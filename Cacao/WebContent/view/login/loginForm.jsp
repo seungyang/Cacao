@@ -28,14 +28,12 @@ $(function(){
 			$('#loginFrm').submit();
 		}
 	});
-<<<<<<< HEAD
 	
 	$('#findEmail').click(function(){
 		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
 		"width=550px, height=600px");
 	});
-=======
->>>>>>> branch 'master' of https://github.com/seungyang/Cacao/
+
 });
 	
 </script>

@@ -25,7 +25,7 @@
   
   
   <tr style="color: blue">
-  	<th>질문번호</th>
+  	<th></th>
     <th>질문자 ID</th>
     <th>질문유형</th>
      <th>제목</th>
@@ -36,7 +36,7 @@
   
 <%--  <%for(int i =0; i < answerList.size(); i++){ %> --%>
   <tr  ng-repeat="user in users">
-    <td>{{user.qId}}</td>
+    <td style="visibility: hidden;">{{user.qId}}</td>
     <td>{{user.userId}}</td>
     <td>{{user.questType}}</td>
     <td>{{user.questTitle}}</td>
@@ -67,14 +67,18 @@
     <textarea class="w3-input w3-border" type="text" ng-model="qAnswer" name="qa_answer" id="qAnswer" placeholder="내용" style="height: auto; min-height: 300px;"></textarea>
   <br> 
   <label>답변상태 설정:</label>
-    <input class="w3-input w3-border" type="text" ng-model="qStatus" name="qa_status" id="qStatus" placeholder="ex)답변완료,답변대기 타이핑하세요">
+    <select id="qStatus" name="qa_status" class="w3-input w3-border" ng-model="qStatus">
+     		 <option value="0">유형을 선택하세요</option>
+     		 <option value="답변대기">답변대기</option>
+     		 <option value="답변완료">답변완료</option>
+   	</select>
   <br>
   <button class="w3-btn w3-green w3-ripple" onclick="testPageMove()">✔ Save Changes</button>
   
   <input style="visibility: hidden;" type="text" id="qId" name="qa_id" ng-model="qId">
  <input style="visibility: hidden;" type="text" id="userId" name="qa_userid" ng-model="userId">
 </form>
-
+ 
 </div>
 </div>
 

@@ -31,8 +31,8 @@ public class CacaoAdminService {
 		return repo.selectAdminLogin(member);
 	}
 	
-	public List<QA> getAnswerList(String email){
-		return repo.getAnswerList(email);		
+	public List<QA> getAnswerList(){
+		return repo.getAnswerList();		
 	}
 	
 	public int getAnswerTextList(QA qa){
