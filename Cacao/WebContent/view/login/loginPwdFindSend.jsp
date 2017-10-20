@@ -4,6 +4,11 @@
     pageEncoding="UTF-8"%>
 <% 
 	String pjName = "/Cacao";
+	if(session.getAttribute("findPwdResult").equals("0")){
+		out.println("<script>alert('입력된 정보가 올바르지 않습니다.');location.href='/Cacao/Login?cmd=loginPwdFind-page';</script>");
+	}else{
+		
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -15,45 +20,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-
-<script type="text/javascript">
-	$(function(){
-		$('#findBtn').click(function(){
-			$('#frm').submit();
-		});
-	});
-</script>
 </head>
 <body>
 <br/>
 <br/>
 
-<form id='frm' action="<%=pjName%>/Login?cmd=loginPwdFindSend-page" method="post">
+<form >
 <div class="form-group">
- 
+ 	<label class="col-md-3 control-label" for="findMail">사용자가 입력한 이메일</label> <br/>
   <label class="col-md-4 control-label" for="findMail">이메일</label>  
   <div class="col-md-5">
   <input id="findMail" name="findMail" type="text" placeholder="메일을 적어주세요" class="form-control input-md" required="" values="">
     
   </div>
 </div>
-<div class="form-group">
-  <label class="col-md-4 control-label" for="findNick">닉네임</label>  
-  <div class="col-md-5">
-  <input id="findNick" name="findNick" type="text" placeholder="가입시 입력한 닉네임을 적어주세요" class="form-control input-md" required="" values="">
-    
-  </div>
-</div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="findBirth">생년월일 (Ex.19990101)</label>  
-  <div class="col-md-5">
-  <input id="findBirth" name="findBirth" type="text" placeholder="YYYYMMDD" class="form-control input-md" required="" values="">
-    
-  </div>
-</div>
-<div class="form-group" style="margin-left: 180px">
-<input type="button" name="findBtn" id="findBtn" value=" 찾  기   "
+<div class="form-group" style="margin-left: 200px">
+<input type="button" name="findBtn" id="findBtn" value=" 확 인   "
 					style="background-color: #ffda01; margin-top: 20px; font-weight: bold; color: black;
 					width: 200px; height: 40px;">
 

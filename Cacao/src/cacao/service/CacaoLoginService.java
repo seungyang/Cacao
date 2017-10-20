@@ -27,10 +27,15 @@ public class CacaoLoginService {
 		return repo.selectLogin(member);
 	}
 	public List<Member> findEmail(String findNick, String findBirth) {
-		
 		return repo.findEmail(findNick,findBirth);
-		
 	}
+	public int findPwd(Member m) {
+			return repo.findPwd(m);
+	}
+	
+	
+	
+	
 //	public int getGroupId(){
 //		return repo.getGroupId();
 //	}

@@ -27,7 +27,7 @@ $(function(){
 		"width=550px, height=600px");
 	});
 	$('#findPwd').click(function(){
-		window.open("<%=pjName %>/Login?cmd=loginEmailFind-page", "이메일찾기",
+		window.open("<%=pjName %>/Login?cmd=loginPwdFind-page", "비밀번호찾기",
 		"width=550px, height=600px");
 	});
 
