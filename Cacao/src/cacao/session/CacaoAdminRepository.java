@@ -9,7 +9,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import cacao.model.vo.Deliver;
 import cacao.model.vo.Member;
+import cacao.model.vo.Order;
 import cacao.model.vo.QA;
 import cacao.model.vo.Service;
 
@@ -101,6 +103,48 @@ public class CacaoAdminRepository {
 		//JDBC의 연결 객체 -> SqlSession
 		try {
 			int result =  sess.insert(namespace + ".serviceModify",service);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	
+	public List<Order> getOrderList(){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+		return sess.selectList(namespace+".selectOrder");
+		}finally {
+			sess.close();
+		}
+	}
+	public Integer orderModify(Order order){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.update(namespace + ".orderModify",order);
+			if(result > 0) {
+				sess.commit();
+			}else {
+				sess.rollback();
+			}
+			return result;
+		}finally {
+			sess.close();
+		}	
+
+	}
+	public Integer orderModify1(Order order){
+		SqlSession sess = getSqlSessionFactory().openSession();
+		//JDBC의 연결 객체 -> SqlSession
+		try {
+			int result =  sess.update(namespace + ".orderModify1",order);
 			if(result > 0) {
 				sess.commit();
 			}else {

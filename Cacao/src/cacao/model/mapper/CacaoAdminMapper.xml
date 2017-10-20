@@ -38,5 +38,18 @@ update service
 set s_kind=#{sKind}, s_cate=#{sCate}, s_title=#{sTitle}, s_detail=#{sDetail} 
 where s_id=#{sId}
 </update>
+<select id="selectOrder" parameterType="hashmap" resultType="order">
+select * from deliver order by d_cancel ASC, d_id DESC
+</select>
+<update id="orderModify" parameterType="order">
+update deliver 
+set d_status=#{dStatus} 
+where d_id=#{dId}
+</update>
+<update id="orderModify1" parameterType="order">
+update deliver 
+set d_status=#{dStatus}, d_cancel='T' 
+where d_id=#{dId}
+</update>
 </mapper> 
  

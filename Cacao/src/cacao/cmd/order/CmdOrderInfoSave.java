@@ -33,12 +33,12 @@ public class CmdOrderInfoSave implements Cmd {
 		String addr4 = request.getParameter("addr2");
 		String allAddr = addr1 + "-" + addr2 + " " + addr3 + " " + addr4;
 		
-		order.setoPayment(request.getParameter("payment"));
-		order.setoName(request.getParameter("qName"));
+		order.setdPay(request.getParameter("payment"));
+		order.setdName(request.getParameter("qName"));
 		order.setmEmail(request.getParameter("qEmail"));
-		order.setoTel(request.getParameter("qTel"));
-		order.setoAddr(allAddr);
-		order.setoMemo(request.getParameter("qTitle"));
+		order.setdTel(request.getParameter("qTel"));
+		order.setdAddr(allAddr);
+		order.setdMemo(request.getParameter("qTitle"));
 		
 		String[] iCnt = request.getParameterValues("iCnt");
 		String[] iId = request.getParameterValues("iId");

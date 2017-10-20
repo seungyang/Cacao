@@ -2,7 +2,9 @@ package cacao.service;
 
 import java.util.List;
 
+import cacao.model.vo.Deliver;
 import cacao.model.vo.Member;
+import cacao.model.vo.Order;
 import cacao.model.vo.QA;
 import cacao.model.vo.Service;
 import cacao.session.CacaoAdminRepository;
@@ -46,6 +48,16 @@ public class CacaoAdminService {
 	}
 	public int serviceModify(Service service){
 		return repo.serviceModify(service);
+	}
+	
+	public List<Order> getOrderList(){
+		return repo.getOrderList();
+	}
+	public int orderModify(Order order){
+		return repo.orderModify(order);
+	}
+	public int orderModify1(Order order){
+		return repo.orderModify1(order);
 	}
 //	public int getGroupId(){
 //		return repo.getGroupId();

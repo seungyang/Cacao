@@ -11,44 +11,59 @@ public class Order {
 	private String iName; // 상품명
 	private String dStatus;
 	private String iCost;
-	private String oPayment; //결제수단
-	private String oName; //주문자명
-	private String oTel; //연락처
-	private String oMemo; //배송메모
-	private String oAddr; //배송주소
-	private String oStr;
+	private String dPay; //결제수단
+	private String dName; //주문자명
+	private String dTel; //연락처
+	private String dMemo; //배송메모
+	private String dAddr; //배송주소
+	private String oStr;  //dId 값 가져오는거
+	private String dTotal; //결제총금액
+	private String dCancel; //주문취소 T or F 값
 
 
 
-	public String getoAddr() {
-		return oAddr;
+
+	public String getdPay() {
+		return dPay;
 	}
-	public void setoAddr(String oAddr) {
-		this.oAddr = oAddr;
+	public void setdPay(String dPay) {
+		this.dPay = dPay;
 	}
-	public String getoMemo() {
-		return oMemo;
+	public String getdName() {
+		return dName;
 	}
-	public void setoMemo(String oMemo) {
-		this.oMemo = oMemo;
+	public void setdName(String dName) {
+		this.dName = dName;
 	}
-	public String getoTel() {
-		return oTel;
+	public String getdTel() {
+		return dTel;
 	}
-	public void setoTel(String oTel) {
-		this.oTel = oTel;
+	public void setdTel(String dTel) {
+		this.dTel = dTel;
 	}
-	public String getoName() {
-		return oName;
+	public String getdMemo() {
+		return dMemo;
 	}
-	public void setoName(String oName) {
-		this.oName = oName;
+	public void setdMemo(String dMemo) {
+		this.dMemo = dMemo;
 	}
-	public String getoPayment() {
-		return oPayment;
+	public String getdAddr() {
+		return dAddr;
 	}
-	public void setoPayment(String oPayment) {
-		this.oPayment = oPayment;
+	public void setdAddr(String dAddr) {
+		this.dAddr = dAddr;
+	}
+	public String getdTotal() {
+		return dTotal;
+	}
+	public void setdTotal(String dTotal) {
+		this.dTotal = dTotal;
+	}
+	public String getdCancel() {
+		return dCancel;
+	}
+	public void setdCancel(String dCancel) {
+		this.dCancel = dCancel;
 	}
 	public String getoId() {
 		return oId;
