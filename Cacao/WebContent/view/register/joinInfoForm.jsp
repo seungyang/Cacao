@@ -71,7 +71,7 @@
 				<hr>
 <!-- 					FORM 시작 -->	
 				<form class="form-horizontal"
-					action="<%=pjName%>/Register?cmd=joinInfoSave-page" method="post"
+					action="<%=pjName%>/Register?cmd=joinAuth-page" method="post"
 					name="signup" id="signup">
 
 					<div class="form-group" style="margin-left: 7%;">
@@ -134,7 +134,7 @@
 							<div class="form-inline" style="margin-left: -4%">
 <!-- 							####### 년도 : YYYY선택 -->
 								<div class="form-group" >
-									<select name="yyyy" class="form-control" style="margin-left: 20%;">
+									<select name="yyyy" class="form-control" >
 										<option value="0">연도</option>
 										<%
 											for (int i = 1955; i < 2011; i++) {
@@ -147,7 +147,7 @@
 								</div>
 <!-- 							#######	월 : MM선택 -->
 								<div class="form-group" >
-									<select name="mm" class="form-control" style="margin-left: 78%;">
+									<select name="mm" class="form-control" style="margin-left: 2%;">
 										<option value="">월</option>
 										<%
 											for(int j=1; j<=12; j++){
@@ -164,7 +164,7 @@
 								</div>
 <!-- 							####### 일 : DD선택 -->
 								<div class="form-group">
-									<select name="dd" class="form-control" style="margin-left: 1300%;">
+									<select name="dd" class="form-control" style="margin-left: 4%;">
 										<option value="">일</option>
 										<%
 
@@ -224,7 +224,7 @@
 	
 
 		<div>
-			<img src="../../img/login/loginfoot.png"
+			<img src="/Cacao/img/login/loginfoot.png"
 				style="height: 55px; margin-left: 23%;" />
 
 		</div>
